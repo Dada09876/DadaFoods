@@ -1,0 +1,6 @@
+//<'DadaFoods.pbo' properties via Mikero's dos tools, dll version 9.10>
+prefix=Source_Files\DadaFoods;
+Mikero=DePbo.dll.9.36;
+version=23081718;
+//PboType=Arma Addon;
+//</properties>
