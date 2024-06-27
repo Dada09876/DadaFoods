@@ -1,23 +1,6 @@
 modded class ModItemRegisterCallbacks
 
 {
-    override void RegisterTwoHanded(DayZPlayerType pType, DayzPlayerItemBehaviorCfg pBehavior)
-    {
-        super.RegisterTwoHanded (pType, pBehavior);
-        pType.AddItemInHandsProfileIK("DadaSoup_Base", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
-        pType.AddItemInHandsProfileIK("DadaDish_Base", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
-        pType.AddItemInHandsProfileIK("DadaBread_Base", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
-    };
-
-    override void RegisterHeavy(DayZPlayerType pType, DayzPlayerItemBehaviorCfg pBehavior)
-    {
-        super.RegisterHeavy (pType, pBehavior);
-        pType.AddItemInHandsProfileIK("DadaDrink_MilkGallon","dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi",pBehavior,"dz/anims/anm/player/ik/two_handed/BaseRadio.anm"); 
-       /* pType.AddItemInHandsProfileIK("srpLargeCarvingBlock", "dz/anims/workspaces/player/player_main/props/player_main_heavy_generator.asi",pBehavior, "dz/anims/anm/player/ik/heavy/generator.anm");
-        pType.AddItemInHandsProfileIK("srpXtraLargeCarvingBlock", "dz/anims/workspaces/player/player_main/props/player_main_heavy_generator.asi",pBehavior, "dz/anims/anm/player/ik/heavy/generator.anm");
-        pType.AddItemInHandsProfileIK("srpGinormousCarvingBlock", "dz/anims/workspaces/player/player_main/player_main_heavy.asi",pBehavior, "dz/anims/anm/player/ik/heavy/metal_sheet.anm");*/
-    };
-
     override void RegisterOneHanded(DayZPlayerType pType, DayzPlayerItemBehaviorCfg pBehavior)
     {
         super.RegisterOneHanded (pType, pBehavior);
@@ -52,5 +35,27 @@ modded class ModItemRegisterCallbacks
         pType.AddItemInHandsProfileIK("Dada_RawFoodCan_Crab","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/sardines.anm");
         pType.AddItemInHandsProfileIK("Dada_PreservedFoodCan_Crab","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/sardines.anm");
         pType.AddItemInHandsProfileIK("Dada_PreservedFoodCan_Crab_Opened","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/sardines.anm");
+        pType.AddItemInHandsProfileIK("DadaDish_Sausage","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/arrow_hunting.anm");
+        pType.AddItemInHandsProfileIK("DadaBread_Baguette","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/Nails_box.anm");
+    };
+
+    override void RegisterTwoHanded(DayZPlayerType pType, DayzPlayerItemBehaviorCfg pBehavior)
+    {
+        super.RegisterTwoHanded (pType, pBehavior);
+        pType.AddItemInHandsProfileIK("DadaSoup_Base", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
+        pType.AddItemInHandsProfileIK("DadaDish_Base", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
+        pType.AddItemInHandsProfileIK("DadaBread_Base", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
+        pType.AddItemInHandsProfileIK("DadaBread_Pizza", "dz/anims/workspaces/player/player_main/player_main_2h.asi", pBehavior, "dz/anims/anm/player/ik/vehicles/BatteryTruck.anm");
+        pType.AddItemInHandsProfileIK("DadaBread_PizzaBase", "dz/anims/workspaces/player/player_main/player_main_2h.asi", pBehavior, "dz/anims/anm/player/ik/vehicles/BatteryTruck.anm");
+        pType.AddItemInHandsProfileIK("DadaBread_PizzaMargherita", "dz/anims/workspaces/player/player_main/player_main_2h.asi", pBehavior, "dz/anims/anm/player/ik/vehicles/BatteryTruck.anm"); 
+    };
+
+    override void RegisterHeavy(DayZPlayerType pType, DayzPlayerItemBehaviorCfg pBehavior)
+    {
+        super.RegisterHeavy (pType, pBehavior);
+        pType.AddItemInHandsProfileIK("DadaDrink_MilkGallon","dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi",pBehavior,"dz/anims/anm/player/ik/two_handed/BaseRadio.anm"); 
+       /* pType.AddItemInHandsProfileIK("srpLargeCarvingBlock", "dz/anims/workspaces/player/player_main/props/player_main_heavy_generator.asi",pBehavior, "dz/anims/anm/player/ik/heavy/generator.anm");
+        pType.AddItemInHandsProfileIK("srpXtraLargeCarvingBlock", "dz/anims/workspaces/player/player_main/props/player_main_heavy_generator.asi",pBehavior, "dz/anims/anm/player/ik/heavy/generator.anm");
+        pType.AddItemInHandsProfileIK("srpGinormousCarvingBlock", "dz/anims/workspaces/player/player_main/player_main_heavy.asi",pBehavior, "dz/anims/anm/player/ik/heavy/metal_sheet.anm");*/
     };
 };
