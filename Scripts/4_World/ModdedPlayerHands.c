@@ -35,7 +35,7 @@ modded class ModItemRegisterCallbacks
         pType.AddItemInHandsProfileIK("Dada_RawFoodCan_Crab","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/sardines.anm");
         pType.AddItemInHandsProfileIK("Dada_PreservedFoodCan_Crab","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/sardines.anm");
         pType.AddItemInHandsProfileIK("Dada_PreservedFoodCan_Crab_Opened","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/sardines.anm");
-        pType.AddItemInHandsProfileIK("DadaDish_Sausage","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/arrow_hunting.anm");
+        pType.AddItemInHandsProfileIK("DadaDish_Sausage","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/zucchini_fresh.anm");
         pType.AddItemInHandsProfileIK("DadaBread_Baguette","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/Nails_box.anm");
     };
 
@@ -54,6 +54,7 @@ modded class ModItemRegisterCallbacks
     {
         super.RegisterHeavy (pType, pBehavior);
         pType.AddItemInHandsProfileIK("DadaDrink_MilkGallon","dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi",pBehavior,"dz/anims/anm/player/ik/two_handed/BaseRadio.anm"); 
+        
        /* pType.AddItemInHandsProfileIK("srpLargeCarvingBlock", "dz/anims/workspaces/player/player_main/props/player_main_heavy_generator.asi",pBehavior, "dz/anims/anm/player/ik/heavy/generator.anm");
         pType.AddItemInHandsProfileIK("srpXtraLargeCarvingBlock", "dz/anims/workspaces/player/player_main/props/player_main_heavy_generator.asi",pBehavior, "dz/anims/anm/player/ik/heavy/generator.anm");
         pType.AddItemInHandsProfileIK("srpGinormousCarvingBlock", "dz/anims/workspaces/player/player_main/player_main_heavy.asi",pBehavior, "dz/anims/anm/player/ik/heavy/metal_sheet.anm");*/

@@ -667,6 +667,7 @@ class CfgVehicles
 	{
 		model = "Source_Files\DadaFoods\Configs\Food\Cooked\data\Sausage.p3d";
 		scope = 2;
+		itemSize[] = {2,1};
 		displayName = "Sausage";
 		descriptionShort = "Better when grilled on the barbecue";
 		hiddenSelections[] = {"cs_raw"};

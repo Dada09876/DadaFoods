@@ -41,7 +41,7 @@ class CfgVehicles
 		weight = 0.5;
 		itemSize[] = {1,2};
 		displayName = "Yeast Pack";
-		descriptionShort = "Pack of Yeast, Hope the infection wasn't too bad...";
+		descriptionShort = "Pack of Yeast. Not at all meaty, despite the name...";
 		model = "\dz\gear\food\PowderedMilk.p3d";
 		canBeSplit = 1;
 		debug_ItemCategory = 6;
