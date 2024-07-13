@@ -12,13 +12,13 @@ class CraftDadaCannibal_EntrailsSpaghetti extends RecipeBase
 		m_MinDamageIngredient[0] = -1;//-1 = disable check
 		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[0] = 1;//-1 = disable check
+		m_MinQuantityIngredient[0] = 30;//-1 = disable check
 		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
 		m_MaxDamageIngredient[1] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[1] = 1;//-1 = disable check
+		m_MinQuantityIngredient[1] = 50;//-1 = disable check
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
 		//----------------------------------------------------------------------------------------------------------------------
 		
@@ -28,7 +28,7 @@ class CraftDadaCannibal_EntrailsSpaghetti extends RecipeBase
 	
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
-		m_IngredientAddQuantity[0] = 0;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -60;// 0 = do nothing
 		m_IngredientDestroy[0] = true;//true = destroy, false = do nothing
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
@@ -37,8 +37,8 @@ class CraftDadaCannibal_EntrailsSpaghetti extends RecipeBase
 
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
-		m_IngredientAddQuantity[1] = 0;// 0 = do nothing
-		m_IngredientDestroy[1] = true;// false = do nothing
+		m_IngredientAddQuantity[1] = -100;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
 		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		//----------------------------------------------------------------------------------------------------------------------
 		
@@ -61,7 +61,7 @@ class CraftDadaCannibal_EntrailsSpaghetti extends RecipeBase
       Edible_Base hooman = Edible_Base.Cast( ingredients[1] );
       if (hooman)
       {
-        return (hooman.IsFoodBaked() || hooman.IsFoodDried() || hooman.IsFoodBoiled());
+        return (hooman.IsFoodRaw() ||hooman.IsFoodBaked() || hooman.IsFoodDried() || hooman.IsFoodBoiled());
       }
     }
     return false;
@@ -88,13 +88,13 @@ class CraftDadaCannibal_EyeballSoup extends RecipeBase
 		m_MinDamageIngredient[0] = -1;//-1 = disable check
 		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[0] = 1;//-1 = disable check
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
 		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
 		m_MaxDamageIngredient[1] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[1] = 1;//-1 = disable check
+		m_MinQuantityIngredient[1] = 50;//-1 = disable check
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
 		//----------------------------------------------------------------------------------------------------------------------
 		
@@ -104,7 +104,7 @@ class CraftDadaCannibal_EyeballSoup extends RecipeBase
 	
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
-		m_IngredientAddQuantity[0] = 150;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -300;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
@@ -113,7 +113,7 @@ class CraftDadaCannibal_EyeballSoup extends RecipeBase
 		
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
-		m_IngredientAddQuantity[1] = 0;// 0 = do nothing
+		m_IngredientAddQuantity[1] = -100;// 0 = do nothing
 		m_IngredientDestroy[1] = true;// false = do nothing
 		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		//----------------------------------------------------------------------------------------------------------------------
