@@ -1,5 +1,4 @@
 class CraftDadaCannibal_EntrailsSpaghetti extends RecipeBase
-
 {
 	override void Init()
 	{
@@ -13,13 +12,13 @@ class CraftDadaCannibal_EntrailsSpaghetti extends RecipeBase
 		m_MinDamageIngredient[0] = -1;//-1 = disable check
 		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[0] = -1;//-1 = disable check
+		m_MinQuantityIngredient[0] = 1;//-1 = disable check
 		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
 		m_MaxDamageIngredient[1] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[1] = -1;//-1 = disable check
+		m_MinQuantityIngredient[1] = 1;//-1 = disable check
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
 		//----------------------------------------------------------------------------------------------------------------------
 		
@@ -55,6 +54,23 @@ class CraftDadaCannibal_EntrailsSpaghetti extends RecipeBase
 		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
 		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity     
+	{      
+    if (ingredients[1])
+	{
+      Edible_Base hooman = Edible_Base.Cast( ingredients[1] );
+      if (hooman)
+      {
+        return (hooman.IsFoodBaked() || hooman.IsFoodDried() || hooman.IsFoodBoiled());
+      }
+    }
+    return false;
+	}
+
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
+	}
 };
 
 
@@ -69,16 +85,16 @@ class CraftDadaCannibal_EyeballSoup extends RecipeBase
 		
 		
 		//conditions
-		m_MinDamageIngredient[0] = 50;//-1 = disable check
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
 		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[0] = -1;//-1 = disable check
+		m_MinQuantityIngredient[0] = 1;//-1 = disable check
 		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
 		m_MaxDamageIngredient[1] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[1] = -1;//-1 = disable check
+		m_MinQuantityIngredient[1] = 1;//-1 = disable check
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
 		//----------------------------------------------------------------------------------------------------------------------
 		
@@ -114,13 +130,42 @@ class CraftDadaCannibal_EyeballSoup extends RecipeBase
 		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
 		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+    Bottle_Base water;
+	if (Class.CastTo(water,ingredients[0]))
+    {
+      bool waterTemp = (water.GetTemperature() > 70 && water.GetTemperature() < 150);
+      if (waterTemp)
+	  {
+        return true;
+      }
+	  return false
+	}
+
+	if (ingredients[1])
+		{
+      Edible_Base hooman = Edible_Base.Cast( ingredients[1] );
+      if (hooman)
+      {
+        return (hooman.IsFoodBaked() || hooman.IsFoodDried() || hooman.IsFoodBoiled() || hooman.IsFoodRaw());
+      }
+    }
+	return false
+    }
+
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
+	}
 };
 
 class CraftDadaCannibal_Jerky extends RecipeBase
 {
 	override void Init()
 	{
-		m_Name = "Craft Skin Jerky";
+		m_Name = "Craft Hooman Jerky";
 		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
 		m_AnimationLength = 2;//animation length in relative time units
 		m_Specialty = -0.01;// value > 0 for roughness, value < 0 for precision
@@ -129,13 +174,13 @@ class CraftDadaCannibal_Jerky extends RecipeBase
 		m_MinDamageIngredient[0] = -1;//-1 = disable check
 		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[0] = 1;//-1 = disable check
+		m_MinQuantityIngredient[0] = -1;//-1 = disable check
 		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
 		m_MaxDamageIngredient[1] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[1] = 1;//-1 = disable check
+		m_MinQuantityIngredient[1] = 50;//-1 = disable check
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
 		//----------------------------------------------------------------------------------------------------------------------
 		
@@ -169,7 +214,7 @@ class CraftDadaCannibal_Jerky extends RecipeBase
 		
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
-		m_IngredientAddQuantity[1] = 0;// 0 = do nothing
+		m_IngredientAddQuantity[1] = -100;// 0 = do nothing
 		m_IngredientDestroy[1] = true;// false = do nothing
 		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		//----------------------------------------------------------------------------------------------------------------------

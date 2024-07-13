@@ -1,9 +1,5 @@
 class DadaCannibal_Base extends HumanSteakMeat
 {
-	override bool IsMutantFood()
-	{
-    	return true;
-  	}
   	override bool CanBeCooked()
  	{
 		return true;
