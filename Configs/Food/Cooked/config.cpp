@@ -140,8 +140,7 @@ class CfgVehicles
 	};
 
 	class Edible_Base;
-	class HumanSteakMeat;
-	class DadaSoup_Base: HumanSteakMeat
+	class DadaSoup_Base: Edible_Base
 	{
 		scope = 1;
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\bowl.p3d";

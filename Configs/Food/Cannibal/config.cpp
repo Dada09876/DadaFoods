@@ -141,7 +141,6 @@ class CfgVehicles
 		"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_dried_co.paa",
 		"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_burnt_co.paa",
 		"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_rotten_co.paa"};
-
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -149,6 +148,17 @@ class CfgVehicles
 			water = 0;
 			nutritionalIndex = 1;
 			toxicity = 0;
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 200;
+					healthLevels[] = {{1,{"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl_damage.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl_damage.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0,{"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl_destruct.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}}};
+				};
+			};
 		};
 	};
 	class DadaCannibal_EntrailsSpaghetti: DadaCannibal_Base
