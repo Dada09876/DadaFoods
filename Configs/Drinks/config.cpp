@@ -96,7 +96,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_FreshMilk_co.paa"};
 	};
 
-	class srpDrink_CurdsAndWhey: DadaDrinks_ColorBase
+	class DadaDrink_CurdsAndWhey: DadaDrinks_ColorBase
 	{
 		class Nutrition
 		{
@@ -113,7 +113,7 @@ class CfgVehicles
 		hiddenSelections[] = {"zbytek"};
 		hiddenSelectionsTextures[] = {"\Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_CurdsAndWhey_co.paa"};
 	};
-	class srpDrink_Whey: DadaDrinks_ColorBase
+	class DadaDrink_Whey: DadaDrinks_ColorBase
 	{
 		class Nutrition
 		{
@@ -598,9 +598,9 @@ class CfgVehicles
 		canBeSplit = 1;
 		displayName = "Milkshake";
 		descriptionShort = "Shake it like a polaroid picture";
-		hiddenSelections[] = {"zbytek"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\Milkshake_co.paa"};
-		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}; 
+		hiddenSelections[] = {"cs_raw","zbytek"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\Milkshake_co.paa","Source_Files\DadaFoods\Configs\Drinks\data\Milkshake_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Drinks\data\MilkCarton.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}; 
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Milkshake.p3d";
 		weight = 50;
 		itemSize[] = {1,3};

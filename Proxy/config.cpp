@@ -19,21 +19,21 @@ class CfgPatches
 };
 class CfgSlots
 {
-	class Slot_srpCheeseMold1
+	class Slot_DadaCheeseMold1
 	{
-		name = "srpCheeseMold1";
+		name = "DadaCheeseMold1";
 		displayName = "Cheese Mold";
 		ghostIcon = "set:dayz_inventory image:cookingequipment";
 	};
-	class Slot_srpMilkGallon
+	class Slot_DadaMilkGallon
 	{
-		name = "srpMilkGallon";
+		name = "DadaMilkGallon";
 		displayName = "Milk Gallon";
 		ghostIcon = "set:dayz_inventory image:barrel";
 	};
-	class Slot_srpYeast
+	class Slot_DadaYeast
 	{
-		name = "srpYeast";
+		name = "DadaYeast";
 		displayName = "Yeast";
 		ghostIcon = "set:dayz_inventory image:berry";
 	};
@@ -44,19 +44,19 @@ class CfgNonAIVehicles
 	class ProxyCheeseMoldProxy: ProxyAttachment
 	{
 		scope = 2;
-		inventorySlot[] = {"srpCheeseMold1"};
-		model = "\Source_Files\FoodModding\Proxy\CheeseMoldProxy.p3d";
+		inventorySlot[] = {"DadaCheeseMold1"};
+		model = "Source_Files\DadaFoods\Proxy\CheeseMoldProxy.p3d";
 	};
 	class ProxyMilkGallonProxy: ProxyAttachment
 	{
 		scope = 2;
-		inventorySlot[] = {"srpMilkGallon"};
-		model = "\Source_Files\FoodModding\Proxy\MilkGallonProxy.p3d";
+		inventorySlot[] = {"DadaMilkGallon"};
+		model = "Source_Files\DadaFoods\Proxy\\MilkGallonProxy.p3d";
 	};
 	class ProxyYeastProxy: ProxyAttachment
 	{
 		scope = 2;
-		inventorySlot[] = {"srpYeast"};
-		model = "\Source_Files\FoodModding\Proxy\YeastProxy.p3d";
+		inventorySlot[] = {"DadaYeast"};
+		model = "Source_Files\DadaFoods\Proxy\YeastProxy.p3d";
 	};
 };

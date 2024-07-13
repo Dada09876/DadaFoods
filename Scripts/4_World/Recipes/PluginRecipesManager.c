@@ -8,6 +8,13 @@ modded class PluginRecipesManagerBase extends PluginBase
     super.RegisterRecipies();
     // an example of registering a recipe you created
 
+    //SPAWNED
+    
+    RegisterRecipe(new CraftBoxCerealCrunchin);
+    RegisterRecipe(new CraftDadaSpawned_BoxCerealCrunchin_Kosmostar);
+    RegisterRecipe(new CraftDadaSpawned_BoxCerealCrunchin_Frosties);
+    RegisterRecipe(new CraftDadaSpawned_BoxCerealCrunchin_Nesquik);
+
     // PROCESSING
 
     /*
@@ -78,33 +85,28 @@ modded class PluginRecipesManagerBase extends PluginBase
 
     // FOOD RAW
 
-    /*
-    RegisterRecipe(new CraftsrpChips_PumpkinSeeds);
-    RegisterRecipe(new Craft_Chips_Jerky);
-    RegisterRecipe(new CraftsrpFoodCan_SmallButter);
-    RegisterRecipe(new CraftsrpFoodCan_BigButter);
-    RegisterRecipe(new CraftsrpYogourt);
-    RegisterRecipe(new CraftsrpDrink_CurdsAndWhey);
-    RegisterRecipe(new CraftsrpBoxCereal_Kosmostars);
-    RegisterRecipe(new CraftsrpBoxCereal_Crisps);
-    RegisterRecipe(new CraftsrpBoxCereal_Paulies);
-    RegisterRecipe(new CraftsrpBoxCereal_Kids);
-    RegisterRecipe(new CraftsrpBoxCereal_Frosties);
-    RegisterRecipe(new CraftsrpRawCerealCrunchin_Frosties);
-    RegisterRecipe(new CraftsrpRawCerealCrunchin_Kids);
-    RegisterRecipe(new CraftsrpRawCerealCrunchin_Kosmostar);
-    RegisterRecipe(new CraftsrpRawPokeBowl);
-    RegisterRecipe(new CraftsrpRawRice);
-    RegisterRecipe(new CraftsrpRawSalad);
-    RegisterRecipe(new CraftsrpRawTomatoSalad);
+    RegisterRecipe(new CraftDadaRaw_PumpkinSeeds);
+    //RegisterRecipe(new Craft_Chips_Jerky);
+    RegisterRecipe(new CraftDadaRaw_SmallButter);
+    RegisterRecipe(new CraftDadaRaw_BigButter);
+    RegisterRecipe(new CraftDadaRaw_Yogourt);
+    RegisterRecipe(new CraftDadaRaw_CerealCrunchin_Kosmostar);
+    RegisterRecipe(new CraftDadaRawCerealCrunchin_Nesquik);
+    RegisterRecipe(new CraftDadaRaw_CerealCrunchin_Frosties);
+    RegisterRecipe(new CraftDadaRaw_PokeBowl);
+    RegisterRecipe(new CraftDadaRaw_Rice);
+    RegisterRecipe(new CraftDadaRaw_Salad);
+    RegisterRecipe(new CraftDadaRaw_TomatoSalad);
     RegisterRecipe(new CraftFreshCheese_Mozza);
     RegisterRecipe(new CraftFreshCheese_CheddarCurds);
     RegisterRecipe(new CraftFreshCheese_Feta);
     RegisterRecipe(new CraftFreshCheese_Goat);
-    RegisterRecipe(new CraftsrpSushi);
-    RegisterRecipe(new CraftsrpFrozenYogurt);
-    RegisterRecipe(new CraftsrpIScream);
-    */
+    RegisterRecipe(new CraftDadaRaw_SushiMaki);
+    RegisterRecipe(new CraftDadaRaw_SushiOnigiri);
+    RegisterRecipe(new CraftDadaRaw_Yogourt);
+    RegisterRecipe(new CraftDadaRaw_VanillaChocoSwirl);
+    RegisterRecipe(new CraftDadaRaw_VanillaIceCream);
+    RegisterRecipe(new CraftDadaRaw_ChocoIScream);
 
 
     // FOOD PIZZA TOPPINGS
@@ -131,15 +133,16 @@ modded class PluginRecipesManagerBase extends PluginBase
     RegisterRecipe(new CraftDadaDrink_BlackTea);
     RegisterRecipe(new CraftDadaDrink_GreenTea);
     RegisterRecipe(new CraftDadaDrink_MilkShake);
+    RegisterRecipe(new CraftDadaDrink_CurdsAndWhey);
 
     
     // CANNIBAL
 
-    /*
-    RegisterRecipe(new CraftsrpChips_MutantFood_SkinJerky);
-    RegisterRecipe(new CraftsrpStew_MutantFood_EyeballSoup);
-    RegisterRecipe(new CraftsrpStew_MutantFood_EntrailSpaghetti);
-    */
+    
+    RegisterRecipe(new CraftDadaCannibal_EntrailsSpaghetti);
+    RegisterRecipe(new CraftDadaCannibal_EyeballSoup);
+    RegisterRecipe(new CraftDadaCannibal_Jerky);
+    
 
    // MISCELLANEOUS
 

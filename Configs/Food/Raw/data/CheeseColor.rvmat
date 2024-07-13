@@ -17,7 +17,7 @@ PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1
 {
-	texture = "Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor_nohq.paa";
+	texture = "Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor_nohq.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -65,7 +65,7 @@ class Stage4
 };
 class Stage5
 {
-	texture = "Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor_smdi.paa";
+	texture = "Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor_smdi.paa";
 	uvSource = "tex";
 	class uvTransform
 	{

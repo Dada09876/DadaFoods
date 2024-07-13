@@ -52,6 +52,7 @@ Special thanks to
 		"Wheat rye loaf of bread (low poly, game ready)" (https://skfb.ly/oT9Cn) by linne5 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 		"sosisa sausage" (https://skfb.ly/oFyNI) by Dmitry_Nzh is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 		"Pocolov Pizzas" (https://skfb.ly/6WQtu) by pocolov is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+		"Sushi Roll" (https://skfb.ly/o9QWE) by gecko0307 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
 	Fonts:
 		"Satisfy ttf" (http://www.apache.org/licenses/), Apache License, Version 2.0, January 2004 (https://fonts.google.com/specimen/Satisfy), Google fonts

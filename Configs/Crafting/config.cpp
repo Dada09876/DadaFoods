@@ -17,17 +17,17 @@ class CfgVehicles
 
     //CHEESE
 
-	class srpCheeseMold: Inventory_Base
+	class DadaCheeseMold: Inventory_Base
 	{
 		scope = 2;
 		displayName = "Cheese Mold";
 		descriptionShort = "Sturdier tool than burlap to drain cheeses.";
-		model = "\Source_Files\FoodModding\Food\Cheese\textures_models\CheeseMold.p3d";
+		model = "Source_Files\DadaFoods\Configs\Crafting\data\CheeseMold.p3d";
 		weight = 1000;
 		itemSize[] = {3,3};
-		inventorySlot[] = {"CheeseMold1"};
+		inventorySlot[] = {"DadaCheeseMold1"};
 		hiddenSelections[] = {"zbytek"};
-		hiddenSelectionsTextures[] = {"\Source_Files\FoodModding\Food\Cheese\textures_models\CheeseMold_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Crafting\data\CheeseMold_co.paa"};
 		destroyOnEmpty = 0;
 		varQuantityDestroyOnMin = 0;
 		class DamageSystem
@@ -74,20 +74,22 @@ class CfgVehicles
 		};
 	};
 
-class srpCheesePress: Inventory_Base
+class DadaCheesePress: Inventory_Base
 	{
 		scope = 2;
 		displayName = "CheesePress";
 		descriptionShort = "A press for crafting different cheeses";
-		model = "Source_Files\FoodModding\Food\Cheese\textures_models\CheeseTable.p3d";
+		model = "Source_Files\DadaFoods\Configs\Crafting\data\CheeseTable.p3d";
+		hiddenSelections[] = {"zbytek"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Crafting\data\CheeseTable_co.paa"};
 		itemSize[] = {5,5};
 		overrideDrawArea = 8;
 		useEntityHierarchy = "true";
-		attachments[] = {"srpCheeseMold1","srpMilkGallon","srpYeast"};
+		attachments[] = {"DadaCheeseMold1","DadaMilkGallon","DadaYeast"};
 		physLayer = "item_large";
 		rotationFlags = 2;
 		heavyItem = 1;
-		weight = 3000;
+		weight = 300;
 		itemBehaviour = 0;
 		destroyOnEmpty = 0;
 		carveNavmesh = 0;
@@ -95,12 +97,28 @@ class srpCheesePress: Inventory_Base
 		allowOwnedCargoManipulation = 1;
 		class GUIInventoryAttachmentsProps
 		{
-			class Liquids
+			class LiquidContainers
 			{
-				name = "Liquid Containers";
+				name = "Milk";
 				description = "";
-				attachmentSlots[] = {"srpMilkGallon"};
-				icon = "set:dayz_inventory image:barrel";
+				attachmentSlots[] = {"DadaMilkGallon"};
+				ghostIcon = "set:dayz_inventory image:barrel";
+			};
+
+			class YeastPack
+			{
+				name = "Yeast";
+				description = "";
+				attachmentSlots[] = {"DadaYeast"};
+				icon = "set:dayz_inventory image:berry";
+			};
+
+			class Mold
+			{
+				name = "Cheese Mold";
+				description = "";
+				attachmentSlots[] = {"DadaCheeseMold1"};
+				icon = "set:dayz_inventory image:cookingequipment";
 			};
 		};
 		class DamageSystem
@@ -110,7 +128,7 @@ class srpCheesePress: Inventory_Base
 				class Health
 				{
 					hitpoints = 100;
-					healthLevels[] = {{1,{"\Source_Files\FoodModding\Food\Cheese\textures_models\srp_table2.rvmat"}},{0.7,{"Source_Files\FoodModding\Food\Cheese\textures_models\srp_table2.rvmat"}},{0.5,{"Source_Files\FoodModding\Food\Cheese\textures_models\srp_table2.rvmat"}},{0,{"Source_Files\FoodModding\Food\Cheese\textures_models\srp_table2.rvmat"}}};
+					healthLevels[] = {{1,{"Source_Files\DadaFoods\Configs\Crafting\data\CheeseTable.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Crafting\data\CheeseTable.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Crafting\data\CheeseTable.rvmat"}},{0,{"Source_Files\DadaFoods\Configs\Crafting\data\CheeseTable.rvmat"}}};
 				};
 			};
 			class GlobalArmor

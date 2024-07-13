@@ -11,10 +11,10 @@ class CfgPatches
 	};
 };
 
-/*class CfgVehicles
+class CfgVehicles
 {
     class Edible_Base;
-	class DadaRaw_Base: Edible_Base
+	class DadaRaw_Base:Edible_Base
 	{
 		scope = 2;
 		model = "Source_Files\DadaFoods\Configs\Food\Cooked\data\bowl.p3d";
@@ -111,21 +111,21 @@ class CfgPatches
 
 
 
-    class DadaRaw_Salad: DadaRaw_Base
+    class DadaRaw_Salad:DadaRaw_Base
 	{
 		displayName = "Salad";
 		descriptionShort = "Lettuce and dressing, perfect meal for the calorie averse or starter for everyone else";
 		hiddenSelections[] = {"camoGround","cs_raw"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\RawBowl\textures_models\ceramicbowl_co.paa","Source_Files\FoodModding\Food\RawBowl\textures_models\srpRawSalad_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaSalad_co.paa"};
 	};
-	class DadaRaw_Rice: DadaRaw_Base
+	class DadaRaw_Rice:DadaRaw_Base
 	{
 		displayName = "Plain Rice";
 		descriptionShort = "It's rice. Not sure what you were hoping for";
 		hiddenSelections[] = {"camoGround","cs_raw"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\RawBowl\textures_models\ceramicbowl_co.paa","Source_Files\FoodModding\Food\RawBowl\textures_models\srpRawRice_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaRiceBowl_co.paa"};
 	};
-	class DadaRaw_PokeBowl: DadaRaw_Base
+	class DadaRaw_PokeBowl:DadaRaw_Base
 	{
 		varQuantityInit = 275;
 		varQuantityMin = 0;
@@ -134,44 +134,49 @@ class CfgPatches
 		displayName = "Poke Bowl";
 		descriptionShort = "Bowl of rice with multiple toppings on it, gotta eat em all!";
 		hiddenSelections[] = {"camoGround","cs_raw"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\RawBowl\textures_models\ceramicbowl_co.paa","Source_Files\FoodModding\Food\RawBowl\textures_models\srpRawPokeBowl_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaPokeBowl_co.paa"};
 	};
-	class DadaRaw_TomatoSalad: DadaRaw_Base
+	class DadaRaw_TomatoSalad:DadaRaw_Base
 	{
 		displayName = "Tomato Salad";
 		descriptionShort = "Tomato and Mozzarella Salad";
 		hiddenSelections[] = {"camoGround","cs_raw"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\RawBowl\textures_models\ceramicbowl_co.paa","Source_Files\FoodModding\Food\RawBowl\textures_models\srpRawTomatoSalad_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaTomatoSalad_co.paa"};
 	};
-	class DadaRaw_CerealCrunchin: DadaRaw_Base
+	class DadaRaw_CerealCrunchin:DadaRaw_Base
 	{
+		scope = 1;
 		displayName = "Cereal Bowl";
 		descriptionShort = "Bowl of cereal";
 	};
-	class DadaRaw_CerealCrunchin_Kids: DadaRaw_CerealCrunchin
-	{
-		Color = "Coco";
-		hiddenSelections[] = {"camoGround","cs_raw"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\RawBowl\textures_models\ceramicbowl_co.paa","Source_Files\FoodModding\Food\RawBowl\textures_models\srpRawCerealCrunchinKids_co.paa"};
-	};
-	class DadaRaw_CerealCrunchin_Frosties: DadaRaw_CerealCrunchin
-	{
-		Color = "Frosties";
-		hiddenSelections[] = {"camoGround","cs_raw"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\RawBowl\textures_models\ceramicbowl_co.paa","Source_Files\FoodModding\Food\RawBowl\textures_models\srpRawCerealCrunchinFrosties_co.paa"};
-	};
-	class DadaRaw_CerealCrunchin_Kosmostar: DadaRaw_CerealCrunchin
-	{
-		Color = "Star";
-		hiddenSelections[] = {"camoGround","cs_raw"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\RawBowl\textures_models\ceramicbowl_co.paa","Source_Files\FoodModding\Food\RawBowl\textures_models\srpRawCerealCrunchinKosmostar_co.paa"};
-	};
-	class DadaRaw_sushi: DadaRaw_Base
+	class DadaRawCerealCrunchin_Nesquik:DadaRaw_CerealCrunchin
 	{
 		scope = 2;
-		displayName = "Sushi";
+		Color = "Coco";
+		hiddenSelections[] = {"camoGround","cs_raw"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaCerealCrunchinKids_co.paa"};
+	};
+	class DadaRaw_CerealCrunchin_Frosties:DadaRaw_CerealCrunchin
+	{
+		scope = 2;
+		Color = "Frosties";
+		hiddenSelections[] = {"camoGround","cs_raw"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaCerealCrunchinFrosties_co.paa"};
+	};
+	class DadaRaw_CerealCrunchin_Kosmostar:DadaRaw_CerealCrunchin
+	{
+		scope = 2;
+		Color = "Star";
+		hiddenSelections[] = {"camoGround","cs_raw"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaCerealCrunchinKosmostar_co.paa"};
+	};
+	
+	class DadaRaw_SushiMaki: DadaRaw_Base
+	{
+		scope = 2;
+		displayName = "Maki";
 		descriptionShort = "Homemade sushi. It looks and smells exactly how you think it does.";
-		model = "Survivalists_Food\food\sushi.p3d";
+		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\Maki.p3d";
 		rotationFlags = 17;
 		weight = 0;
 		interactionWeight = 1;
@@ -182,8 +187,8 @@ class CfgPatches
 		inventorySlot[] = {"Ingredient","Ingredient1","Ingredient2","Ingredient3","Ingredient4","Ingredient5","Ingredient6","Ingredient7","Ingredient8"};
 		isMeleeWeapon = 1;
 		hiddenSelections[] = {"cs_raw"};
-		hiddenSelectionsTextures[] = {"Survivalists_Food\food\data\sushi_raw_co.paa"};
-		hiddenSelectionsMaterials[] = {"Survivalists_Food\food\data\sushi.rvmat"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\Dada_Maki_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\Maki.rvmat"};
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -191,7 +196,7 @@ class CfgPatches
 				class Health
 				{
 					hitpoints = 50;
-					healthLevels[] = {{1,{"Survivalists_Food\food\data\sushi.rvmat"}},{0.7,{"Survivalists_Food\food\data\sushi.rvmat"}},{0.5,{"Survivalists_Food\food\data\sushi.rvmat"}},{0.3,{"Survivalists_Food\food\data\sushi.rvmat"}},{0,{"Survivalists_Food\food\data\sushi.rvmat"}}};
+					healthLevels[] = {{1,{"Source_Files\DadaFoods\Configs\Food\Raw\data\Maki.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Raw\data\Maki.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Raw\data\Maki.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Raw\data\Maki.rvmat"}},{0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\Maki.rvmat"}}};
 				};
 			};
 		};
@@ -229,31 +234,54 @@ class CfgPatches
 			};
 		};
 	};
+
+	class DadaRaw_SushiOnigiri:DadaRaw_SushiMaki
+	{
+		scope = 2;
+		displayName = "Onigiri";
+		descriptionShort = "Homemade sushi. It looks and smells exactly how you think it does.";
+		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\Onigiri.p3d";
+		hiddenSelections[] = {"cs_raw"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\Dada_Onigiri_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 50;
+					healthLevels[] = {{1,{"Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"}},{0,{"Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"}}};
+				};
+			};
+		};
+	};
+
     class FoodCan_100g_ColorBase;
-	class DadaRaw_SmallButter: FoodCan_100g_ColorBase
+	class DadaRaw_SmallButter:FoodCan_100g_ColorBase
 	{
 		scope = 2;
 		itemSize[] = {1,1};
 		displayName = "Small Butter";
 		descriptionShort = "Just a little bit of butter";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"\Source_Files\FoodModding\Food\Cheese\textures_models\srpFoodCan_SmallButter_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaFoodCan_SmallButter_co.paa"};
 	};
 
-	class DadaRaw_SmallButter_Opened: DadaRaw_Base
+	class DadaRaw_SmallButter_Opened:DadaRaw_Base
 	{
 		debug_ItemCategory = 6;
 		model = "\dz\gear\food\FoodCan_100g_open.p3d";
 		scope = 2;
 		itemSize[] = {1,1};
-		weight = 15;
+		weight = 2;
 		varQuantityInit = 100;
 		varQuantityMin = 0;
 		varQuantityMax = 100;
 		isMeleeWeapon = 1;
 		descriptionShort = "Just a little bit of butter";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"\Source_Files\FoodModding\Food\Cheese\textures_models\srpFoodCan_SmallButter_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaFoodCan_SmallButter_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -274,18 +302,18 @@ class CfgPatches
 			};
 		};
 	};
-	class DadaRaw_BigButter: DadaRaw_Base
+	class DadaRaw_BigButter:DadaRaw_Base
 	{
 		scope = 2;
 		displayName = "Big Butter";
 		descriptionShort = "Big chunk of butter";
 		model = "\dz\gear\food\Rice.p3d";
 		debug_ItemCategory = 6;
-		weight = 60;
+		weight = 2;
 		canBeSplit = 1;
 		itemSize[] = {1,2};
 		hiddenSelections[] = {"zbytek"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\Cheese\textures_models\srpFoodCan_BigButter_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaFoodCan_BigButter_co.paa"};
 		varQuantityInit = 600;
 		varQuantityMin = 0;
 		varQuantityMax = 600;
@@ -343,16 +371,16 @@ class CfgPatches
 		};
 	};
 	
-	class DadaRaw_Yogourt: DadaRaw_Base
+	class DadaRaw_Yogourt:DadaRaw_Base
 	{
 		scope = 2;
 		itemSize[] = {2,1};
 		displayName = "Yogurt";
 		descriptionShort = "Yogurt cup";
-		model = "Source_Files\FoodModding\Food\Cheese\textures_models\Yogourt.p3d";
+		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\Yogourt.p3d";
 		canBeSplit = 1;
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"\Source_Files\FoodModding\Food\Cheese\textures_models\Yogourt_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\Yogourt_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -368,21 +396,23 @@ class CfgPatches
 				class Health
 				{
 					hitpoints = 40;
-					healthLevels[] = {{1.0,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.7,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.5,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.3,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.0,{"Source_Files\FoodModding\Food\Cheese\textures_models\Yogourt_destruct.rvmat"}}};
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}}};
 				};
 			};
 		};
 	};
-	class DadaRaw_Mozza: DadaRaw_Base
+
+	class DadaRaw_CheeseBase: DadaRaw_Base {};
+	class DadaRaw_Mozza:DadaRaw_CheeseBase
 	{
 		scope = 2;
 		itemSize[] = {2,1};
 		displayName = "Mozzarella";
 		descriptionShort = "Fresh Mozzarella di bufala";
-		model = "Source_Files\FoodModding\Food\Cheese\textures_models\Mozza.p3d";
+		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\Mozza.p3d";
 		canBeSplit = 1;
 		hiddenSelections[] = {"zbytek"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\Cheese\textures_models\Mozza_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\Mozza_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -398,21 +428,22 @@ class CfgPatches
 				class Health
 				{
 					hitpoints = 40;
-					healthLevels[] = {{1.0,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.7,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.5,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.3,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.0,{"Source_Files\FoodModding\Food\Cheese\textures_models\Yogourt_destruct.rvmat"}}};
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}}};
 				};
 			};
 		};
 	};
-	class DadaRaw_MontereyJack: DadaRaw_Base
+	class DadaRaw_MontereyJack:DadaRaw_CheeseBase
 	{
 		scope = 2;
 		itemSize[] = {2,2};
 		displayName = "Monterey Jack";
 		descriptionShort = "MontereyJack";
-		model = "Source_Files\FoodModding\Food\Cheese\textures_models\CheeseBlock.p3d";
+		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseBlock.p3d";
 		canBeSplit = 1;
-		hiddenSelections[] = {"zbytek","camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor_co.paa","Source_Files\FoodModding\Food\Cheese\textures_models\CheeseWrap_ca.paa"};
+		hiddenSelections[] = {"cs_raw","camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseWrap_ca.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -429,20 +460,20 @@ class CfgPatches
 			class Health
 			{
 				hitpoints = 40;
-				healthLevels[] = {{1.0,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.7,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.5,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.3,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.0,{"Source_Files\FoodModding\Food\Cheese\textures_models\Yogourt_destruct.rvmat"}}};
+				healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}}};
 			};
 		};
 	};
 
 	class Snack_ColorBase;
-	class DadaRaw_CheddarCurds:Snack_Colorbase
+	class DadaRaw_CheddarCurds:DadaRaw_CheeseBase
 	{
 		scope = 2;
 		model = "\DZ\gear\food\salty_crackers.p3d";
 		displayName = "Fromage Skouik Skouik";
 		descriptionShort = "Le meilleur fromage à mettre dans vos poutines maison!";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\Cheese\textures_models\srpCheddarCurds_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaCheddarCurds_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 0;
@@ -453,7 +484,6 @@ class CfgPatches
 		};
 	};
 
-    class Snack_ColorBase;
 	class DadaRaw_PumpkinSeeds:Snack_Colorbase
 	{
 		scope = 2;
@@ -461,7 +491,7 @@ class CfgPatches
 		displayName = "Pumpkin Seeds";
 		descriptionShort = "Roasted pumpkin seeds.";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\Retextures\textures_models\srpChips_PumpkinSeeds_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\Dada_PumpkinSeeds_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 0;
@@ -472,16 +502,16 @@ class CfgPatches
 		};
 	};
 
-	class DadaRaw_FreshGoatCheese: DadaRaw_Base
+	class DadaRaw_FreshGoatCheese:DadaRaw_CheeseBase
 	{
 		scope = 2;
 		itemSize[] = {2,1};
 		displayName = "Goat Cheese";
 		descriptionShort = "Fresh Goat Cheese, baaah-ter on bread";
-		model = "Source_Files\FoodModding\Food\Cheese\textures_models\FreshGoatCheese.p3d";
+		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\FreshGoatCheese.p3d";
 		canBeSplit = 1;
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\Cheese\textures_models\srpFreshGoatCheese_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaFreshGoatCheese_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -497,21 +527,21 @@ class CfgPatches
 				class Health
 				{
 					hitpoints = 40;
-					healthLevels[] = {{1.0,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.7,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.5,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.3,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.0,{"Source_Files\FoodModding\Food\Cheese\textures_models\Yogourt_destruct.rvmat"}}};
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}}};
 				};
 			};
 		};
 	};
-	class DadaRaw_Feta: DadaRaw_Base
+	class DadaRaw_Feta:DadaRaw_CheeseBase
 	{
 		scope = 2;
 		itemSize[] = {1,2};
 		displayName = "Feta Cheese";
 		descriptionShort = "Feta Cheese";
-		model = "Source_Files\FoodModding\Food\Cheese\textures_models\Feta.p3d";
+		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\Feta.p3d";
 		canBeSplit = 1;
 		hiddenSelections[] = {"zbytek"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\Cheese\textures_models\Feta_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\Mozza_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -527,20 +557,20 @@ class CfgPatches
 				class Health
 				{
 					hitpoints = 40;
-					healthLevels[] = {{1.0,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.7,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.5,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.3,{"Source_Files\FoodModding\Food\Cheese\textures_models\CheeseColor.rvmat"}},{0.0,{"Source_Files\FoodModding\Food\Cheese\textures_models\Yogourt_destruct.rvmat"}}};
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}}};
 				};
 			};
 		};
 	};
-	class DadaRaw_FrozenYogurt: DadaRaw_Base
+	class DadaRaw_VanillaChocoSwirl:DadaRaw_Base
 	{
 		scope = 2;
 		itemSize[] = {1,2};
-		displayName = "Frozen Yogurt";
+		displayName = "Ice Cream";
 		descriptionShort = "Don't eat it too fast! you are gonna get a brainfreeze";
-		model = "Source_Files\FoodModding\Food\Cheese\textures_models\IScream.p3d";
+		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.p3d";
 		hiddenSelections[] = {"zbytek"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\Cheese\textures_models\FrozenYogurt_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -556,20 +586,20 @@ class CfgPatches
 				class Health
 				{
 					hitpoints = 40;
-					healthLevels[] = {{1.0,{"Source_Files\FoodModding\Food\Cheese\textures_models\IScream.rvmat"}},{0.7,{"Source_Files\FoodModding\Food\Cheese\textures_models\IScream.rvmat"}},{0.5,{"Source_Files\FoodModding\Food\Cheese\textures_models\IScream.rvmat"}},{0.3,{"Source_Files\FoodModding\Food\Cheese\textures_models\IScream.rvmat"}},{0.0,{"Source_Files\FoodModding\Food\Cheese\textures_models\IScream.rvmat"}}};
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.rvmat"}}};
 				};
 			};
 		};
 	};
-	class DadaRaw_IceCream: DadaRaw_FrozenYogurt
+	class DadaRaw_VanillaIceCream:DadaRaw_VanillaChocoSwirl
 	{
 		scope = 2;
 		itemSize[] = {1,2};
 		displayName = "Ice cream";
-		descriptionShort = "Because life is exciting enough  already";
-		model = "Source_Files\FoodModding\Food\Cheese\textures_models\IScream.p3d";
+		descriptionShort = "Because life is exciting enough already";
+		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.p3d";
 		hiddenSelections[] = {"zbytek"};
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\Cheese\textures_models\IScream_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -585,16 +615,22 @@ class CfgPatches
 				class Health
 				{
 					hitpoints = 40;
-					healthLevels[] = {{1.0,{"Source_Files\FoodModding\Food\Cheese\textures_models\IScream.rvmat"}},{0.7,{"Source_Files\FoodModding\Food\Cheese\textures_models\IScream.rvmat"}},{0.5,{"Source_Files\FoodModding\Food\Cheese\textures_models\IScream.rvmat"}},{0.3,{"Source_Files\FoodModding\Food\Cheese\textures_models\IScream.rvmat"}},{0.0,{"Source_Files\FoodModding\Food\Cheese\textures_models\IScream.rvmat"}}};
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.rvmat"}}};
 				};
 			};
 		};
 	};
-	class DadaRaw_ChocoIScream: DadaRaw_IceCream
+	class DadaRaw_ChocoIScream:DadaRaw_VanillaIceCream
 	{
 		displayName = "Chocolate Ice cream";
 		descriptionShort = "Chocolate chunks ice cream";
-		hiddenSelectionsTextures[] = {"Source_Files\FoodModding\Food\Cheese\textures_models\ChocoIScream_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ChocoIScream_co.paa"};
+	};
+	class DadaRaw_FrozenYogurt:DadaRaw_VanillaIceCream
+	{
+		displayName = "Frozen Yogurt";
+		descriptionShort = "Chocolate chunks ice cream";
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ChocoIScream_co.paa"};
 	};
 	
     class PowderedMilk: Edible_Base
@@ -613,4 +649,4 @@ class CfgPatches
 	{
 		canBeSplit = 1;
 	};
-};*/
+};

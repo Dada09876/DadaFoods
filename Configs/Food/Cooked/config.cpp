@@ -140,7 +140,8 @@ class CfgVehicles
 	};
 
 	class Edible_Base;
-	class DadaSoup_Base: Edible_Base
+	class HumanSteakMeat;
+	class DadaSoup_Base: HumanSteakMeat
 	{
 		scope = 1;
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\bowl.p3d";
@@ -418,7 +419,7 @@ class CfgVehicles
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.p3d";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_rotten_co.paa"};
-		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat"};
 	};
 
 	class DadaBread_PizzaBase: DadaBread_Base
@@ -428,8 +429,8 @@ class CfgVehicles
 		descriptionShort = "Freshly made pizza, which toppings will be chosen?";
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.p3d";
 		hiddenSelections[] = {"cs_raw"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_rotten_co.paa"};
-		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_rotten_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat"};
 	};
 
 	class DadaBread_PizzaMargherita: DadaBread_Base
@@ -439,8 +440,8 @@ class CfgVehicles
 		descriptionShort = "Freshly made pizza, which toppings will be chosen?";
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.p3d";
 		hiddenSelections[] = {"cs_raw"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_rotten_co.paa"};
-		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_rotten_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat"};
 	};
 
 	class DadaDish_Rigatoni: DadaDish_Base

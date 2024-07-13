@@ -114,16 +114,16 @@ class CraftDadaBread_Pita extends RecipeBase
 		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 
- override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+ 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
     if (ingredients[0])
 		{
-			Edible_Base bread = Edible_Base.Cast( ingredients[0]);
-			if (bread)
-			{
-				return (bread.IsFoodBaked() || bread.IsFoodRaw());
-			}
-	  	}
+      Edible_Base food = Edible_Base.Cast( ingredients[0] );
+      if (food)
+      {
+        return (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw());
+      }
+    }
     return false;
 	}
 
@@ -191,16 +191,16 @@ class CraftDadaBread_Loaf extends RecipeBase
 		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 
- override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+ 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
     if (ingredients[0])
 		{
-			Edible_Base bread = Edible_Base.Cast( ingredients[0]);
-			if (bread)
-			{
-				return (bread.IsFoodBaked() || bread.IsFoodRaw());
-			}
-	  	}
+      Edible_Base food = Edible_Base.Cast( ingredients[0] );
+      if (food)
+      {
+        return (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw());
+      }
+    }
     return false;
 	}
 
@@ -272,12 +272,12 @@ class CraftDadaBread_Baguette extends RecipeBase
 	{      
     if (ingredients[0])
 		{
-			Edible_Base bread = Edible_Base.Cast( ingredients[0]);
-			if (bread)
-			{
-				return (bread.IsFoodBaked() || bread.IsFoodRaw());
-			}
-	  	}
+      Edible_Base food = Edible_Base.Cast( ingredients[0] );
+      if (food)
+      {
+        return (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw());
+      }
+    }
     return false;
 	}
 
@@ -349,12 +349,12 @@ class CraftDadaBread_Pasta extends RecipeBase
 	{      
     if (ingredients[0])
 		{
-			Edible_Base bread = Edible_Base.Cast( ingredients[0]);
-			if (bread)
-			{
-				return (bread.IsFoodBaked() || bread.IsFoodRaw());
-			}
-	  	}
+      Edible_Base food = Edible_Base.Cast( ingredients[0] );
+      if (food)
+      {
+        return (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw());
+      }
+    }
     return false;
 	}
 
@@ -426,12 +426,12 @@ class CraftDadaBread_Pizza extends RecipeBase
 	{      
     if (ingredients[0])
 		{
-			Edible_Base bread = Edible_Base.Cast( ingredients[0]);
-			if (bread)
-			{
-				return (bread.IsFoodBaked() || bread.IsFoodRaw());
-			}
-	  	}
+      Edible_Base food = Edible_Base.Cast( ingredients[0] );
+      if (food)
+      {
+        return (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw());
+      }
+    }
     return false;
 	}
 
@@ -515,10 +515,15 @@ class CraftDadaDish_Spaghetti extends RecipeBase
       Edible_Base food = Edible_Base.Cast( ingredients[1] );
       if (bread && food)
       {
-        return (bread.IsFoodBaked() || bread.IsFoodRaw() && (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw()));
+        return (bread.IsFoodBaked() || bread.IsFoodRaw() || bread.IsFoodDried() || bread.IsFoodBoiled() && (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw()));
       }
     }
     return false;
+	}
+
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };
 
@@ -587,7 +592,7 @@ class CraftDadaDish_Cannelloni extends RecipeBase
 		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 
-		override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
     if (ingredients[0] && ingredients[1])
 		{
@@ -595,10 +600,15 @@ class CraftDadaDish_Cannelloni extends RecipeBase
       Edible_Base food = Edible_Base.Cast( ingredients[1] );
       if (bread && food)
       {
-        return (bread.IsFoodBaked() || bread.IsFoodRaw() && (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw()));
+        return (bread.IsFoodBaked() || bread.IsFoodRaw() || bread.IsFoodDried() || bread.IsFoodBoiled() && (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw()));
       }
     }
     return false;
+	}
+	
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };
 
@@ -675,10 +685,15 @@ class CraftDadaDish_Bowties extends RecipeBase
       Edible_Base food = Edible_Base.Cast( ingredients[1] );
       if (bread && food)
       {
-        return (bread.IsFoodBaked() || bread.IsFoodRaw() && (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw()));
+        return (bread.IsFoodBaked() || bread.IsFoodRaw() || bread.IsFoodDried() || bread.IsFoodBoiled() && (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw()));
       }
     }
     return false;
+	}
+	
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };
 
@@ -755,10 +770,15 @@ class CraftDadaDish_Lasagna extends RecipeBase
       Edible_Base food = Edible_Base.Cast( ingredients[1] );
       if (bread && food)
       {
-        return (bread.IsFoodBaked() || bread.IsFoodRaw() && (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw()));
+        return (bread.IsFoodBaked() || bread.IsFoodRaw() || bread.IsFoodDried() || bread.IsFoodBoiled() && (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw()));
       }
     }
     return false;
+	}
+	
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };
 class CraftDadaDish_Rigatoni extends RecipeBase
@@ -834,10 +854,15 @@ class CraftDadaDish_Rigatoni extends RecipeBase
       Edible_Base food = Edible_Base.Cast( ingredients[1] );
       if (bread && food)
       {
-        return (bread.IsFoodBaked() || bread.IsFoodRaw() && (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw()));
+        return (bread.IsFoodBaked() || bread.IsFoodRaw() || bread.IsFoodDried() || bread.IsFoodBoiled() && (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw()));
       }
     }
     return false;
+	}
+	
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };
 
@@ -914,10 +939,15 @@ class CraftDadaBread_PizzaBase extends RecipeBase
       Edible_Base food = Edible_Base.Cast( ingredients[1] );
       if (bread && food)
       {
-        return (bread.IsFoodBaked() || bread.IsFoodRaw() && (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw()));
+        return (bread.IsFoodBaked() || bread.IsFoodRaw() || bread.IsFoodDried() || bread.IsFoodBoiled() && (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw()));
       }
     }
     return false;
+	}
+	
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };
 
@@ -2015,17 +2045,17 @@ class CraftDadaDish_Pie extends RecipeBase
 	{      
     if (ingredients[0] && ingredients[1])
 		{
-      Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
-      if (food && food1)
+      Edible_Base bread = Edible_Base.Cast( ingredients[0] );
+      Edible_Base food = Edible_Base.Cast( ingredients[1] );
+      if (bread && food)
       {
-        return (food.IsFoodRaw() && (food1.IsFoodBaked() || food1.IsFoodDried() || food1.IsFoodBoiled() || food1.IsFoodRaw()));
+        return (bread.IsFoodBaked() || bread.IsFoodRaw() || bread.IsFoodDried() || bread.IsFoodBoiled() && (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw()));
       }
     }
     return false;
 	}
-
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
@@ -2111,7 +2141,20 @@ class CraftDadaDish_Pie1 extends RecipeBase
 		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+    if (ingredients[0])
+		{
+      Edible_Base bread = Edible_Base.Cast( ingredients[0] );
+      if (bread)
+      {
+        return (bread.IsFoodBaked() || bread.IsFoodRaw() || bread.IsFoodDried() || bread.IsFoodBoiled());
+      }
+    }
+    return false;
+	}
+	
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
@@ -2181,7 +2224,20 @@ class CraftDadaDish_Pie2 extends RecipeBase
 		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+    if (ingredients[0])
+		{
+      Edible_Base bread = Edible_Base.Cast( ingredients[0]);
+      if (bread)
+      {
+        return (bread.IsFoodBaked() || bread.IsFoodRaw() || bread.IsFoodDried() || bread.IsFoodBoiled());
+      }
+    }
+    return false;
+	}
+	
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
@@ -2548,7 +2604,7 @@ class CraftDadaDish_MacaroniAndCheese extends RecipeBase
 		
 		//ingredient 2
 		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
-		/*InsertIngredient(1,"DadaCheese_Base");//you can insert multiple ingredients this way*/
+		InsertIngredient(1,"DadaRaw_CheeseBase");//you can insert multiple ingredients this way*/
 		
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
