@@ -126,7 +126,7 @@ class CfgVehicles
 		canBeSplit = 1;
 		scope = 2;
 		displayName = "Whey";
-		descriptionShort = "Little Miss Muffet’s favourite drink. Cheesy drink.";
+		descriptionShort = "Some like that dairy aftertaste";
 		hiddenSelections[] = {"zbytek"};
 		hiddenSelectionsTextures[] = {"\Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_Whey_co.paa"};
 	};

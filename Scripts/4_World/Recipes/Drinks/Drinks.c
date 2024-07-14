@@ -660,13 +660,13 @@ class CraftDadaDrink_MilkShake extends RecipeBase
 		m_MinDamageIngredient[0] = -1;//-1 = disable check
 		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[0] = 200;//-1 = disable check
+		m_MinQuantityIngredient[0] = 50;//-1 = disable check
 		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
 		m_MaxDamageIngredient[1] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[1] = 200;//-1 = disable check
+		m_MinQuantityIngredient[1] = 50;//-1 = disable check
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
 		//----------------------------------------------------------------------------------------------------------------------
 		
@@ -710,8 +710,17 @@ class CraftDadaDrink_MilkShake extends RecipeBase
 	}
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		return true;
+	{      
+    if (ingredients[0] && ingredients[1])
+		{
+      Edible_Base food = Edible_Base.Cast( ingredients[0] );
+      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
+      if (food && food1)
+      {
+        return (food.IsFoodRaw() || food.IsFoodDried() && (food1.IsFoodDried() || food1.IsFoodRaw()));
+      }
+    }
+    return false;
 	}
 
 override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
@@ -734,7 +743,7 @@ class CraftDadaDrink_CurdsAndWhey extends RecipeBase
 		m_MinDamageIngredient[0] = -1;//-1 = disable check
 		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
 		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
 		m_MinDamageIngredient[1] = -1;//-1 = disable check

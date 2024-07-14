@@ -34,9 +34,6 @@ class CraftDadaCheeseMold extends RecipeBase
 		
 		//ingredient 2
 		InsertIngredient(1,"BurlapSack");//you can insert multiple ingredients this way
-		InsertIngredient(1,"BurlapSack_Black");//you can insert multiple ingredients this way
-		InsertIngredient(1,"BurlapSack_Skull");//you can insert multiple ingredients this way
-		InsertIngredient(1,"BurlapSack_White");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = -400;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -105,9 +102,6 @@ class RepairDadaCheeseMold extends RecipeBase
 		
 		//ingredient 2
 		InsertIngredient(1,"BurlapSack");//you can insert multiple ingredients this way
-		InsertIngredient(1,"BurlapSack_Black");//you can insert multiple ingredients this way
-		InsertIngredient(1,"BurlapSack_Skull");//you can insert multiple ingredients this way
-		InsertIngredient(1,"BurlapSack_White");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing

@@ -566,7 +566,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		itemSize[] = {1,2};
-		displayName = "Ice Cream";
+		displayName = "Vanilla & Chocolate Ice Cream";
 		descriptionShort = "Don't eat it too fast! you are gonna get a brainfreeze";
 		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.p3d";
 		hiddenSelections[] = {"zbytek"};
@@ -595,7 +595,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		itemSize[] = {1,2};
-		displayName = "Ice cream";
+		displayName = "Vanilla Ice cream";
 		descriptionShort = "Because life is exciting enough already";
 		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.p3d";
 		hiddenSelections[] = {"zbytek"};

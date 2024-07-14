@@ -258,8 +258,8 @@ class CraftDadaRaw_Rice extends RecipeBase
 	}
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{      
-    Bottle_Base water;
+	{
+	Bottle_Base water;  
 	if (Class.CastTo(water,ingredients[1]))
     {
       bool waterTemp = (water.GetTemperature() > 70 && water.GetTemperature() < 150);
@@ -267,12 +267,11 @@ class CraftDadaRaw_Rice extends RecipeBase
 	  {
         return true;
       }
-	  return false
+	  return false;
 	}
-	return false
+	return false;
     }
-	
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
@@ -345,13 +344,12 @@ class CraftDadaRaw_PokeBowl extends RecipeBase
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
-    if (ingredients[0] && ingredients[1])
+    if (ingredients[1])
 		{
-      Edible_Base food = Edible_Base.Cast( ingredients[0] );
       Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
-      if (food && food1)
+      if (food1)
       {
-        return (food.IsFoodRaw() || food.IsFoodDried() && (food1.IsFoodRaw() || food1.IsFoodDried()));
+        return (food1.IsFoodRaw() || food1.IsFoodDried());
       }
     }
     return false;
@@ -389,8 +387,8 @@ class CraftDadaRaw_CerealCrunchin_Frosties extends RecipeBase
 		
 		//INGREDIENTS
 		//ingredient 1
-		InsertIngredient(0,"DadaSpawned_BoxCerealCrunchin_Frosties");//you can insert multiple ingredients this way
 		InsertIngredient(0,"BoxCerealCrunchin");//you can insert multiple ingredients this way
+		InsertIngredient(0,"DadaSpawned_BoxCerealCrunchin_Frosties");//you can insert multiple ingredients this way
 	
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
@@ -399,9 +397,10 @@ class CraftDadaRaw_CerealCrunchin_Frosties extends RecipeBase
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
-		InsertIngredient(1,"srpDrink_MilkBottle");//you can insert multiple ingredients this w
-        InsertIngredient(1,"srpDrink_MilkGallon");//you can insert multiple ingredients this w
-        InsertIngredient(1,"srpDrink_FreshMilk");//you can insert multiple ingredients this w
+		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
+        InsertIngredient(1,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
+        InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -424,20 +423,12 @@ class CraftDadaRaw_CerealCrunchin_Frosties extends RecipeBase
 		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 
-    override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{      
-    if (ingredients[0] && ingredients[1])
-		{
-      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
-      if (food1)
-      {
-        return (food1.IsFoodRaw() || food1.IsFoodDried());
-      }
-    }
-    return false;
+override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{
+		return true;
 	}
-	
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+
+override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
@@ -457,7 +448,7 @@ class CraftDadaRawCerealCrunchin_Nesquik extends RecipeBase
 		m_MinDamageIngredient[0] = -1;//-1 = disable check
 		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[0] = 125;//-1 = disable check
+		m_MinQuantityIngredient[0] = 25;//-1 = disable check
 		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
@@ -478,9 +469,10 @@ class CraftDadaRawCerealCrunchin_Nesquik extends RecipeBase
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
-		InsertIngredient(1,"srpDrink_MilkBottle");//you can insert multiple ingredients this w
-        InsertIngredient(1,"srpDrink_MilkGallon");//you can insert multiple ingredients this w
-        InsertIngredient(1,"srpDrink_FreshMilk");//you can insert multiple ingredients this w
+		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
+        InsertIngredient(1,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
+        InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -502,12 +494,12 @@ class CraftDadaRawCerealCrunchin_Nesquik extends RecipeBase
 		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 
-override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		return true;
 	}
-
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
@@ -527,7 +519,7 @@ class CraftDadaRaw_CerealCrunchin_Kosmostar extends RecipeBase
 		m_MinDamageIngredient[0] = -1;//-1 = disable check
 		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[0] = 125;//-1 = disable check
+		m_MinQuantityIngredient[0] = 25;//-1 = disable check
 		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
@@ -548,9 +540,10 @@ class CraftDadaRaw_CerealCrunchin_Kosmostar extends RecipeBase
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
-		InsertIngredient(1,"srpDrink_MilkBottle");//you can insert multiple ingredients this w
-        InsertIngredient(1,"srpDrink_MilkGallon");//you can insert multiple ingredients this w
-        InsertIngredient(1,"srpDrink_FreshMilk");//you can insert multiple ingredients this
+		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
+        InsertIngredient(1,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
+        InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -572,9 +565,9 @@ class CraftDadaRaw_CerealCrunchin_Kosmostar extends RecipeBase
 		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 
-	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	/*override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
-    if (ingredients[0] && ingredients[1])
+    if (ingredients[1])
 		{
       Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
       if (food1)
@@ -583,6 +576,10 @@ class CraftDadaRaw_CerealCrunchin_Kosmostar extends RecipeBase
       }
     }
     return false;
+	}*/
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{
+		return true;
 	}
 	
 	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
@@ -938,13 +935,13 @@ class CraftDadaRaw_Yogourt extends RecipeBase
 		m_MinDamageIngredient[0] = -1;//-1 = disable check
 		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[0] = 33;//-1 = disable check
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
 		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
 		m_MaxDamageIngredient[1] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[1] = 165;//-1 = disable check
+		m_MinQuantityIngredient[1] = 25;//-1 = disable check
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
 		//----------------------------------------------------------------------------------------------------------------------
 		
@@ -1039,9 +1036,6 @@ class CraftFreshCheese_Mozza extends RecipeBase
 		
 		//ingredient 2
 		InsertIngredient(1,"BurlapSack");//you can insert multiple ingredients this way
-		InsertIngredient(1,"BurlapSack_Black");//you can insert multiple ingredients this way
-		InsertIngredient(1,"BurlapSack_Skull");//you can insert multiple ingredients this way
-		InsertIngredient(1,"BurlapSack_White");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCheeseMold");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = -400;// 0 = do nothing
@@ -1221,9 +1215,6 @@ class CraftFreshCheese_Goat extends RecipeBase
 		
 		//ingredient 2
 		InsertIngredient(1,"BurlapSack");//you can insert multiple ingredients this way
-		InsertIngredient(1,"BurlapSack_Black");//you can insert multiple ingredients this way
-		InsertIngredient(1,"BurlapSack_Skull");//you can insert multiple ingredients this way
-		InsertIngredient(1,"BurlapSack_White");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCheeseMold");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = -400;// 0 = do nothing
@@ -1471,10 +1462,10 @@ class CraftDadaRaw_VanillaChocoSwirl extends RecipeBase
 		
 		//INGREDIENTS
 		//ingredient 1
-		InsertIngredient(0,"srpDrink_FreshMilk");//you can insert multiple ingredients this way
-        InsertIngredient(0,"srpDrink_MilkBottle");//you can insert multiple ingredients this way
-		InsertIngredient(0,"srpDrink_MilkCarton");//you can insert multiple ingredients this way
-        InsertIngredient(0,"srpDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(0,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
+        InsertIngredient(0,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
+        InsertIngredient(0,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(0,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 	
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
@@ -1483,10 +1474,10 @@ class CraftDadaRaw_VanillaChocoSwirl extends RecipeBase
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
-		InsertIngredient(1,"srpDrink_FreshMilk");//you can insert multiple ingredients this way
-        InsertIngredient(1,"srpDrink_MilkBottle");//you can insert multiple ingredients this way
-		InsertIngredient(1,"srpDrink_MilkCarton");//you can insert multiple ingredients this way
-        InsertIngredient(1,"srpDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
+        InsertIngredient(1,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
+        InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -1555,10 +1546,10 @@ class CraftDadaRaw_VanillaIceCream extends RecipeBase
 		
 		//INGREDIENTS
 		//ingredient 1
-		InsertIngredient(0,"srpDrink_FreshMilk");//you can insert multiple ingredients this way
-        InsertIngredient(0,"srpDrink_MilkBottle");//you can insert multiple ingredients this way
-		InsertIngredient(0,"srpDrink_MilkCarton");//you can insert multiple ingredients this way
-        InsertIngredient(0,"srpDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(0,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
+        InsertIngredient(0,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
+        InsertIngredient(0,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(0,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 	
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
@@ -1567,10 +1558,10 @@ class CraftDadaRaw_VanillaIceCream extends RecipeBase
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
-		InsertIngredient(1,"srpDrink_FreshMilk");//you can insert multiple ingredients this way
-        InsertIngredient(1,"srpDrink_MilkBottle");//you can insert multiple ingredients this way
-		InsertIngredient(1,"srpDrink_MilkCarton");//you can insert multiple ingredients this way
-        InsertIngredient(1,"srpDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
+        InsertIngredient(1,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
+        InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -1639,10 +1630,10 @@ class CraftDadaRaw_ChocoIScream extends RecipeBase
 		
 		//INGREDIENTS
 		//ingredient 1
-		InsertIngredient(0,"srpDrink_FreshMilk");//you can insert multiple ingredients this way
-        InsertIngredient(0,"srpDrink_MilkBottle");//you can insert multiple ingredients this way
-		InsertIngredient(0,"srpDrink_MilkCarton");//you can insert multiple ingredients this way
-        InsertIngredient(0,"srpDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(0,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
+        InsertIngredient(0,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
+        InsertIngredient(0,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(0,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 	
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
@@ -1651,10 +1642,10 @@ class CraftDadaRaw_ChocoIScream extends RecipeBase
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
-		InsertIngredient(1,"srpDrink_FreshMilk");//you can insert multiple ingredients this way
-        InsertIngredient(1,"srpDrink_MilkBottle");//you can insert multiple ingredients this way
-		InsertIngredient(1,"srpDrink_MilkCarton");//you can insert multiple ingredients this way
-        InsertIngredient(1,"srpDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
+        InsertIngredient(1,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
+        InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing

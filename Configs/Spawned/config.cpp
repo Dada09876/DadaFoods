@@ -204,7 +204,7 @@ class CfgVehicles
 		itemSize[] = {1,2};
 		inventorySlot[] = {"DadaYeast"};
 		displayName = "Yeast Pack";
-		descriptionShort = "Pack of Yeast. Not at all meaty, despite the name...";
+		descriptionShort = "Pack of Yeast.";
 		model = "\dz\gear\food\PowderedMilk.p3d";
 		canBeSplit = 1;
 		debug_ItemCategory = 6;

@@ -187,8 +187,8 @@ class CfgVehicles
 	{
 		scope = 2;
 		model = "\DZ\gear\food\salty_chips.p3d";
-		displayName = "Skin Jerky";
-		descriptionShort = "Dried human skin strips";
+		displayName = "Hooman Jerky";
+		descriptionShort = "Dried human flesh strips";
         debug_ItemCategory = 6;
 		rotationFlags = 1;
 		weight = 10;

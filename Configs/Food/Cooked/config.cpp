@@ -425,7 +425,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		displayName = "Pizza Marinara";
-		descriptionShort = "Freshly made pizza, which toppings will be chosen?";
+		descriptionShort = "Freshly made pizza, always better with some cheese";
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.p3d";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_rotten_co.paa"};
@@ -447,7 +447,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		displayName = "Rigatoni";
-		descriptionShort = "Freshly made pasta with chicken in a homemade tomato sauce. Mr.White has a secret recipe of this meal";
+		descriptionShort = "Freshly made pasta with chicken in a homemade tomato sauce.";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_baked_co.paa","\Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_baked_co.paa"};
 	};

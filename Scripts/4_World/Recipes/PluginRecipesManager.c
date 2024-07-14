@@ -18,10 +18,10 @@ modded class PluginRecipesManagerBase extends PluginBase
     // PROCESSING
 
     /*
-    RegisterRecipe(new CraftsrpSaltBag);
-    RegisterRecipe(new CraftsrpCheeseMold);
-    RegisterRecipe(new RepairsrpCheeseMold);
-    */
+    RegisterRecipe(new CraftsrpSaltBag);*/
+    RegisterRecipe(new CraftDadaCheeseMold);
+    RegisterRecipe(new RepairDadaCheeseMold);
+    
 
 
     // FOOD COOKED
