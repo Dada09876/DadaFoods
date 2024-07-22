@@ -569,8 +569,8 @@ class CfgVehicles
 		displayName = "Vanilla & Chocolate Ice Cream";
 		descriptionShort = "Don't eat it too fast! you are gonna get a brainfreeze";
 		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.p3d";
-		hiddenSelections[] = {"zbytek"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream_co.paa"};
+		hiddenSelections[] = {"cs_raw"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\IScreamVanillaChoco_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -593,44 +593,21 @@ class CfgVehicles
 	};
 	class DadaRaw_VanillaIceCream:DadaRaw_VanillaChocoSwirl
 	{
-		scope = 2;
-		itemSize[] = {1,2};
 		displayName = "Vanilla Ice cream";
 		descriptionShort = "Because life is exciting enough already";
-		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.p3d";
-		hiddenSelections[] = {"zbytek"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream_co.paa"};
-		class Nutrition
-		{
-			fullnessIndex = 3;
-			energy = 150;
-			water = 50;
-			nutritionalIndex = 1;
-			toxicity = 0;
-		};
-		class DamageSystem
-		{
-			class GlobalHealth
-			{
-				class Health
-				{
-					hitpoints = 40;
-					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.rvmat"}}};
-				};
-			};
-		};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\IScreamVanilla_co.paa"};
 	};
 	class DadaRaw_ChocoIScream:DadaRaw_VanillaIceCream
 	{
 		displayName = "Chocolate Ice cream";
 		descriptionShort = "Chocolate chunks ice cream";
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ChocoIScream_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\IScreamChoco_co.paa"};
 	};
 	class DadaRaw_FrozenYogurt:DadaRaw_VanillaIceCream
 	{
 		displayName = "Frozen Yogurt";
-		descriptionShort = "Chocolate chunks ice cream";
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ChocoIScream_co.paa"};
+		descriptionShort = "frozen yogurt";
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\FrozenYogurt_co.paa"};
 	};
 	
     class PowderedMilk: Edible_Base

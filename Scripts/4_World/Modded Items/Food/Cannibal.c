@@ -27,27 +27,6 @@ class DadaCannibal_Base extends HumanSteakMeat
 		AddAction(ActionCreateIndoorFireplace);
 		AddAction(ActionCreateIndoorOven);
 	}
-
-	override FoodStageType GetNextFoodStageType( CookingMethodType cooking_method )
-    {
-    FoodStageType superStage = super.GetNextFoodStageType(cooking_method);
-    if (IsFoodRaw())
-    {
-    	if (cooking_method == CookingMethodType.BAKING)
-    	{
-        	superStage = FoodStageType.BAKED;
-    	}
-	  	if (cooking_method == CookingMethodType.BOILING)
-	  	{
-        	superStage = FoodStageType.BOILED;
-      	}
-	  	if (cooking_method == CookingMethodType.DRYING)
-		{
-        	superStage = FoodStageType.DRIED;
-      	}
-    }
-    return superStage;
-    }
 };
 
 class DadaCannibal_EyeballSoup extends DadaCannibal_Base

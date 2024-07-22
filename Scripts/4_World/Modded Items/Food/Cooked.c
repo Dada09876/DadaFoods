@@ -24,27 +24,6 @@ class DadaSoup_Base extends Edible_Base
 		RemoveAction(ActionEatMeat);
 		AddAction(ActionDrinkCookingPot);
 	}
-
-	override FoodStageType GetNextFoodStageType( CookingMethodType cooking_method )
-    {
-    FoodStageType superStage = super.GetNextFoodStageType(cooking_method);
-    if (IsFoodRaw())
-    {
-    	if (cooking_method == CookingMethodType.BAKING)
-    	{
-        	superStage = FoodStageType.BAKED;
-    	}
-	  	if (cooking_method == CookingMethodType.BOILING)
-	  	{
-        	superStage = FoodStageType.BOILED;
-      	}
-	  	if (cooking_method == CookingMethodType.DRYING)
-		{
-        	superStage = FoodStageType.DRIED;
-      	}
-    }
-    return superStage;
-    }
 };
 	
 class DadaDish_Base: DadaSoup_Base

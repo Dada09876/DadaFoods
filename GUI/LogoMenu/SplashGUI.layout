@@ -1,0 +1,27 @@
+FrameWidgetClass FrameWidget {
+ ignorepointer 0
+ position -0.323 0.09929
+ size 0.21942 0.27983
+ halign center_ref
+ valign center_ref
+ scaled 1
+ priority 995
+ {
+  ImageWidgetClass SplashLogo {
+   visible 1
+   ignorepointer 1
+   position -14.4452 -18.8239
+   size 355.28 336.28101
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   priority 2
+   image0 ""
+   imageTexture "{9C5BC26856E90E64}Source_Files/DadaFoods/GUI/LogoMenu/DadaLogo-fondtransparent.edds"
+   mode additive
+   "src alpha" 1
+   "stretch mode" stretch_w_h
+  }
+ }
+}
