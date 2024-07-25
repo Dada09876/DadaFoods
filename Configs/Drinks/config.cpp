@@ -90,6 +90,8 @@ class CfgVehicles
 		};
 		canBeSplit = 1;
 		scope = 2;
+		itemSize[] = {1,2};
+		weight = 1;
 		displayName = "Fresh Milk";
 		descriptionShort = "Some say it's good for the bones";
 		hiddenSelections[] = {"zbytek"};
@@ -108,6 +110,8 @@ class CfgVehicles
 		};
 		canBeSplit = 1;
 		scope = 2;
+		itemSize[] = {1,2};
+		weight = 1;
 		displayName = "Curds and whey";
 		descriptionShort = "Little Miss Muffet’s favourite snack. Chunky and cheesy mix. Can be strained for its curds";
 		hiddenSelections[] = {"zbytek"};
@@ -125,6 +129,8 @@ class CfgVehicles
 		};
 		canBeSplit = 1;
 		scope = 2;
+		itemSize[] = {1,2};
+		weight = 1;
 		displayName = "Whey";
 		descriptionShort = "Some like that dairy aftertaste";
 		hiddenSelections[] = {"zbytek"};
@@ -134,7 +140,8 @@ class CfgVehicles
 	class DadaDrink_Coffee: DadaDrinks_ColorBase
 	{
 		scope = 2;
-		itemSize[] = {2,2};
+		itemSize[] = {2,1};
+		weight = 24;
 		displayName = "Cup of coffee";
 		descriptionShort = "A cup full of coffee.";
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Cup.p3d";
@@ -182,7 +189,7 @@ class CfgVehicles
 		hiddenSelections[] = {"zbytek"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_MilkBottle_co.paa"};
 		model = "\dz\gear\drinks\WaterBottle.p3d";
-		weight = 50;
+		weight = 1;
 		itemSize[] = {1,3};
 		varQuantityInit = 1000;
 		varQuantityMax = 1000;
@@ -262,7 +269,7 @@ class CfgVehicles
 		hiddenSelections[] = {"zbytek","camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\MilkCartonCap_co.paa","Source_Files\DadaFoods\Configs\Drinks\data\MilkCarton_co.paa"};
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\MilkCartonModel.p3d";
-		weight = 50;
+		weight = 1;
 		itemSize[] = {1,3};
 		varQuantityInit = 1000;
 		varQuantityMax = 1000;
@@ -344,7 +351,7 @@ class CfgVehicles
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\MilkGallon_co.paa"};
 		inventorySlot[] = {"DadaMilkGallon"};
-		weight = 200;
+		weight = 5;
 		itemSize[] = {4,5};
 		varQuantityInit = 4000;
 		varQuantityMax = 4000;
@@ -393,7 +400,8 @@ class CfgVehicles
 	class DadaDrink_MilkCoffee: DadaDrinks_ColorBase
 	{
 		scope = 2;
-		itemSize[] = {2,2};
+		itemSize[] = {2,1};
+		weight = 24;
 		displayName = "Cup of milk coffee";
 		descriptionShort = "A cup full of milk coffee.";
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Cup.p3d";
@@ -441,7 +449,8 @@ class CfgVehicles
 	class DadaDrink_MilkCoffeeArt: DadaDrinks_ColorBase
 	{
 		scope = 2;
-		itemSize[] = {2,2};
+		itemSize[] = {2,1};
+		weight = 24;
 		displayName = "Cup of milk coffee";
 		descriptionShort = "A cup full of coffee.";
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Cup.p3d";
@@ -489,7 +498,8 @@ class CfgVehicles
 	class DadaDrink_BlackTea: DadaDrinks_ColorBase
 	{
 		scope = 2;
-		itemSize[] = {2,2};
+		itemSize[] = {2,1};
+		weight = 24;
 		displayName = "Cup of black tea";
 		descriptionShort = "A cup full of tea.";
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Cup.p3d";
@@ -542,7 +552,8 @@ class CfgVehicles
 	class DadaDrink_GreenTea: DadaDrinks_ColorBase
 	{
 		scope = 2;
-		itemSize[] = {2,2};
+		itemSize[] = {2,1};
+		weight = 24;
 		displayName = "Cup of matcha";
 		descriptionShort = "A cup full of tea.";
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Cup.p3d";
@@ -602,7 +613,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\Milkshake_co.paa","Source_Files\DadaFoods\Configs\Drinks\data\Milkshake_co.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Drinks\data\MilkCarton.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}; 
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Milkshake.p3d";
-		weight = 50;
+		weight = 3;
 		itemSize[] = {1,3};
 		varQuantityInit = 300;
 		varQuantityMax = 300;

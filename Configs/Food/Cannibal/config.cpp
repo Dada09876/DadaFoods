@@ -25,12 +25,12 @@ class CfgVehicles
 		quantityBar = 1;
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Bowl_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_rotten_co.paa",};
+		hiddenSelectionsMaterials[] = {"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"};
 		displayName = "$STR_HumanSteakMeat0";
 		descriptionShort = "$STR_HumanSteakMeat1";
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\bowl.p3d";
 		debug_ItemCategory = 6;
-		weight = 0;
-		weightPerQuantityUnit = 2.5;
+		weight = 2;
 		interactionWeight = 1;
 		itemSize[] = {2,3};
 		varQuantityInit = 275;

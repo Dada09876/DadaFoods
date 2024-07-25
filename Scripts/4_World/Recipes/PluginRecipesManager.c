@@ -144,12 +144,9 @@ modded class PluginRecipesManagerBase extends PluginBase
     RegisterRecipe(new CraftDadaCannibal_Jerky);
     
 
-   // MISCELLANEOUS
-
-    /*
-    RegisterRecipe(new CraftCatalanosMenu);
-    RegisterRecipe(new CraftsrpKidsMenu);
-    RegisterRecipe(new CraftsrpCharcoalTabs);
-    */
+   // CRAFTING
+    
+    RegisterRecipe(new CraftDadaCharcoalPiece);
+    RegisterRecipe(new CraftDadaCharcoalTabs);
   };
 };

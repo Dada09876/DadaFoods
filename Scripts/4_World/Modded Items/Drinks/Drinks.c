@@ -63,7 +63,7 @@ class DadaDrink_Coffee: DadaDrinks_ColorBase
 	}
 };
 
-/*class DadaDrink_MilkCoffee: DadaDrinks_ColorBase
+class DadaDrink_MilkCoffee: DadaDrinks_ColorBase
 {
   override void OnConsume(float amount, PlayerBase consumer)
 	{
@@ -113,4 +113,4 @@ class DadaDrink_BlackTea: DadaDrinks_ColorBase
 
 		consumer.GetModifiersManager().ActivateModifier(eModifiers.MDF_IMMUNITYBOOST);
 	}
-};*/
+};

@@ -18,11 +18,10 @@ class CfgVehicles
 	{
 		scope = 2;
 		model = "Source_Files\DadaFoods\Configs\Food\Cooked\data\bowl.p3d";
-		weight = 0;
-		weightPerQuantityUnit = "2.5";
+		weight = 2.5;
 		canBeSplit = 1;
 		interactionWeight = 1;
-		quantityBar = 0;
+		quantityBar = 1;
 		varQuantityInit = 150;
 		varQuantityMin = 0;
 		varQuantityMax = 150;
@@ -274,7 +273,7 @@ class CfgVehicles
 		model = "\dz\gear\food\FoodCan_100g_open.p3d";
 		scope = 2;
 		itemSize[] = {1,1};
-		weight = 2;
+		weight = 1;
 		varQuantityInit = 100;
 		varQuantityMin = 0;
 		varQuantityMax = 100;
@@ -309,7 +308,7 @@ class CfgVehicles
 		descriptionShort = "Big chunk of butter";
 		model = "\dz\gear\food\Rice.p3d";
 		debug_ItemCategory = 6;
-		weight = 2;
+		weight = .5;
 		canBeSplit = 1;
 		itemSize[] = {1,2};
 		hiddenSelections[] = {"zbytek"};
@@ -375,6 +374,9 @@ class CfgVehicles
 	{
 		scope = 2;
 		itemSize[] = {2,1};
+		weight = 1;
+		interactionWeight = 1;
+		quantityBar = 1;
 		displayName = "Yogurt";
 		descriptionShort = "Yogurt cup";
 		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\Yogourt.p3d";
@@ -402,7 +404,13 @@ class CfgVehicles
 		};
 	};
 
-	class DadaRaw_CheeseBase: DadaRaw_Base {};
+	class DadaRaw_CheeseBase: DadaRaw_Base 
+	{
+		weight = 1;
+		canBeSplit = 1;
+		interactionWeight = 1;
+		quantityBar = 1;
+	};
 	class DadaRaw_Mozza:DadaRaw_CheeseBase
 	{
 		scope = 2;
@@ -441,6 +449,10 @@ class CfgVehicles
 		descriptionShort = "MontereyJack";
 		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseBlock.p3d";
 		canBeSplit = 1;
+		weight = 1;
+		varQuantityInit = 300;
+		varQuantityMin = 0;
+		varQuantityMax = 300;
 		hiddenSelections[] = {"cs_raw","camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseWrap_ca.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"};

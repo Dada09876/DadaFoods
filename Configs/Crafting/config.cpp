@@ -89,7 +89,7 @@ class DadaCheesePress: Inventory_Base
 		physLayer = "item_large";
 		rotationFlags = 2;
 		heavyItem = 1;
-		weight = 300;
+		weight = 2000;
 		itemBehaviour = 0;
 		destroyOnEmpty = 0;
 		carveNavmesh = 0;
@@ -162,6 +162,89 @@ class DadaCheesePress: Inventory_Base
 					{
 						damage = 0;
 					};
+				};
+			};
+		};
+	};
+
+	class DadaCharcoalPiece: Inventory_Base
+	{
+		scope = 2;
+		displayName = "Charcoal Piece";
+		descriptionShort = "A piece of burnt material";
+		model = "\dz\gear\consumables\SmallStone.p3d";
+		hiddenSelections[] = {"zbytek"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Crafting\data\DadaCharcoalPiece_co.paa"};
+		animClass = "NoFireClass";
+		weight = 50;
+		itemSize[] = {1,1};
+		rotationFlags = 17;
+		canBeSplit = 1;
+		varQuantityInit = 1.0;
+		varQuantityMin = 0.0;
+		varQuantityMax = 12.0;
+		varQuantityDestroyOnMin = 1;
+		varStackMax = 12.0;
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 100;
+					healthLevels[] = {{1.0,{"DZ\gear\consumables\data\stone.rvmat"}},{0.7,{"DZ\gear\consumables\data\stone.rvmat"}},{0.5,{"DZ\gear\consumables\data\stone_damage.rvmat"}},{0.3,{"DZ\gear\consumables\data\stone_damage.rvmat"}},{0.0,{"DZ\gear\consumables\data\stone_destruct.rvmat"}}};
+				};
+			};
+		};
+	};
+
+	class DadaSaltBag: Inventory_Base
+	{
+		scope = 2;
+		displayName = "Salt Bag";
+		descriptionShort = "May be used for salting your dishes or curing foods";
+		model = "\dz\gear\consumables\garden_lime.p3d";
+		hiddenSelections[] = {"zbytek"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Crafting\data\SaltBag_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Crafting\data\SaltBag.rvmat"};
+		animClass = "NoFireClass";
+		weight = 300;
+		itemSize[] = {3,5};
+		stackedUnit = "g";
+		quantityBar = 1;
+		varQuantityInit = 12.0;
+		varQuantityMin = 0.0;
+		varQuantityMax = 12.0;
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 100;
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Crafting\data\SaltBag.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Crafting\data\SaltBag.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Crafting\data\SaltBag_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Crafting\data\SaltBag_damage.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Crafting\data\SaltBag_destruct.rvmat"}}};
+				};
+			};
+		};
+		soundImpactType = "organic";
+		class AnimEvents
+		{
+			class SoundWeapon
+			{
+				class pickUpItemLight
+				{
+					soundSet = "pickUpGardenLimeLight_SoundSet";
+					id = 796;
+				};
+				class pickUpItem
+				{
+					soundSet = "pickUpGardenLime_SoundSet";
+					id = 797;
+				};
+				class drop
+				{
+					soundset = "gardenlime_drop_SoundSet";
+					id = 898;
 				};
 			};
 		};

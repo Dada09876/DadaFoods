@@ -17,13 +17,15 @@ class CfgVehicles
     class Dada_RawFoodCan_Colorbase: Edible_Base
 	{
 		scope = 0;
+		weight = 2;
+		interactionWeight = 1;
+		quantityBar = 1;
 		canBeSplit = 1;
 		displayName = "Canned Food";
 		descriptionShort = "Gotta cook it before you eat it!";
 		model = "\dz\gear\food\food_can_open.p3d";
 		rotationFlags = 63;
 		itemSize[] = {1,2};
-		weight = 2;
 		varQuantityInit = 100;
 		varQuantityMin = 0;
 		varQuantityMax = 400;
@@ -785,10 +787,12 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaCrabCan_co.paa"};
 		rotationFlags = 34;
 		itemSize[] = {2,1};
-		weight = 125;
+		weight = 2.5;
+		interactionWeight = 1;
+		quantityBar = 1;
 		varQuantityInit = 100;
 		varQuantityMin = 0;
-		varQuantityMax = 200;
+		varQuantityMax = 100;
 		isMeleeWeapon = 1;
 		class DamageSystem
 		{
@@ -814,7 +818,12 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaCrabCan_co.paa"};
 		rotationFlags = 34;
 		itemSize[] = {2,1};
-		weight = 125;
+		weight = 5;
+		interactionWeight = 1;
+		quantityBar = 1;
+		varQuantityInit = 100;
+		varQuantityMin = 0;
+		varQuantityMax = 100;
 		isMeleeWeapon = 1;
 		class DamageSystem
 		{
@@ -848,7 +857,12 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 		};
 		rotationFlags = 34;
 		itemSize[] = {2,1};
-		weight = 125;
+		weight = 2.5;
+		varQuantityInit = 0;
+		varQuantityMin = 0;
+		varQuantityMax = 100;
+		interactionWeight = 1;
+		quantityBar = 1;
 		isMeleeWeapon = 1;
 		class DamageSystem
 		{
@@ -875,10 +889,12 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaClamCan_co.paa"};
 		rotationFlags = 34;
 		itemSize[] = {2,1};
-		weight = 125;
+		weight = 2.5;
+		interactionWeight = 1;
+		quantityBar = 1;
 		varQuantityInit = 100;
 		varQuantityMin = 0;
-		varQuantityMax = 200;
+		varQuantityMax = 100;
 		isMeleeWeapon = 1;
 		class DamageSystem
 		{
@@ -904,7 +920,10 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaClamCan_co.paa"};
 		rotationFlags = 34;
 		itemSize[] = {2,1};
-		weight = 125;
+		weight = 10;
+		varQuantityInit = 0;
+		varQuantityMin = 0;
+		varQuantityMax = 100;
 		isMeleeWeapon = 1;
 		class DamageSystem
 		{
@@ -938,7 +957,12 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 		};
 		rotationFlags = 34;
 		itemSize[] = {2,1};
-		weight = 125;
+		weight = 2.5;
+		varQuantityInit = 0;
+		varQuantityMin = 0;
+		varQuantityMax = 100;
+		interactionWeight = 1;
+		quantityBar = 1;
 		isMeleeWeapon = 1;
 		class DamageSystem
 		{
