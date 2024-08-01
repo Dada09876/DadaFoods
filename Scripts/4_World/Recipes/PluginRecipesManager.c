@@ -14,13 +14,19 @@ modded class PluginRecipesManagerBase extends PluginBase
     RegisterRecipe(new CraftDadaSpawned_BoxCerealCrunchin_Kosmostar);
     RegisterRecipe(new CraftDadaSpawned_BoxCerealCrunchin_Frosties);
     RegisterRecipe(new CraftDadaSpawned_BoxCerealCrunchin_Nesquik);
+    RegisterRecipe(new CraftDadaSpawned_Coffee);
+    RegisterRecipe(new CraftDadaSpawned_GreenTea);
+    RegisterRecipe(new CraftDadaSpawned_BlackTea);
 
-    // PROCESSING
+    // CRAFTING
 
     /*
     RegisterRecipe(new CraftsrpSaltBag);*/
     RegisterRecipe(new CraftDadaCheeseMold);
     RegisterRecipe(new RepairDadaCheeseMold);
+    RegisterRecipe(new CraftDadaCoffeePacket);
+    RegisterRecipe(new CraftDadaGreenTeaPacket);
+    RegisterRecipe(new CraftDadaBlackTeaPacket);
     
 
 

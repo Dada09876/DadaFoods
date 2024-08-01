@@ -45,6 +45,13 @@ modded class ModItemRegisterCallbacks
         pType.AddItemInHandsProfileIK("DadaSpawned_Flour","dz/anims/workspaces/player/player_main/props/player_main_1h_food_box.asi",pBehavior,"dz/anims/anm/player/ik/gear/box_cereal.anm");
         pType.AddItemInHandsProfileIK("DadaSpawned_CerealBase","dz/anims/workspaces/player/player_main/props/player_main_1h_food_box.asi",pBehavior,"dz/anims/anm/player/ik/gear/box_cereal.anm");
         pType.AddItemInHandsProfileIK("DadaSpawned_Yeast","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/powdered_milk.anm");
+
+        pType.AddItemInHandsProfileIK("DadaSpawned_Coffee","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/rice.anm");
+        pType.AddItemInHandsProfileIK("DadaSpawned_GreenTea","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/rice.anm");
+        pType.AddItemInHandsProfileIK("DadaSpawned_BlackTea","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/rice.anm");
+        pType.AddItemInHandsProfileIK("DadaCoffeePacket","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/Heatpack.anm");
+        pType.AddItemInHandsProfileIK("DadaGreenTeaPacket","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/Heatpack.anm");
+        pType.AddItemInHandsProfileIK("DadaBlackTeaPacket","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/Heatpack.anm");
     };
 
     override void RegisterTwoHanded(DayZPlayerType pType, DayzPlayerItemBehaviorCfg pBehavior)

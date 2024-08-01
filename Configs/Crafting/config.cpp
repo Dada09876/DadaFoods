@@ -249,4 +249,148 @@ class DadaCheesePress: Inventory_Base
 			};
 		};
 	};
+
+	class DadaCoffeePacket: Edible_Base
+	{
+		scope = 2;
+		displayName = "Coffee Infuser Packet";
+		descriptionShort = "May be used for making coffee";
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket_co.paa"};
+		hiddenSelections[] = {"zbytek"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket.rvmat"};
+		model = "\DZ\gear\tools\Heatpack.p3d";
+		isMeleeWeapon = 1;
+		weight = .5;
+		varQuantityInit = 50;
+		varQuantityMin = 0;
+		varQuantityMax = 50;
+		absorbency = 1;
+		itemSize[] = {1,1};
+		animClass = "Knife";
+		rotationFlags = 17;
+		varWetMax = 1.0;
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 30;
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket_damage.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket_destruct.rvmat"}}};
+				};
+			};
+		};
+		class AnimEvents
+		{
+			class SoundWeapon
+			{
+				class pickUpItem
+				{
+					soundSet = "pickUpBloodBag_SoundSet";
+					id = 797;
+				};
+				class drop
+				{
+					soundset = "bloodbag_drop_SoundSet";
+					id = 898;
+				};
+			};
+		};
+	};
+
+	class DadaGreenTeaPacket: Edible_Base
+	{
+		scope = 2;
+		displayName = "Green Tea Packet";
+		descriptionShort = "May be used for making green tea";
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Crafting\data\GreenTeaPacket_co.paa"};
+		hiddenSelections[] = {"zbytek"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket.rvmat"};
+		model = "\DZ\gear\tools\Heatpack.p3d";
+		isMeleeWeapon = 1;
+		weight = .5;
+		varQuantityInit = 50;
+		varQuantityMin = 0;
+		varQuantityMax = 50;
+		absorbency = 1;
+		itemSize[] = {1,1};
+		animClass = "Knife";
+		rotationFlags = 17;
+		varWetMax = 1.0;
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 30;
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket_damage.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket_destruct.rvmat"}}};
+				};
+			};
+		};
+		class AnimEvents
+		{
+			class SoundWeapon
+			{
+				class pickUpItem
+				{
+					soundSet = "pickUpBloodBag_SoundSet";
+					id = 797;
+				};
+				class drop
+				{
+					soundset = "bloodbag_drop_SoundSet";
+					id = 898;
+				};
+			};
+		};
+	};
+
+	class DadaBlackTeaPacket: Edible_Base
+	{
+		scope = 2;
+		displayName = "Black Tea Packet";
+		descriptionShort = "May be used for making black tea";
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Crafting\data\BlackTeaPacket_co.paa"};
+		hiddenSelections[] = {"zbytek"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket.rvmat"};
+		model = "\DZ\gear\tools\Heatpack.p3d";
+		isMeleeWeapon = 1;
+		weight = .5;
+		varQuantityInit = 50;
+		varQuantityMin = 0;
+		varQuantityMax = 50;
+		absorbency = 1;
+		itemSize[] = {1,1};
+		animClass = "Knife";
+		rotationFlags = 17;
+		varWetMax = 1.0;
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 30;
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket_damage.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket_destruct.rvmat"}}};
+				};
+			};
+		};
+		class AnimEvents
+		{
+			class SoundWeapon
+			{
+				class pickUpItem
+				{
+					soundSet = "pickUpBloodBag_SoundSet";
+					id = 797;
+				};
+				class drop
+				{
+					soundset = "bloodbag_drop_SoundSet";
+					id = 898;
+				};
+			};
+		};
+	};
 };

@@ -308,14 +308,14 @@ class CfgVehicles
 		descriptionShort = "Big chunk of butter";
 		model = "\dz\gear\food\Rice.p3d";
 		debug_ItemCategory = 6;
-		weight = .5;
+		weight = 1;
 		canBeSplit = 1;
 		itemSize[] = {1,2};
 		hiddenSelections[] = {"zbytek"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaFoodCan_BigButter_co.paa"};
-		varQuantityInit = 600;
+		varQuantityInit = 250;
 		varQuantityMin = 0;
-		varQuantityMax = 600;
+		varQuantityMax = 250;
 		absorbency = 0.9;
 		rotationFlags = 63;
 		class DamageSystem
@@ -637,5 +637,6 @@ class CfgVehicles
 	class Rice: Edible_Base
 	{
 		canBeSplit = 1;
+		weight = 1;
 	};
 };

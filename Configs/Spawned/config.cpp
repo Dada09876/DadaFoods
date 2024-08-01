@@ -242,4 +242,214 @@ class CfgVehicles
 	{
 		canBeSplit = 1;
 	};
+
+	class DadaSpawned_Coffee: Edible_Base
+	{
+		scope = 2;
+		displayName = "Coffee Bag";
+		descriptionShort = "Bag full of ground coffee beans";
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_CoffeeBag_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"};
+		model = "\DZ\gear\food\Rice.p3d";
+		hiddenSelections[] = {"zbytek"};
+		canBeSplit = 1;
+		debug_ItemCategory = 6;
+		weight = 1;
+		itemSize[] = {2,3};
+		varQuantityInit = 500;
+		varQuantityMin = 0;
+		varQuantityMax = 500;
+		absorbency = 0.9;
+		rotationFlags = 63;
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 40;
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_destruct.rvmat"}}};
+				};
+			};
+		};
+		class Nutrition
+		{
+			fullnessIndex = 3;
+			energy = 100;
+			water = 0;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+		class AnimEvents
+		{
+			class SoundWeapon
+			{
+				class openTunaCan
+				{
+					soundSet = "openTunaCan_SoundSet";
+					id = 204;
+				};
+				class Eating_TakeFood
+				{
+					soundSet = "Eating_TakeFood_Soundset";
+					id = 889;
+				};
+				class Eating_BoxOpen
+				{
+					soundSet = "Eating_BoxOpen_Soundset";
+					id = 893;
+				};
+				class Eating_BoxShake
+				{
+					soundSet = "Eating_BoxShake_Soundset";
+					id = 894;
+				};
+				class Eating_BoxEnd
+				{
+					soundSet = "Eating_BoxEnd_Soundset";
+					id = 895;
+				};
+			};
+		};
+	};
+
+	class DadaSpawned_GreenTea: Edible_Base
+	{
+		scope = 2;
+		displayName = "Green Tea Bag";
+		descriptionShort = "Bag full of tea leaves";
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_GreenTeaBag_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"};
+		model = "\DZ\gear\food\Rice.p3d";
+		hiddenSelections[] = {"zbytek"};
+		canBeSplit = 1;
+		debug_ItemCategory = 6;
+		weight = 1;
+		itemSize[] = {2,3};
+		varQuantityInit = 500;
+		varQuantityMin = 0;
+		varQuantityMax = 500;
+		absorbency = 0.9;
+		rotationFlags = 63;
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 40;
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_destruct.rvmat"}}};
+				};
+			};
+		};
+		class Nutrition
+		{
+			fullnessIndex = 3;
+			energy = 100;
+			water = 0;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+		class AnimEvents
+		{
+			class SoundWeapon
+			{
+				class openTunaCan
+				{
+					soundSet = "openTunaCan_SoundSet";
+					id = 204;
+				};
+				class Eating_TakeFood
+				{
+					soundSet = "Eating_TakeFood_Soundset";
+					id = 889;
+				};
+				class Eating_BoxOpen
+				{
+					soundSet = "Eating_BoxOpen_Soundset";
+					id = 893;
+				};
+				class Eating_BoxShake
+				{
+					soundSet = "Eating_BoxShake_Soundset";
+					id = 894;
+				};
+				class Eating_BoxEnd
+				{
+					soundSet = "Eating_BoxEnd_Soundset";
+					id = 895;
+				};
+			};
+		};
+	};
+
+	class DadaSpawned_BlackTea: Edible_Base
+	{
+		scope = 2;
+		displayName = "Black Tea Bag";
+		descriptionShort = "Bag full of tea leaves";
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_BlackTeaBag_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"};
+		model = "\DZ\gear\food\Rice.p3d";
+		hiddenSelections[] = {"zbytek"};
+		canBeSplit = 1;
+		debug_ItemCategory = 6;
+		weight = 1;
+		itemSize[] = {2,3};
+		varQuantityInit = 500;
+		varQuantityMin = 0;
+		varQuantityMax = 500;
+		absorbency = 0.9;
+		rotationFlags = 63;
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 40;
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_destruct.rvmat"}}};
+				};
+			};
+		};
+		class Nutrition
+		{
+			fullnessIndex = 3;
+			energy = 100;
+			water = 0;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+		class AnimEvents
+		{
+			class SoundWeapon
+			{
+				class openTunaCan
+				{
+					soundSet = "openTunaCan_SoundSet";
+					id = 204;
+				};
+				class Eating_TakeFood
+				{
+					soundSet = "Eating_TakeFood_Soundset";
+					id = 889;
+				};
+				class Eating_BoxOpen
+				{
+					soundSet = "Eating_BoxOpen_Soundset";
+					id = 893;
+				};
+				class Eating_BoxShake
+				{
+					soundSet = "Eating_BoxShake_Soundset";
+					id = 894;
+				};
+				class Eating_BoxEnd
+				{
+					soundSet = "Eating_BoxEnd_Soundset";
+					id = 895;
+				};
+			};
+		};
+	};
 };
