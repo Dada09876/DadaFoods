@@ -1248,8 +1248,13 @@ class CraftDadaSoup_ChickenBroth extends RecipeBase
 	}
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{  
+    if (ingredients[0])
 	{
-	Bottle_Base water;  
+	  return true;
+	}
+	  
+	Bottle_Base water;
 	if (Class.CastTo(water,ingredients[1]))
     {
       bool waterTemp = (water.GetTemperature() > 70 && water.GetTemperature() < 150);

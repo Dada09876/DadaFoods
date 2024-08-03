@@ -483,11 +483,16 @@ class CraftDadaDrink_Coffee extends RecipeBase
 	}
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{  
+    if (ingredients[0])
 	{
-	Bottle_Base water;  
+	  return true;
+	}
+	  
+	Bottle_Base water;
 	if (Class.CastTo(water,ingredients[1]))
     {
-      bool waterTemp = (water.GetTemperature() > 50 && water.GetTemperature() < 150);
+      bool waterTemp = (water.GetTemperature() > 70 && water.GetTemperature() < 150);
       if (waterTemp)
 	  {
         return true;
@@ -677,7 +682,7 @@ class CraftDadaDrink_GreenTea extends RecipeBase
 		//ingredient 1
 		InsertIngredient(0,"DadaSpawned_GreenTea");//you can insert multiple ingredients this way
 		InsertIngredient(0,"DadaGreenTeaPacket");//you can insert multiple ingredients this way
-	
+		
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -50;// 0 = do nothing
@@ -708,11 +713,16 @@ class CraftDadaDrink_GreenTea extends RecipeBase
 	}
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{  
+    if (ingredients[0])
 	{
-	Bottle_Base water;  
+	  return true;
+	}
+	  
+	Bottle_Base water;
 	if (Class.CastTo(water,ingredients[1]))
     {
-      bool waterTemp = (water.GetTemperature() > 50 && water.GetTemperature() < 150);
+      bool waterTemp = (water.GetTemperature() > 70 && water.GetTemperature() < 150);
       if (waterTemp)
 	  {
         return true;
@@ -786,11 +796,16 @@ class CraftDadaDrink_BlackTea extends RecipeBase
 	}
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{  
+    if (ingredients[0])
 	{
-	Bottle_Base water;  
+	  return true;
+	}
+	  
+	Bottle_Base water;
 	if (Class.CastTo(water,ingredients[1]))
     {
-      bool waterTemp = (water.GetTemperature() > 50 && water.GetTemperature() < 150);
+      bool waterTemp = (water.GetTemperature() > 70 && water.GetTemperature() < 150);
       if (waterTemp)
 	  {
         return true;
