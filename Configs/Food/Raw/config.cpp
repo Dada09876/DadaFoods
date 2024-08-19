@@ -629,10 +629,12 @@ class CfgVehicles
 	class Honey: Edible_Base
 	{
 		canBeSplit = 1;
+		weight = 1;
 	};
 	class Marmalade: Edible_Base
 	{
 		canBeSplit = 1;
+		weight = 1;
 	};
 	class Rice: Edible_Base
 	{
