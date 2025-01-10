@@ -321,6 +321,8 @@ class CraftDadaRaw_PokeBowl extends RecipeBase
 		InsertIngredient(1,"Sardines");//you can insert multiple ingredients this way
 		InsertIngredient(1,"SRP_FreshWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
         InsertIngredient(1,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
+		InsertIngredient(1,"WalleyePollockFilletMeat");
+        InsertIngredient(1,"SteelheadTroutFilletMeat");
 
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -629,6 +631,8 @@ class CraftDadaRaw_SushiMaki extends RecipeBase
 		InsertIngredient(1,"Sardines");//you can insert multiple ingredients this way
 		InsertIngredient(1,"SRP_FreshWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
         InsertIngredient(1,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
+		InsertIngredient(1,"WalleyePollockFilletMeat");
+        InsertIngredient(1,"SteelheadTroutFilletMeat");
 
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -711,6 +715,8 @@ class CraftDadaRaw_SushiOnigiri extends RecipeBase
 		InsertIngredient(1,"Sardines");//you can insert multiple ingredients this way
 		InsertIngredient(1,"SRP_FreshWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
         InsertIngredient(1,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
+		InsertIngredient(1,"WalleyePollockFilletMeat");
+        InsertIngredient(1,"SteelheadTroutFilletMeat");
 
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing

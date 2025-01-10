@@ -71,3 +71,13 @@ class DadaCannibal_Jerky extends HumanSteakMeat
 		AddAction(ActionEatMeat);
 	}
 };
+
+class DadaCannibal_WasteBread extends DadaCannibal_Base
+{
+	override void SetActions()
+	{
+		super.SetActions();
+		RemoveAction(ActionDrinkCookingPot);
+		AddAction(ActionEatMeat);
+	}	
+};

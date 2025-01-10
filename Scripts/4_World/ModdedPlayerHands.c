@@ -15,7 +15,8 @@ modded class ModItemRegisterCallbacks
         pType.AddItemInHandsProfileIK("DadaRaw_Yogourt", "dz/anims/workspaces/player/player_main/props/player_main_1h_fruit.asi",pBehavior,"dz/anims/anm/player/ik/gear/apple.anm");	
         pType.AddItemInHandsProfileIK("DadaRaw_SmallButter","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/foodcan100g.anm");
         pType.AddItemInHandsProfileIK("DadaRaw_SmallButter_Opened","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/foodcan100g.anm");
-        //pType.AddItemInHandsProfileIK("srpDrink_CurdsAndWhey","dz/anims/workspaces/player/player_main/props/player_main_1h_sodacan.asi",pBehavior,"dz/anims/anm/player/ik/gear/soda_can.anm");
+        pType.AddItemInHandsProfileIK("DadaDrink_CurdsAndWhey","dz/anims/workspaces/player/player_main/props/player_main_1h_sodacan.asi",pBehavior,"dz/anims/anm/player/ik/gear/soda_can.anm");
+        pType.AddItemInHandsProfileIK("DadaDrink_Whey","dz/anims/workspaces/player/player_main/props/player_main_1h_sodacan.asi",pBehavior,"dz/anims/anm/player/ik/gear/soda_can.anm");
         pType.AddItemInHandsProfileIK("DadaRaw_BigButter","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/rice.anm");	
         pType.AddItemInHandsProfileIK("DadaRaw_MontereyJack","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/rice.anm");	
         pType.AddItemInHandsProfileIK("DadaRaw_Feta","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/banana.anm");
@@ -66,12 +67,24 @@ modded class ModItemRegisterCallbacks
         pType.AddItemInHandsProfileIK("DadaBread_PizzaMargherita", "dz/anims/workspaces/player/player_main/player_main_2h.asi", pBehavior, "dz/anims/anm/player/ik/vehicles/BatteryTruck.anm");
         pType.AddItemInHandsProfileIK("DadaCheeseMold", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm"); 
         pType.AddItemInHandsProfileIK("DadaCannibal_Base", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
+        pType.AddItemInHandsProfileIK("DadaBoneMeal",	"dz/anims/workspaces/player/player_main/weapons/player_main_2h_extinguisher.asi",pBehavior,	"dz/anims/anm/player/ik/two_handed/gardenlime.anm");
+        pType.AddItemInHandsProfileIK("DadaSaltBag",	"dz/anims/workspaces/player/player_main/weapons/player_main_2h_extinguisher.asi",pBehavior,	"dz/anims/anm/player/ik/two_handed/gardenlime.anm");
     };
 
     override void RegisterHeavy(DayZPlayerType pType, DayzPlayerItemBehaviorCfg pBehavior)
     {
         super.RegisterHeavy (pType, pBehavior);
         pType.AddItemInHandsProfileIK("DadaDrink_MilkGallon","dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi",pBehavior,"dz/anims/anm/player/ik/two_handed/BaseRadio.anm"); 
+        
+        //dz/anims/anm/player/ik/two_handed/BaseRadio.anm       good posi not drink
+        //dz/anims/anm/player/ik/heavy/55galDrum.anm        good drink
+        //dz/anims/anm/player/ik/heavy/generator.anm        same as 55galdrum
+        //dz/anims/anm/player/ik/heavy/wooden_log.anm       NOOPE
+        //dz/anims/anm/player/ik/heavy/metal_sheet.anm      NOOPE
+        //dz/anims/anm/player/ik/vehicles/radiator_truck.anm     NOOPE   
+
+        //dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi
+    
         
        /* pType.AddItemInHandsProfileIK("srpLargeCarvingBlock", "dz/anims/workspaces/player/player_main/props/player_main_heavy_generator.asi",pBehavior, "dz/anims/anm/player/ik/heavy/generator.anm");
         pType.AddItemInHandsProfileIK("srpXtraLargeCarvingBlock", "dz/anims/workspaces/player/player_main/props/player_main_heavy_generator.asi",pBehavior, "dz/anims/anm/player/ik/heavy/generator.anm");

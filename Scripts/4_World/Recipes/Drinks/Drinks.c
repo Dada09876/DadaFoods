@@ -610,6 +610,7 @@ class CraftDadaDrink_MilkCoffeeArt extends RecipeBase
         InsertIngredient(0,"DadaDrink_Coffee");//you can insert multiple ingredients this way
 		InsertIngredient(0,"DadaSpawned_Coffee");//you can insert multiple ingredients this way
 		InsertIngredient(0,"DadaCoffeePacket");//you can insert multiple ingredients this way
+		InsertIngredient(0,"DadaDrink_MilkCoffeeArt");//you can insert multiple ingredients this way
         
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing

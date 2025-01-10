@@ -65,6 +65,7 @@ modded class PluginRecipesManagerBase extends PluginBase
     RegisterRecipe(new CraftDadaDish_MacaroniAndCheese);
     RegisterRecipe(new CraftDadaDish_ShepardsPie);
     RegisterRecipe(new CraftDadaDish_PulledPork);
+    RegisterRecipe(new CraftDadaDish_Sausage);
 
 
     // FOOD CANNED
@@ -148,11 +149,12 @@ modded class PluginRecipesManagerBase extends PluginBase
     RegisterRecipe(new CraftDadaCannibal_EntrailsSpaghetti);
     RegisterRecipe(new CraftDadaCannibal_EyeballSoup);
     RegisterRecipe(new CraftDadaCannibal_Jerky);
-    
+    RegisterRecipe(new CraftDadaCannibal_WasteBread);
 
    // CRAFTING
     
     RegisterRecipe(new CraftDadaCharcoalPiece);
     RegisterRecipe(new CraftDadaCharcoalTabs);
+    RegisterRecipe(new CraftDadaBoneMeal);
   };
 };

@@ -49,7 +49,6 @@ class DadaRaw_CerealCrunchin: DadaRaw_Base
 	{
 		super.SetActions();
 		
-		RemoveAction(ActionForceFeed);
 		RemoveAction(ActionEatMeat);
 		AddAction(ActionDrinkCookingPot);
 	};	
@@ -77,9 +76,26 @@ class DadaRaw_SushiOnigiri: DadaRaw_SushiMaki
 
 class DadaRaw_SmallButter_Opened: DadaRaw_Base
 {
-   override bool IsFruit()
+	override bool CanDecay()
 	{
 		return true;
+	}
+	
+	override bool CanProcessDecay()
+	{
+		return !GetIsFrozen() && !( GetAgents() & eAgents.FOOD_POISON );
+	}
+	
+	override void SetActions()
+	{
+		super.SetActions();
+		
+		AddAction(ActionEatSmallCan);
+	}
+	
+	override bool IsOpen()
+	{
+		return false;
 	}
 
 	override bool CanBeCooked()
@@ -91,36 +107,13 @@ class DadaRaw_SmallButter_Opened: DadaRaw_Base
 	{
 		return false;
 	}
-   override bool CanDecay()
-	{
-		return true;
-	}
-	
-	override bool CanProcessDecay()
-	{
-		return !( GetAgents() & eAgents.FOOD_POISON );
-	}
-	
-	override void SetActions()
-	{
-		super.SetActions();
-		
-		AddAction(ActionForceFeedSmall);
-		AddAction(ActionEatSmallCan);
-	}
-	
-	override bool IsOpen()
-	{
-		return true;
-	}
 };
 
-class DadaRaw_SmallButter: DadaRaw_Base
+class DadaRaw_SmallButter: Edible_Base
 {
 	override void Open()
 	{
-		super.Open();
-		ReplaceEdibleWithNew("srpFoodCan_SmallButter_Opened");
+		ReplaceEdibleWithNew("DadaRaw_SmallButter_Opened");
 	}
 		
 	override void SetActions()
@@ -133,6 +126,11 @@ class DadaRaw_SmallButter: DadaRaw_Base
 	override bool IsOpen()
 	{
 		return false;
+	}
+	
+	override float GetQuantityNormalizedScripted()
+	{
+		return 1.0;
 	}
 };
 
@@ -193,8 +191,8 @@ class DadaRaw_Yogourt: DadaRaw_Base
 	{
 		super.SetActions();
 		
-		AddAction(ActionForceFeedSmall);
 		AddAction(ActionEatSmallCan);
+		RemoveAction(ActionEatMeat);
 	}
 	
 	override bool IsOpen()
@@ -234,8 +232,8 @@ class DadaRaw_Mozza: DadaRaw_Base
 	{
 		super.SetActions();
 		
-		AddAction(ActionForceFeedSmall);
 		AddAction(ActionEatSmallCan);
+		RemoveAction(ActionEatMeat);
 	}
 	
 	override bool IsOpen()
@@ -275,8 +273,8 @@ class DadaRaw_MontereyJack: DadaRaw_Base
 	{
 		super.SetActions();
 		
-		AddAction(ActionForceFeedSmall);
 		AddAction(ActionEatSmallCan);
+		RemoveAction(ActionEatMeat);
 	}
 	
 	override bool IsOpen()
@@ -315,8 +313,8 @@ class DadaRaw_FreshGoatCheese: DadaRaw_Base
 	{
 		super.SetActions();
 		
-		AddAction(ActionForceFeedSmall);
 		AddAction(ActionEatSmallCan);
+		RemoveAction(ActionEatMeat);
 	}
 	
 	override bool IsOpen()
@@ -355,8 +353,8 @@ class DadaRaw_Feta: DadaRaw_Base
 	{
 		super.SetActions();
 		
-		AddAction(ActionForceFeedSmall);
 		AddAction(ActionEatSmallCan);
+		RemoveAction(ActionEatMeat);
 	}
 	
 	override bool IsOpen()
@@ -396,8 +394,9 @@ class DadaRaw_VanillaChocoSwirl: DadaRaw_Base
 		super.SetActions();
 		
 		AddAction(ActionEatFruit);
+		RemoveAction(ActionEatMeat);
 	}
-	
+
 	override bool IsOpen()
 	{
 		return false;

@@ -55,37 +55,37 @@ class CfgVehicles
 			{
 				class Raw
 				{
-					visual_properties[] = {0,0,-1};
+					visual_properties[] = {0,0,0};
 					nutrition_properties[] = {5,50,50,1,0,4};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					visual_properties[] = {-1,-1,-1};
-					nutrition_properties[] = {10,25,25,1,0,"4 + 16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
 					cooking_properties[] = {0,0};
 				};
 				class Baked
 				{
-					visual_properties[] = {-1,-1,-1};
-					nutrition_properties[] = {2,250,50,1,0};
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,300,50,1,0};
 					cooking_properties[] = {70,45};
 				};
 				class Boiled
 				{
-					visual_properties[] = {-1,-1,-1};
-					nutrition_properties[] = {2,200,100,1,0};
-					cooking_properties[] = {70,50};
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,250,100,1,0};
+					cooking_properties[] = {70,55};
 				};
 				class Dried
 				{
-					visual_properties[] = {-1,-1,-1};
-					nutrition_properties[] = {3,300,0,1,0};
-					cooking_properties[] = {70,55,80};
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,250,0,1,0};
+					cooking_properties[] = {70,120,80};
 				};
 				class Burned
 				{
-					visual_properties[] = {-1,-1,-1};
+					visual_properties[] = {0,4,4};
 					nutrition_properties[] = {5,50,0,1,0,16};
 					cooking_properties[] = {100,90};
 				};
@@ -161,6 +161,7 @@ class CfgVehicles
 			};
 		};
 	};
+	
 	class DadaCannibal_EntrailsSpaghetti: DadaCannibal_Base
 	{
 		scope = 2;
@@ -218,6 +219,93 @@ class CfgVehicles
 			};
 		};
 		soundImpactType = "plastic";
+		class AnimEvents
+		{
+			class SoundWeapon
+			{
+				class openTunaCan
+				{
+					soundSet = "openTunaCan_SoundSet";
+					id = 204;
+				};
+				class pickUpItem
+				{
+					soundSet = "pickUpBloodBag_SoundSet";
+					id = 797;
+				};
+				class Eating_TakeFood
+				{
+					soundSet = "Eating_TakeFood_Soundset";
+					id = 889;
+				};
+				class Eating_BoxOpen
+				{
+					soundSet = "Eating_BoxOpen_Soundset";
+					id = 893;
+				};
+				class Eating_BoxShake
+				{
+					soundSet = "Eating_BoxShake_Soundset";
+					id = 894;
+				};
+				class Eating_BoxEnd
+				{
+					soundSet = "Eating_BoxEnd_Soundset";
+					id = 895;
+				};
+				class drop
+				{
+					soundset = "bloodbag_drop_SoundSet";
+					id = 898;
+				};
+			};
+		};
+	};
+
+	class DadaBread_Base;
+	class DadaCannibal_WasteBread: DadaBread_Base
+	{
+		scope = 2;
+		weight = 2;
+		interactionWeight = 1;
+		quantityBar = 1;
+		canBeSplit = 1;
+		inventorySlot[] = {"Ingredient","DirectCookingA","DirectCookingB","DirectCookingC","SmokingA","SmokingB","SmokingC","SmokingD","Ingredient1","Ingredient2","Ingredient3","Ingredient4","Ingredient5","Ingredient6","Ingredient7","Ingredient8"};
+		itemSize[] = {3,2};
+        displayName = "Waste Bread";
+		descriptionShort = "Smells a bit weird for bread";
+		varQuantityInit = 100;
+		varQuantityMin = 0;
+		varQuantityMax = 100;
+		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\RoundDough.p3d";
+		hiddenSelections[] = {"cs_raw"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_rotten_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 200;
+					healthLevels[] = {{1,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"}},{0.7,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"}},{0.5,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"}},{0.3,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"}},{0,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"}}};
+				};
+			};
+		};	
+
+		class Nutrition
+		{
+			fullnessIndex = 3;
+			energy = 100;
+			water = 50;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+		class NoiseImpact
+		{
+			strength = 600;
+			type = "sound";
+		};
 		class AnimEvents
 		{
 			class SoundWeapon

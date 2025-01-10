@@ -393,4 +393,41 @@ class DadaCheesePress: Inventory_Base
 			};
 		};
 	};
+
+	class GardenLime;
+	class DadaBoneMeal: GardenLime
+	{
+		scope = 2;
+		displayName = "Bone Meal";
+		descriptionShort = "Pile of Crushed Bones";
+		hiddenSelections[] = {"zbytek"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Crafting\data\BoneMeal_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Crafting\data\BoneMeal.rvmat"};
+		canBeSplit = 1;
+		animClass = "NoFireClass";
+		weight = 300;
+		itemSize[] = {3,5};
+		stackedUnit = "g";
+		quantityBar = 1;
+		varQuantityInit = 5000;
+		varQuantityMin = 0.0;
+		varQuantityMax = 5000;
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 100;
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Crafting\data\BoneMeal.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Crafting\data\BoneMeal.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Crafting\data\BoneMeal_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Crafting\data\BoneMeal_damage.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Crafting\data\BoneMeal_destruct.rvmat"}}};
+				};
+			};
+		};
+		class Horticulture
+		{
+			TexId = 1;
+			AddEnergyToSlot = 1;
+			ConsumedQuantity = 250.0;
+		};
+	};
 };

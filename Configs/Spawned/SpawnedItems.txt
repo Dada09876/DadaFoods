@@ -2,7 +2,6 @@ This is a list of the items that are not craftable but are needed to make some r
 
 Flour
 Yeast
-Rice
 coffee
 tea
 

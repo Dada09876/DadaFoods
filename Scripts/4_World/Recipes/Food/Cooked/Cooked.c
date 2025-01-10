@@ -127,7 +127,7 @@ class CraftDadaBread_Pita extends RecipeBase
     return false;
 	}
 
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
@@ -998,6 +998,7 @@ class CraftDadaDish_GroundMeat extends RecipeBase
 		InsertIngredient(1,"FoxSteakMeat");//you can insert multiple ingredients this way
 		InsertIngredient(1,"ChickenBreastMeat");//you can insert multiple ingredients this way
 		InsertIngredient(1,"RabbitLegMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"ReindeerSteakMeat");//you can insert multiple ingredients this way
 		/*
 		InsertIngredient(1,"srpChickenleg");//you can insert multiple ingredients this way
 		InsertIngredient(1,"srpSausage");//you can insert multiple ingredients this way
@@ -1643,6 +1644,7 @@ class CraftDadaDish_Gumbo extends RecipeBase
 		InsertIngredient(0,"FoxSteakMeat");//you can insert multiple ingredients this way
 		InsertIngredient(0,"ChickenBreastMeat");//you can insert multiple ingredients this way
 		InsertIngredient(0,"RabbitLegMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"ReindeerSteakMeat");//you can insert multiple ingredients this way
 		InsertIngredient(0,"TunaCanDuck");//you can insert multi
 		InsertIngredient(0,"TunaCanDuck_Opened");//you can insert multi
 		/*
@@ -1990,6 +1992,7 @@ class CraftDadaDish_Pie extends RecipeBase
         InsertIngredient(1,"CowSteakMeat");//you can insert multiple ingredients this way
         InsertIngredient(1,"SheepSteakMeat");//you can insert multiple ingredients this way
         InsertIngredient(1,"FoxSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"ReindeerSteakMeat");//you can insert multiple ingredients this way
         InsertIngredient(1,"ChickenBreastMeat");//you can insert multiple ingredients this way
         InsertIngredient(1,"RabbitLegMeat");//you can insert multiple ingredients this way
 		InsertIngredient(1,"CarpFilletMeat");//you can insert multiple ingredients this way
@@ -2366,6 +2369,8 @@ class CraftDadaDish_SeafoodGumbo extends RecipeBase
 		InsertIngredient(0,"SardinesCan_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(0,"TunaCan");//you can insert multiple ingredients this way
 		InsertIngredient(0,"TunaCan_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(0,"WalleyePollockFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"SteelheadTroutFilletMeat");//you can insert multiple ingredients this way
 		
 		/*
 		InsertIngredient(0,"SRP_FreshWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
@@ -2609,7 +2614,12 @@ class CraftDadaDish_MacaroniAndCheese extends RecipeBase
 		
 		//ingredient 2
 		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaRaw_CheeseBase");//you can insert multiple ingredients this way*/
+		InsertIngredient(1,"DadaRaw_CheeseBase");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDrink_CurdsAndWhey");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDrink_Whey");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -2769,6 +2779,7 @@ class CraftDadaDish_PulledPork extends RecipeBase
 		
 		//ingredient 2
 		InsertIngredient(1,"PigSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"BoarSteakMeat");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -2799,6 +2810,80 @@ class CraftDadaDish_PulledPork extends RecipeBase
       if (food && food1)
       {
         return (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw() && (food1.IsFoodBaked() || food1.IsFoodDried() || food1.IsFoodBoiled() || food1.IsFoodRaw()));
+      }
+    }
+    return false;
+	}
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
+	}
+};
+
+class CraftDadaDish_Sausage extends RecipeBase
+{
+	override void Init()
+	{
+		m_Name = "Craft Sausage";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 2;//animation length in relative time units
+		m_Specialty = -0.01;// value > 0 for roughness, value < 0 for precision
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
+		
+		m_MinQuantityIngredient[0] = -1;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"Guts");//you can insert multiple ingredients this way
+
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[0] = 0;// 0 = do nothing
+		m_IngredientDestroy[0] = true;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		
+		//ingredient 2
+		InsertIngredient(1,"DadaDish_GroundMeat");//you can insert multiple ingredients this way
+		
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
+		
+		//result1
+		AddResult("DadaDish_Sausage");//add results here
+
+		m_ResultSetFullQuantity[0] = false;//true = set full quantity, false = do nothing
+		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+    if (ingredients[1])
+	{
+      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
+      if (food1)
+      {
+        return ((food1.IsFoodBaked() || food1.IsFoodDried() || food1.IsFoodBoiled() || food1.IsFoodRaw()));
       }
     }
     return false;

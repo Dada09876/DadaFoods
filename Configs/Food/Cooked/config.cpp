@@ -373,6 +373,7 @@ class CfgVehicles
 	class DadaBread_Loaf: DadaBread_Base
 	{
 		scope = 2;
+		itemSize[] = {3,2};
 		displayName = "Bread Loaf";
 		descriptionShort = "A loaf of bread. Should be baked before consuming... but I guess no one can stop you if you don't";
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\loaf.p3d";
@@ -395,6 +396,7 @@ class CfgVehicles
 	class DadaBread_Baguette: DadaBread_Base
 	{
 		scope = 2;
+		itemSize[] = {3,2};
 		displayName = "Baguette";
 		descriptionShort = "Baguette du fromage. Should be baked before consuming... but I guess no one can stop you if you don't";
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\Baguette.p3d";

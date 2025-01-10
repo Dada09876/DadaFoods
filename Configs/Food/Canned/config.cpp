@@ -13,7 +13,132 @@ class CfgPatches
 
 class CfgVehicles
 {
-    class Edible_Base;
+    class BaseFoodStageTransitions;
+	class DadaCanStageTransitions: BaseFoodStageTransitions
+	{
+	class Raw
+	{
+		class ToBaked
+		{
+			transition_to = 2;
+			cooking_method = 1;
+		};
+		class ToBoiled
+		{
+			transition_to = 3;
+			cooking_method = 2;
+		};
+		class ToDried
+		{
+			transition_to = 4;
+			cooking_method = 3;
+		};
+		class ToBurned
+		{
+			transition_to = 5;
+			cooking_method = 3;
+		};
+		class ToRotten
+		{
+			transition_to = 6;
+			cooking_method = 4;
+		};
+	};
+	class Rotten
+	{
+		class ToBurned
+		{
+			transition_to = 5;
+			cooking_method = 1;
+		};
+	};
+	class Baked
+	{
+		class ToBaked
+		{
+			transition_to = 5;
+			cooking_method = 1;
+		};
+		class ToBoiled
+		{
+			transition_to = 5;
+			cooking_method = 2;
+		};
+		class ToDried
+		{
+			transition_to = 5;
+			cooking_method = 3;
+		};
+		class ToBurned
+		{
+			transition_to = 5;
+			cooking_method = 3;
+		};
+		class ToRotten
+		{
+			transition_to = 6;
+			cooking_method = 4;
+		};
+	};
+	class Boiled
+	{
+		class ToBaked
+		{
+			transition_to = 5;
+			cooking_method = 1;
+		};
+		class ToBoiled
+		{
+			transition_to = 5;
+			cooking_method = 2;
+		};
+		class ToDried
+		{
+			transition_to = 5;
+			cooking_method = 3;
+		};
+		class ToBurned
+		{
+			transition_to = 5;
+			cooking_method = 3;
+		};
+		class ToRotten
+		{
+			transition_to = 6;
+			cooking_method = 4;
+		};
+	};
+	class Dried
+	{
+		class ToBaked
+		{
+			transition_to = 5;
+			cooking_method = 1;
+		};
+		class ToBoiled
+		{
+			transition_to = 5;
+			cooking_method = 2;
+		};
+		class ToDried
+		{
+			transition_to = 5;
+			cooking_method = 3;
+		};
+		class ToBurned
+		{
+			transition_to = 5;
+			cooking_method = 3;
+		};
+		class ToRotten
+		{
+			transition_to = 6;
+			cooking_method = 4;
+		};
+	};
+	class Burned{};
+	};
+	class Edible_Base;
     class Dada_RawFoodCan_Colorbase: Edible_Base
 	{
 		scope = 0;
@@ -74,8 +199,7 @@ class CfgVehicles
 					cooking_properties[] = {100,30};
 				};
 			};
-            class MeatStageTransitions;
-			class FoodStageTransitions: MeatStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 		class DamageSystem
 		{
@@ -312,7 +436,7 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Chunky Soup";
-		descriptionShort = "ESPEN Beef and Vegetable soup, as chunky as ever";
+		descriptionShort = "ESPENLock Beef and Vegetable soup, as chunky as ever";
 		color = "ESPENChunkySoup";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
@@ -321,7 +445,7 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Chunky Soup";
-		descriptionShort = "ESPEN Beef and Vegetable soup, as chunky as ever";
+		descriptionShort = "ESPENLock Beef and Vegetable soup, as chunky as ever";
 		color = "ESPENChunkySoup";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
@@ -330,7 +454,7 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Chunky Soup";
-		descriptionShort = "ESPEN Beef and Vegetable soup, as chunky as ever";
+		descriptionShort = "ESPENLock Beef and Vegetable soup, as chunky as ever";
 		color = "ESPENChunkySoup";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
@@ -348,7 +472,7 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "SPAM";
-		descriptionShort = "An L&S staple";
+		descriptionShort = "An ESPENLock staple";
 		color = "LSSPAM";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
@@ -357,7 +481,7 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "SPAM";
-		descriptionShort = "An L&S staple";
+		descriptionShort = "An ESPENLock staple";
 		color = "LSSPAM";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
@@ -366,7 +490,7 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "SPAM";
-		descriptionShort = "An L&S staple";
+		descriptionShort = "An ESPENLock staple";
 		color = "LSSPAM";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
@@ -419,7 +543,7 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 	class Dada_RawFoodCan_ESPENMacnCheese: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
-		displayName = "ESPEN Mac And Cheese";
+		displayName = "ESPENLock Mac And Cheese";
 		descriptionShort = "Tastes like childhood. Pimp it with sausages for a more consistent meal";
 		color = "ESPENMacnCheese";
 		hiddenSelections[] = {"camoGround"};
@@ -428,7 +552,7 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 	class Dada_PreservedFoodCan_ESPENMacnCheese: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
-		displayName = "ESPEN Mac And Cheese";
+		displayName = "ESPENLock Mac And Cheese";
 		descriptionShort = "Tastes like childhood. Pimp it with sausages for a more consistent meal";
 		color = "ESPENMacnCheese";
 		hiddenSelections[] = {"camoGround"};
@@ -437,7 +561,7 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 	class Dada_PreservedFoodCan_ESPENMacnCheese_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
-		displayName = "ESPEN Mac And Cheese";
+		displayName = "ESPENLock Mac And Cheese";
 		descriptionShort = "Tastes like childhood. Pimp it with sausages for a more consistent meal";
 		color = "ESPENMacnCheese";
 		hiddenSelections[] = {"camoGround"};

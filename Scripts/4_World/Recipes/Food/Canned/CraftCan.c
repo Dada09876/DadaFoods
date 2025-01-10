@@ -2,7 +2,7 @@ class Craft_Dada_RawFoodCan_LSVeggies extends RecipeBase
 {
 	override void Init()
 	{
-		m_Name = "Craft L&S Veggies Can";
+		m_Name = "Craft ESPENLock Veggies Can";
 		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
 		m_AnimationLength = 1;//animation length in relative time units
 		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
@@ -116,6 +116,8 @@ class Craft_Dada_RawFoodCan_STAGham extends RecipeBase
         InsertIngredient(0,"RabbitLegMeat");//you can insert multiple ingredients this way
         //InsertIngredient(0,"srpSausage");//you can insert multiple ingredients this way
         //InsertIngredient(0,"srpStew_GroundBeef");//you can insert multiple ingredients this way
+		InsertIngredient(0,"ReindeerSteakMeat");
+		InsertIngredient(0,"FoxSteakMeat");
 	
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
@@ -139,6 +141,8 @@ class Craft_Dada_RawFoodCan_STAGham extends RecipeBase
         //InsertIngredient(1,"srpChickenleg");//you can insert multiple ingredients this way
         //InsertIngredient(1,"srpSausage");//you can insert multiple ingredients this way
         //InsertIngredient(1,"srpStew_GroundBeef");//you can insert multiple ingredients this way
+		InsertIngredient(1,"ReindeerSteakMeat");
+		InsertIngredient(1,"FoxSteakMeat");
         
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -176,7 +180,7 @@ class Craft_Dada_RawFoodCan_ESPENChunkySoup extends RecipeBase
 {
 	override void Init()
 	{
-		m_Name = "Craft ESPEN Chunky Soup";
+		m_Name = "Craft ESPENLock Chunky Soup";
 		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
 		m_AnimationLength = 1;//animation length in relative time units
 		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
@@ -210,6 +214,7 @@ class Craft_Dada_RawFoodCan_ESPENChunkySoup extends RecipeBase
         InsertIngredient(0,"FoxSteakMeat");
         InsertIngredient(0,"ChickenBreastMeat");
         InsertIngredient(0,"RabbitLegMeat");
+		InsertIngredient(0,"ReindeerSteakMeat");
         //InsertIngredient(0,"srpChickenleg");
         //InsertIngredient(0,"srpSausage");
         //InsertIngredient(0,"srpStew_GroundBeef");
@@ -263,7 +268,7 @@ class Craft_Dada_RawFoodCan_LSSPAM extends RecipeBase
 {
 	override void Init()
 	{
-		m_Name = "Craft L&S SPAM Can";
+		m_Name = "Craft ESPENLock SPAM Can";
 		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
 		m_AnimationLength = 1;//animation length in relative time units
 		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
@@ -294,10 +299,11 @@ class Craft_Dada_RawFoodCan_LSSPAM extends RecipeBase
         InsertIngredient(0,"BearSteakMeat");//you can insert multiple ingredients this way
         InsertIngredient(0,"CowSteakMeat");//you can insert multiple ingredients this way
         InsertIngredient(0,"SheepSteakMeat");//you can insert multiple ingredients this way
-        InsertIngredient(0,"FoxSteakMeat");//you can insert multiple ingredients this way
         InsertIngredient(0,"RabbitLegMeat");//you can insert multiple ingredients this way
         //InsertIngredient(0,"srpSausage");//you can insert multiple ingredients this way
         //InsertIngredient(0,"srpStew_GroundBeef");//you can insert multiple ingredients this way
+		InsertIngredient(0,"ReindeerSteakMeat");
+		InsertIngredient(0,"FoxSteakMeat");
 	
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
@@ -314,13 +320,13 @@ class Craft_Dada_RawFoodCan_LSSPAM extends RecipeBase
         InsertIngredient(1,"WolfSteakMeat");//you can insert multiple ingredients this way
         InsertIngredient(1,"BearSteakMeat");//you can insert multiple ingredients this way
         InsertIngredient(1,"CowSteakMeat");//you can insert multiple ingredients this way
-        InsertIngredient(1,"SheepSteakMeat");//you can insert multiple ingredients this way
-        InsertIngredient(1,"FoxSteakMeat");//you can insert multiple ingredients this way
         InsertIngredient(1,"ChickenBreastMeat");//you can insert multiple ingredients this way
         InsertIngredient(1,"RabbitLegMeat");//you can insert multiple ingredients this way
         //InsertIngredient(1,"srpChickenleg");//you can insert multiple ingredients this way
         //InsertIngredient(1,"srpSausage");//you can insert multiple ingredients this way
         //InsertIngredient(1,"srpStew_GroundBeef");//you can insert multiple ingredients this way
+		InsertIngredient(1,"ReindeerSteakMeat");
+		InsertIngredient(1,"FoxSteakMeat");
         
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -404,6 +410,7 @@ class Craft_Dada_RawFoodCan_STAGchili extends RecipeBase
         //InsertIngredient(1,"srpChickenleg");//you can insert multiple ingredients this way
         //InsertIngredient(1,"srpSausage");//you can insert multiple ingredients this way
         //InsertIngredient(1,"srpStew_GroundBeef");//you can insert multiple ingredients this way
+		InsertIngredient(1,"ReindeerSteakMeat");
        
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -440,7 +447,7 @@ class Craft_Dada_RawFoodCan_ESPENMacnCheese extends RecipeBase
 {
 	override void Init()
 	{
-		m_Name = "Craft ESPEN Mac & Cheese Can";
+		m_Name = "Craft ESPENLock Mac & Cheese Can";
 		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
 		m_AnimationLength = 1;//animation length in relative time units
 		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
@@ -471,10 +478,10 @@ class Craft_Dada_RawFoodCan_ESPENMacnCheese extends RecipeBase
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
-    	//InsertIngredient(1,"srpMozza");//you can insert multiple ingredients this way
-		//InsertIngredient(1,"srpCheddarCurds");//you can insert multiple ingredients way
-		//InsertIngredient(1,"srpFeta");//you can insert multiple ingredients this way
-		//InsertIngredient(1,"srpFreshGoatCheese");//you can insert multiple ingredients
+    	InsertIngredient(1,"DadaRaw_Mozza");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaRaw_CheddarCurds");//you can insert multiple ingredients way
+		InsertIngredient(1,"DadaRaw_Feta");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaRaw_FreshGoatCheese");//you can insert multiple ingredients
 
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -682,7 +689,9 @@ class Craft_Dada_RawFoodCan_Paella extends RecipeBase
         InsertIngredient(0,"HerringFilletMeat");//you can insert multiple ingredients this way
         InsertIngredient(0,"MullowayFilletMeat");//you can insert multiple ingredients this way
         InsertIngredient(0,"Rice");
-        //InsertIngredient(0,"Dada_Raw_Rice");
+        InsertIngredient(0,"Dada_Raw_Rice");
+		InsertIngredient(0,"WalleyePollockFilletMeat");
+		InsertIngredient(0,"SteelheadTroutFilletMeat");
 
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
@@ -706,7 +715,10 @@ class Craft_Dada_RawFoodCan_Paella extends RecipeBase
         InsertIngredient(1,"BearSteakMeat");
         InsertIngredient(1,"CowSteakMeat");
         InsertIngredient(1,"SheepSteakMeat");
-        InsertIngredient(1,"FoxSteakMeat");
+        InsertIngredient(1,"ReindeerSteakMeat");
+		InsertIngredient(1,"FoxSteakMeat");
+		InsertIngredient(1,"WalleyePollockFilletMeat");
+		InsertIngredient(1,"SteelheadTroutFilletMeat");
         InsertIngredient(1,"ChickenBreastMeat");
         InsertIngredient(1,"RabbitLegMeat");
         //InsertIngredient(1,"srpChickenleg");
@@ -847,7 +859,6 @@ class Craft_Dada_RawFoodCan_Quail extends RecipeBase
 		InsertIngredient(0,"ChickenBreastMeat");//you can insert multiple ingredients this way
         InsertIngredient(0,"RabbitLegMeat");//you can insert multiple ingredients this way
         //InsertIngredient(0,"srpChickenleg");//you can insert multiple ingredients this way
-        InsertIngredient(0,"FoxSteakMeat");
 
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
@@ -856,7 +867,6 @@ class Craft_Dada_RawFoodCan_Quail extends RecipeBase
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
-        InsertIngredient(1,"FoxSteakMeat");//you can insert multiple ingredients this way
         InsertIngredient(1,"ChickenBreastMeat");//you can insert multiple ingredients this way
         InsertIngredient(1,"RabbitLegMeat");//you can insert multiple ingredients this way
         //InsertIngredient(1,"srpChickenleg");//you can insert multiple ingredients this way
@@ -1019,6 +1029,9 @@ class Craft_Dada_RawFoodCan_Samosa extends RecipeBase
         InsertIngredient(1,"MackerelFilletMeat");
         InsertIngredient(1,"Bitterlings");
         InsertIngredient(1,"Sardines");
+		InsertIngredient(1,"ReindeerSteakMeat");
+		InsertIngredient(1,"WalleyePollockFilletMeat");
+		InsertIngredient(1,"SteelheadTroutFilletMeat");
 
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -1101,6 +1114,7 @@ class Craft_Dada_RawFoodCan_HomemadeChili extends RecipeBase
         //InsertIngredient(1,"srpChickenleg");//you can insert multiple ingredients this way
         //InsertIngredient(1,"srpSausage");//you can insert multiple ingredients this way
         //InsertIngredient(1,"srpStew_GroundBeef");//you can insert multiple ingredients this way
+		InsertIngredient(1,"ReindeerSteakMeat");
        
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -1231,12 +1245,14 @@ class Craft_Dada_RawFoodCan_Crab extends RecipeBase
 		InsertIngredient(0,"MackerelFilletMeat");//you can insert multiple ingredients this way
 		InsertIngredient(0,"Bitterlings");//you can insert multiple ingredients this way
 		InsertIngredient(0,"Sardines");//you can insert multiple ingredients this way
-		//InsertIngredient(0,"SRP_FreshWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
-		//InsertIngredient(0,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
+		InsertIngredient(0,"SRP_FreshWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
+		InsertIngredient(0,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
 		//InsertIngredient(0,"AcanthopagrusFilletMeat");//you can insert multiple ingredients this way
 		//InsertIngredient(0,"ChubFilletMeat");//you can insert multiple ingredients this way
         //InsertIngredient(0,"HerringFilletMeat");//you can insert multiple ingredients this way
         //InsertIngredient(0,"MullowayFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"WalleyePollockFilletMeat");
+		InsertIngredient(0,"SteelheadTroutFilletMeat");
 		
 	
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
@@ -1246,16 +1262,24 @@ class Craft_Dada_RawFoodCan_Crab extends RecipeBase
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
-        InsertIngredient(0,"CarpFilletMeat");//you can insert multiple ingredients this way
-		InsertIngredient(0,"MackerelFilletMeat");//you can insert multiple ingredients this way
-		InsertIngredient(0,"Bitterlings");//you can insert multiple ingredients this way
-		InsertIngredient(0,"Sardines");//you can insert multiple ingredients this way
-		//InsertIngredient(0,"SRP_FreshWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
-		//InsertIngredient(0,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
+        InsertIngredient(1,"CarpFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"MackerelFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Bitterlings");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Sardines");//you can insert multiple ingredients this way
+		InsertIngredient(1,"SRP_FreshWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
+		InsertIngredient(1,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
 		//InsertIngredient(0,"AcanthopagrusFilletMeat");//you can insert multiple ingredients this way
 		//InsertIngredient(0,"ChubFilletMeat");//you can insert multiple ingredients this way
         //InsertIngredient(0,"HerringFilletMeat");//you can insert multiple ingredients this way
         //InsertIngredient(0,"MullowayFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"WalleyePollockFilletMeat");
+		InsertIngredient(1,"SteelheadTroutFilletMeat");
+
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = -1;// 0 = do nothing
+		m_IngredientDestroy[1] = true;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//result1
 		AddResult("Dada_RawFoodCan_Crab");//add results here
@@ -1320,6 +1344,8 @@ class Craft_Dada_RawFoodCan_Clam extends RecipeBase
 		//InsertIngredient(0,"ChubFilletMeat");//you can insert multiple ingredients this way
         //InsertIngredient(0,"HerringFilletMeat");//you can insert multiple ingredients this way
         //InsertIngredient(0,"MullowayFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"WalleyePollockFilletMeat");
+		InsertIngredient(0,"SteelheadTroutFilletMeat");
 		
 	
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
@@ -1329,16 +1355,18 @@ class Craft_Dada_RawFoodCan_Clam extends RecipeBase
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
-        InsertIngredient(0,"CarpFilletMeat");//you can insert multiple ingredients this way
-		InsertIngredient(0,"MackerelFilletMeat");//you can insert multiple ingredients this way
-		InsertIngredient(0,"Bitterlings");//you can insert multiple ingredients this way
-		InsertIngredient(0,"Sardines");//you can insert multiple ingredients this way
-		//InsertIngredient(0,"SRP_FreshWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
-		//InsertIngredient(0,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
+        InsertIngredient(1,"CarpFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"MackerelFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Bitterlings");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Sardines");//you can insert multiple ingredients this way
+		InsertIngredient(1,"SRP_FreshWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
+		InsertIngredient(1,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
 		//InsertIngredient(0,"AcanthopagrusFilletMeat");//you can insert multiple ingredients this way
 		//InsertIngredient(0,"ChubFilletMeat");//you can insert multiple ingredients this way
         //InsertIngredient(0,"HerringFilletMeat");//you can insert multiple ingredients this way
         //InsertIngredient(0,"MullowayFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"WalleyePollockFilletMeat");
+		InsertIngredient(1,"SteelheadTroutFilletMeat");
 
         m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
