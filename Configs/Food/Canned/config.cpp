@@ -248,6 +248,7 @@ class CfgVehicles
 
     class Dada_PreservedFoodCan_Colorbase: Edible_Base
 	{
+		scope = 0;
 		displayName = "Preserved Canned Food";
 		descriptionShort = "A can of food that is preserved from spoiling.";
 		model = "\dz\gear\food\food_can.p3d";
@@ -305,6 +306,7 @@ class CfgVehicles
 
 	class Dada_PreservedFoodCan_Colorbase_Opened: Edible_Base
 	{
+		scope = 0;
 		canBeSplit = 1;
 		displayName = "Preserved Canned Food Open";
 		descriptionShort = "An opened can of preserved food. Who knows how long it has been in there.";

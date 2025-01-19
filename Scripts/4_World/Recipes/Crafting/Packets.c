@@ -54,12 +54,30 @@ class CraftDadaCoffeePacket extends RecipeBase
 		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
 		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
+
     override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		return true;
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && item.GetTemperature())
+
+	// check if ingredient has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
 	}
 
-    override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	return false;
+    }
+
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
@@ -121,12 +139,30 @@ class CraftDadaGreenTeaPacket extends RecipeBase
 		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
 		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
+
     override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		return true;
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && item.GetTemperature())
+
+	// check if ingredient has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
 	}
 
-    override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	return false;
+    }
+
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
@@ -188,12 +224,30 @@ class CraftDadaBlackTeaPacket extends RecipeBase
 		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
 		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
+
     override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		return true;
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && item.GetTemperature())
+
+	// check if ingredient has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
 	}
 
-    override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	return false;
+    }
+
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}

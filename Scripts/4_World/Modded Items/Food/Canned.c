@@ -24,7 +24,6 @@ class Dada_RawFoodCan_Colorbase extends Edible_Base
 	{
 		super.SetActions();
 		
-		AddAction(ActionForceFeed);
 		AddAction(ActionEatMeat);
 	}
 };
@@ -53,7 +52,6 @@ class Dada_PreservedFoodCan_Colorbase_Opened: Edible_Base
 	{
 		super.SetActions();
 		
-		AddAction(ActionForceFeedSmall);
 		AddAction(ActionEatSmallCan);
 	}
 };

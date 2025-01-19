@@ -52,6 +52,7 @@ modded class PluginRecipesManagerBase extends PluginBase
     RegisterRecipe(new CraftDadaDish_Chili);
     RegisterRecipe(new CraftDadaSoup_Gravy);
     RegisterRecipe(new CraftDadaDish_Gumbo);
+    RegisterRecipe(new CraftDadaDish_Gumbo1);
     RegisterRecipe(new CraftDadaDish_MushroomCream);
     RegisterRecipe(new CraftDadaDish_SauteedMushrooms);
     RegisterRecipe(new CraftDadaDish_Pancakes);
@@ -60,6 +61,7 @@ modded class PluginRecipesManagerBase extends PluginBase
     RegisterRecipe(new CraftDadaDish_Pie2);
     RegisterRecipe(new CraftDadaSoup_Ragout);
     RegisterRecipe(new CraftDadaDish_SeafoodGumbo);
+    RegisterRecipe(new CraftDadaDish_SeafoodGumbo1);
     RegisterRecipe(new CraftDadaSoup_TomatoSauce);
     RegisterRecipe(new CraftDadaSoup_TomatoSoup);
     RegisterRecipe(new CraftDadaDish_MacaroniAndCheese);
@@ -136,7 +138,9 @@ modded class PluginRecipesManagerBase extends PluginBase
     RegisterRecipe(new CraftDadaDrink_MilkGallon);
     RegisterRecipe(new CraftDadaDrink_Coffee);
     RegisterRecipe(new CraftDadaDrink_MilkCoffee);
+    RegisterRecipe(new CraftDadaDrink_MilkCoffee1);
     RegisterRecipe(new CraftDadaDrink_MilkCoffeeArt);
+    RegisterRecipe(new CraftDadaDrink_MilkCoffeeArt1);
     RegisterRecipe(new CraftDadaDrink_BlackTea);
     RegisterRecipe(new CraftDadaDrink_GreenTea);
     RegisterRecipe(new CraftDadaDrink_MilkShake);

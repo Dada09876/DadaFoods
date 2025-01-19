@@ -1,47 +1,3 @@
-	/*
-	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{      
-    if (ingredients[0] && ingredients[1])
-		{
-      Edible_Base bread = Edible_Base.Cast( ingredients[0] );
-      Edible_Base food = Edible_Base.Cast( ingredients[1] );
-      if (bread && food)
-      {
-        return (bread.IsFoodBaked() || bread.IsFoodRaw() || bread.IsFoodDried() || bread.IsFoodBoiled() && (food.IsFoodBaked() || food.IsFoodDried() || food.IsFoodBoiled() || food.IsFoodRaw()));
-      }
-    }
-    return false;
-	}
-	
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
-	{
-		Debug.Log("Recipe Do method called","recipes");
-	}
-
-	//
-
-	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-	Bottle_Base water;  
-	if (Class.CastTo(water,ingredients[1]))
-    {
-      bool waterTemp = (water.GetTemperature() > 70 && water.GetTemperature() < 150);
-      if (waterTemp)
-	  {
-        return true;
-      }
-	  return false;
-	}
-	return false;
-    }
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
-	{
-		Debug.Log("Recipe Do method called","recipes");
-	}
-
-//
-*/
-
 class CraftDadaRaw_Salad extends RecipeBase
 {
 	override void Init()
@@ -56,13 +12,13 @@ class CraftDadaRaw_Salad extends RecipeBase
 		m_MinDamageIngredient[0] = -1;//-1 = disable check
 		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[0] = 1;//-1 = disable check
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
 		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
 		m_MaxDamageIngredient[1] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[1] = 1;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
 		//----------------------------------------------------------------------------------------------------------------------
 		
@@ -105,23 +61,66 @@ class CraftDadaRaw_Salad extends RecipeBase
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
-    if (ingredients[0] && ingredients[1])
-		{
-      Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
-      if (food && food1)
-      {
-        return (food.IsFoodRaw() || food.IsFoodDried() && (food1.IsFoodRaw() || food1.IsFoodDried()));
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
       }
-    }
-    return false;
+	  return false;
 	}
-	
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried() || item.GetFoodStage().IsFoodBaked() || item.GetFoodStage().IsFoodBoiled());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried() || vessel.GetFoodStage().IsFoodBaked() || vessel.GetFoodStage().IsFoodBoiled());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
+
 
 class CraftDadaRaw_TomatoSalad extends RecipeBase
 {
@@ -137,13 +136,13 @@ class CraftDadaRaw_TomatoSalad extends RecipeBase
 		m_MinDamageIngredient[0] = -1;//-1 = disable check
 		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[0] = 1;//-1 = disable check
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
 		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
 		m_MaxDamageIngredient[1] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[1] = 1;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
 		//----------------------------------------------------------------------------------------------------------------------
 		
@@ -182,19 +181,61 @@ class CraftDadaRaw_TomatoSalad extends RecipeBase
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
-    if (ingredients[0] && ingredients[1])
-		{
-      Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
-      if (food && food1)
-      {
-        return (food.IsFoodRaw() || food.IsFoodDried() && (food1.IsFoodRaw() || food1.IsFoodDried()));
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
       }
-    }
-    return false;
+	  return false;
 	}
-	
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried() || item.GetFoodStage().IsFoodBaked() || item.GetFoodStage().IsFoodBoiled());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried() || vessel.GetFoodStage().IsFoodBaked() || vessel.GetFoodStage().IsFoodBoiled());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
@@ -258,24 +299,55 @@ class CraftDadaRaw_Rice extends RecipeBase
 	}
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-	Bottle_Base water;  
-	if (Class.CastTo(water,ingredients[1]))
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && vessel.IsLiquidContainer()&& vessel.GetTemperature()&& item.GetTemperature())
+	
+	// check if liquid is water
+	if (Class.CastTo(vessel,ingredients[1]))
     {
-      bool waterTemp = (water.GetTemperature() > 70 && water.GetTemperature() < 150);
-      if (waterTemp)
+		if (vessel.GetLiquidType() == LIQUID_WATER  ||  vessel.GetLiquidType() == LIQUID_RIVERWATER)
+		{
+			return true;
+		}
+	  return false;
+	}
+
+	// check if liquid has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 70 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
 	  {
         return true;
       }
 	  return false;
 	}
+
+	// check if ingredient has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
 	return false;
     }
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
+
 
 class CraftDadaRaw_PokeBowl extends RecipeBase
 {
@@ -297,7 +369,7 @@ class CraftDadaRaw_PokeBowl extends RecipeBase
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
 		m_MaxDamageIngredient[1] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[1] = -1;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
 		//----------------------------------------------------------------------------------------------------------------------
 		
@@ -346,18 +418,61 @@ class CraftDadaRaw_PokeBowl extends RecipeBase
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
-    if (ingredients[1])
-		{
-      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
-      if (food1)
-      {
-        return (food1.IsFoodRaw() || food1.IsFoodDried());
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
       }
-    }
-    return false;
+	  return false;
 	}
-	
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried() || item.GetFoodStage().IsFoodBaked() || item.GetFoodStage().IsFoodBoiled());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried() || vessel.GetFoodStage().IsFoodBaked() || vessel.GetFoodStage().IsFoodBoiled());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
@@ -426,15 +541,55 @@ class CraftDadaRaw_CerealCrunchin_Frosties extends RecipeBase
 	}
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		return true;
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
 	}
 
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 70 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	
 
 class CraftDadaRawCerealCrunchin_Nesquik extends RecipeBase
 {
@@ -497,15 +652,55 @@ class CraftDadaRawCerealCrunchin_Nesquik extends RecipeBase
 	}
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		return true;
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
 	}
-	
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 70 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	
 
 class CraftDadaRaw_CerealCrunchin_Kosmostar extends RecipeBase
 {
@@ -567,28 +762,56 @@ class CraftDadaRaw_CerealCrunchin_Kosmostar extends RecipeBase
 		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 
-	/*override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{      
-    if (ingredients[1])
-		{
-      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
-      if (food1)
-      {
-        return (food1.IsFoodRaw() || food1.IsFoodDried());
-      }
-    }
-    return false;
-	}*/
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		return true;
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
 	}
-	
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 70 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	
 
 class CraftDadaRaw_SushiMaki extends RecipeBase
 {
@@ -610,7 +833,7 @@ class CraftDadaRaw_SushiMaki extends RecipeBase
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
 		m_MaxDamageIngredient[1] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[1] = -1;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
 		//----------------------------------------------------------------------------------------------------------------------
 		
@@ -656,23 +879,65 @@ class CraftDadaRaw_SushiMaki extends RecipeBase
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
-    if (ingredients[0] && ingredients[1])
-		{
-      Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
-      if (food && food1)
-      {
-        return (food.IsFoodRaw() || food.IsFoodDried() && (food1.IsFoodRaw() || food1.IsFoodDried() || food1.IsFoodBaked() || food1.IsFoodBoiled() ));
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
       }
-    }
-    return false;
+	  return false;
 	}
-	
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried() || item.GetFoodStage().IsFoodBaked() || item.GetFoodStage().IsFoodBoiled());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried() || vessel.GetFoodStage().IsFoodBaked() || vessel.GetFoodStage().IsFoodBoiled());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	
 
 class CraftDadaRaw_SushiOnigiri extends RecipeBase
 {
@@ -694,7 +959,7 @@ class CraftDadaRaw_SushiOnigiri extends RecipeBase
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
 		m_MaxDamageIngredient[1] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[1] = -1;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
 		//----------------------------------------------------------------------------------------------------------------------
 		
@@ -740,23 +1005,65 @@ class CraftDadaRaw_SushiOnigiri extends RecipeBase
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
-    if (ingredients[0] && ingredients[1])
-		{
-      Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
-      if (food && food1)
-      {
-        return (food.IsFoodRaw() || food.IsFoodDried() && (food1.IsFoodRaw() || food1.IsFoodDried() || food1.IsFoodBaked() || food1.IsFoodBoiled() ));
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
       }
-    }
-    return false;
+	  return false;
 	}
-	
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried() || item.GetFoodStage().IsFoodBaked() || item.GetFoodStage().IsFoodBoiled());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried() || vessel.GetFoodStage().IsFoodBaked() || vessel.GetFoodStage().IsFoodBoiled());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	
 
 class CraftDadaRaw_SmallButter extends RecipeBase
 {
@@ -826,23 +1133,65 @@ class CraftDadaRaw_SmallButter extends RecipeBase
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
-    if (ingredients[0] && ingredients[1])
-		{
-      Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
-      if (food && food1)
-      {
-        return (food.IsFoodRaw() || food.IsFoodDried() && (food1.IsFoodRaw() || food1.IsFoodDried()));
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
       }
-    }
-    return false;
+	  return false;
 	}
-	
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried() || item.GetFoodStage().IsFoodBaked() || item.GetFoodStage().IsFoodBoiled());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried() || vessel.GetFoodStage().IsFoodBaked() || vessel.GetFoodStage().IsFoodBoiled());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	
 
 class CraftDadaRaw_BigButter extends RecipeBase
 {
@@ -909,23 +1258,65 @@ class CraftDadaRaw_BigButter extends RecipeBase
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
-    if (ingredients[0] && ingredients[1])
-		{
-      Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
-      if (food && food1)
-      {
-        return (food.IsFoodRaw() || food.IsFoodDried() && (food1.IsFoodRaw() || food1.IsFoodDried()));
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
       }
-    }
-    return false;
+	  return false;
 	}
-	
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried() || item.GetFoodStage().IsFoodBaked() || item.GetFoodStage().IsFoodBoiled());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried() || vessel.GetFoodStage().IsFoodBaked() || vessel.GetFoodStage().IsFoodBoiled());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	
 
 class CraftDadaRaw_Yogourt extends RecipeBase
 {
@@ -988,23 +1379,55 @@ class CraftDadaRaw_Yogourt extends RecipeBase
 	}
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{      
-    if (ingredients[0])
-		{
-      Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      if (food)
-      {
-        return (food.IsFoodRaw() || food.IsFoodDried());
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[1]);
+	ItemBase vessel = ItemBase.Cast(ingredients[0]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
       }
-    }
-    return false;
+	  return false;
 	}
-	
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[0]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 70 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[0]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	
 
 class CraftFreshCheese_Mozza extends RecipeBase
 {
@@ -1076,23 +1499,44 @@ class CraftFreshCheese_Mozza extends RecipeBase
 	}
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{      
-    if (ingredients[0])
-		{
-      Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      if (food)
-      {
-        return (food.IsFoodRaw() || food.IsFoodDried());
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[1]);
+	ItemBase vessel = ItemBase.Cast(ingredients[0]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[0]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 70 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
       }
-    }
-	return false
+	  return false;
 	}
 
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[0]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	
 
 class CraftFreshCheese_CheddarCurds extends RecipeBase
 {
@@ -1166,24 +1610,44 @@ class CraftFreshCheese_CheddarCurds extends RecipeBase
 		m_ResultReplacesIngredient[1] = -1;
 	}
 
-override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{      
-    if (ingredients[0])
-		{
-      		Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      		if (food)
-      		{
-        		return (food.IsFoodRaw() || food.IsFoodDried());
-      		}
-    	}
-		return false
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && item.GetTemperature() && item.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
 	}
 
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[0]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	
 
 class CraftFreshCheese_Goat extends RecipeBase
 {
@@ -1255,23 +1719,43 @@ class CraftFreshCheese_Goat extends RecipeBase
 	}
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{      
-    if (ingredients[0])
-		{
-      		Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      		if (food)
-      		{
-        		return (food.IsFoodRaw() || food.IsFoodDried());
-      		}
-    	}
-		return false
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && item.GetTemperature() && item.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
 	}
 
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[0]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	
 
 class CraftFreshCheese_Feta extends RecipeBase
 {
@@ -1346,23 +1830,43 @@ class CraftFreshCheese_Feta extends RecipeBase
 	}
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{      
-    if (ingredients[0])
-		{
-      		Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      		if (food)
-      		{
-        		return (food.IsFoodRaw() || food.IsFoodDried());
-      		}
-    	}
-		return false
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && item.GetTemperature() && item.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
 	}
 
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[0]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	
 
 class CraftDadaRaw_FrozenYogurt extends RecipeBase
 {
@@ -1423,24 +1927,65 @@ class CraftDadaRaw_FrozenYogurt extends RecipeBase
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
-    if (ingredients[0] && ingredients[1])
-		{
-      Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
-      if (food && food1)
-      {
-        return (food.IsFoodRaw() || food.IsFoodDried() && (food1.IsFoodRaw() || food1.IsFoodDried()));
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > -150 && item.GetTemperature() < 0);
+      if (itemTemp)
+	  {
+        return true;
       }
-    }
-    return false;
+	  return false;
 	}
 
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
 
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > -150 && vessel.GetTemperature() < 0);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	
 
 class CraftDadaRaw_VanillaChocoSwirl extends RecipeBase
 {
@@ -1507,24 +2052,65 @@ class CraftDadaRaw_VanillaChocoSwirl extends RecipeBase
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
-    if (ingredients[0] && ingredients[1])
-		{
-      Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
-      if (food && food1)
-      {
-        return (food.IsFoodRaw() || food.IsFoodDried() && (food1.IsFoodRaw() || food1.IsFoodDried()));
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > -150 && item.GetTemperature() < 0);
+      if (itemTemp)
+	  {
+        return true;
       }
-    }
-    return false;
+	  return false;
 	}
 
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
 
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > -150 && vessel.GetTemperature() < 0);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+  return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	
 
 class CraftDadaRaw_VanillaIceCream extends RecipeBase
 {
@@ -1591,24 +2177,65 @@ class CraftDadaRaw_VanillaIceCream extends RecipeBase
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
-    if (ingredients[0] && ingredients[1])
-		{
-      Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
-      if (food && food1)
-      {
-        return (food.IsFoodRaw() || food.IsFoodDried() && (food1.IsFoodRaw() || food1.IsFoodDried()));
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > -150 && item.GetTemperature() < 0);
+      if (itemTemp)
+	  {
+        return true;
       }
-    }
-    return false;
+	  return false;
 	}
 
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
 
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > -150 && vessel.GetTemperature() < 0);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	
 
 class CraftDadaRaw_ChocoIScream extends RecipeBase
 {
@@ -1675,23 +2302,59 @@ class CraftDadaRaw_ChocoIScream extends RecipeBase
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{      
-    if (ingredients[0] && ingredients[1])
-		{
-      Edible_Base food = Edible_Base.Cast( ingredients[0] );
-      Edible_Base food1 = Edible_Base.Cast( ingredients[1] );
-      if (food && food1)
-      {
-        return (food.IsFoodRaw() || food.IsFoodDried() && (food1.IsFoodRaw() || food1.IsFoodDried()));
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > -150 && item.GetTemperature() < 0);
+      if (itemTemp)
+	  {
+        return true;
       }
-    }
-    return false;
+	  return false;
 	}
 
-
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
-	{
-		Debug.Log("Recipe Do method called","recipes");
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
 	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > -150 && vessel.GetTemperature() < 0);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   };
 };
 
 class CraftDadaRaw_PumpkinSeeds extends RecipeBase
@@ -1751,12 +2414,41 @@ class CraftDadaRaw_PumpkinSeeds extends RecipeBase
 	}
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		return true;
+	{      
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && vessel.GetTemperature())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 50 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
 	}
 
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > -150 && vessel.GetTemperature() < 0);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+};	

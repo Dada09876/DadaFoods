@@ -59,11 +59,40 @@ class CraftDadaSpawned_Coffee extends RecipeBase
 	}
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		return true;
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && vessel.GetTemperature()&& item.GetTemperature())
+
+	// check if liquid has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 50);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
 	}
 
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	// check if ingredient has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+	return false;
+    }
+
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
@@ -128,11 +157,40 @@ class CraftDadaSpawned_GreenTea extends RecipeBase
 	}
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		return true;
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && vessel.GetTemperature()&& item.GetTemperature())
+
+	// check if liquid has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 50);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
 	}
 
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	// check if ingredient has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+	return false;
+    }
+
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
@@ -197,11 +255,40 @@ class CraftDadaSpawned_BlackTea extends RecipeBase
 	}
 
 override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		return true;
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && vessel.GetTemperature()&& item.GetTemperature())
+
+	// check if liquid has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 50);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
 	}
 
-override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	// check if ingredient has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+	return false;
+    }
+
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}

@@ -112,16 +112,6 @@ class Craft_OpenCan extends RecipeBase
 		string newItemName = string.Format("%1_Opened", ingredients[0].GetType()); 
 		//DamageTool(tool,player);
 	}
-	
-	/*void DamageTool(ItemBase tool,PlayerBase player)
-	{
-		float health_delta = -(tool.GetMaxHealth("","Health") / 40);
-		health_delta = Math.Clamp(health_delta,-10,-0.5);
-		
-		if(health_delta <0) health_delta = player.GetSoftSkillsManager().SubtractSpecialtyBonus(health_delta, m_Specialty);
-		else 				health_delta = player.GetSoftSkillsManager().AddSpecialtyBonus(health_delta, m_Specialty);
-		tool.AddHealth("","",health_delta);
-	}*/
 };
 
 class Craft_SealCan extends RecipeBase  
