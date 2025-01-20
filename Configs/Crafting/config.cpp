@@ -405,7 +405,7 @@ class DadaCheesePress: Inventory_Base
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Crafting\data\BoneMeal.rvmat"};
 		canBeSplit = 1;
 		animClass = "NoFireClass";
-		weight = 300;
+		weight = 1;
 		itemSize[] = {3,5};
 		stackedUnit = "g";
 		quantityBar = 1;
@@ -429,5 +429,12 @@ class DadaCheesePress: Inventory_Base
 			AddEnergyToSlot = 1;
 			ConsumedQuantity = 250.0;
 		};
+	};
+
+	class SmallGuts: Edible_Base
+	{
+		scope = 2;
+		displayName = "Small Guts";
+		descriptionShort = "A Pile of Small Guts";
 	};
 };
