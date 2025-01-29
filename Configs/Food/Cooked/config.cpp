@@ -689,10 +689,32 @@ class CfgVehicles
 		};	
 	};
 
+	class DadaDish_Fries: DadaDish_Base
+	{
+		model = "Source_Files\DadaFoods\Configs\Food\Cooked\data\fries.p3d";
+		scope = 2;
+		weight = 0.5;
+		itemSize[] = {2,1};
+		displayName = "Fries";
+		descriptionShort = "Crispy and Salty";
+		hiddenSelections[] = {"cs_raw"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaFries_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaFries_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaFries_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaFries_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaFries_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaFries_rotten_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 200;
+					healthLevels[] = {{1,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"}},{0.7,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"}},{0.5,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"}},{0.3,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"}},{0,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"}}};
+				};
+			};
+		};	
+	};
 // FRIED
 
 
 // CURED
-
 
 };
