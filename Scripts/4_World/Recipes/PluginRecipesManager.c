@@ -1,6 +1,6 @@
 // override the plugin recipe manager class
-modded class PluginRecipesManagerBase extends PluginBase
-{    
+modded class PluginRecipesManager
+{
   // override the register recipes method
   override void RegisterRecipies()
   {
@@ -9,7 +9,7 @@ modded class PluginRecipesManagerBase extends PluginBase
     // an example of registering a recipe you created
 
     //SPAWNED
-    
+
     RegisterRecipe(new CraftBoxCerealCrunchin);
     RegisterRecipe(new CraftDadaSpawned_BoxCerealCrunchin_Kosmostar);
     RegisterRecipe(new CraftDadaSpawned_BoxCerealCrunchin_Frosties);
@@ -27,7 +27,7 @@ modded class PluginRecipesManagerBase extends PluginBase
     RegisterRecipe(new CraftDadaCoffeePacket);
     RegisterRecipe(new CraftDadaGreenTeaPacket);
     RegisterRecipe(new CraftDadaBlackTeaPacket);
-    
+
 
 
     // FOOD COOKED
@@ -130,7 +130,7 @@ modded class PluginRecipesManagerBase extends PluginBase
 
     */
 
-    // DRINKS 
+    // DRINKS
 
     RegisterRecipe(new CraftDadaDrink_FreshMilk);
     RegisterRecipe(new CraftDadaDrink_MilkBottle);
@@ -146,17 +146,17 @@ modded class PluginRecipesManagerBase extends PluginBase
     RegisterRecipe(new CraftDadaDrink_MilkShake);
     RegisterRecipe(new CraftDadaDrink_CurdsAndWhey);
 
-    
+
     // CANNIBAL
 
-    
+
     RegisterRecipe(new CraftDadaCannibal_EntrailsSpaghetti);
     RegisterRecipe(new CraftDadaCannibal_EyeballSoup);
     RegisterRecipe(new CraftDadaCannibal_Jerky);
     RegisterRecipe(new CraftDadaCannibal_WasteBread);
 
    // CRAFTING
-    
+
     RegisterRecipe(new CraftDadaCharcoalPiece);
     RegisterRecipe(new CraftDadaCharcoalTabs);
     RegisterRecipe(new CraftDadaBoneMeal);
