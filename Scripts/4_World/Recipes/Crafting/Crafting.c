@@ -6,8 +6,6 @@ class CraftDadaCharcoalPiece extends Craft_DadaTemp1Stage1_BaseRecipe
 		
 		m_MinQuantityIngredient[0] = -1;//-1 = disable check
 		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
-		m_MinQuantityIngredient[1] = 70;//-1 = disable check
-		m_MaxQuantityIngredient[1] = -1;//-1 = disab
 		
 		//INGREDIENTS
 		//ingredient 1
