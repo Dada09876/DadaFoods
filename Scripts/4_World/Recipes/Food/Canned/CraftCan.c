@@ -1,114 +1,4 @@
-class Craft_DadaFoodCan_BaseRecipe extends RecipeBase
-{
-	override void Init()
-	{
-		m_Name = "Craft Food Can";
-		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
-		m_AnimationLength = 1;//animation length in relative time units
-		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
-
-		//conditions
-		m_MinDamageIngredient[0] = -1;//-1 = disable check
-		m_MaxDamageIngredient[0] = 3;//-1 = disable check
-
-		m_MinQuantityIngredient[0] = 60;//-1 = disable check
-		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
-
-		m_MinDamageIngredient[1] = -1;//-1 = disable check
-		m_MaxDamageIngredient[1] = 3;//-1 = disable check
-
-		m_MinQuantityIngredient[1] = 60;//-1 = disable check
-		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
-		//----------------------------------------------------------------------------------------------------------------------
-
-		//INGREDIENTS
-		//ingredient 1
-		// InsertIngredient(0,"Tomato");
-        // InsertIngredient(0,"GreenBellPepper");
-        // InsertIngredient(0,"Zucchini");
-        // InsertIngredient(0,"SlicedPumpkin");
-        // InsertIngredient(0,"Potato");
-        // InsertIngredient(0,"PotatoSeed");
-
-		m_IngredientAddHealth[0] = 0;// 0 = do nothing
-		m_IngredientSetHealth[0] = -1; // -1 = do nothing
-		m_IngredientAddQuantity[0] = 0;// 0 = do nothing
-		m_IngredientDestroy[0] = true;//true = destroy, false = do nothing
-		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
-
-		//ingredient 2
-        // InsertIngredient(1,"Tomato");//you can insert multiple ingredients this way
-        // InsertIngredient(1,"GreenBellPepper");//you can insert multiple ingredients this way
-        // InsertIngredient(1,"Zucchini");//you can insert multiple ingredients this way
-        // InsertIngredient(1,"SlicedPumpkin");//you can insert multiple ingredients this way
-        // InsertIngredient(1,"Potato");//you can insert multiple ingredients this way
-        // InsertIngredient(1,"PotatoSeed");//you can insert multiple ingredients this way
-
-		m_IngredientAddHealth[1] = 0;// 0 = do nothing
-		m_IngredientSetHealth[1] = -1; // -1 = do nothing
-		m_IngredientAddQuantity[1] = 0;// 0 = do nothing
-		m_IngredientDestroy[1] = true;// false = do nothing
-		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
-		//----------------------------------------------------------------------------------------------------------------------
-
-		//result1
-		// AddResult("Dada_RawFoodCan_LSVeggies");//add results here
-
-		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
-		m_ResultSetQuantity[0] = 100;//-1 = do nothing
-		m_ResultSetHealth[0] = -1;//-1 = do nothing
-		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
-		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
-		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
-		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
-		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
-	}
-
-	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		// define my variables
-		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
-		{
-			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
-			{
-				return false;
-			}
-			FoodStage foodStage1 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage1.IsFoodRaw() || foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
-			{
-				return false;
-			}
-
-			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 10 || ingredient2.GetTemperature() > 70)
-			{
-				return false;
-			}
-			FoodStage foodStage2 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage2.IsFoodRaw() || foodStage2.IsFoodBurned() || foodStage2.IsFoodRotten())
-			{
-				return false;
-			}
-			// by this point we know the 2 ingredients are both good temperatures and have good food stages
-			return true;
-		}
-		// initial ingredients are wrong, false
-   		return false;
-   	}
-
-   	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
-	{
-		Debug.Log("Recipe Do method called","recipes");
-	}
-};
-
-
-class Craft_Dada_RawFoodCan_LSVeggies extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_LSVeggies extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -136,7 +26,7 @@ class Craft_Dada_RawFoodCan_LSVeggies extends Craft_DadaFoodCan_BaseRecipe
 		AddResult("Dada_RawFoodCan_LSVeggies");//add results here
 	}
 };
-class Craft_Dada_RawFoodCan_STAGham extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_STAGham extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -183,7 +73,7 @@ class Craft_Dada_RawFoodCan_STAGham extends Craft_DadaFoodCan_BaseRecipe
 		AddResult("Dada_RawFoodCan_STAGham");//add results here
 	}
 };
-class Craft_Dada_RawFoodCan_ESPENChunkySoup extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_ESPENChunkySoup extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -221,7 +111,7 @@ class Craft_Dada_RawFoodCan_ESPENChunkySoup extends Craft_DadaFoodCan_BaseRecipe
 		AddResult("Dada_RawFoodCan_ESPENChunkySoup");//add results here
 	}
 };
-class Craft_Dada_RawFoodCan_LSSPAM extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_LSSPAM extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -266,7 +156,7 @@ class Craft_Dada_RawFoodCan_LSSPAM extends Craft_DadaFoodCan_BaseRecipe
 		AddResult("Dada_RawFoodCan_LSSPAM");//add results here
 	}
 };
-class Craft_Dada_RawFoodCan_STAGchili extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_STAGchili extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -299,7 +189,7 @@ class Craft_Dada_RawFoodCan_STAGchili extends Craft_DadaFoodCan_BaseRecipe
 		AddResult("Dada_RawFoodCan_STAGchili");//add results here
 	}
 };
-class Craft_Dada_RawFoodCan_ESPENMacnCheese extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_ESPENMacnCheese extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -323,7 +213,7 @@ class Craft_Dada_RawFoodCan_ESPENMacnCheese extends Craft_DadaFoodCan_BaseRecipe
 		AddResult("Dada_RawFoodCan_ESPENMacnCheese");//add results here
 	}
 };
-class Craft_Dada_RawFoodCan_DicedTomatoes extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_DicedTomatoes extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -340,7 +230,7 @@ class Craft_Dada_RawFoodCan_DicedTomatoes extends Craft_DadaFoodCan_BaseRecipe
 		AddResult("Dada_RawFoodCan_DicedTomatoes");//add results here
 	}
 };
-class Craft_Dada_RawFoodCan_Ketchup extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_Ketchup extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -358,7 +248,7 @@ class Craft_Dada_RawFoodCan_Ketchup extends Craft_DadaFoodCan_BaseRecipe
 		AddResult("Dada_RawFoodCan_Ketchup");//add results here
 	}
 };
-class Craft_Dada_RawFoodCan_Paella extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_Paella extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -416,7 +306,7 @@ class Craft_Dada_RawFoodCan_Paella extends Craft_DadaFoodCan_BaseRecipe
 		AddResult("Dada_RawFoodCan_Paella");//add results here
 	}
 };
-class Craft_Dada_RawFoodCan_PumpkinPuree extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_PumpkinPuree extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -433,7 +323,7 @@ class Craft_Dada_RawFoodCan_PumpkinPuree extends Craft_DadaFoodCan_BaseRecipe
 		AddResult("Dada_RawFoodCan_PumpkinPuree");//add results here
 	}
 };
-class Craft_Dada_RawFoodCan_Quail extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_Quail extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -453,7 +343,7 @@ class Craft_Dada_RawFoodCan_Quail extends Craft_DadaFoodCan_BaseRecipe
 
 	}
 };
-class Craft_Dada_RawFoodCan_Relish extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_Relish extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -470,7 +360,7 @@ class Craft_Dada_RawFoodCan_Relish extends Craft_DadaFoodCan_BaseRecipe
 		AddResult("Dada_RawFoodCan_Relish");//add results here
 	}
 };
-class Craft_Dada_RawFoodCan_Samosa extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_Samosa extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -513,7 +403,7 @@ class Craft_Dada_RawFoodCan_Samosa extends Craft_DadaFoodCan_BaseRecipe
 		AddResult("Dada_RawFoodCan_Samosa");//add results here
 	}
 };
-class Craft_Dada_RawFoodCan_HomemadeChili extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_HomemadeChili extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -544,7 +434,7 @@ class Craft_Dada_RawFoodCan_HomemadeChili extends Craft_DadaFoodCan_BaseRecipe
 		AddResult("Dada_RawFoodCan_HomemadeChili");//add results here
 	}
 };
-class Craft_Dada_RawFoodCan_HomemadePumpkinPuree extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_HomemadePumpkinPuree extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -560,7 +450,7 @@ class Craft_Dada_RawFoodCan_HomemadePumpkinPuree extends Craft_DadaFoodCan_BaseR
 		AddResult("Dada_RawFoodCan_HomemadePumpkinPuree");//add results here
 	}
 };
-class Craft_Dada_RawFoodCan_Crab extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_Crab extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -597,7 +487,7 @@ class Craft_Dada_RawFoodCan_Crab extends Craft_DadaFoodCan_BaseRecipe
 		AddResult("Dada_RawFoodCan_Crab");//add results here
 	}
 };
-class Craft_Dada_RawFoodCan_Clam extends Craft_DadaFoodCan_BaseRecipe
+class Craft_Dada_RawFoodCan_Clam extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
