@@ -1,127 +1,388 @@
-class CraftDadaRaw_Salad extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+class CraftDadaRaw_Salad extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft Salad";
-
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 2;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[1] = 60;//-1 = disable check
-	
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
+		
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"Tomato");//you can insert multiple ingredients this way
         InsertIngredient(0,"GreenBellPepper");//you can insert multiple ingredients this way
         InsertIngredient(0,"Zucchini");//you can insert multiple ingredients this way
 
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[0] = 0;// 0 = do nothing
+		m_IngredientDestroy[0] = true;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		
 		//ingredient 2
         InsertIngredient(1,"Tomato");//you can insert multiple ingredients this way
         InsertIngredient(1,"GreenBellPepper");//you can insert multiple ingredients this way
         InsertIngredient(1,"Zucchini");//you can insert multiple ingredients this way
 
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = 0;// 0 = do nothing
+		m_IngredientDestroy[1] = true;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
+		
 		//result1
 		AddResult("DadaRaw_Salad");//add results here
 
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 150;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried() || item.GetFoodStage().IsFoodBaked() || item.GetFoodStage().IsFoodBoiled());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried() || vessel.GetFoodStage().IsFoodBaked() || vessel.GetFoodStage().IsFoodBoiled());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };
 
 
-class CraftDadaRaw_TomatoSalad extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+class CraftDadaRaw_TomatoSalad extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft Tomato Salad";
-
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 2;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[1] = 60;//-1 = disable check
-	
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
+		
+		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"Tomato");//you can insert multiple ingredients this way
 
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[0] = 0;// 0 = do nothing
+		m_IngredientDestroy[0] = true;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		
 		//ingredient 2
         InsertIngredient(1,"Tomato");//you can insert multiple ingredients this way
 
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = 0;// 0 = do nothing
+		m_IngredientDestroy[1] = true;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
+		
 		//result1
 		AddResult("DadaRaw_TomatoSalad");//add results here
 
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 150;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried() || item.GetFoodStage().IsFoodBaked() || item.GetFoodStage().IsFoodBoiled());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried() || vessel.GetFoodStage().IsFoodBaked() || vessel.GetFoodStage().IsFoodBoiled());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };
 
-class CraftDadaRaw_Rice extends Craft_DadaTempTemp1Liquid1_BaseRecipe
+class CraftDadaRaw_Rice extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft Rice";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 1;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
 		m_MinQuantityIngredient[0] = 30;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"Rice");//you can insert multiple ingredients this way
 	
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -75;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
 		InsertIngredient(1,"Bottle_Base");//you can insert multiple ingredients this w
 		
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[1] = -300;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
 		AddResult("DadaRaw_Rice");//add results here
 
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 150;//-1 = do nothing
-		m_ResultInheritsHealth[0] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		// define my variables
-		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && vessel.IsLiquidContainer()&& vessel.GetTemperature()&& item.GetTemperature())
+	
+	// check if liquid is water
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		if (vessel.GetLiquidType() == LIQUID_WATER  ||  vessel.GetLiquidType() == LIQUID_RIVERWATER)
 		{
-			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
-			{
-				return false;
-			}
-
-
-			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 50 || ingredient2.GetTemperature() > 200)
-			{
-				return false;
-			}
-			if (ingredient2.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
-			{
-				return false;
-			}
-			// by this point we know the 2 ingredients are both good temperatures and have good food stages
 			return true;
 		}
-		// initial ingredients are wrong, false
-   		return false;
-		}
+	  return false;
+	}
+
+	// check if liquid has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 70 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+	// check if ingredient has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+	return false;
+    }
+
+	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
+	}
 };
 
 
-class CraftDadaRaw_PokeBowl extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+class CraftDadaRaw_PokeBowl extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft Poke Bowl";
-	
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 1;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[0] = 150;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[1] = 60;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"DadaRaw_Rice");//you can insert multiple ingredients this way
-
+	
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		
 		//ingredient 2
 		InsertIngredient(1,"Tomato");//you can insert multiple ingredients this way
         InsertIngredient(1,"GreenBellPepper");//you can insert multiple ingredients this way
@@ -134,29 +395,123 @@ class CraftDadaRaw_PokeBowl extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
         InsertIngredient(1,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
 		InsertIngredient(1,"WalleyePollockFilletMeat");
         InsertIngredient(1,"SteelheadTroutFilletMeat");
+
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = -1;// 0 = do nothing
+		m_IngredientDestroy[1] = true;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
 		AddResult("DadaRaw_PokeBowl");//add results here
 
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried() || item.GetFoodStage().IsFoodBaked() || item.GetFoodStage().IsFoodBoiled());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried() || vessel.GetFoodStage().IsFoodBaked() || vessel.GetFoodStage().IsFoodBoiled());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };
 
-class CraftDadaRaw_CerealCrunchin_Frosties extends Craft_DadaTempTemp1Stage1_BaseRecipe
+class CraftDadaRaw_CerealCrunchin_Frosties extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft Cereal Bowl";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 1;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
-		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
+		
+		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"BoxCerealCrunchin");//you can insert multiple ingredients this way
 		InsertIngredient(0,"DadaSpawned_BoxCerealCrunchin_Frosties");//you can insert multiple ingredients this way
 	
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
 		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
@@ -164,31 +519,111 @@ class CraftDadaRaw_CerealCrunchin_Frosties extends Craft_DadaTempTemp1Stage1_Bas
         InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 
-		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = -100;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
 		AddResult("DadaRaw_CerealCrunchin_Frosties");//add results here
 
+
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 250;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+	}
+
+override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 70 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };	
 
-class CraftDadaRawCerealCrunchin_Nesquik extends Craft_DadaTempTemp1Stage1_BaseRecipe
+class CraftDadaRawCerealCrunchin_Nesquik extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft Chocolate Cereal Bowl";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 1;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
 		
-		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
+		
+		m_MinQuantityIngredient[0] = 25;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"DadaSpawned_BoxCerealCrunchin_Nesquik");//you can insert multiple ingredients this way
 	
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
 		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
@@ -196,31 +631,110 @@ class CraftDadaRawCerealCrunchin_Nesquik extends Craft_DadaTempTemp1Stage1_BaseR
         InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 
-		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = -100;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
 		AddResult("DadaRawCerealCrunchin_Nesquik");//add results here
 
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 150;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 70 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };	
 
-class CraftDadaRaw_CerealCrunchin_Kosmostar extends Craft_DadaTempTemp1Stage1_BaseRecipe
+class CraftDadaRaw_CerealCrunchin_Kosmostar extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft Kosmostar Cereal Bowl";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 1;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
 		
-		m_MinQuantityIngredient[0] = 50;//-1 = disable check
-		m_MinQuantityIngredient[1] = 100;//-1 = disable chec
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
+		
+		m_MinQuantityIngredient[0] = 25;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"DadaSpawned_BoxCerealCrunchin_Kosmostar");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[0] = -100;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
 		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
@@ -228,31 +742,110 @@ class CraftDadaRaw_CerealCrunchin_Kosmostar extends Craft_DadaTempTemp1Stage1_Ba
         InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 
-		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
 		AddResult("DadaRaw_CerealCrunchin_Kosmostar");//add results here
 
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 150;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 70 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };	
 
-class CraftDadaRaw_SushiMaki extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+class CraftDadaRaw_SushiMaki extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft Maki";
-	
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 1;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[1] = 60;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"DadaRaw_Rice");//you can insert multiple ingredients this way
 	
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -75;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
 		InsertIngredient(1,"CarpFilletMeat");//you can insert multiple ingredients this way
@@ -263,29 +856,122 @@ class CraftDadaRaw_SushiMaki extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
         InsertIngredient(1,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
 		InsertIngredient(1,"WalleyePollockFilletMeat");
         InsertIngredient(1,"SteelheadTroutFilletMeat");
+
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = -1;// 0 = do nothing
+		m_IngredientDestroy[1] = true;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
 		AddResult("DadaRaw_SushiMaki");//add results here
 
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 75;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried() || item.GetFoodStage().IsFoodBaked() || item.GetFoodStage().IsFoodBoiled());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried() || vessel.GetFoodStage().IsFoodBaked() || vessel.GetFoodStage().IsFoodBoiled());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };	
 
-class CraftDadaRaw_SushiOnigiri extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+class CraftDadaRaw_SushiOnigiri extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft Onigiri";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 1;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[1] = 60;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"DadaRaw_Rice");//you can insert multiple ingredients this way
 	
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -75;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
 		InsertIngredient(1,"CarpFilletMeat");//you can insert multiple ingredients this way
@@ -296,22 +982,112 @@ class CraftDadaRaw_SushiOnigiri extends Craft_DadaTempStageTemp1Stage1_BaseRecip
         InsertIngredient(1,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
 		InsertIngredient(1,"WalleyePollockFilletMeat");
         InsertIngredient(1,"SteelheadTroutFilletMeat");
+
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = -1;// 0 = do nothing
+		m_IngredientDestroy[1] = true;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
 		AddResult("DadaRaw_SushiOnigiri");//add results here
 
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 75;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried() || item.GetFoodStage().IsFoodBaked() || item.GetFoodStage().IsFoodBoiled());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried() || vessel.GetFoodStage().IsFoodBaked() || vessel.GetFoodStage().IsFoodBoiled());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };	
 
-class CraftDadaRaw_SmallButter extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+class CraftDadaRaw_SmallButter extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft little bit of butter";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 0.5;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
 		m_MinQuantityIngredient[0] = 150;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[1] = 150;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//INGREDIENTS
 		//ingredient 1
@@ -321,8 +1097,12 @@ class CraftDadaRaw_SmallButter extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		InsertIngredient(0,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 		InsertIngredient(0,"Lard");//you can insert multiple ingredients this way
     
+    
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -300;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
 		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
@@ -331,24 +1111,111 @@ class CraftDadaRaw_SmallButter extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 		InsertIngredient(1,"Lard");//you can insert multiple ingredient
     
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[1] = -300;// 0 = do nothing
 		m_IngredientDestroy[1] = false;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
 		AddResult("DadaRaw_SmallButter");//add results here
 
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 300;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried() || item.GetFoodStage().IsFoodBaked() || item.GetFoodStage().IsFoodBoiled());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried() || vessel.GetFoodStage().IsFoodBaked() || vessel.GetFoodStage().IsFoodBoiled());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };	
 
-class CraftDadaRaw_BigButter extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+class CraftDadaRaw_BigButter extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft big chunk of butter";
-
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 0.5;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[0] = 300;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[1] = 300;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//INGREDIENTS
 		//ingredient 1
@@ -357,8 +1224,11 @@ class CraftDadaRaw_BigButter extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		InsertIngredient(0,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 		InsertIngredient(0,"Lard");//you can insert multiple ingredient
     
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -600;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
         InsertIngredient(1,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
@@ -366,24 +1236,111 @@ class CraftDadaRaw_BigButter extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 		InsertIngredient(1,"Lard");//you can insert multiple ingredient
     
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[1] = -600;// 0 = do nothing
 		m_IngredientDestroy[1] = false;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
 		AddResult("DadaRaw_BigButter");//add results here
 
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 600;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried() || item.GetFoodStage().IsFoodBaked() || item.GetFoodStage().IsFoodBoiled());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 1 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried() || vessel.GetFoodStage().IsFoodBaked() || vessel.GetFoodStage().IsFoodBoiled());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };	
 
-class CraftDadaRaw_Yogourt extends Craft_DadaTempStageTemp1_BaseRecipe
+class CraftDadaRaw_Yogourt extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft Yogurt";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 1;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
 		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[1] = 25;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//INGREDIENTS
 		//ingredient 1
@@ -392,142 +1349,228 @@ class CraftDadaRaw_Yogourt extends Craft_DadaTempStageTemp1_BaseRecipe
         InsertIngredient(0,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
 		InsertIngredient(0,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 	
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -300;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
 		InsertIngredient(1,"DadaSpawned_Yeast");//you can insert multiple ingredients this w
 
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[1] = -50;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
 		AddResult("DadaRaw_Yogourt");//add results here
 
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 150;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[1]);
+	ItemBase vessel = ItemBase.Cast(ingredients[0]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[0]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 70 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[0]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };	
 
-class CraftFreshCheese_Mozza extends Craft_DadaTempStage_BaseRecipe
+class CraftFreshCheese_Mozza extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft Mozzarella";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 2;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
 		m_MinQuantityIngredient[0] = 150;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[1] = -1;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"DadaDrink_CurdsAndWhey");//you can insert multiple ingredients this way
 	
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
 		InsertIngredient(1,"BurlapSack");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCheeseMold");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = -400;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = 0;// 0 = do nothing
 		m_IngredientDestroy[1] = -1;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
 		AddResult("DadaRaw_Mozza");//add results here
 
-		m_ResultInheritsHealth[0] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
-
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
+		m_ResultSetQuantity[0] = 100;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 
 		AddResult ("DadaDrink_Whey");
 
 		m_ResultSetFullQuantity[1] = true;//true = set full quantity, false = do nothing
-		m_ResultInheritsHealth[1] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultSetQuantity[1] = -1;//-1 = do nothing
+		m_ResultSetHealth[1] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[1] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[1] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[1] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[1] = -1;
+	}
+
+override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[1]);
+	ItemBase vessel = ItemBase.Cast(ingredients[0]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[0]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > 70 && vessel.GetTemperature() < 150);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[0]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };	
 
-class CraftFreshCheese_CheddarCurds extends Craft_DadaTempStage_BaseRecipe
+class CraftFreshCheese_CheddarCurds extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft Cheddar Curds";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 2;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
 		m_MinQuantityIngredient[0] = 150;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 2;//-1 = disable check
+		
 		m_MinQuantityIngredient[1] = -1;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
 		
-		//ingredient 1
-		InsertIngredient(0,"DadaDrink_CurdsAndWhey");//you can insert multiple ingredients this way
-	
-		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
-		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
-		
-		//ingredient 2
-		InsertIngredient(1,"BurlapSack");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCheeseMold");//you can insert multiple ingredients this way
-		
-		m_IngredientAddHealth[1] = -400;// 0 = do nothin
-		m_IngredientDestroy[1] = -1;// false = do nothing
-		
-		//result1
-		AddResult("DadaRaw_CheddarCurds");//add results here
-
-		m_ResultInheritsHealth[0] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
-
-		AddResult ("DadaDrink_Whey");
-
-		m_ResultSetFullQuantity[1] = true;//true = set full quantity, false = do nothing
-		m_ResultInheritsHealth[1] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
-	}
-};	
-
-class CraftFreshCheese_Goat extends Craft_DadaTempStage_BaseRecipe
-{
-	override void Init()
-	{
-		m_Name = "Craft Goat Cheese";
-		
-		m_MinQuantityIngredient[0] = 150;//-1 = disable check
-		m_MinQuantityIngredient[1] = -1;//-1 = disable check
-	
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"DadaDrink_CurdsAndWhey");//you can insert multiple ingredients this way
 	
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
 		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
-		
-		//ingredient 2
-		InsertIngredient(1,"BurlapSack");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCheeseMold");//you can insert multiple ingredients this way
-		
-		m_IngredientAddHealth[1] = -400;// 0 = do nothing
-		m_IngredientDestroy[1] = -1;// false = do nothing
-		
-		//result1
-		AddResult("DadaRaw_FreshGoatCheese");//add results here
-
-		m_ResultSetQuantity[0] = 100;//-1 = do nothing
-		m_ResultInheritsHealth[0] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
-
-		AddResult ("DadaDrink_Whey");
-
-		m_ResultSetFullQuantity[1] = true;//true = set full quantity, false = do nothing
-		m_ResultInheritsHealth[1] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
-	}
-};	
-
-class CraftFreshCheese_Feta extends Craft_DadaTempStage_BaseRecipe
-{
-	override void Init()
-	{
-		m_Name = "Craft Feta Cheese";
-		
-		m_MinQuantityIngredient[0] = 150;//-1 = disable check
-		m_MinQuantityIngredient[1] = -1;//-1 = disable check
-	
-		//INGREDIENTS
-		//ingredient 1
-		InsertIngredient(0,"DadaDrink_CurdsAndWhey");//you can insert multiple ingredients this way
-	
-		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
-		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
 		InsertIngredient(1,"BurlapSack");//you can insert multiple ingredients this way
@@ -537,168 +1580,436 @@ class CraftFreshCheese_Feta extends Craft_DadaTempStage_BaseRecipe
 		InsertIngredient(1,"DadaCheeseMold");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = -400;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = 0;// 0 = do nothing
 		m_IngredientDestroy[1] = -1;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
+		
+		//result1
+		AddResult("DadaRaw_CheddarCurds");//add results here
+
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
+		m_ResultSetQuantity[0] = 100;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+
+		AddResult ("DadaDrink_Whey");
+
+		m_ResultSetFullQuantity[1] = true;//true = set full quantity, false = do nothing
+		m_ResultSetQuantity[1] = -1;//-1 = do nothing
+		m_ResultSetHealth[1] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[1] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[1] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[1] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[1] = -1;
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && item.GetTemperature() && item.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[0]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
+	}
+};	
+
+class CraftFreshCheese_Goat extends RecipeBase
+{
+	override void Init()
+	{
+		m_Name = "Craft Goat Cheese";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 2;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
+		
+		m_MinQuantityIngredient[0] = 150;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 2;//-1 = disable check
+		
+		m_MinQuantityIngredient[1] = -1;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"DadaDrink_CurdsAndWhey");//you can insert multiple ingredients this way
+	
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		
+		//ingredient 2
+		InsertIngredient(1,"BurlapSack");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCheeseMold");//you can insert multiple ingredients this way
+		
+		m_IngredientAddHealth[1] = -400;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = 0;// 0 = do nothing
+		m_IngredientDestroy[1] = -1;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
+		
+		//result1
+		AddResult("DadaRaw_FreshGoatCheese");//add results here
+
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
+		m_ResultSetQuantity[0] = 100;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+
+		AddResult ("DadaDrink_Whey");
+
+		m_ResultSetFullQuantity[1] = true;//true = set full quantity, false = do nothing
+		m_ResultSetQuantity[1] = -1;//-1 = do nothing
+		m_ResultSetHealth[1] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[1] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[1] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[1] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[1] = -1;
+	}
+
+override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && item.GetTemperature() && item.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[0]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
+	}
+};	
+
+class CraftFreshCheese_Feta extends RecipeBase
+{
+	override void Init()
+	{
+		m_Name = "Craft Feta Cheese";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 2;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
+		
+		m_MinQuantityIngredient[0] = 150;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 2;//-1 = disable check
+		
+		m_MinQuantityIngredient[1] = -1;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"DadaDrink_CurdsAndWhey");//you can insert multiple ingredients this way
+	
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		
+		//ingredient 2
+		InsertIngredient(1,"BurlapSack");//you can insert multiple ingredients this way
+		InsertIngredient(1,"BurlapSack_Black");//you can insert multiple ingredients this way
+		InsertIngredient(1,"BurlapSack_Skull");//you can insert multiple ingredients this way
+		InsertIngredient(1,"BurlapSack_White");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCheeseMold");//you can insert multiple ingredients this way
+		
+		m_IngredientAddHealth[1] = -400;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = 0;// 0 = do nothing
+		m_IngredientDestroy[1] = -1;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
 		AddResult("DadaRaw_Feta");//add results here
 
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 100;//-1 = do nothing
-		m_ResultInheritsHealth[0] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
-		
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+
 		AddResult ("DadaDrink_Whey");
 
 		m_ResultSetFullQuantity[1] = true;//true = set full quantity, false = do nothing
-		m_ResultInheritsHealth[1] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultSetQuantity[1] = -1;//-1 = do nothing
+		m_ResultSetHealth[1] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[1] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[1] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[1] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[1] = -1;
+	}
+
+override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{  
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && item.GetTemperature() && item.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[0]))
+    {
+      bool itemTemp = (item.GetTemperature() > 1 && item.GetTemperature() < 50);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[0]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };	
 
-class CraftDadaRaw_FrozenYogurt extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+class CraftDadaRaw_FrozenYogurt extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft Frozen Yogurt";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 1;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
 		m_MinQuantityIngredient[0] = 75;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[1] = 75;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"DadaRaw_Yogourt");//you can insert multiple ingredients this way
 
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
 		InsertIngredient(1,"DadaRaw_Yogourt");//you can insert multiple ingredients this w
 
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
 		AddResult("DadaRaw_FrozenYogurt");//add results here
 
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 300;//-1 = do nothing
-		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 
-	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		// define my variables
-		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
-		{
-			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < -100 || ingredient1.GetTemperature() > 0)
-			{
-				return false;
-			}
-			FoodStage foodStage1 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
-			{
-				return false;
-			}
+override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
 
-			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < -100 || ingredient2.GetTemperature() > 0)
-			{
-				return false;
-			}
-			FoodStage foodStage2 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage2.IsFoodBurned() || foodStage2.IsFoodRotten())
-			{
-				return false;
-			}
-			// by this point we know the 2 ingredients are both good temperatures and have good food stages
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > -150 && item.GetTemperature() < 0);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried());
+		if (itemStage)
+		{
 			return true;
 		}
-		// initial ingredients are wrong, false
-   		return false;
-   	}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > -150 && vessel.GetTemperature() < 0);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
+	}
 };	
 
-class CraftDadaRaw_VanillaChocoSwirl extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+class CraftDadaRaw_VanillaChocoSwirl extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft Vanilla & Chocolate Ice Cream";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 1;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
 		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[1] = 100;//-1 = disable check
-		
-		//ingredient 1
-		InsertIngredient(0,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
-        InsertIngredient(0,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
-        InsertIngredient(0,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
-		InsertIngredient(0,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
-	
-		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
-		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
-		
-		//ingredient 2
-		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
-        InsertIngredient(1,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
-        InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
-
-		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
-		m_IngredientDestroy[1] = false;// false = do nothing
-		
-		//result1
-		AddResult("DadaRaw_VanillaChocoSwirl");//add results here
-
-		m_ResultSetQuantity[0] = 300;//-1 = do nothing
-		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
-	}
-
-	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		// define my variables
-		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
-		{
-			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < -100 || ingredient1.GetTemperature() > 0)
-			{
-				return false;
-			}
-			FoodStage foodStage1 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
-			{
-				return false;
-			}
-
-			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < -100 || ingredient2.GetTemperature() > 0)
-			{
-				return false;
-			}
-			FoodStage foodStage2 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage2.IsFoodBurned() || foodStage2.IsFoodRotten())
-			{
-				return false;
-			}
-			// by this point we know the 2 ingredients are both good temperatures and have good food stages
-			return true;
-		}
-		// initial ingredients are wrong, false
-   		return false;
-   	}
-};	
-
-class CraftDadaRaw_VanillaIceCream extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
-{
-	override void Init()
-	{
-		m_Name = "Craft Vanilla Ice Cream";
-		
-		m_MinQuantityIngredient[0] = 100;//-1 = disable check
-		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//INGREDIENTS
 		//ingredient 1
@@ -707,80 +2018,136 @@ class CraftDadaRaw_VanillaIceCream extends Craft_DadaTempStageTemp1Stage1_BaseRe
         InsertIngredient(0,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
 		InsertIngredient(0,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 	
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
-	
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		
 		//ingredient 2
 		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
         InsertIngredient(1,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
         InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
-		AddResult("DadaRaw_VanillaIceCream");//add results here
+		AddResult("DadaRaw_VanillaChocoSwirl");//add results here
 
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 300;//-1 = do nothing
-		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 
-	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		// define my variables
-		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
-		{
-			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < -100 || ingredient1.GetTemperature() > 0)
-			{
-				return false;
-			}
-			FoodStage foodStage1 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
-			{
-				return false;
-			}
+override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
 
-			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < -100 || ingredient2.GetTemperature() > 0)
-			{
-				return false;
-			}
-			FoodStage foodStage2 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage2.IsFoodBurned() || foodStage2.IsFoodRotten())
-			{
-				return false;
-			}
-			// by this point we know the 2 ingredients are both good temperatures and have good food stages
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > -150 && item.GetTemperature() < 0);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried());
+		if (itemStage)
+		{
 			return true;
 		}
-		// initial ingredients are wrong, false
-   		return false;
-   	}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > -150 && vessel.GetTemperature() < 0);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+  return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
+	}
 };	
 
-class CraftDadaRaw_ChocoIScream extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+class CraftDadaRaw_VanillaIceCream extends RecipeBase
 {
 	override void Init()
 	{
-		m_Name = "Craft Chocolate Ice Cream";
+		m_Name = "Craft Vanilla Ice Cream";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 1;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
 		m_MinQuantityIngredient[0] = 100;//-1 = disable check
-		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
 		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
+		
+		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
         InsertIngredient(0,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
         InsertIngredient(0,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
 		InsertIngredient(0,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 	
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
 		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
@@ -788,74 +2155,300 @@ class CraftDadaRaw_ChocoIScream extends Craft_DadaTempStageTemp1Stage1_BaseRecip
         InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
+		
+		//result1
+		AddResult("DadaRaw_VanillaIceCream");//add results here
+
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
+		m_ResultSetQuantity[0] = 300;//-1 = do nothing
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+	}
+
+override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > -150 && item.GetTemperature() < 0);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried());
+		if (itemStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > -150 && vessel.GetTemperature() < 0);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
+	}
+};	
+
+class CraftDadaRaw_ChocoIScream extends RecipeBase
+{
+	override void Init()
+	{
+		m_Name = "Craft Chocolate Ice Cream";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 1;//animation length in relative time units
+		m_Specialty = -0.02;// value > 0 for roughness, value < 0 for precision
+		
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
+		
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
+        InsertIngredient(0,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
+        InsertIngredient(0,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(0,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
+	
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		
+		//ingredient 2
+		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
+        InsertIngredient(1,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
+        InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
+
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
 		AddResult("DadaRaw_ChocoIScream");//add results here
 
+		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 300;//-1 = do nothing
-		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 
-	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{
-		// define my variables
-		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
-		{
-			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < -100 || ingredient1.GetTemperature() > 0)
-			{
-				return false;
-			}
-			FoodStage foodStage1 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
-			{
-				return false;
-			}
+override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
 
-			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < -100 || ingredient2.GetTemperature() > 0)
-			{
-				return false;
-			}
-			FoodStage foodStage2 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage2.IsFoodBurned() || foodStage2.IsFoodRotten())
-			{
-				return false;
-			}
-			// by this point we know the 2 ingredients are both good temperatures and have good food stages
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && item.GetFoodStage() && vessel.GetTemperature() && vessel.GetFoodStage())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > -150 && item.GetTemperature() < 0);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(item,ingredients[1]))
+    {
+		bool itemStage = (item.GetFoodStage().IsFoodRaw() || item.GetFoodStage().IsFoodDried());
+		if (itemStage)
+		{
 			return true;
 		}
-		// initial ingredients are wrong, false
-   		return false;
-   	}
+		return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > -150 && vessel.GetTemperature() < 0);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   // check if item has right FoodStage
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+		bool vesselStage = (vessel.GetFoodStage().IsFoodRaw() || vessel.GetFoodStage().IsFoodDried());
+		if (vesselStage)
+		{
+			return true;
+		}
+		return false;
+	}
+
+   return false;
+   };
 };
 
-class CraftDadaRaw_PumpkinSeeds extends Craft_DadaTempTemp1_BaseRecipe
+class CraftDadaRaw_PumpkinSeeds extends RecipeBase
 {
 	override void Init()
 	{
 		m_Name = "Craft roasted pumpkin seeds";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 2;//animation length in relative time units
+		m_Specialty = -0.01;// value > 0 for roughness, value < 0 for precision
+		
+		//conditions
+		m_MinDamageIngredient[0] = -1;//-1 = disable check
+		m_MaxDamageIngredient[0] = 3;//-1 = disable check
 		
 		m_MinQuantityIngredient[0] = 20;//-1 = disable check
+		m_MaxQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinDamageIngredient[1] = -1;//-1 = disable check
+		m_MaxDamageIngredient[1] = 3;//-1 = disable check
+		
 		m_MinQuantityIngredient[1] = 20;//-1 = disable check
+		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"PumpkinSeeds");//you can insert multiple ingredients this way
 		
+		m_IngredientAddHealth[0] = 0;// 0 = do nothing
+		m_IngredientSetHealth[0] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[0] = 0;// 0 = do nothing
+		m_IngredientDestroy[0] = true;//true = destroy, false = do nothing
+		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		
 		//ingredient 2
 		InsertIngredient(1,"PumpkinSeeds");//you can insert multiple ingredients this way
+		
+		m_IngredientAddHealth[1] = 0;// 0 = do nothing
+		m_IngredientSetHealth[1] = -1; // -1 = do nothing
+		m_IngredientAddQuantity[1] = 0;// 0 = do nothing
+		m_IngredientDestroy[1] = true;// false = do nothing
+		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
+		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
 		AddResult("DadaRaw_PumpkinSeeds");//add results here
 
+		m_ResultSetFullQuantity[0] = false;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 50;//-1 = do nothing
-		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultSetHealth[0] = -1;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
+		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
+		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{      
+	// define my variables 
+	ItemBase item = ItemBase.Cast(ingredients[0]);
+	ItemBase vessel = ItemBase.Cast(ingredients[1]);
+
+	// Are both conditions fulfilled for the item (bottlebase)
+    if (item && vessel && item.GetTemperature() && vessel.GetTemperature())
+
+	// check if item has right temperature  
+	if (Class.CastTo(item,ingredients[1]))
+    {
+      bool itemTemp = (item.GetTemperature() > 50 && item.GetTemperature() < 150);
+      if (itemTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+	// check if item has right temperature  
+	if (Class.CastTo(vessel,ingredients[1]))
+    {
+      bool vesselTemp = (vessel.GetTemperature() > -150 && vessel.GetTemperature() < 0);
+      if (vesselTemp)
+	  {
+        return true;
+      }
+	  return false;
+	}
+
+   return false;
+   }
+
+   override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+	{
+		Debug.Log("Recipe Do method called","recipes");
 	}
 };	

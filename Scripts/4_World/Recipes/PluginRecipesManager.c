@@ -23,7 +23,6 @@ modded class PluginRecipesManager
     /*
     RegisterRecipe(new CraftsrpSaltBag);*/
     RegisterRecipe(new CraftDadaCheeseMold);
-    RegisterRecipe(new CraftDadaCheeseMold1);
     RegisterRecipe(new RepairDadaCheeseMold);
     RegisterRecipe(new CraftDadaCoffeePacket);
     RegisterRecipe(new CraftDadaGreenTeaPacket);
@@ -64,7 +63,6 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaDish_SeafoodGumbo);
     RegisterRecipe(new CraftDadaDish_SeafoodGumbo1);
     RegisterRecipe(new CraftDadaSoup_TomatoSauce);
-    RegisterRecipe(new CraftDadaSoup_TomatoSauce1);
     RegisterRecipe(new CraftDadaSoup_TomatoSoup);
     RegisterRecipe(new CraftDadaDish_MacaroniAndCheese);
     RegisterRecipe(new CraftDadaDish_ShepardsPie);

@@ -53,7 +53,6 @@ Special thanks to
 		"sosisa sausage" (https://skfb.ly/oFyNI) by Dmitry_Nzh is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 		"Pocolov Pizzas" (https://skfb.ly/6WQtu) by pocolov is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 		"Sushi Roll" (https://skfb.ly/o9QWE) by gecko0307 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
-		"French fries" (https://skfb.ly/otLKQ) by 1-3D.com is licensed under Creative Commons Attribution-ShareAlike (http://creativecommons.org/licenses/by-sa/4.0/). Changed texture from the original
 
 	Fonts:
 		"Satisfy ttf" (http://www.apache.org/licenses/), Apache License, Version 2.0, January 2004 (https://fonts.google.com/specimen/Satisfy), Google fonts
