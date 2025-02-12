@@ -44,15 +44,19 @@ class CraftDadaCharcoalPiece extends Craft_DadaTemp1Stage1_BaseRecipe
 		// define my variables
 		ItemBase ingredient1;
 		ItemBase ingredient2;
-		if (Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			{
+				return false;
+			}
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
 			if (ingredient2.GetTemperature() < 10 || ingredient2.GetTemperature() > 70)
 			{
 				return false;
 			}
-			
-			FoodStage foodStage2 = ingredient2.GetFoodStage();
+			FoodStage foodStage2 = ingredient1.GetFoodStage();
 			// if the food is raw, burnt or rotten
 			if (foodStage2.IsFoodRaw() || foodStage2.IsFoodRotten() || foodStage2.IsFoodBaked() || foodStage2.IsFoodBoiled() || foodStage2.IsFoodDried())
 			{
