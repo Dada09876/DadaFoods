@@ -743,7 +743,7 @@ class Craft_DadaTempTemp1Stage1_BaseRecipe extends RecipeBase
 			}
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
 				return false;
 			}

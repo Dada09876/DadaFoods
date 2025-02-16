@@ -361,7 +361,6 @@ class Craft_Dada_RawFoodCan_Relish extends Craft_DadaTempStageTemp1Stage1_BaseRe
 	}
 };
 
-/// ToChange ///
 class Craft_Dada_RawFoodCan_Samosa extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
@@ -372,12 +371,10 @@ class Craft_Dada_RawFoodCan_Samosa extends Craft_DadaTempStageTemp1Stage1_BaseRe
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"Potato");
-        InsertIngredient(0,"PotatoSeed");
 
 		//ingredient 2
         InsertIngredient(1,"GreenBellPepper");
         InsertIngredient(1,"Potato");
-        InsertIngredient(1,"PotatoSeed");
         InsertIngredient(1,"GoatSteakMeat");
         InsertIngredient(1,"MouflonSteakMeat");
         InsertIngredient(1,"BoarSteakMeat");
@@ -405,8 +402,67 @@ class Craft_Dada_RawFoodCan_Samosa extends Craft_DadaTempStageTemp1Stage1_BaseRe
 		AddResult("Dada_RawFoodCan_Samosa");//add results here
 	}
 };
-/// ToChange ///
 
+class Craft_Dada_RawFoodCan_Samosa1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Samosa filling Can";
+
+		//INGREDIENTS
+		//ingredient 1
+        InsertIngredient(0,"PotatoSeed");
+
+		//ingredient 2
+        InsertIngredient(1,"GreenBellPepper");
+        InsertIngredient(1,"Potato");
+        InsertIngredient(1,"GoatSteakMeat");
+        InsertIngredient(1,"MouflonSteakMeat");
+        InsertIngredient(1,"BoarSteakMeat");
+        InsertIngredient(1,"PigSteakMeat");
+        InsertIngredient(1,"DeerSteakMeat");
+        InsertIngredient(1,"WolfSteakMeat");
+        InsertIngredient(1,"BearSteakMeat");
+        InsertIngredient(1,"CowSteakMeat");
+        InsertIngredient(1,"SheepSteakMeat");
+        InsertIngredient(1,"FoxSteakMeat");
+        InsertIngredient(1,"ChickenBreastMeat");
+        InsertIngredient(1,"RabbitLegMeat");
+        //InsertIngredient(1,"srpChickenleg");
+        //InsertIngredient(1,"srpSausage");
+        //InsertIngredient(1,"srpStew_GroundBeef");
+        InsertIngredient(1,"CarpFilletMeat");
+        InsertIngredient(1,"MackerelFilletMeat");
+        InsertIngredient(1,"Bitterlings");
+        InsertIngredient(1,"Sardines");
+		InsertIngredient(1,"ReindeerSteakMeat");
+		InsertIngredient(1,"WalleyePollockFilletMeat");
+		InsertIngredient(1,"SteelheadTroutFilletMeat");
+
+		//result1
+		AddResult("Dada_RawFoodCan_Samosa");//add results here
+	}
+};
+
+class Craft_Dada_RawFoodCan_Samosa2 extends Craft_DadaTempTemp1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Samosa filling Can";
+
+		//INGREDIENTS
+		//ingredient 1
+        InsertIngredient(0,"PotatoSeed");
+
+		//ingredient 2
+        InsertIngredient(1,"PotatoSeed");
+
+		//result1
+		AddResult("Dada_RawFoodCan_Samosa");//add results here
+	}
+};
 
 class Craft_Dada_RawFoodCan_HomemadeChili extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {

@@ -89,6 +89,8 @@ modded class PluginRecipesManager
     RegisterRecipe(new Craft_Dada_RawFoodCan_Quail);
     RegisterRecipe(new Craft_Dada_RawFoodCan_Relish);
     RegisterRecipe(new Craft_Dada_RawFoodCan_Samosa);
+    RegisterRecipe(new Craft_Dada_RawFoodCan_Samosa1);
+    RegisterRecipe(new Craft_Dada_RawFoodCan_Samosa2);
     RegisterRecipe(new Craft_Dada_RawFoodCan_HomemadeChili);
     RegisterRecipe(new Craft_Dada_RawFoodCan_HomemadePumpkinPuree);
     RegisterRecipe(new Craft_Dada_RawFoodCan_Crab);
