@@ -1,10 +1,17 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Configs\Crafting\config.bin
+//Produced from mikero's Dos Tools Dll version 9.93
+//https://mikero.bytex.digital/Downloads
+//'now' is Tue Feb 04 16:40:50 2025 : 'file' last modified on Sat Jan 18 22:45:02 2025
+////////////////////////////////////////////////////////////////////
+
 #define _ARMA_
 
 class CfgPatches
 {
 	class DadaFoods_Configs_Crafting
 	{
-		units[] = {};
+		units[] = {"DadaCheeseMold","DadaCheesePress","DadaCharcoalPiece","DadaSaltBag","DadaCoffeePacket","DadaGreenTeaPacket","DadaBlackTeaPacket","DadaBoneMeal"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"DadaFoods"};
@@ -14,9 +21,6 @@ class CfgVehicles
 {
 	class Inventory_Base;
 	class Edible_Base;
-
-    //CHEESE
-
 	class DadaCheeseMold: Inventory_Base
 	{
 		scope = 2;
@@ -73,8 +77,7 @@ class CfgVehicles
 			};
 		};
 	};
-
-class DadaCheesePress: Inventory_Base
+	class DadaCheesePress: Inventory_Base
 	{
 		scope = 2;
 		displayName = "CheesePress";
@@ -104,7 +107,6 @@ class DadaCheesePress: Inventory_Base
 				attachmentSlots[] = {"DadaMilkGallon"};
 				ghostIcon = "set:dayz_inventory image:barrel";
 			};
-
 			class YeastPack
 			{
 				name = "Yeast";
@@ -112,7 +114,6 @@ class DadaCheesePress: Inventory_Base
 				attachmentSlots[] = {"DadaYeast"};
 				icon = "set:dayz_inventory image:berry";
 			};
-
 			class Mold
 			{
 				name = "Cheese Mold";
@@ -166,7 +167,6 @@ class DadaCheesePress: Inventory_Base
 			};
 		};
 	};
-
 	class DadaCharcoalPiece: Inventory_Base
 	{
 		scope = 2;
@@ -197,7 +197,6 @@ class DadaCheesePress: Inventory_Base
 			};
 		};
 	};
-
 	class DadaSaltBag: Inventory_Base
 	{
 		scope = 2;
@@ -249,7 +248,6 @@ class DadaCheesePress: Inventory_Base
 			};
 		};
 	};
-
 	class DadaCoffeePacket: Edible_Base
 	{
 		scope = 2;
@@ -260,7 +258,7 @@ class DadaCheesePress: Inventory_Base
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket.rvmat"};
 		model = "\DZ\gear\tools\Heatpack.p3d";
 		isMeleeWeapon = 1;
-		weight = .5;
+		weight = 0.5;
 		varQuantityInit = 50;
 		varQuantityMin = 0;
 		varQuantityMax = 50;
@@ -297,7 +295,6 @@ class DadaCheesePress: Inventory_Base
 			};
 		};
 	};
-
 	class DadaGreenTeaPacket: Edible_Base
 	{
 		scope = 2;
@@ -308,7 +305,7 @@ class DadaCheesePress: Inventory_Base
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket.rvmat"};
 		model = "\DZ\gear\tools\Heatpack.p3d";
 		isMeleeWeapon = 1;
-		weight = .5;
+		weight = 0.5;
 		varQuantityInit = 50;
 		varQuantityMin = 0;
 		varQuantityMax = 50;
@@ -345,7 +342,6 @@ class DadaCheesePress: Inventory_Base
 			};
 		};
 	};
-
 	class DadaBlackTeaPacket: Edible_Base
 	{
 		scope = 2;
@@ -356,7 +352,7 @@ class DadaCheesePress: Inventory_Base
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket.rvmat"};
 		model = "\DZ\gear\tools\Heatpack.p3d";
 		isMeleeWeapon = 1;
-		weight = .5;
+		weight = 0.5;
 		varQuantityInit = 50;
 		varQuantityMin = 0;
 		varQuantityMax = 50;
@@ -393,7 +389,6 @@ class DadaCheesePress: Inventory_Base
 			};
 		};
 	};
-
 	class GardenLime;
 	class DadaBoneMeal: GardenLime
 	{
@@ -429,12 +424,5 @@ class DadaCheesePress: Inventory_Base
 			AddEnergyToSlot = 1;
 			ConsumedQuantity = 250.0;
 		};
-	};
-
-	class SmallGuts: Edible_Base
-	{
-		scope = 2;
-		displayName = "Small Guts";
-		descriptionShort = "A Pile of Small Guts";
 	};
 };

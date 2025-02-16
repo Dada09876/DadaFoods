@@ -1,19 +1,25 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Configs\Spawned\config.bin
+//Produced from mikero's Dos Tools Dll version 9.93
+//https://mikero.bytex.digital/Downloads
+//'now' is Tue Feb 04 16:40:53 2025 : 'file' last modified on Sat Jan 18 22:45:01 2025
+////////////////////////////////////////////////////////////////////
+
 #define _ARMA_
 
 class CfgPatches
 {
 	class DadaFoods_Configs_Food_Spawned
 	{
-		units[] = {};
+		units[] = {"DadaSpawned_Flour","DadaSpawned_BoxCerealCrunchin_Frosties","DadaSpawned_BoxCerealCrunchin_Nesquik","DadaSpawned_BoxCerealCrunchin_Kosmostar","DadaSpawned_Yeast","PowderedMilk","DadaSpawned_Coffee","DadaSpawned_GreenTea","DadaSpawned_BlackTea"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"DadaFoods"};
 	};
 };
-
 class CfgVehicles
-{    
-    class Edible_Base;
+{
+	class Edible_Base;
 	class DadaSpawned_Flour: Edible_Base
 	{
 		scope = 2;
@@ -21,7 +27,8 @@ class CfgVehicles
 		descriptionShort = "Basic cooking ingredient";
 		model = "\dz\gear\food\BoxCereal.p3d";
 		canBeSplit = 1;
-		weight = 4;debug_ItemCategory = 6;
+		weight = 4;
+		debug_ItemCategory = 6;
 		rotationFlags = 17;
 		itemSize[] = {3,3};
 		varQuantityInit = 250;
@@ -91,7 +98,6 @@ class CfgVehicles
 			};
 		};
 	};
-
 	class DadaSpawned_CerealBase: Edible_Base
 	{
 		scope = 1;
@@ -99,7 +105,8 @@ class CfgVehicles
 		descriptionShort = "cereals";
 		model = "\dz\gear\food\BoxCereal.p3d";
 		canBeSplit = 1;
-		weight = 4;debug_ItemCategory = 6;
+		weight = 4;
+		debug_ItemCategory = 6;
 		rotationFlags = 17;
 		itemSize[] = {3,3};
 		varQuantityInit = 250;
@@ -169,7 +176,6 @@ class CfgVehicles
 			};
 		};
 	};
-
 	class DadaSpawned_BoxCerealCrunchin_Frosties: DadaSpawned_CerealBase
 	{
 		scope = 2;
@@ -178,7 +184,6 @@ class CfgVehicles
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_BoxCerealCrunchin_Frosties_co.paa"};
 	};
-
 	class DadaSpawned_BoxCerealCrunchin_Nesquik: DadaSpawned_CerealBase
 	{
 		scope = 2;
@@ -187,7 +192,6 @@ class CfgVehicles
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_BoxCerealCrunchin_Nesquik_co.paa"};
 	};
-
 	class DadaSpawned_BoxCerealCrunchin_Kosmostar: DadaSpawned_CerealBase
 	{
 		scope = 2;
@@ -196,8 +200,7 @@ class CfgVehicles
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_BoxCerealCrunchin_Kosmostar_co.paa"};
 	};
-	
-    class DadaSpawned_Yeast: Edible_Base
+	class DadaSpawned_Yeast: Edible_Base
 	{
 		scope = 2;
 		weight = 0.5;
@@ -209,7 +212,7 @@ class CfgVehicles
 		canBeSplit = 1;
 		debug_ItemCategory = 6;
 		rotationFlags = 17;
-        hiddenSelections[] = {"zbytek"};
+		hiddenSelections[] = {"zbytek"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_Yeast_co.paa"};
 		class Nutrition
 		{
@@ -220,7 +223,6 @@ class CfgVehicles
 			toxicity = 0;
 		};
 	};
-
 	class PowderedMilk: Edible_Base
 	{
 		scope = 2;
@@ -237,12 +239,10 @@ class CfgVehicles
 			toxicity = 0;
 		};
 	};
-
 	class BoxCerealCrunchin: Edible_Base
 	{
 		canBeSplit = 1;
 	};
-
 	class DadaSpawned_Coffee: Edible_Base
 	{
 		scope = 2;
@@ -312,7 +312,6 @@ class CfgVehicles
 			};
 		};
 	};
-
 	class DadaSpawned_GreenTea: Edible_Base
 	{
 		scope = 2;
@@ -382,7 +381,6 @@ class CfgVehicles
 			};
 		};
 	};
-
 	class DadaSpawned_BlackTea: Edible_Base
 	{
 		scope = 2;

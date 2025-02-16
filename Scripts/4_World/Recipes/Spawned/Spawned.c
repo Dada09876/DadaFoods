@@ -2,6 +2,7 @@ class CraftBoxCerealCrunchin extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Cereal Box";
 
 		//conditions
@@ -31,6 +32,7 @@ class CraftDadaSpawned_BoxCerealCrunchin_Kosmostar extends Craft_DadaTempTemp1_B
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Stars Cereal Box";
 		
 		//conditions
@@ -59,6 +61,7 @@ class CraftDadaSpawned_BoxCerealCrunchin_Frosties extends Craft_DadaTempTemp1_Ba
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Corn Flakes Cereal Box";
 
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -86,6 +89,7 @@ class CraftDadaSpawned_BoxCerealCrunchin_Nesquik extends Craft_DadaTempTemp1_Bas
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Nesquik Cereal Box";
 	
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -113,6 +117,7 @@ class CraftDadaSpawned_Coffee extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Coffee Bag";
 	
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -143,6 +148,7 @@ class CraftDadaSpawned_GreenTea extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Green Tea Bag";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -173,6 +179,7 @@ class CraftDadaSpawned_BlackTea extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Black Tea Bag";
 		
 		//conditions

@@ -1,8 +1,8 @@
 ////////////////////////////////////////////////////////////////////
-//DeRap: Food\Drinks\config.bin
-//Produced from mikero's Dos Tools Dll version 9.10
+//DeRap: Configs\Drinks\config.bin
+//Produced from mikero's Dos Tools Dll version 9.93
 //https://mikero.bytex.digital/Downloads
-//'now' is Wed Nov 15 14:56:06 2023 : 'file' last modified on Wed Nov 15 14:56:06 2023
+//'now' is Tue Feb 04 16:40:50 2025 : 'file' last modified on Sat Jan 18 22:45:02 2025
 ////////////////////////////////////////////////////////////////////
 
 #define _ARMA_
@@ -11,13 +11,12 @@ class CfgPatches
 {
 	class DadaFoods_Configs_Drinks
 	{
-		units[] = {};
+		units[] = {"DadaDrink_FreshMilk","DadaDrink_CurdsAndWhey","DadaDrink_Whey","DadaDrink_Coffee","DadaDrink_MilkBottle","DadaDrink_MilkCarton","DadaDrink_MilkGallon","DadaDrink_MilkCoffee","DadaDrink_MilkCoffeeArt","DadaDrink_BlackTea","DadaDrink_GreenTea","DadaDrink_MilkShake"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"DadaFoods"};
 	};
 };
-
 class CfgVehicles
 {
 	class Edible_Base;
@@ -53,7 +52,6 @@ class CfgVehicles
 			nutritionalIndex = 1;
 			toxicity = 0;
 		};
-
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -77,7 +75,6 @@ class CfgVehicles
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 	};
-
 	class DadaDrink_FreshMilk: DadaDrinks_ColorBase
 	{
 		class Nutrition
@@ -97,7 +94,6 @@ class CfgVehicles
 		hiddenSelections[] = {"zbytek"};
 		hiddenSelectionsTextures[] = {"\Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_FreshMilk_co.paa"};
 	};
-
 	class DadaDrink_CurdsAndWhey: DadaDrinks_ColorBase
 	{
 		class Nutrition
@@ -136,7 +132,6 @@ class CfgVehicles
 		hiddenSelections[] = {"zbytek"};
 		hiddenSelectionsTextures[] = {"\Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_Whey_co.paa"};
 	};
-
 	class DadaDrink_Coffee: DadaDrinks_ColorBase
 	{
 		scope = 2;
@@ -179,7 +174,6 @@ class CfgVehicles
 			};
 		};
 	};
-
 	class DadaDrink_MilkBottle: DadaDrinks_ColorBase
 	{
 		scope = 2;
@@ -407,7 +401,7 @@ class CfgVehicles
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Cup.p3d";
 		hiddenSelections[] = {"zbytek","camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_MilkCoffee_ca.paa","Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_MilkCoffee_ca.paa"};
-		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Cup.rvmat"}; 
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Cup.rvmat"};
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -505,7 +499,7 @@ class CfgVehicles
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Cup.p3d";
 		hiddenSelections[] = {"zbytek","camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_BlackTea_ca.paa","Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_BlackTea_ca.paa"};
-		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Cup.rvmat"}; 
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Cup.rvmat"};
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -611,7 +605,7 @@ class CfgVehicles
 		descriptionShort = "Shake it like a polaroid picture";
 		hiddenSelections[] = {"cs_raw","zbytek"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\Milkshake_co.paa","Source_Files\DadaFoods\Configs\Drinks\data\Milkshake_co.paa"};
-		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Drinks\data\MilkCarton.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}; 
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Drinks\data\MilkCarton.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"};
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Milkshake.p3d";
 		weight = 3;
 		itemSize[] = {1,3};

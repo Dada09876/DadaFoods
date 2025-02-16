@@ -2,6 +2,7 @@ class CraftDadaBread_Base extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Make Dough";
 	
 		//conditions
@@ -33,6 +34,7 @@ class CraftDadaBread_Pita extends Craft_DadaTempStage_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Mold Into Flat Bread";
 		
 		//conditions
@@ -65,6 +67,7 @@ class CraftDadaBread_Loaf extends Craft_DadaTempStage_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Mold Into Loaf";
 
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -95,6 +98,7 @@ class CraftDadaBread_Baguette extends Craft_DadaTempStage_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Mold Into Baguette";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -125,6 +129,7 @@ class CraftDadaBread_Pasta extends Craft_DadaTempStage_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Mold Into Raw Pasta";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -156,6 +161,7 @@ class CraftDadaBread_Pizza extends Craft_DadaTempStage_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Mold Into Pizza Dough";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -186,6 +192,7 @@ class CraftDadaDish_Spaghetti extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Make Spaghetti dish";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -224,6 +231,7 @@ class CraftDadaDish_Cannelloni extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Make Cannelloni dish";
 
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -261,6 +269,7 @@ class CraftDadaDish_Bowties extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Make Bowties dish";
 		
 		//conditions
@@ -301,6 +310,7 @@ class CraftDadaDish_Lasagna extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Make Lasagna dish";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -338,6 +348,7 @@ class CraftDadaDish_Rigatoni extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Make Rigatoni";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -375,6 +386,7 @@ class CraftDadaBread_PizzaBase extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Make Pizza Marinara";
 	
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -412,6 +424,7 @@ class CraftDadaDish_GroundMeat extends Craft_DadaTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Ground Meat";
 		
 		m_MinQuantityIngredient[0] = -1;//-1 = disable check
@@ -451,6 +464,7 @@ class CraftDadaDish_MashedPotatoes extends Craft_DadaTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Mashed Potatoes";
 		
 		//conditions
@@ -479,6 +493,7 @@ class CraftDadaDish_MashedPotatoes1 extends Craft_DadaTemp1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Mashed Potatoes";
 
 		//conditions
@@ -507,6 +522,7 @@ class CraftDadaSoup_ChickenBroth extends Craft_DadaTempTemp1Liquid1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Broth";
 		
 		//conditions
@@ -530,26 +546,26 @@ class CraftDadaSoup_ChickenBroth extends Craft_DadaTempTemp1Liquid1_BaseRecipe
 		m_ResultSetQuantity[0] = 275;//-1 = do nothing
 	}
 
-override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
 
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 50 || ingredient2.GetTemperature() > 200)
+			if (ingredient1.GetTemperature() < 50 || ingredient1.GetTemperature() > 200)
 			{
 				return false;
 			}
-			if (ingredient2.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -559,12 +575,15 @@ override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for 
 		// initial ingredients are wrong, false
    		return false;
    	}
+
 };
 
 class CraftDadaSoup_ChickenBroth1 extends Craft_DadaTempStageTemp1Liquid1_BaseRecipe
 {
+	
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Broth";
 		
 		//conditions
@@ -592,29 +611,29 @@ class CraftDadaSoup_ChickenBroth1 extends Craft_DadaTempStageTemp1Liquid1_BaseRe
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
-			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			FoodStage foodStage0 = ingredient0.GetFoodStage();
 			// if the food is raw, burnt or rotten
-			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
+			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
 			{
 				return false;
 			}
 
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 50 || ingredient2.GetTemperature() > 200)
+			if (ingredient1.GetTemperature() < 50 || ingredient1.GetTemperature() > 200)
 			{
 				return false;
 			}
-			if (ingredient2.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -635,6 +654,7 @@ class CraftDadaSoup_ChickenNoodleSoup extends Craft_DadaTempStageTemp1Stage1_Bas
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Chicken and Noodles Soup";
 		
 		//conditions
@@ -673,6 +693,7 @@ class CraftDadaDish_Chili extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Chili";
 		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
 		m_AnimationLength = 2;//animation length in relative time units
@@ -715,6 +736,7 @@ class CraftDadaSoup_Gravy extends Craft_DadaTempTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Gravy";
 		
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -745,6 +767,7 @@ class CraftDadaDish_MushroomCream extends Craft_DadaTempStageTemp1Stage1_BaseRec
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Mushroom cream";
 		
 		//conditions
@@ -771,6 +794,7 @@ class CraftDadaDish_SauteedMushrooms extends Craft_DadaTempStageTemp1Stage1_Base
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Sauteed Mushrooms";
 		
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -795,6 +819,7 @@ class CraftDadaDish_Pancakes extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Pancakes";
 	
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -828,6 +853,7 @@ class CraftDadaDish_Pie extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Mold Into Pie";
 
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -897,6 +923,7 @@ class CraftDadaDish_Pie1 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Mold Into Pie";
 		
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -934,6 +961,7 @@ class CraftDadaSoup_TomatoSauce extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Tomato Sauce";
 		
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -958,6 +986,7 @@ class CraftDadaSoup_TomatoSoup extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Tomato Soup";
 
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -988,6 +1017,7 @@ class CraftDadaDish_MacaroniAndCheese extends Craft_DadaTempStageTemp1Stage1_Bas
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Macaroni And Cheese Bowl";
 
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -1024,6 +1054,7 @@ class CraftDadaDish_ShepardsPie extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Shepard's Pie";
 
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -1054,6 +1085,7 @@ class CraftDadaDish_PulledPork extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Pulled Pork";
 		
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -1092,6 +1124,7 @@ class CraftDadaDish_Sausage extends Craft_DadaTempTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Sausage";
 		
 		m_MinQuantityIngredient[0] = 150;//-1 = disable check
@@ -1120,6 +1153,7 @@ class CraftDadaDish_Pie2 extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Mold Into Pie";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -1154,6 +1188,7 @@ class CraftDadaSoup_Ragout extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Ragout";
 		
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -1193,6 +1228,7 @@ class CraftDadaDish_Gumbo extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Gumbo";
 		
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -1243,6 +1279,7 @@ class CraftDadaDish_SeafoodGumbo extends Craft_DadaTempStageTemp1Stage1_BaseReci
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Seafood Gumbo";
 		
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -1279,10 +1316,11 @@ class CraftDadaDish_SeafoodGumbo extends Craft_DadaTempStageTemp1Stage1_BaseReci
 	}
 };
 
-class CraftDadaDish_Gumbo1 extends Craft_DadaTempStageTemp1_BaseRecipe
+class CraftDadaDish_Gumbo1 extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Gumbo";
 	
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -1312,10 +1350,11 @@ class CraftDadaDish_Gumbo1 extends Craft_DadaTempStageTemp1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_SeafoodGumbo1 extends Craft_DadaTempStageTemp1_BaseRecipe
+class CraftDadaDish_SeafoodGumbo1 extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Seafood Gumbo";
 		
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -1347,6 +1386,7 @@ class CraftDadaSoup_TomatoSauce1 extends Craft_DadaTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Tomato Sauce";
 		
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check

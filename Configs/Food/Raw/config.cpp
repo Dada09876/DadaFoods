@@ -1,20 +1,26 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Configs\Food\Raw\config.bin
+//Produced from mikero's Dos Tools Dll version 9.93
+//https://mikero.bytex.digital/Downloads
+//'now' is Tue Feb 04 16:40:52 2025 : 'file' last modified on Sat Jan 18 22:45:01 2025
+////////////////////////////////////////////////////////////////////
+
 #define _ARMA_
 
 class CfgPatches
 {
 	class DadaFoods_Configs_Food_Raw
 	{
-		units[] = {};
+		units[] = {"DadaRaw_Base","DadaRaw_Salad","DadaRaw_Rice","DadaRaw_PokeBowl","DadaRaw_TomatoSalad","DadaRawCerealCrunchin_Nesquik","DadaRaw_CerealCrunchin_Frosties","DadaRaw_CerealCrunchin_Kosmostar","DadaRaw_SushiMaki","DadaRaw_SushiOnigiri","DadaRaw_SmallButter","DadaRaw_SmallButter_Opened","DadaRaw_BigButter","DadaRaw_Yogourt","DadaRaw_CheeseBase","DadaRaw_Mozza","DadaRaw_MontereyJack","DadaRaw_CheddarCurds","DadaRaw_PumpkinSeeds","DadaRaw_FreshGoatCheese","DadaRaw_Feta","DadaRaw_VanillaChocoSwirl","DadaRaw_VanillaIceCream","DadaRaw_ChocoIScream","DadaRaw_FrozenYogurt"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"DadaFoods"};
 	};
 };
-
 class CfgVehicles
 {
-    class Edible_Base;
-	class DadaRaw_Base:Edible_Base
+	class Edible_Base;
+	class DadaRaw_Base: Edible_Base
 	{
 		scope = 2;
 		model = "Source_Files\DadaFoods\Configs\Food\Cooked\data\bowl.p3d";
@@ -107,24 +113,21 @@ class CfgVehicles
 			};
 		};
 	};
-
-
-
-    class DadaRaw_Salad:DadaRaw_Base
+	class DadaRaw_Salad: DadaRaw_Base
 	{
 		displayName = "Salad";
 		descriptionShort = "Lettuce and dressing, perfect meal for the calorie averse or starter for everyone else";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaSalad_co.paa"};
 	};
-	class DadaRaw_Rice:DadaRaw_Base
+	class DadaRaw_Rice: DadaRaw_Base
 	{
 		displayName = "Plain Rice";
 		descriptionShort = "It's rice. Not sure what you were hoping for";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaRiceBowl_co.paa"};
 	};
-	class DadaRaw_PokeBowl:DadaRaw_Base
+	class DadaRaw_PokeBowl: DadaRaw_Base
 	{
 		varQuantityInit = 275;
 		varQuantityMin = 0;
@@ -135,41 +138,40 @@ class CfgVehicles
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaPokeBowl_co.paa"};
 	};
-	class DadaRaw_TomatoSalad:DadaRaw_Base
+	class DadaRaw_TomatoSalad: DadaRaw_Base
 	{
 		displayName = "Tomato Salad";
 		descriptionShort = "Tomato and Mozzarella Salad";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaTomatoSalad_co.paa"};
 	};
-	class DadaRaw_CerealCrunchin:DadaRaw_Base
+	class DadaRaw_CerealCrunchin: DadaRaw_Base
 	{
 		scope = 1;
 		displayName = "Cereal Bowl";
 		descriptionShort = "Bowl of cereal";
 	};
-	class DadaRawCerealCrunchin_Nesquik:DadaRaw_CerealCrunchin
+	class DadaRawCerealCrunchin_Nesquik: DadaRaw_CerealCrunchin
 	{
 		scope = 2;
 		Color = "Coco";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaCerealCrunchinKids_co.paa"};
 	};
-	class DadaRaw_CerealCrunchin_Frosties:DadaRaw_CerealCrunchin
+	class DadaRaw_CerealCrunchin_Frosties: DadaRaw_CerealCrunchin
 	{
 		scope = 2;
 		Color = "Frosties";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaCerealCrunchinFrosties_co.paa"};
 	};
-	class DadaRaw_CerealCrunchin_Kosmostar:DadaRaw_CerealCrunchin
+	class DadaRaw_CerealCrunchin_Kosmostar: DadaRaw_CerealCrunchin
 	{
 		scope = 2;
 		Color = "Star";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaCerealCrunchinKosmostar_co.paa"};
 	};
-	
 	class DadaRaw_SushiMaki: DadaRaw_Base
 	{
 		scope = 2;
@@ -233,8 +235,7 @@ class CfgVehicles
 			};
 		};
 	};
-
-	class DadaRaw_SushiOnigiri:DadaRaw_SushiMaki
+	class DadaRaw_SushiOnigiri: DadaRaw_SushiMaki
 	{
 		scope = 2;
 		displayName = "Onigiri";
@@ -255,9 +256,8 @@ class CfgVehicles
 			};
 		};
 	};
-
-    class FoodCan_100g_ColorBase;
-	class DadaRaw_SmallButter:FoodCan_100g_ColorBase
+	class FoodCan_100g_ColorBase;
+	class DadaRaw_SmallButter: FoodCan_100g_ColorBase
 	{
 		scope = 2;
 		itemSize[] = {1,1};
@@ -266,8 +266,7 @@ class CfgVehicles
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaFoodCan_SmallButter_co.paa"};
 	};
-
-	class DadaRaw_SmallButter_Opened:DadaRaw_Base
+	class DadaRaw_SmallButter_Opened: DadaRaw_Base
 	{
 		debug_ItemCategory = 6;
 		model = "\dz\gear\food\FoodCan_100g_open.p3d";
@@ -301,7 +300,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class DadaRaw_BigButter:DadaRaw_Base
+	class DadaRaw_BigButter: DadaRaw_Base
 	{
 		scope = 2;
 		displayName = "Big Butter";
@@ -369,8 +368,7 @@ class CfgVehicles
 			};
 		};
 	};
-	
-	class DadaRaw_Yogourt:DadaRaw_Base
+	class DadaRaw_Yogourt: DadaRaw_Base
 	{
 		scope = 2;
 		itemSize[] = {2,1};
@@ -403,15 +401,14 @@ class CfgVehicles
 			};
 		};
 	};
-
-	class DadaRaw_CheeseBase: DadaRaw_Base 
+	class DadaRaw_CheeseBase: DadaRaw_Base
 	{
 		weight = 1;
 		canBeSplit = 1;
 		interactionWeight = 1;
 		quantityBar = 1;
 	};
-	class DadaRaw_Mozza:DadaRaw_CheeseBase
+	class DadaRaw_Mozza: DadaRaw_CheeseBase
 	{
 		scope = 2;
 		itemSize[] = {2,1};
@@ -441,7 +438,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class DadaRaw_MontereyJack:DadaRaw_CheeseBase
+	class DadaRaw_MontereyJack: DadaRaw_CheeseBase
 	{
 		scope = 2;
 		itemSize[] = {2,2};
@@ -476,9 +473,8 @@ class CfgVehicles
 			};
 		};
 	};
-
 	class Snack_ColorBase;
-	class DadaRaw_CheddarCurds:DadaRaw_CheeseBase
+	class DadaRaw_CheddarCurds: DadaRaw_CheeseBase
 	{
 		scope = 2;
 		model = "\DZ\gear\food\salty_crackers.p3d";
@@ -495,8 +491,7 @@ class CfgVehicles
 			toxicity = 0;
 		};
 	};
-
-	class DadaRaw_PumpkinSeeds:Snack_Colorbase
+	class DadaRaw_PumpkinSeeds: Snack_Colorbase
 	{
 		scope = 2;
 		model = "\DZ\gear\food\salty_crackers.p3d";
@@ -513,8 +508,7 @@ class CfgVehicles
 			toxicity = 0;
 		};
 	};
-
-	class DadaRaw_FreshGoatCheese:DadaRaw_CheeseBase
+	class DadaRaw_FreshGoatCheese: DadaRaw_CheeseBase
 	{
 		scope = 2;
 		itemSize[] = {2,1};
@@ -544,7 +538,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class DadaRaw_Feta:DadaRaw_CheeseBase
+	class DadaRaw_Feta: DadaRaw_CheeseBase
 	{
 		scope = 2;
 		itemSize[] = {1,2};
@@ -574,7 +568,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class DadaRaw_VanillaChocoSwirl:DadaRaw_Base
+	class DadaRaw_VanillaChocoSwirl: DadaRaw_Base
 	{
 		scope = 2;
 		itemSize[] = {1,2};
@@ -603,26 +597,25 @@ class CfgVehicles
 			};
 		};
 	};
-	class DadaRaw_VanillaIceCream:DadaRaw_VanillaChocoSwirl
+	class DadaRaw_VanillaIceCream: DadaRaw_VanillaChocoSwirl
 	{
 		displayName = "Vanilla Ice cream";
 		descriptionShort = "Because life is exciting enough already";
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\IScreamVanilla_co.paa"};
 	};
-	class DadaRaw_ChocoIScream:DadaRaw_VanillaIceCream
+	class DadaRaw_ChocoIScream: DadaRaw_VanillaIceCream
 	{
 		displayName = "Chocolate Ice cream";
 		descriptionShort = "Chocolate chunks ice cream";
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\IScreamChoco_co.paa"};
 	};
-	class DadaRaw_FrozenYogurt:DadaRaw_VanillaIceCream
+	class DadaRaw_FrozenYogurt: DadaRaw_VanillaIceCream
 	{
 		displayName = "Frozen Yogurt";
 		descriptionShort = "frozen yogurt";
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\FrozenYogurt_co.paa"};
 	};
-	
-    class PowderedMilk: Edible_Base
+	class PowderedMilk: Edible_Base
 	{
 		canBeSplit = 1;
 	};

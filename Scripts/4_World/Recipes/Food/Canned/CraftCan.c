@@ -360,6 +360,8 @@ class Craft_Dada_RawFoodCan_Relish extends Craft_DadaTempStageTemp1Stage1_BaseRe
 		AddResult("Dada_RawFoodCan_Relish");//add results here
 	}
 };
+
+/// ToChange ///
 class Craft_Dada_RawFoodCan_Samosa extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
@@ -403,6 +405,9 @@ class Craft_Dada_RawFoodCan_Samosa extends Craft_DadaTempStageTemp1Stage1_BaseRe
 		AddResult("Dada_RawFoodCan_Samosa");//add results here
 	}
 };
+/// ToChange ///
+
+
 class Craft_Dada_RawFoodCan_HomemadeChili extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
@@ -439,7 +444,7 @@ class Craft_Dada_RawFoodCan_HomemadePumpkinPuree extends Craft_DadaTempStageTemp
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Craft Perky Pumpkin Pure Can";
+		m_Name = "Craft Perky Pumpkin Can";
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"SlicedPumpkin");

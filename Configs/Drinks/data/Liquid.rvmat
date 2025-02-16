@@ -1,8 +1,8 @@
 ////////////////////////////////////////////////////////////////////
-//DeRap: data\tacgoggles_glass.rvmat
-//Produced from mikero's Dos Tools Dll version 9.10
+//DeRap: Configs\Drinks\data\Liquid.rvmat
+//Produced from mikero's Dos Tools Dll version 9.93
 //https://mikero.bytex.digital/Downloads
-//'now' is Fri Nov 10 21:17:50 2023 : 'file' last modified on Fri May 12 10:18:52 2023
+//'now' is Tue Feb 04 16:40:50 2025 : 'file' last modified on Sat Jan 18 22:45:17 2025
 ////////////////////////////////////////////////////////////////////
 
 #define _ARMA_
@@ -11,7 +11,7 @@ ambient[] = {1,1,1,1};
 diffuse[] = {1,1,1,1};
 forcedDiffuse[] = {0,0,0,0};
 emmisive[] = {0.5,0.5,0.5,1};
-specular[] = {.7,.7,.7,.7};
+specular[] = {0.7,0.7,0.7,0.7};
 specularPower = 150;
 PixelShaderID = "Super";
 VertexShaderID = "Super";

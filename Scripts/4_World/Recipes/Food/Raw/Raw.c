@@ -2,6 +2,7 @@ class CraftDadaRaw_Salad extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Salad";
 
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -30,6 +31,7 @@ class CraftDadaRaw_TomatoSalad extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Tomato Salad";
 
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -52,6 +54,7 @@ class CraftDadaRaw_Rice extends Craft_DadaTempTemp1Liquid1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Rice";
 		
 		m_MinQuantityIngredient[0] = 30;//-1 = disable check
@@ -80,23 +83,23 @@ class CraftDadaRaw_Rice extends Craft_DadaTempTemp1Liquid1_BaseRecipe
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
 
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 50 || ingredient2.GetTemperature() > 200)
+			if (ingredient1.GetTemperature() < 50 || ingredient1.GetTemperature() > 200)
 			{
 				return false;
 			}
-			if (ingredient2.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -105,7 +108,7 @@ class CraftDadaRaw_Rice extends Craft_DadaTempTemp1Liquid1_BaseRecipe
 		}
 		// initial ingredients are wrong, false
    		return false;
-		}
+   	}
 };
 
 
@@ -113,6 +116,7 @@ class CraftDadaRaw_PokeBowl extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Poke Bowl";
 	
 		m_MinQuantityIngredient[0] = 150;//-1 = disable check
@@ -146,6 +150,7 @@ class CraftDadaRaw_CerealCrunchin_Frosties extends Craft_DadaTempTemp1Stage1_Bas
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Cereal Bowl";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -178,6 +183,7 @@ class CraftDadaRawCerealCrunchin_Nesquik extends Craft_DadaTempTemp1Stage1_BaseR
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Chocolate Cereal Bowl";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -210,6 +216,7 @@ class CraftDadaRaw_CerealCrunchin_Kosmostar extends Craft_DadaTempTemp1Stage1_Ba
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Kosmostar Cereal Bowl";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -242,6 +249,7 @@ class CraftDadaRaw_SushiMaki extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Maki";
 	
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -275,6 +283,7 @@ class CraftDadaRaw_SushiOnigiri extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Onigiri";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -308,6 +317,7 @@ class CraftDadaRaw_SmallButter extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft little bit of butter";
 		
 		m_MinQuantityIngredient[0] = 150;//-1 = disable check
@@ -345,6 +355,7 @@ class CraftDadaRaw_BigButter extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft big chunk of butter";
 
 		m_MinQuantityIngredient[0] = 300;//-1 = disable check
@@ -380,6 +391,7 @@ class CraftDadaRaw_Yogourt extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Yogurt";
 		
 		m_MinQuantityIngredient[0] = 100;//-1 = disable check
@@ -412,6 +424,7 @@ class CraftFreshCheese_Mozza extends Craft_DadaTempStage_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Mozzarella";
 		
 		m_MinQuantityIngredient[0] = 150;//-1 = disable check
@@ -447,6 +460,7 @@ class CraftFreshCheese_CheddarCurds extends Craft_DadaTempStage_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Cheddar Curds";
 		
 		m_MinQuantityIngredient[0] = 150;//-1 = disable check
@@ -481,6 +495,7 @@ class CraftFreshCheese_Goat extends Craft_DadaTempStage_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Goat Cheese";
 		
 		m_MinQuantityIngredient[0] = 150;//-1 = disable check
@@ -517,6 +532,7 @@ class CraftFreshCheese_Feta extends Craft_DadaTempStage_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Feta Cheese";
 		
 		m_MinQuantityIngredient[0] = 150;//-1 = disable check
@@ -556,6 +572,7 @@ class CraftDadaRaw_FrozenYogurt extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Frozen Yogurt";
 		
 		m_MinQuantityIngredient[0] = 75;//-1 = disable check
@@ -584,30 +601,30 @@ class CraftDadaRaw_FrozenYogurt extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < -100 || ingredient1.GetTemperature() > 0)
+			if (ingredient0.GetTemperature() < -40 || ingredient0.GetTemperature() > 20)
+			{
+				return false;
+			}
+			FoodStage foodStage0 = ingredient0.GetFoodStage();
+			// if the food is raw, burnt or rotten
+			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
+			{
+				return false;
+			}
+
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
+			if (ingredient1.GetTemperature() < -40 || ingredient1.GetTemperature() > 20)
 			{
 				return false;
 			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if the food is raw, burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
-			{
-				return false;
-			}
-
-			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < -100 || ingredient2.GetTemperature() > 0)
-			{
-				return false;
-			}
-			FoodStage foodStage2 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage2.IsFoodBurned() || foodStage2.IsFoodRotten())
 			{
 				return false;
 			}
@@ -623,6 +640,7 @@ class CraftDadaRaw_VanillaChocoSwirl extends Craft_DadaTempStageTemp1Stage1_Base
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Vanilla & Chocolate Ice Cream";
 		
 		m_MinQuantityIngredient[0] = 100;//-1 = disable check
@@ -656,30 +674,30 @@ class CraftDadaRaw_VanillaChocoSwirl extends Craft_DadaTempStageTemp1Stage1_Base
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < -100 || ingredient1.GetTemperature() > 0)
+			if (ingredient0.GetTemperature() < -40 || ingredient0.GetTemperature() > 20)
+			{
+				return false;
+			}
+			FoodStage foodStage0 = ingredient0.GetFoodStage();
+			// if the food is raw, burnt or rotten
+			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
+			{
+				return false;
+			}
+
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
+			if (ingredient1.GetTemperature() < -40 || ingredient1.GetTemperature() > 20)
 			{
 				return false;
 			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if the food is raw, burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
-			{
-				return false;
-			}
-
-			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < -100 || ingredient2.GetTemperature() > 0)
-			{
-				return false;
-			}
-			FoodStage foodStage2 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage2.IsFoodBurned() || foodStage2.IsFoodRotten())
 			{
 				return false;
 			}
@@ -695,6 +713,7 @@ class CraftDadaRaw_VanillaIceCream extends Craft_DadaTempStageTemp1Stage1_BaseRe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Vanilla Ice Cream";
 		
 		m_MinQuantityIngredient[0] = 100;//-1 = disable check
@@ -729,30 +748,30 @@ class CraftDadaRaw_VanillaIceCream extends Craft_DadaTempStageTemp1Stage1_BaseRe
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < -100 || ingredient1.GetTemperature() > 0)
+			if (ingredient0.GetTemperature() < -40 || ingredient0.GetTemperature() > 20)
+			{
+				return false;
+			}
+			FoodStage foodStage0 = ingredient0.GetFoodStage();
+			// if the food is raw, burnt or rotten
+			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
+			{
+				return false;
+			}
+
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
+			if (ingredient1.GetTemperature() < -40 || ingredient1.GetTemperature() > 20)
 			{
 				return false;
 			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if the food is raw, burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
-			{
-				return false;
-			}
-
-			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < -100 || ingredient2.GetTemperature() > 0)
-			{
-				return false;
-			}
-			FoodStage foodStage2 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage2.IsFoodBurned() || foodStage2.IsFoodRotten())
 			{
 				return false;
 			}
@@ -768,6 +787,7 @@ class CraftDadaRaw_ChocoIScream extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft Chocolate Ice Cream";
 		
 		m_MinQuantityIngredient[0] = 100;//-1 = disable check
@@ -801,30 +821,30 @@ class CraftDadaRaw_ChocoIScream extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < -100 || ingredient1.GetTemperature() > 0)
+			if (ingredient0.GetTemperature() < -40 || ingredient0.GetTemperature() > 20)
+			{
+				return false;
+			}
+			FoodStage foodStage0 = ingredient0.GetFoodStage();
+			// if the food is raw, burnt or rotten
+			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
+			{
+				return false;
+			}
+
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
+			if (ingredient1.GetTemperature() < -40 || ingredient1.GetTemperature() > 20)
 			{
 				return false;
 			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if the food is raw, burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
-			{
-				return false;
-			}
-
-			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < -100 || ingredient2.GetTemperature() > 0)
-			{
-				return false;
-			}
-			FoodStage foodStage2 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage2.IsFoodBurned() || foodStage2.IsFoodRotten())
 			{
 				return false;
 			}
@@ -840,6 +860,7 @@ class CraftDadaRaw_PumpkinSeeds extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
 		m_Name = "Craft roasted pumpkin seeds";
 		
 		m_MinQuantityIngredient[0] = 20;//-1 = disable check

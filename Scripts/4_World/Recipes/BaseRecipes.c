@@ -56,10 +56,27 @@ class Craft_DadaTempStageLiquidTemp1Stage1Liquid1_BaseRecipe extends RecipeBase
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
+			// if the ingredient 0 is cooler than 10C or hotter than 70C
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
+			{
+				return false;
+			}
+			FoodStage foodStage0 = ingredient0.GetFoodStage();
+			// if the food is raw, burnt or rotten
+			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten() || foodStage1.IsFoodRaw() || foodStage1.IsFoodDried() || foodStage1.IsFoodBaked() || foodStage1.IsFoodBoiled()) 
+			{
+				return false;
+			}
+			if (ingredient0.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			{
+				return false;
+			}
+
+
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
 			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
@@ -72,23 +89,6 @@ class Craft_DadaTempStageLiquidTemp1Stage1Liquid1_BaseRecipe extends RecipeBase
 				return false;
 			}
 			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
-			{
-				return false;
-			}
-
-
-			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 10 || ingredient2.GetTemperature() > 70)
-			{
-				return false;
-			}
-			FoodStage foodStage2 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage2.IsFoodBurned() || foodStage2.IsFoodRotten())
-			{
-				return false;
-			}
-			if (ingredient2.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -153,7 +153,7 @@ class Craft_Dada_BaseRecipe extends RecipeBase
 		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 100;//-1 = do nothing
 		m_ResultSetHealth[0] = -1;//-1 = do nothing
-		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
 		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
 		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
@@ -228,11 +228,11 @@ class Craft_DadaTemp_BaseRecipe extends RecipeBase
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
-		ItemBase ingredient1;
-		if (Class.CastTo(ingredient1, ingredients[0]))
+		ItemBase ingredient0;
+		if (Class.CastTo(ingredient0, ingredients[0]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
@@ -307,11 +307,11 @@ class Craft_DadaTemp1_BaseRecipe extends RecipeBase
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient2, ingredients[1]))
+		ItemBase ingredient1;
+		if (Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 10 || ingredient2.GetTemperature() > 70)
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
 				return false;
 			}
@@ -385,18 +385,18 @@ class Craft_DadaTempTemp1_BaseRecipe extends RecipeBase
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 10 || ingredient2.GetTemperature() > 70)
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
 				return false;
 			}
@@ -470,18 +470,18 @@ class Craft_DadaTempStage_BaseRecipe extends RecipeBase
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
-		ItemBase ingredient1;
+		ItemBase ingredient0;
 
-		if (Class.CastTo(ingredient1, ingredients[0]))
+		if (Class.CastTo(ingredient0, ingredients[0]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
-			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			FoodStage foodStage0 = ingredient0.GetFoodStage();
 			// if the food is raw, burnt or rotten
-			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
+			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
 			{
 				return false;
 			}
@@ -556,18 +556,18 @@ class Craft_DadaTemp1Stage1_BaseRecipe extends RecipeBase
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
-		ItemBase ingredient2;
+		ItemBase ingredient1;
 
-		if (Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 10 || ingredient2.GetTemperature() > 70)
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
 				return false;
 			}
-			FoodStage foodStage2 = ingredient2.GetFoodStage();
+			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if the food is raw, burnt or rotten
-			if (foodStage2.IsFoodBurned() || foodStage2.IsFoodRotten())
+			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
 			{
 				return false;
 			}
@@ -641,24 +641,24 @@ class Craft_DadaTempStageTemp1_BaseRecipe extends RecipeBase
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
-			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			FoodStage foodStage0 = ingredient0.GetFoodStage();
 			// if the food is raw, burnt or rotten
-			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
+			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
 			{
 				return false;
 			}
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 10 || ingredient2.GetTemperature() > 70)
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
 				return false;
 			}
@@ -732,24 +732,24 @@ class Craft_DadaTempTemp1Stage1_BaseRecipe extends RecipeBase
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 10 || ingredient2.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
-			FoodStage foodStage2 = ingredient1.GetFoodStage();
+			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if the food is raw, burnt or rotten
-			if (foodStage2.IsFoodBurned() || foodStage2.IsFoodRotten())
+			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
 			{
 				return false;
 			}
@@ -823,11 +823,23 @@ class Craft_DadaTempStageTemp1Stage1_BaseRecipe extends RecipeBase
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
+			{
+				return false;
+			}
+			FoodStage foodStage0 = ingredient0.GetFoodStage();
+			// if the food is raw, burnt or rotten
+			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
+			{
+				return false;
+			}
+
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
 			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
 				return false;
@@ -835,18 +847,6 @@ class Craft_DadaTempStageTemp1Stage1_BaseRecipe extends RecipeBase
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if the food is raw, burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
-			{
-				return false;
-			}
-
-			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 10 || ingredient2.GetTemperature() > 70)
-			{
-				return false;
-			}
-			FoodStage foodStage2 = ingredient1.GetFoodStage();
-			// if the food is raw, burnt or rotten
-			if (foodStage2.IsFoodBurned() || foodStage2.IsFoodRotten())
 			{
 				return false;
 			}
@@ -911,7 +911,7 @@ class Craft_DadaTempLiquid_BaseRecipe extends RecipeBase
 		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 100;//-1 = do nothing
 		m_ResultSetHealth[0] = -1;//-1 = do nothing
-		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsHealth[0] = 1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
 		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
 		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
@@ -921,16 +921,16 @@ class Craft_DadaTempLiquid_BaseRecipe extends RecipeBase
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
-		ItemBase ingredient1;
-		if (Class.CastTo(ingredient1, ingredients[0]))
+		ItemBase ingredient0;
+		if (Class.CastTo(ingredient0, ingredients[0]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
 			
-			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient0.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -992,7 +992,7 @@ class Craft_DadaTemp1Liquid1_BaseRecipe extends RecipeBase
 		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 100;//-1 = do nothing
 		m_ResultSetHealth[0] = -1;//-1 = do nothing
-		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsHealth[0] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
 		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
 		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
@@ -1003,17 +1003,17 @@ class Craft_DadaTemp1Liquid1_BaseRecipe extends RecipeBase
 	{
 		// define my variables
 
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient2, ingredients[1]))
+		ItemBase ingredient1;
+		if (Class.CastTo(ingredient1, ingredients[1]))
 		{
 			
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 10 || ingredient2.GetTemperature() > 70)
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
 				return false;
 			}
 		
-			if (ingredient2.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -1088,24 +1088,24 @@ class Craft_DadaTempLiquidTemp1_BaseRecipe extends RecipeBase
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
 			
-			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient0.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
 			{
 				return false;
 			}
 
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 10 || ingredient2.GetTemperature() > 70)
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
 				return false;
 			}
@@ -1180,23 +1180,23 @@ class Craft_DadaTempTemp1Liquid1_BaseRecipe extends RecipeBase
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
 
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 10 || ingredient2.GetTemperature() > 70)
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
 				return false;
 			}
-			if (ingredient2.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -1271,29 +1271,29 @@ class Craft_DadaTempStageTemp1Liquid1_BaseRecipe extends RecipeBase
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
-			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			FoodStage foodStage0 = ingredient0.GetFoodStage();
 			// if the food is raw, burnt or rotten
-			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
+			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
 			{
 				return false;
 			}
 
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 10 || ingredient2.GetTemperature() > 70)
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
 				return false;
 			}
-			if (ingredient2.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -1368,29 +1368,29 @@ class Craft_DadaTempLiquidTemp1Stage1_BaseRecipe extends RecipeBase
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
-			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient0.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
 			{
 				return false;
 			}
 
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 10 || ingredient2.GetTemperature() > 70)
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
 				return false;
 			}
-			FoodStage foodStage2 = ingredient1.GetFoodStage();
+			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if the food is raw, burnt or rotten
-			if (foodStage2.IsFoodBurned() || foodStage2.IsFoodRotten())
+			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
 			{
 				return false;
 			}
@@ -1465,27 +1465,27 @@ class Craft_DadaTempLiquidTemp1Liquid1_BaseRecipe extends RecipeBase
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
+		ItemBase ingredient0;
 		ItemBase ingredient1;
-		ItemBase ingredient2;
-		if (Class.CastTo(ingredient1, ingredients[0]) && Class.CastTo(ingredient2, ingredients[1]))
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
-			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient0.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
 			{
 				return false;
 			}
 
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient2.GetTemperature() < 10 || ingredient2.GetTemperature() > 70)
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
 				return false;
 			}
-			if (ingredient2.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
 			{
 				return false;
 			}

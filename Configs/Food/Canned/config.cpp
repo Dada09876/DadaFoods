@@ -1,145 +1,151 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Configs\Food\Canned\config.bin
+//Produced from mikero's Dos Tools Dll version 9.93
+//https://mikero.bytex.digital/Downloads
+//'now' is Tue Feb 04 16:40:51 2025 : 'file' last modified on Sat Jan 18 22:45:02 2025
+////////////////////////////////////////////////////////////////////
+
 #define _ARMA_
 
 class CfgPatches
 {
 	class DadaFoods_Configs_Food_Canned
 	{
-		units[] = {};
+		units[] = {"Dada_RawFoodCan_LSVeggies","Dada_PreservedFoodCan_LSVeggies","Dada_PreservedFoodCan_LSVeggies_Opened","Dada_RawFoodCan_STAGham","Dada_PreservedFoodCan_STAGham","Dada_PreservedFoodCan_STAGham_Opened","Dada_RawFoodCan_ESPENChunkySoup","Dada_PreservedFoodCan_ESPENChunkySoup","Dada_PreservedFoodCan_ESPENChunkySoup_Opened","Dada_RawFoodCan_LSSPAM","Dada_PreservedFoodCan_LSSPAM","Dada_PreservedFoodCan_LSSPAM_Opened","Dada_RawFoodCan_STAGchili","Dada_PreservedFoodCan_STAGchili","Dada_PreservedFoodCan_STAGchili_Opened","Dada_RawFoodCan_ESPENMacnCheese","Dada_PreservedFoodCan_ESPENMacnCheese","Dada_PreservedFoodCan_ESPENMacnCheese_Opened","Dada_RawFoodCan_DicedTomatoes","Dada_PreservedFoodCan_DicedTomatoes","Dada_PreservedFoodCan_DicedTomatoes_Opened","Dada_RawFoodCan_Ketchup","Dada_PreservedFoodCan_Ketchup","Dada_PreservedFoodCan_Ketchup_Opened","Dada_RawFoodCan_Paella","Dada_PreservedFoodCan_Paella","Dada_PreservedFoodCan_Paella_Opened","Dada_RawFoodCan_PumpkinPuree","Dada_PreservedFoodCan_PumpkinPuree","Dada_PreservedFoodCan_PumpkinPuree_Opened","Dada_RawFoodCan_Quail","Dada_PreservedFoodCan_Quail","Dada_PreservedFoodCan_Quail_Opened","Dada_RawFoodCan_Relish","Dada_PreservedFoodCan_Relish","Dada_PreservedFoodCan_Relish_Opened","Dada_RawFoodCan_Samosa","Dada_PreservedFoodCan_Samosa","Dada_PreservedFoodCan_Samosa_Opened","Dada_RawFoodCan_HomemadeChili","Dada_PreservedFoodCan_HomemadeChili","Dada_PreservedFoodCan_HomemadeChili_Opened","Dada_RawFoodCan_HomemadePumpkinPuree","Dada_PreservedFoodCan_HomemadePumpkinPuree","Dada_PreservedFoodCan_HomemadePumpkinPuree_Opened","Dada_RawFoodCan_Crab","Dada_PreservedFoodCan_Crab","Dada_PreservedFoodCan_Crab_Opened","Dada_RawFoodCan_Clam","Dada_PreservedFoodCan_Clam","Dada_PreservedFoodCan_Clam_Opened"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"DadaFoods"};
 	};
 };
-
 class CfgVehicles
 {
-    class BaseFoodStageTransitions;
+	class BaseFoodStageTransitions;
 	class DadaCanStageTransitions: BaseFoodStageTransitions
 	{
-	class Raw
-	{
-		class ToBaked
+		class Raw
 		{
-			transition_to = 2;
-			cooking_method = 1;
+			class ToBaked
+			{
+				transition_to = 2;
+				cooking_method = 1;
+			};
+			class ToBoiled
+			{
+				transition_to = 3;
+				cooking_method = 2;
+			};
+			class ToDried
+			{
+				transition_to = 4;
+				cooking_method = 3;
+			};
+			class ToBurned
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToRotten
+			{
+				transition_to = 6;
+				cooking_method = 4;
+			};
 		};
-		class ToBoiled
+		class Rotten
 		{
-			transition_to = 3;
-			cooking_method = 2;
+			class ToBurned
+			{
+				transition_to = 5;
+				cooking_method = 1;
+			};
 		};
-		class ToDried
+		class Baked
 		{
-			transition_to = 4;
-			cooking_method = 3;
+			class ToBaked
+			{
+				transition_to = 5;
+				cooking_method = 1;
+			};
+			class ToBoiled
+			{
+				transition_to = 5;
+				cooking_method = 2;
+			};
+			class ToDried
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToBurned
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToRotten
+			{
+				transition_to = 6;
+				cooking_method = 4;
+			};
 		};
-		class ToBurned
+		class Boiled
 		{
-			transition_to = 5;
-			cooking_method = 3;
+			class ToBaked
+			{
+				transition_to = 5;
+				cooking_method = 1;
+			};
+			class ToBoiled
+			{
+				transition_to = 5;
+				cooking_method = 2;
+			};
+			class ToDried
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToBurned
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToRotten
+			{
+				transition_to = 6;
+				cooking_method = 4;
+			};
 		};
-		class ToRotten
+		class Dried
 		{
-			transition_to = 6;
-			cooking_method = 4;
+			class ToBaked
+			{
+				transition_to = 5;
+				cooking_method = 1;
+			};
+			class ToBoiled
+			{
+				transition_to = 5;
+				cooking_method = 2;
+			};
+			class ToDried
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToBurned
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToRotten
+			{
+				transition_to = 6;
+				cooking_method = 4;
+			};
 		};
-	};
-	class Rotten
-	{
-		class ToBurned
-		{
-			transition_to = 5;
-			cooking_method = 1;
-		};
-	};
-	class Baked
-	{
-		class ToBaked
-		{
-			transition_to = 5;
-			cooking_method = 1;
-		};
-		class ToBoiled
-		{
-			transition_to = 5;
-			cooking_method = 2;
-		};
-		class ToDried
-		{
-			transition_to = 5;
-			cooking_method = 3;
-		};
-		class ToBurned
-		{
-			transition_to = 5;
-			cooking_method = 3;
-		};
-		class ToRotten
-		{
-			transition_to = 6;
-			cooking_method = 4;
-		};
-	};
-	class Boiled
-	{
-		class ToBaked
-		{
-			transition_to = 5;
-			cooking_method = 1;
-		};
-		class ToBoiled
-		{
-			transition_to = 5;
-			cooking_method = 2;
-		};
-		class ToDried
-		{
-			transition_to = 5;
-			cooking_method = 3;
-		};
-		class ToBurned
-		{
-			transition_to = 5;
-			cooking_method = 3;
-		};
-		class ToRotten
-		{
-			transition_to = 6;
-			cooking_method = 4;
-		};
-	};
-	class Dried
-	{
-		class ToBaked
-		{
-			transition_to = 5;
-			cooking_method = 1;
-		};
-		class ToBoiled
-		{
-			transition_to = 5;
-			cooking_method = 2;
-		};
-		class ToDried
-		{
-			transition_to = 5;
-			cooking_method = 3;
-		};
-		class ToBurned
-		{
-			transition_to = 5;
-			cooking_method = 3;
-		};
-		class ToRotten
-		{
-			transition_to = 6;
-			cooking_method = 4;
-		};
-	};
-	class Burned{};
+		class Burned{};
 	};
 	class Edible_Base;
-    class Dada_RawFoodCan_Colorbase: Edible_Base
+	class Dada_RawFoodCan_Colorbase: Edible_Base
 	{
 		scope = 0;
 		weight = 2;
@@ -245,8 +251,7 @@ class CfgVehicles
 			};
 		};
 	};
-
-    class Dada_PreservedFoodCan_Colorbase: Edible_Base
+	class Dada_PreservedFoodCan_Colorbase: Edible_Base
 	{
 		scope = 0;
 		displayName = "Preserved Canned Food";
@@ -303,7 +308,6 @@ class CfgVehicles
 			};
 		};
 	};
-
 	class Dada_PreservedFoodCan_Colorbase_Opened: Edible_Base
 	{
 		scope = 0;
@@ -361,7 +365,6 @@ class CfgVehicles
 			};
 		};
 	};
-
 	class Dada_RawFoodCan_LSVeggies: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -397,8 +400,7 @@ class CfgVehicles
 			toxicity = 0;
 		};
 	};
-
-class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
+	class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Reconstituted Meat";
@@ -433,7 +435,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			toxicity = 0;
 		};
 	};
-
 	class Dada_RawFoodCan_ESPENChunkySoup: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -469,8 +470,7 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			toxicity = 0;
 		};
 	};
-
-    class Dada_RawFoodCan_LSSPAM: Dada_RawFoodCan_Colorbase
+	class Dada_RawFoodCan_LSSPAM: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "SPAM";
@@ -505,7 +505,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			toxicity = 0;
 		};
 	};
-
 	class Dada_RawFoodCan_STAGchili: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -541,7 +540,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			toxicity = 0;
 		};
 	};
-
 	class Dada_RawFoodCan_ESPENMacnCheese: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -577,7 +575,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			toxicity = 0;
 		};
 	};
-
 	class Dada_RawFoodCan_DicedTomatoes: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -613,7 +610,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			toxicity = 0;
 		};
 	};
-
 	class Dada_RawFoodCan_Ketchup: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -649,7 +645,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			toxicity = 0;
 		};
 	};
-
 	class Dada_RawFoodCan_Paella: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -685,7 +680,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			toxicity = 0;
 		};
 	};
-
 	class Dada_RawFoodCan_PumpkinPuree: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -721,7 +715,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			toxicity = 0;
 		};
 	};
-
 	class Dada_RawFoodCan_Quail: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -757,7 +750,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			toxicity = 0;
 		};
 	};
-
 	class Dada_RawFoodCan_Relish: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -793,7 +785,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			toxicity = 0;
 		};
 	};
-
 	class Dada_RawFoodCan_Samosa: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -829,7 +820,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			toxicity = 0;
 		};
 	};
-
 	class Dada_RawFoodCan_HomemadeChili: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -865,7 +855,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			toxicity = 0;
 		};
 	};
-
 	class Dada_RawFoodCan_HomemadePumpkinPuree: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -901,7 +890,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			toxicity = 0;
 		};
 	};
-	
 	class Dada_RawFoodCan_Crab: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -932,7 +920,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			};
 		};
 	};
-
 	class Dada_PreservedFoodCan_Crab: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
@@ -963,7 +950,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			};
 		};
 	};
-
 	class Dada_PreservedFoodCan_Crab_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		displayName = "Crab Can";
@@ -1002,8 +988,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			};
 		};
 	};
-	
-
 	class Dada_RawFoodCan_Clam: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -1034,7 +1018,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			};
 		};
 	};
-
 	class Dada_PreservedFoodCan_Clam: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
@@ -1063,7 +1046,6 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			};
 		};
 	};
-
 	class Dada_PreservedFoodCan_Clam_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
@@ -1102,4 +1084,4 @@ class Dada_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			};
 		};
 	};
-}; 
+};

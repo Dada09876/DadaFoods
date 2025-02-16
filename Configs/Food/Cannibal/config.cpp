@@ -1,10 +1,17 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Configs\Food\Cannibal\config.bin
+//Produced from mikero's Dos Tools Dll version 9.93
+//https://mikero.bytex.digital/Downloads
+//'now' is Tue Feb 04 16:40:51 2025 : 'file' last modified on Sat Jan 18 22:45:02 2025
+////////////////////////////////////////////////////////////////////
+
 #define _ARMA_
 
 class CfgPatches
 {
 	class DadaFoods_Configs_Cannibal
 	{
-		units[] = {};
+		units[] = {"DadaCannibal_Base","DadaCannibal_EyeballSoup","DadaCannibal_EntrailsSpaghetti","DadaCannibal_Jerky","DadaCannibal_WasteBread"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"DadaFoods"};
@@ -12,19 +19,17 @@ class CfgPatches
 };
 class CfgVehicles
 {
-
-    class BaseFoodStageTransitions;
+	class BaseFoodStageTransitions;
 	class DadaDishStageTransitions;
 	class FoodAnimationSources;
-
-    class HumanSteakMeat;
+	class HumanSteakMeat;
 	class DadaCannibal_Base: HumanSteakMeat
 	{
 		scope = 2;
 		canBeSplit = 1;
 		quantityBar = 1;
 		hiddenSelections[] = {"camoGround","cs_raw"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Bowl_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_rotten_co.paa",};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Bowl_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Base_rotten_co.paa"};
 		hiddenSelectionsMaterials[] = {"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"};
 		displayName = "$STR_HumanSteakMeat0";
 		descriptionShort = "$STR_HumanSteakMeat1";
@@ -129,18 +134,13 @@ class CfgVehicles
 			};
 		};
 	};
-
-    class DadaCannibal_EyeballSoup: DadaCannibal_Base
+	class DadaCannibal_EyeballSoup: DadaCannibal_Base
 	{
 		scope = 2;
 		displayName = "Human Eyeball Soup";
 		descriptionShort = "A stew made from human meat.";
 		hiddenSelections[] = {"camoGround","cs_raw"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Bowl_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_raw_co.paa", "Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_baked_co.paa",
-		"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_boiled_co.paa",
-		"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_dried_co.paa",
-		"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_burnt_co.paa",
-		"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_rotten_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Bowl_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_rotten_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -161,18 +161,13 @@ class CfgVehicles
 			};
 		};
 	};
-	
 	class DadaCannibal_EntrailsSpaghetti: DadaCannibal_Base
 	{
 		scope = 2;
 		displayName = "Human Entrails Spaghetti";
 		descriptionShort = "Human Guts Spaghetti";
 		hiddenSelections[] = {"camoGround","cs_raw"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Bowl_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_raw_co.paa", "Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_baked_co.paa",
-		"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_boiled_co.paa",
-		"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_dried_co.paa",
-		"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_burnt_co.paa",
-		"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_rotten_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Bowl_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_rotten_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -182,7 +177,6 @@ class CfgVehicles
 			toxicity = 0;
 		};
 	};
-	
 	class Chips;
 	class DadaCannibal_Jerky: Chips
 	{
@@ -190,7 +184,7 @@ class CfgVehicles
 		model = "\DZ\gear\food\salty_chips.p3d";
 		displayName = "Hooman Jerky";
 		descriptionShort = "Dried human flesh strips";
-        debug_ItemCategory = 6;
+		debug_ItemCategory = 6;
 		rotationFlags = 1;
 		weight = 10;
 		itemSize[] = {2,3};
@@ -204,7 +198,7 @@ class CfgVehicles
 			nutritionalIndex = 1;
 			toxicity = 0;
 		};
-        varQuantityInit = 50;
+		varQuantityInit = 50;
 		varQuantityMin = 0;
 		varQuantityMax = 50;
 		class DamageSystem
@@ -261,7 +255,6 @@ class CfgVehicles
 			};
 		};
 	};
-
 	class DadaBread_Base;
 	class DadaCannibal_WasteBread: DadaBread_Base
 	{
@@ -272,7 +265,7 @@ class CfgVehicles
 		canBeSplit = 1;
 		inventorySlot[] = {"Ingredient","DirectCookingA","DirectCookingB","DirectCookingC","SmokingA","SmokingB","SmokingC","SmokingD","Ingredient1","Ingredient2","Ingredient3","Ingredient4","Ingredient5","Ingredient6","Ingredient7","Ingredient8"};
 		itemSize[] = {3,2};
-        displayName = "Waste Bread";
+		displayName = "Waste Bread";
 		descriptionShort = "Smells a bit weird for bread";
 		varQuantityInit = 100;
 		varQuantityMin = 0;
@@ -291,8 +284,7 @@ class CfgVehicles
 					healthLevels[] = {{1,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"}},{0.7,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"}},{0.5,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"}},{0.3,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"}},{0,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"}}};
 				};
 			};
-		};	
-
+		};
 		class Nutrition
 		{
 			fullnessIndex = 3;
