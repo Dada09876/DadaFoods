@@ -518,7 +518,7 @@ class CraftDadaDish_MashedPotatoes1 extends Craft_DadaTemp1_BaseRecipe
 	}
 };
 
-class CraftDadaSoup_ChickenBroth extends Craft_DadaTempTemp1Liquid1_BaseRecipe
+class CraftDadaSoup_ChickenBroth extends Craft_DadaTemp1Liquid1_BaseRecipe
 {
 	override void Init()
 	{
@@ -549,23 +549,15 @@ class CraftDadaSoup_ChickenBroth extends Craft_DadaTempTemp1Liquid1_BaseRecipe
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
 	{
 		// define my variables
-		ItemBase ingredient0;
 		ItemBase ingredient1;
-		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
+		if (Class.CastTo(ingredient1, ingredients[1]))
 		{
-			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
-			{
-				return false;
-			}
-
-
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 50 || ingredient1.GetTemperature() > 200)
+			if (ingredient1.GetTemperature() < 30 || ingredient1.GetTemperature() > 200)
 			{
 				return false;
 			}
-			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || ingredient1.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient1.GetLiquidType() == LIQUID_SALINE || ingredient1.GetLiquidType() == LIQUID_VODKA || ingredient1.GetLiquidType() == LIQUID_BEER || ingredient1.GetLiquidType() == LIQUID_GASOLINE || ingredient1.GetLiquidType() == LIQUID_DIESEL || ingredient1.GetLiquidType() == LIQUID_DISINFECTANT || ingredient1.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -633,7 +625,7 @@ class CraftDadaSoup_ChickenBroth1 extends Craft_DadaTempStageTemp1Liquid1_BaseRe
 			{
 				return false;
 			}
-			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || ingredient1.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient1.GetLiquidType() == LIQUID_SALINE || ingredient1.GetLiquidType() == LIQUID_VODKA || ingredient1.GetLiquidType() == LIQUID_BEER || ingredient1.GetLiquidType() == LIQUID_GASOLINE || ingredient1.GetLiquidType() == LIQUID_DIESEL || ingredient1.GetLiquidType() == LIQUID_DISINFECTANT || ingredient1.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
 			}

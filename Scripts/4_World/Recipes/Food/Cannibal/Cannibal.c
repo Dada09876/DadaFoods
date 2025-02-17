@@ -41,7 +41,9 @@ class CraftDadaCannibal_EyeballSoup extends Craft_DadaTempLiquidTemp1Stage1_Base
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"Bottle_Base");//you can insert multiple ingredients this way
-	
+		InsertIngredient(0,"BloodBagFull");//you can insert multiple ingredients this way
+		InsertIngredient(0,"BloodBagIV");//you can insert multiple ingredients this way
+		
 		m_IngredientAddQuantity[0] = -300;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
@@ -64,23 +66,27 @@ class CraftDadaCannibal_EyeballSoup extends Craft_DadaTempLiquidTemp1Stage1_Base
 		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
+
 			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
 			{
 				return false;
 			}
-			if (ingredient0.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+
+			if (ingredient0.GetLiquidType() == LIQUID_NONE || ingredient0.GetLiquidType() == LIQUID_SALINE || ingredient0.GetLiquidType() == LIQUID_VODKA || ingredient0.GetLiquidType() == LIQUID_BEER || ingredient0.GetLiquidType() == LIQUID_DISINFECTANT || ingredient0.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
 			}
 
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
+	
 			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
 				return false;
 			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if the food is raw, burnt or rotten
+
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
 			{
 				return false;
@@ -161,7 +167,7 @@ class CraftDadaCannibal_Jerky extends Craft_DadaTemp1Stage1_BaseRecipe
    	}
 };
 
-class CraftDadaCannibal_WasteBread extends Craft_DadaTempTemp1Stage1_BaseRecipe
+class CraftDadaCannibal_WasteBread extends Craft_DadaTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -179,8 +185,6 @@ class CraftDadaCannibal_WasteBread extends Craft_DadaTempTemp1Stage1_BaseRecipe
 
 		//ingredient 2
 		InsertIngredient(1,"HumanSteakMeat");
-
-		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		
 		//result1
 		AddResult("DadaCannibal_WasteBread");//add results here

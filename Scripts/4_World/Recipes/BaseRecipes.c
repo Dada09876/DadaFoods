@@ -71,7 +71,7 @@ class Craft_DadaTempStageLiquidTemp1Stage1Liquid1_BaseRecipe extends RecipeBase
 			{
 				return false;
 			}
-			if (ingredient0.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient0.GetLiquidType() == LIQUID_NONE || ingredient0.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient0.GetLiquidType() == LIQUID_SALINE || ingredient0.GetLiquidType() == LIQUID_VODKA || ingredient0.GetLiquidType() == LIQUID_BEER || ingredient0.GetLiquidType() == LIQUID_GASOLINE || ingredient0.GetLiquidType() == LIQUID_DIESEL || ingredient0.GetLiquidType() == LIQUID_DISINFECTANT || ingredient0.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -88,7 +88,7 @@ class Craft_DadaTempStageLiquidTemp1Stage1Liquid1_BaseRecipe extends RecipeBase
 			{
 				return false;
 			}
-			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || ingredient1.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient1.GetLiquidType() == LIQUID_SALINE || ingredient1.GetLiquidType() == LIQUID_VODKA || ingredient1.GetLiquidType() == LIQUID_BEER || ingredient1.GetLiquidType() == LIQUID_GASOLINE || ingredient1.GetLiquidType() == LIQUID_DIESEL || ingredient1.GetLiquidType() == LIQUID_DISINFECTANT || ingredient1.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -104,6 +104,16 @@ class Craft_DadaTempStageLiquidTemp1Stage1Liquid1_BaseRecipe extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
+
+	const int STATE_HOT_LVL_FOUR     = 600;
+    const int STATE_HOT_LVL_THREE      = 250;
+    const int STATE_HOT_LVL_TWO     = 70;
+    const int STATE_HOT_LVL_ONE      = 35;
+    const int STATE_NEUTRAL_TEMP    = 15;
+    const int STATE_COLD_LVL_ONE      = 3;
+    const int STATE_COLD_LVL_TWO      = -10;
+    const int STATE_COLD_LVL_THREE  = -50;
+    const int STATE_COLD_LVL_FOUR    = -100;
 */
 
 class Craft_Dada_BaseRecipe extends RecipeBase
@@ -930,7 +940,7 @@ class Craft_DadaTempLiquid_BaseRecipe extends RecipeBase
 				return false;
 			}
 			
-			if (ingredient0.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient0.GetLiquidType() == LIQUID_NONE || ingredient0.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient0.GetLiquidType() == LIQUID_SALINE || ingredient0.GetLiquidType() == LIQUID_VODKA || ingredient0.GetLiquidType() == LIQUID_BEER || ingredient0.GetLiquidType() == LIQUID_GASOLINE || ingredient0.GetLiquidType() == LIQUID_DIESEL || ingredient0.GetLiquidType() == LIQUID_DISINFECTANT || ingredient0.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -1013,7 +1023,7 @@ class Craft_DadaTemp1Liquid1_BaseRecipe extends RecipeBase
 				return false;
 			}
 		
-			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || ingredient1.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient1.GetLiquidType() == LIQUID_SALINE || ingredient1.GetLiquidType() == LIQUID_VODKA || ingredient1.GetLiquidType() == LIQUID_BEER || ingredient1.GetLiquidType() == LIQUID_GASOLINE || ingredient1.GetLiquidType() == LIQUID_DIESEL || ingredient1.GetLiquidType() == LIQUID_DISINFECTANT || ingredient1.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -1098,11 +1108,10 @@ class Craft_DadaTempLiquidTemp1_BaseRecipe extends RecipeBase
 				return false;
 			}
 			
-			if (ingredient0.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient0.GetLiquidType() == LIQUID_NONE || ingredient0.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient0.GetLiquidType() == LIQUID_SALINE || ingredient0.GetLiquidType() == LIQUID_VODKA || ingredient0.GetLiquidType() == LIQUID_BEER || ingredient0.GetLiquidType() == LIQUID_GASOLINE || ingredient0.GetLiquidType() == LIQUID_DIESEL || ingredient0.GetLiquidType() == LIQUID_DISINFECTANT || ingredient0.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
 			}
-
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
 			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
@@ -1196,7 +1205,8 @@ class Craft_DadaTempTemp1Liquid1_BaseRecipe extends RecipeBase
 			{
 				return false;
 			}
-			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || ingredient1.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient1.GetLiquidType() == LIQUID_SALINE || ingredient1.GetLiquidType() == LIQUID_VODKA || ingredient1.GetLiquidType() == LIQUID_BEER || ingredient1.GetLiquidType() == LIQUID_GASOLINE || ingredient1.GetLiquidType() == LIQUID_DIESEL || ingredient1.GetLiquidType() == LIQUID_DISINFECTANT || ingredient1.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -1293,7 +1303,7 @@ class Craft_DadaTempStageTemp1Liquid1_BaseRecipe extends RecipeBase
 			{
 				return false;
 			}
-			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || ingredient1.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient1.GetLiquidType() == LIQUID_SALINE || ingredient1.GetLiquidType() == LIQUID_VODKA || ingredient1.GetLiquidType() == LIQUID_BEER || ingredient1.GetLiquidType() == LIQUID_GASOLINE || ingredient1.GetLiquidType() == LIQUID_DIESEL || ingredient1.GetLiquidType() == LIQUID_DISINFECTANT || ingredient1.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -1377,7 +1387,7 @@ class Craft_DadaTempLiquidTemp1Stage1_BaseRecipe extends RecipeBase
 			{
 				return false;
 			}
-			if (ingredient0.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient0.GetLiquidType() == LIQUID_NONE || ingredient0.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient0.GetLiquidType() == LIQUID_SALINE || ingredient0.GetLiquidType() == LIQUID_VODKA || ingredient0.GetLiquidType() == LIQUID_BEER || ingredient0.GetLiquidType() == LIQUID_GASOLINE || ingredient0.GetLiquidType() == LIQUID_DIESEL || ingredient0.GetLiquidType() == LIQUID_DISINFECTANT || ingredient0.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -1474,7 +1484,7 @@ class Craft_DadaTempLiquidTemp1Liquid1_BaseRecipe extends RecipeBase
 			{
 				return false;
 			}
-			if (ingredient0.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient0.GetLiquidType() == LIQUID_NONE || ingredient0.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient0.GetLiquidType() == LIQUID_SALINE || ingredient0.GetLiquidType() == LIQUID_VODKA || ingredient0.GetLiquidType() == LIQUID_BEER || ingredient0.GetLiquidType() == LIQUID_GASOLINE || ingredient0.GetLiquidType() == LIQUID_DIESEL || ingredient0.GetLiquidType() == LIQUID_DISINFECTANT || ingredient0.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -1485,7 +1495,7 @@ class Craft_DadaTempLiquidTemp1Liquid1_BaseRecipe extends RecipeBase
 			{
 				return false;
 			}
-			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || ingredient1.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient1.GetLiquidType() == LIQUID_SALINE || ingredient1.GetLiquidType() == LIQUID_VODKA || ingredient1.GetLiquidType() == LIQUID_BEER || ingredient1.GetLiquidType() == LIQUID_GASOLINE || ingredient1.GetLiquidType() == LIQUID_DIESEL || ingredient1.GetLiquidType() == LIQUID_DISINFECTANT || ingredient1.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
 			}

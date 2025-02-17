@@ -99,7 +99,8 @@ class CraftDadaRaw_Rice extends Craft_DadaTempTemp1Liquid1_BaseRecipe
 			{
 				return false;
 			}
-			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || ingredient1.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient1.GetLiquidType() == LIQUID_SALINE || ingredient1.GetLiquidType() == LIQUID_VODKA || ingredient1.GetLiquidType() == LIQUID_BEER || ingredient1.GetLiquidType() == LIQUID_GASOLINE || ingredient1.GetLiquidType() == LIQUID_DIESEL || ingredient1.GetLiquidType() == LIQUID_DISINFECTANT || ingredient1.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
 			}
@@ -575,26 +576,26 @@ class CraftDadaRaw_FrozenYogurt extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 		super.Init();
 		m_Name = "Craft Frozen Yogurt";
 		
-		m_MinQuantityIngredient[0] = 75;//-1 = disable check
-		m_MinQuantityIngredient[1] = 75;//-1 = disable check
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
 		
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"DadaRaw_Yogourt");//you can insert multiple ingredients this way
 
-		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -75;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
 		InsertIngredient(1,"DadaRaw_Yogourt");//you can insert multiple ingredients this w
 
-		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientAddQuantity[1] = -75;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
 		
 		//result1
 		AddResult("DadaRaw_FrozenYogurt");//add results here
 
-		m_ResultSetQuantity[0] = 300;//-1 = do nothing
+		m_ResultSetQuantity[0] = 150;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 
@@ -606,7 +607,7 @@ class CraftDadaRaw_FrozenYogurt extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient0.GetTemperature() < -40 || ingredient0.GetTemperature() > 20)
+			if (ingredient0.GetTemperature() < 0 || ingredient0.GetTemperature() > 15)
 			{
 				return false;
 			}
@@ -618,7 +619,7 @@ class CraftDadaRaw_FrozenYogurt extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 			}
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < -40 || ingredient1.GetTemperature() > 20)
+			if (ingredient1.GetTemperature() < 0 || ingredient1.GetTemperature() > 15)
 			{
 				return false;
 			}
@@ -679,7 +680,7 @@ class CraftDadaRaw_VanillaChocoSwirl extends Craft_DadaTempStageTemp1Stage1_Base
 		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient0.GetTemperature() < -40 || ingredient0.GetTemperature() > 20)
+			if (ingredient0.GetTemperature() < 0 || ingredient0.GetTemperature() > 15)
 			{
 				return false;
 			}
@@ -691,7 +692,7 @@ class CraftDadaRaw_VanillaChocoSwirl extends Craft_DadaTempStageTemp1Stage1_Base
 			}
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < -40 || ingredient1.GetTemperature() > 20)
+			if (ingredient1.GetTemperature() < 0|| ingredient1.GetTemperature() > 15)
 			{
 				return false;
 			}
@@ -753,7 +754,7 @@ class CraftDadaRaw_VanillaIceCream extends Craft_DadaTempStageTemp1Stage1_BaseRe
 		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient0.GetTemperature() < -40 || ingredient0.GetTemperature() > 20)
+			if (ingredient0.GetTemperature() < 0 || ingredient0.GetTemperature() > 15)
 			{
 				return false;
 			}
@@ -765,7 +766,7 @@ class CraftDadaRaw_VanillaIceCream extends Craft_DadaTempStageTemp1Stage1_BaseRe
 			}
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < -40 || ingredient1.GetTemperature() > 20)
+			if (ingredient1.GetTemperature() < 0 || ingredient1.GetTemperature() > 15)
 			{
 				return false;
 			}
@@ -826,7 +827,7 @@ class CraftDadaRaw_ChocoIScream extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			if (ingredient0.GetTemperature() < -40 || ingredient0.GetTemperature() > 20)
+			if (ingredient0.GetTemperature() < 0 || ingredient0.GetTemperature() > 15)
 			{
 				return false;
 			}
@@ -838,7 +839,7 @@ class CraftDadaRaw_ChocoIScream extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 			}
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < -40 || ingredient1.GetTemperature() > 20)
+			if (ingredient1.GetTemperature() < 0 || ingredient1.GetTemperature() > 15)
 			{
 				return false;
 			}
@@ -856,7 +857,7 @@ class CraftDadaRaw_ChocoIScream extends Craft_DadaTempStageTemp1Stage1_BaseRecip
    	}
 };
 
-class CraftDadaRaw_PumpkinSeeds extends Craft_DadaTempTemp1_BaseRecipe
+class CraftDadaRaw_PumpkinSeeds extends Craft_Dada_BaseRecipe
 {
 	override void Init()
 	{

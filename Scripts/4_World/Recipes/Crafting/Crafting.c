@@ -49,7 +49,7 @@ class CraftDadaCharcoalPiece extends Craft_DadaTemp1Stage1_BaseRecipe
 		if (Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 150)
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
 				return false;
 			}
@@ -107,12 +107,12 @@ class CraftDadaCharcoalTabs extends Craft_DadaTemp1Liquid1_BaseRecipe
 		{
 			
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 30 || ingredient1.GetTemperature() > 150)
+			if (ingredient1.GetTemperature() < 30 || ingredient1.GetTemperature() > 200)
 			{
 				return false;
 			}
 		
-			if (ingredient1.GetLiquidType() == LIQUID_NONE || GROUP_LIQUID_BLOOD || LIQUID_SALINE || LIQUID_VODKA || LIQUID_BEER || LIQUID_GASOLINE || LIQUID_DIESEL || LIQUID_DISINFECTANT || LIQUID_SOLUTION)
+			if (ingredient1.GetLiquidType() == LIQUID_NONE || ingredient1.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient1.GetLiquidType() == LIQUID_SALINE || ingredient1.GetLiquidType() == LIQUID_VODKA || ingredient1.GetLiquidType() == LIQUID_BEER || ingredient1.GetLiquidType() == LIQUID_GASOLINE || ingredient1.GetLiquidType() == LIQUID_DIESEL || ingredient1.GetLiquidType() == LIQUID_DISINFECTANT || ingredient1.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
 			}

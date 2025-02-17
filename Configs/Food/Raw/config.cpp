@@ -375,6 +375,9 @@ class CfgVehicles
 		weight = 1;
 		interactionWeight = 1;
 		quantityBar = 1;
+		varQuantityInit = 75;
+		varQuantityMin = 0;
+		varQuantityMax = 75;
 		displayName = "Yogurt";
 		descriptionShort = "Yogurt cup";
 		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\Yogourt.p3d";
