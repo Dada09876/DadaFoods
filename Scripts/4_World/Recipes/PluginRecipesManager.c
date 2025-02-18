@@ -158,6 +158,7 @@ modded class PluginRecipesManager
 
     RegisterRecipe(new CraftDadaCannibal_EntrailsSpaghetti);
     RegisterRecipe(new CraftDadaCannibal_EyeballSoup);
+    RegisterRecipe(new CraftDadaCannibal_EyeballSoup1);
     RegisterRecipe(new CraftDadaCannibal_Jerky);
     RegisterRecipe(new CraftDadaCannibal_WasteBread);
 

@@ -41,8 +41,6 @@ class CraftDadaCannibal_EyeballSoup extends Craft_DadaTempLiquidTemp1Stage1_Base
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"Bottle_Base");//you can insert multiple ingredients this way
-		InsertIngredient(0,"BloodBagFull");//you can insert multiple ingredients this way
-		InsertIngredient(0,"BloodBagIV");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[0] = -300;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
@@ -78,6 +76,63 @@ class CraftDadaCannibal_EyeballSoup extends Craft_DadaTempLiquidTemp1Stage1_Base
 			}
 
 
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
+	
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			{
+				return false;
+			}
+			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if the food is raw, burnt or rotten
+
+			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
+			{
+				return false;
+			}
+			// by this point we know the 2 ingredients are both good temperatures and have good food stages
+			return true;
+		}
+		// initial ingredients are wrong, false
+   		return false;
+   	}
+};
+
+class CraftDadaCannibal_EyeballSoup1 extends Craft_DadaTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Human Eyeball Soup";
+		
+		//conditions
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MinQuantityIngredient[1] = 50;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"BloodBagFull");//you can insert multiple ingredients this way
+		InsertIngredient(0,"BloodBagIV");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[0] = -300;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"HumanSteakMeat");
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		
+		//result1
+		AddResult("DadaCannibal_EyeballSoup");//add results here
+
+		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{
+		// define my variables
+		ItemBase ingredient1;
+		if (Class.CastTo(ingredient1, ingredients[1]))
+		{
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
 	
 			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
