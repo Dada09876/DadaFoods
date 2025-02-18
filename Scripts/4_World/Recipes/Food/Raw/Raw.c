@@ -608,12 +608,10 @@ class CraftDadaRaw_FrozenYogurt extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			Print("========================================================================================================== ingredient0 Temp: " + ingredient0.GetTemperature());
 			if (ingredient0.GetTemperature() < -100 || ingredient0.GetTemperature() > 15)
 			{
 				return false;
 			}
-			Print("========================================================================================================== ingredient0 Stage: " + ingredient0.GetFoodStage());
 			FoodStage foodStage0 = ingredient0.GetFoodStage();
 			// if the food is raw, burnt or rotten
 			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
@@ -622,12 +620,10 @@ class CraftDadaRaw_FrozenYogurt extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 			}
 
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			Print("========================================================================================================== ingredient1 Temp: " + ingredient1.GetTemperature());
 			if (ingredient1.GetTemperature() < -100 || ingredient1.GetTemperature() > 15)
 			{
 				return false;
 			}
-			Print("========================================================================================================== ingredient1 Stage: " + ingredient1.GetFoodStage());
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if the food is raw, burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
@@ -711,12 +707,10 @@ class CraftDadaRaw_FrozenYogurt2 extends Craft_DadaTempStage_BaseRecipe
 		if (Class.CastTo(ingredient0, ingredients[0]))
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
-			Print("========================================================================================================== ingredient0 Temp: " + ingredient0.GetTemperature());
 			if (ingredient0.GetTemperature() < -100 || ingredient0.GetTemperature() > 15)
 			{
 				return false;
 			}
-			Print("========================================================================================================== ingredient0 Stage: " + ingredient0.GetFoodStage());
 			FoodStage foodStage0 = ingredient0.GetFoodStage();
 			// if the food is raw, burnt or rotten
 			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
