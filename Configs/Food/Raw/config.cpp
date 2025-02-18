@@ -368,42 +368,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class DadaRaw_Yogourt: DadaRaw_Base
-	{
-		scope = 2;
-		itemSize[] = {2,1};
-		weight = 1;
-		interactionWeight = 1;
-		quantityBar = 1;
-		varQuantityInit = 75;
-		varQuantityMin = 0;
-		varQuantityMax = 75;
-		displayName = "Yogurt";
-		descriptionShort = "Yogurt cup";
-		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\Yogourt.p3d";
-		canBeSplit = 1;
-		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\Yogourt_co.paa"};
-		class Nutrition
-		{
-			fullnessIndex = 3;
-			energy = 150;
-			water = 50;
-			nutritionalIndex = 1;
-			toxicity = 0;
-		};
-		class DamageSystem
-		{
-			class GlobalHealth
-			{
-				class Health
-				{
-					hitpoints = 40;
-					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}}};
-				};
-			};
-		};
-	};
+
 	class DadaRaw_CheeseBase: DadaRaw_Base
 	{
 		weight = 1;
@@ -636,5 +601,55 @@ class CfgVehicles
 	{
 		canBeSplit = 1;
 		weight = 1;
+	};
+
+	class DadaRaw_Yogourt: FoodCan_100g_ColorBase
+	{
+		scope = 2;
+		itemSize[] = {2,1};
+		displayName = "Yogurt";
+		descriptionShort = "Yogurt cup";
+		varQuantityInit = 75;
+		varQuantityMin = 0;
+		varQuantityMax = 75;
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\Yogourt_co.paa"};
+	};
+
+	class DadaRaw_Yogourt_Opened: DadaRaw_Base
+	{
+		scope = 2;
+		itemSize[] = {2,1};
+		weight = 1;
+		interactionWeight = 1;
+		quantityBar = 1;
+		varQuantityInit = 75;
+		varQuantityMin = 0;
+		varQuantityMax = 75;
+		displayName = "Yogurt";
+		descriptionShort = "Yogurt cup";
+		canBeSplit = 1;
+		model = "\dz\gear\food\FoodCan_100g_open.p3d";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\Yogourt_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 3;
+			energy = 150;
+			water = 50;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 40;
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}}};
+				};
+			};
+		};
 	};
 };

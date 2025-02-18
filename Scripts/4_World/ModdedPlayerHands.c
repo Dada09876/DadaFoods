@@ -12,7 +12,8 @@ modded class ModItemRegisterCallbacks
         pType.AddItemInHandsProfileIK("DadaDrink_BlackTea","dz/anims/workspaces/player/player_main/props/player_main_1h_torch.asi",pBehavior,"dz/anims/anm/player/ik/gear/GasLight.anm");
         pType.AddItemInHandsProfileIK("DadaDrink_GreenTea","dz/anims/workspaces/player/player_main/props/player_main_1h_torch.asi",pBehavior,"dz/anims/anm/player/ik/gear/GasLight.anm");
         pType.AddItemInHandsProfileIK("DadaDrink_FreshMilk","dz/anims/workspaces/player/player_main/props/player_main_1h_sodacan.asi",pBehavior,"dz/anims/anm/player/ik/gear/soda_can.anm");	
-        pType.AddItemInHandsProfileIK("DadaRaw_Yogourt", "dz/anims/workspaces/player/player_main/props/player_main_1h_fruit.asi",pBehavior,"dz/anims/anm/player/ik/gear/apple.anm");	
+        pType.AddItemInHandsProfileIK("DadaRaw_Yogourt","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/foodcan100g.anm");
+        pType.AddItemInHandsProfileIK("DadaRaw_Yogourt_Opened","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/foodcan100g.anm");
         pType.AddItemInHandsProfileIK("DadaRaw_SmallButter","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/foodcan100g.anm");
         pType.AddItemInHandsProfileIK("DadaRaw_SmallButter_Opened","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/foodcan100g.anm");
         pType.AddItemInHandsProfileIK("DadaDrink_CurdsAndWhey","dz/anims/workspaces/player/player_main/props/player_main_1h_sodacan.asi",pBehavior,"dz/anims/anm/player/ik/gear/soda_can.anm");

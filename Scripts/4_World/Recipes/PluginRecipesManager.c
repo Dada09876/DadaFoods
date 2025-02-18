@@ -116,7 +116,9 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftFreshCheese_Goat);
     RegisterRecipe(new CraftDadaRaw_SushiMaki);
     RegisterRecipe(new CraftDadaRaw_SushiOnigiri);
-    RegisterRecipe(new CraftDadaRaw_Yogourt);
+    RegisterRecipe(new CraftDadaRaw_FrozenYogurt);
+    RegisterRecipe(new CraftDadaRaw_FrozenYogurt1);
+    RegisterRecipe(new CraftDadaRaw_FrozenYogurt2);
     RegisterRecipe(new CraftDadaRaw_VanillaChocoSwirl);
     RegisterRecipe(new CraftDadaRaw_VanillaIceCream);
     RegisterRecipe(new CraftDadaRaw_ChocoIScream);

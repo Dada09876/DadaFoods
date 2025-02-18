@@ -161,46 +161,6 @@ class DadaRaw_BigButter: Rice
 	}
 };
 
-class DadaRaw_Yogourt: DadaRaw_Base
-{
-	override bool IsFruit()
-	{
-		return true;
-	}
-
-	override bool CanBeCooked()
-	{
-		return false;
-	}
-	
-	override bool CanBeCookedOnStick()
-	{
-		return false;
-	}	
-   override bool CanDecay()
-	{
-		return true;
-	}
-	
-	override bool CanProcessDecay()
-	{
-		return !( GetAgents() & eAgents.FOOD_POISON );
-	}
-	
-	override void SetActions()
-	{
-		super.SetActions();
-		
-		AddAction(ActionEatSmallCan);
-		RemoveAction(ActionEatMeat);
-	}
-	
-	override bool IsOpen()
-	{
-		return false;
-	}
-};
-
 class DadaRaw_Mozza: DadaRaw_Base
 {
 	override bool IsFruit()
@@ -417,4 +377,69 @@ class DadaRaw_FrozenYogurt: DadaRaw_VanillaChocoSwirl
 
 class DadaRaw_CheddarCurds: DadaRaw_Base
 {
+};
+
+class DadaRaw_Yogourt: Edible_Base
+{
+	override void Open()
+	{
+		ReplaceEdibleWithNew("DadaRaw_Yogourt_Opened");
+	}
+		
+	override void SetActions()
+	{
+		super.SetActions();
+		
+		AddAction(ActionOpen);
+	}
+	
+	override bool IsOpen()
+	{
+		return false;
+	}
+	
+	override float GetQuantityNormalizedScripted()
+	{
+		return 1.0;
+	}
+};
+
+class DadaRaw_Yogourt_Opened: DadaRaw_Base
+{
+	override bool IsFruit()
+	{
+		return true;
+	}
+
+	override bool CanBeCooked()
+	{
+		return false;
+	}
+	
+	override bool CanBeCookedOnStick()
+	{
+		return false;
+	}	
+   override bool CanDecay()
+	{
+		return true;
+	}
+	
+	override bool CanProcessDecay()
+	{
+		return !( GetAgents() & eAgents.FOOD_POISON );
+	}
+	
+	override void SetActions()
+	{
+		super.SetActions();
+		
+		AddAction(ActionEatSmallCan);
+		RemoveAction(ActionEatMeat);
+	}
+	
+	override bool IsOpen()
+	{
+		return false;
+	}
 };
