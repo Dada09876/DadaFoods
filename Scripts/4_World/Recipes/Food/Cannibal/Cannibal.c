@@ -6,7 +6,7 @@ class CraftDadaCannibal_EntrailsSpaghetti extends Craft_DadaTempTemp1Stage1_Base
 		m_Name = "Make Entrails Spaghetti";
 
 		m_MinQuantityIngredient[0] = 30;//-1 = disable check
-		m_MinQuantityIngredient[1] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = 90;//-1 = disable check
 		
 		//INGREDIENTS
 		//ingredient 1
@@ -22,7 +22,7 @@ class CraftDadaCannibal_EntrailsSpaghetti extends Craft_DadaTempTemp1Stage1_Base
 		//result1
 		AddResult("DadaCannibal_EntrailsSpaghetti");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 	}
 };
 
@@ -36,7 +36,7 @@ class CraftDadaCannibal_EyeballSoup extends Craft_DadaTempLiquidTemp1Stage1_Base
 		
 		//conditions
 		m_MinQuantityIngredient[0] = 100;//-1 = disable check
-		m_MinQuantityIngredient[1] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = 90;//-1 = disable check
 		
 		//INGREDIENTS
 		//ingredient 1
@@ -53,7 +53,7 @@ class CraftDadaCannibal_EyeballSoup extends Craft_DadaTempLiquidTemp1Stage1_Base
 		//result1
 		AddResult("DadaCannibal_EyeballSoup");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 	}
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
@@ -65,7 +65,7 @@ class CraftDadaCannibal_EyeballSoup extends Craft_DadaTempLiquidTemp1Stage1_Base
 		{
 			// if the ingredient 1 is cooler than 10C or hotter than 70C
 
-			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 70)
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 200)
 			{
 				return false;
 			}
@@ -124,7 +124,7 @@ class CraftDadaCannibal_EyeballSoup1 extends Craft_DadaTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaCannibal_EyeballSoup");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 	}
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
@@ -193,7 +193,7 @@ class CraftDadaCannibal_Jerky extends Craft_DadaTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaCannibal_Jerky");//add results here
 
-		m_ResultSetQuantity[0] = 150;//-1 = do nothing
+		m_ResultSetQuantity[0] = 90;//-1 = do nothing
 	}
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity

@@ -24,7 +24,7 @@ class CraftDadaBread_Base extends Craft_DadaTempTemp1_BaseRecipe
 		//result1
 		AddResult("DadaBread_Base");//add results here
 
-		m_ResultSetFullQuantity[0] = true;//true = set full quantity, false = do nothing
+		m_ResultSetFullQuantity[0] = 125;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = -1;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
@@ -222,7 +222,7 @@ class CraftDadaDish_Spaghetti extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaDish_Spaghetti");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;
 	}
 };
@@ -260,7 +260,7 @@ class CraftDadaDish_Cannelloni extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaDish_Cannelloni");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;//-1 = do nothing
 	}
 };
@@ -301,7 +301,7 @@ class CraftDadaDish_Bowties extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaDish_Bowties");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -339,7 +339,7 @@ class CraftDadaDish_Lasagna extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaDish_Lasagna");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -377,7 +377,7 @@ class CraftDadaDish_Rigatoni extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaDish_Rigatoni");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -415,7 +415,7 @@ class CraftDadaBread_PizzaBase extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaBread_PizzaBase");//add results here
 
-		m_ResultSetQuantity[0] = 250;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -455,7 +455,7 @@ class CraftDadaDish_GroundMeat extends Craft_DadaTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaDish_GroundMeat");//add results here
 
-		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultSetQuantity[0] = 65;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -484,7 +484,7 @@ class CraftDadaDish_MashedPotatoes extends Craft_DadaTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaDish_MashedPotatoes");//add results here
 
-		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultSetQuantity[0] = 65;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -513,7 +513,7 @@ class CraftDadaDish_MashedPotatoes1 extends Craft_DadaTemp1_BaseRecipe
 		//result1
 		AddResult("DadaDish_MashedPotatoes");//add results here
 
-		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultSetQuantity[0] = 65;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -543,7 +543,7 @@ class CraftDadaSoup_ChickenBroth extends Craft_DadaTemp1Liquid1_BaseRecipe
 		//result1
 		AddResult("DadaSoup_ChickenBroth");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 	}
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
@@ -596,7 +596,7 @@ class CraftDadaSoup_ChickenBroth1 extends Craft_DadaTempStageTemp1Liquid1_BaseRe
 		//result1
 		AddResult("DadaSoup_ChickenBroth");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 
@@ -676,7 +676,7 @@ class CraftDadaSoup_ChickenNoodleSoup extends Craft_DadaTempStageTemp1Stage1_Bas
 		//result1
 		AddResult("DadaSoup_ChickenNoodleSoup");
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -719,7 +719,7 @@ class CraftDadaDish_Chili extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaDish_Chili");//add results here
 
-		m_ResultSetQuantity[0] = 300;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -750,7 +750,7 @@ class CraftDadaSoup_Gravy extends Craft_DadaTempTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaSoup_Gravy");
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -777,7 +777,7 @@ class CraftDadaDish_MushroomCream extends Craft_DadaTempStageTemp1Stage1_BaseRec
 		//result1
 		AddResult("DadaSoup_MushroomCream");//add results here
 
-		m_ResultSetQuantity[0] = 250;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -802,7 +802,7 @@ class CraftDadaDish_SauteedMushrooms extends Craft_DadaTempStageTemp1Stage1_Base
 		//result1
 		AddResult("DadaDish_SauteedMushrooms");//add results here
 
-		m_ResultSetQuantity[0] = 250;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -836,7 +836,7 @@ class CraftDadaDish_Pancakes extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
         AddResult("DadaBread_Pancakes");//add results here
     
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -906,7 +906,7 @@ class CraftDadaDish_Pie extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaDish_Pie");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -944,7 +944,7 @@ class CraftDadaDish_Pie1 extends Craft_DadaTempStageTemp1_BaseRecipe
 		//result1
 		AddResult("DadaDish_Pie");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -969,7 +969,7 @@ class CraftDadaSoup_TomatoSauce extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 		//result1
 		AddResult("DadaSoup_TomatoSauce");//add results here
 
-		m_ResultSetQuantity[0] = 250;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -1000,7 +1000,7 @@ class CraftDadaSoup_TomatoSoup extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaSoup_TomatoSoup");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -1037,7 +1037,7 @@ class CraftDadaDish_MacaroniAndCheese extends Craft_DadaTempStageTemp1Stage1_Bas
 		//result1
 		AddResult("DadaDish_MacaroniAndCheese");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -1068,7 +1068,7 @@ class CraftDadaDish_ShepardsPie extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 		//result1
 		AddResult("DadaDish_ShepherdsPie");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -1107,7 +1107,7 @@ class CraftDadaDish_PulledPork extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaDish_PulledPork");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -1136,7 +1136,7 @@ class CraftDadaDish_Sausage extends Craft_DadaTempTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaDish_Sausage");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -1171,7 +1171,7 @@ class CraftDadaDish_Pie2 extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaDish_Pie");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -1210,7 +1210,7 @@ class CraftDadaSoup_Ragout extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaSoup_Ragout");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -1262,7 +1262,7 @@ class CraftDadaDish_Gumbo extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaDish_Gumbo");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -1303,7 +1303,7 @@ class CraftDadaDish_SeafoodGumbo extends Craft_DadaTempStageTemp1Stage1_BaseReci
 		//result1
 		AddResult("DadaDish_SeafoodGumbo");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -1337,7 +1337,7 @@ class CraftDadaDish_Gumbo1 extends Craft_DadaTempTemp1_BaseRecipe
 		//result1
 		AddResult("DadaDish_Gumbo");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -1369,7 +1369,7 @@ class CraftDadaDish_SeafoodGumbo1 extends Craft_DadaTempTemp1_BaseRecipe
 		//result1
 		AddResult("DadaDish_SeafoodGumbo");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -1398,7 +1398,7 @@ class CraftDadaSoup_TomatoSauce1 extends Craft_DadaTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaSoup_TomatoSauce");//add results here
 
-		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultSetQuantity[0] = 65;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };

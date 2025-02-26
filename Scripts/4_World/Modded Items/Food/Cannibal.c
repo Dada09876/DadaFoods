@@ -42,7 +42,7 @@ class DadaCannibal_EntrailsSpaghetti extends DadaCannibal_Base
 	}	
 };
 
-class DadaCannibal_Jerky extends HumanSteakMeat
+class DadaCannibal_Jerky extends DadaCannibal_Base
 {
 	override bool CanBeCooked()
 	{

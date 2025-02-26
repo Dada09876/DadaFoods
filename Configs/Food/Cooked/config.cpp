@@ -152,7 +152,7 @@ class CfgVehicles
 		itemSize[] = {3,2};
         displayName = "Soup";
 		descriptionShort = "Soup.";
-		varQuantityInit = 300;
+		varQuantityInit = 125;
 		varQuantityMin = 0;
 		varQuantityMax = 300;
 		hiddenSelections[] = {"camoGround","cs_raw"};

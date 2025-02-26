@@ -38,7 +38,7 @@ class CfgVehicles
 		weight = 2;
 		interactionWeight = 1;
 		itemSize[] = {2,3};
-		varQuantityInit = 275;
+		varQuantityInit = 125;
 		varQuantityMin = 0;
 		varQuantityMax = 300;
 		inventorySlot[] = {"Ingredient","DirectCookingA","DirectCookingB","DirectCookingC","SmokingA","SmokingB","SmokingC","SmokingD"};
@@ -143,9 +143,9 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Bowl_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_rotten_co.paa"};
 		class Nutrition
 		{
-			fullnessIndex = 3;
-			energy = 100;
-			water = 0;
+			fullnessIndex = 2;
+			energy = 50;
+			water = 100;
 			nutritionalIndex = 1;
 			toxicity = 0;
 		};
@@ -171,14 +171,14 @@ class CfgVehicles
 		class Nutrition
 		{
 			fullnessIndex = 3;
-			energy = 100;
-			water = 0;
+			energy = 150;
+			water = 50;
 			nutritionalIndex = 1;
 			toxicity = 0;
 		};
 	};
-	class Chips;
-	class DadaCannibal_Jerky: Chips
+	
+	class DadaCannibal_Jerky: DadaCannibal_Base
 	{
 		scope = 2;
 		model = "\DZ\gear\food\salty_chips.p3d";
@@ -192,8 +192,8 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Jerky_co.paa"};
 		class Nutrition
 		{
-			fullnessIndex = 5;
-			energy = 50;
+			fullnessIndex = 3;
+			energy = 100;
 			water = 0;
 			nutritionalIndex = 1;
 			toxicity = 0;
@@ -255,8 +255,8 @@ class CfgVehicles
 			};
 		};
 	};
-	class DadaBread_Base;
-	class DadaCannibal_WasteBread: DadaBread_Base
+
+	class DadaCannibal_WasteBread: DadaCannibal_Base
 	{
 		scope = 2;
 		weight = 2;
@@ -265,8 +265,8 @@ class CfgVehicles
 		canBeSplit = 1;
 		inventorySlot[] = {"Ingredient","DirectCookingA","DirectCookingB","DirectCookingC","SmokingA","SmokingB","SmokingC","SmokingD","Ingredient1","Ingredient2","Ingredient3","Ingredient4","Ingredient5","Ingredient6","Ingredient7","Ingredient8"};
 		itemSize[] = {3,2};
-		displayName = "Waste Bread";
-		descriptionShort = "Smells a bit weird for bread";
+		displayName = "Simple Round Dough";
+		descriptionShort = "A round, plain dough. Should be baked before consuming... but I guess no one can stop you if you don't.";
 		varQuantityInit = 100;
 		varQuantityMin = 0;
 		varQuantityMax = 100;

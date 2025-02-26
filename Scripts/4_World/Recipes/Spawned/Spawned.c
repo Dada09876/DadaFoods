@@ -113,7 +113,7 @@ class CraftDadaSpawned_BoxCerealCrunchin_Nesquik extends Craft_DadaTempTemp1_Bas
 	}
 };
 
-class CraftDadaSpawned_Coffee extends Craft_DadaTempTemp1_BaseRecipe
+/*class CraftDadaSpawned_Coffee extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -205,4 +205,4 @@ class CraftDadaSpawned_BlackTea extends Craft_DadaTempTemp1_BaseRecipe
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 	}
-};
+};*/

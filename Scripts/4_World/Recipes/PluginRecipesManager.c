@@ -14,9 +14,9 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaSpawned_BoxCerealCrunchin_Kosmostar);
     RegisterRecipe(new CraftDadaSpawned_BoxCerealCrunchin_Frosties);
     RegisterRecipe(new CraftDadaSpawned_BoxCerealCrunchin_Nesquik);
-    RegisterRecipe(new CraftDadaSpawned_Coffee);
-    RegisterRecipe(new CraftDadaSpawned_GreenTea);
-    RegisterRecipe(new CraftDadaSpawned_BlackTea);
+    //RegisterRecipe(new CraftDadaSpawned_Coffee);
+    //RegisterRecipe(new CraftDadaSpawned_GreenTea);
+    //RegisterRecipe(new CraftDadaSpawned_BlackTea);
 
     // CRAFTING
 
