@@ -1,4 +1,4 @@
-class CraftDadaCharcoalPiece extends Craft_DadaTemp1Stage1_BaseRecipe
+class CraftDadaCharcoalPiece extends Craft_Dada_BaseRecipe
 {
 	override void Init()
 	{
@@ -48,19 +48,14 @@ class CraftDadaCharcoalPiece extends Craft_DadaTemp1Stage1_BaseRecipe
 
 		if (Class.CastTo(ingredient1, ingredients[1]))
 		{
-			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
-			{
-				return false;
-			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if the food is raw, burnt or rotten
-			if (foodStage1.IsFoodRotten() || foodStage1.IsFoodRaw() || foodStage1.IsFoodDried() || foodStage1.IsFoodBaked() || foodStage1.IsFoodBoiled())
+			if (foodStage1.IsFoodBurned())
 			{
-				return false;
+				return true;
 			}
 			// by this point we know the 2 ingredients are both good temperatures and have good food stages
-			return true;
+			return false;
 		}
 		// initial ingredients are wrong, false
    		return false;

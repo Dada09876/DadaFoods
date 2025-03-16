@@ -278,6 +278,14 @@ class CfgVehicles
 				};
 			};
 		};
+class Nutrition
+		{
+			fullnessIndex = 3;
+			energy = 10;
+			water = 0;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
 		class AnimEvents
 		{
 			class SoundWeapon
@@ -325,6 +333,14 @@ class CfgVehicles
 				};
 			};
 		};
+class Nutrition
+		{
+			fullnessIndex = 3;
+			energy = 10;
+			water = 0;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
 		class AnimEvents
 		{
 			class SoundWeapon
@@ -371,6 +387,14 @@ class CfgVehicles
 					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket_damage.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket_destruct.rvmat"}}};
 				};
 			};
+		};
+class Nutrition
+		{
+			fullnessIndex = 3;
+			energy = 10;
+			water = 0;
+			nutritionalIndex = 1;
+			toxicity = 0;
 		};
 		class AnimEvents
 		{

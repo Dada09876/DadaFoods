@@ -67,6 +67,7 @@ class DadaDish_MacaroniAndCheese: DadaDish_Base{};
 class DadaDish_ShepherdsPie: DadaDish_Base{};
 class DadaDish_PulledPork: DadaDish_Base{};
 class DadaDish_Rigatoni: DadaDish_Base{};
+class DadaDish_Fries: DadaDish_Base{};
 
 class DadaBread_Pita: DadaBread_Base{};
 class DadaBread_Loaf: DadaBread_Base{};

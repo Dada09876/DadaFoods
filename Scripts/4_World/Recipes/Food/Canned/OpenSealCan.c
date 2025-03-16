@@ -169,7 +169,7 @@ class Craft_SealCan extends RecipeBase
 	{
     // check to see if the food can is baked or boiled. do not let them can the food if it is not cooked
     Dada_RawFoodCan_Colorbase can = Dada_RawFoodCan_Colorbase.Cast(ingredients[1]);
-    if (can && (can.IsFoodBaked() || can.IsFoodBoiled()))
+    if (can && (can.IsFoodBaked() || can.IsFoodBoiled() || can.IsFoodDried()))
     {
       return true;    
     }

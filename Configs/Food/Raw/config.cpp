@@ -277,6 +277,7 @@ class CfgVehicles
 		varQuantityMin = 0;
 		varQuantityMax = 100;
 		isMeleeWeapon = 1;
+		displayName = "Small Butter";
 		descriptionShort = "Just a little bit of butter";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaFoodCan_SmallButter_co.paa"};

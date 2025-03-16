@@ -17,6 +17,12 @@ class DadaRaw_Base : Edible_Base
 	{
 		return true;
 	}
+
+	override bool CanProcessDecay()
+	{
+		return !( GetAgents() & eAgents.FOOD_POISON );
+	}
+
 	override void SetActions()
 	{
 		super.SetActions();
@@ -76,36 +82,17 @@ class DadaRaw_SushiOnigiri: DadaRaw_SushiMaki
 
 class DadaRaw_SmallButter_Opened: DadaRaw_Base
 {
-	override bool CanDecay()
-	{
-		return true;
-	}
-	
-	override bool CanProcessDecay()
-	{
-		return !GetIsFrozen() && !( GetAgents() & eAgents.FOOD_POISON );
-	}
-	
 	override void SetActions()
 	{
 		super.SetActions();
 		
 		AddAction(ActionEatSmallCan);
+		RemoveAction(ActionEatMeat);
 	}
 	
 	override bool IsOpen()
 	{
-		return false;
-	}
-
-	override bool CanBeCooked()
-	{
-		return false;
-	}
-	
-	override bool CanBeCookedOnStick()
-	{
-		return false;
+		return true;
 	}
 };
 
@@ -163,152 +150,39 @@ class DadaRaw_BigButter: Rice
 
 class DadaRaw_Mozza: DadaRaw_Base
 {
-	override bool IsFruit()
-	{
-		return true;
-	}
-
-	override bool CanBeCooked()
-	{
-		return false;
-	}
-	
-	override bool CanBeCookedOnStick()
-	{
-		return false;
-	}	
-
-   override bool CanDecay()
-	{
-		return true;
-	}
-	
-	override bool CanProcessDecay()
-	{
-		return !( GetAgents() & eAgents.FOOD_POISON );
-	}
-	
 	override void SetActions()
 	{
 		super.SetActions();
 		
 		AddAction(ActionEatSmallCan);
 		RemoveAction(ActionEatMeat);
-	}
-	
-	override bool IsOpen()
-	{
-		return false;
 	}
 };
 
 class DadaRaw_MontereyJack: DadaRaw_Base
 {
-	override bool IsFruit()
-	{
-		return true;
-	}
-
-	override bool CanBeCooked()
-	{
-		return false;
-	}
-	
-	override bool CanBeCookedOnStick()
-	{
-		return false;
-	}
-
-   override bool CanDecay()
-	{
-		return true;
-	}
-	
-	override bool CanProcessDecay()
-	{
-		return !( GetAgents() & eAgents.FOOD_POISON );
-	}
-	
 	override void SetActions()
 	{
 		super.SetActions();
 		
 		AddAction(ActionEatSmallCan);
 		RemoveAction(ActionEatMeat);
-	}
-	
-	override bool IsOpen()
-	{
-		return false;
 	}
 };
 
 class DadaRaw_FreshGoatCheese: DadaRaw_Base
 {
-	override bool IsFruit()
-	{
-		return true;
-	}
-
-	override bool CanBeCooked()
-	{
-		return false;
-	}
-	
-	override bool CanBeCookedOnStick()
-	{
-		return false;
-	}
-   override bool CanDecay()
-	{
-		return true;
-	}
-	
-	override bool CanProcessDecay()
-	{
-		return !( GetAgents() & eAgents.FOOD_POISON );
-	}
-	
 	override void SetActions()
 	{
 		super.SetActions();
 		
 		AddAction(ActionEatSmallCan);
 		RemoveAction(ActionEatMeat);
-	}
-	
-	override bool IsOpen()
-	{
-		return false;
 	}
 };
 
 class DadaRaw_Feta: DadaRaw_Base
 {
-	override bool IsFruit()
-	{
-		return true;
-	}
-
-	override bool CanBeCooked()
-	{
-		return false;
-	}
-	
-	override bool CanBeCookedOnStick()
-	{
-		return false;
-	}
-   override bool CanDecay()
-	{
-		return true;
-	}
-	
-	override bool CanProcessDecay()
-	{
-		return !( GetAgents() & eAgents.FOOD_POISON );
-	}
-	
 	override void SetActions()
 	{
 		super.SetActions();
@@ -316,50 +190,16 @@ class DadaRaw_Feta: DadaRaw_Base
 		AddAction(ActionEatSmallCan);
 		RemoveAction(ActionEatMeat);
 	}
-	
-	override bool IsOpen()
-	{
-		return false;
-	}
 };
 
 class DadaRaw_VanillaChocoSwirl: DadaRaw_Base
 {
-	override bool IsFruit()
-	{
-		return true;
-	}
-
-	override bool CanBeCooked()
-	{
-		return false;
-	}
-	
-	override bool CanBeCookedOnStick()
-	{
-		return false;
-	}
-   override bool CanDecay()
-	{
-		return true;
-	}
-	
-	override bool CanProcessDecay()
-	{
-		return !( GetAgents() & eAgents.FOOD_POISON );
-	}
-	
 	override void SetActions()
 	{
 		super.SetActions();
 		
 		AddAction(ActionEatFruit);
 		RemoveAction(ActionEatMeat);
-	}
-
-	override bool IsOpen()
-	{
-		return false;
 	}
 };
 
@@ -406,30 +246,6 @@ class DadaRaw_Yogourt: Edible_Base
 
 class DadaRaw_Yogourt_Opened: DadaRaw_Base
 {
-	override bool IsFruit()
-	{
-		return true;
-	}
-
-	override bool CanBeCooked()
-	{
-		return false;
-	}
-	
-	override bool CanBeCookedOnStick()
-	{
-		return false;
-	}	
-   override bool CanDecay()
-	{
-		return true;
-	}
-	
-	override bool CanProcessDecay()
-	{
-		return !( GetAgents() & eAgents.FOOD_POISON );
-	}
-	
 	override void SetActions()
 	{
 		super.SetActions();
@@ -440,6 +256,6 @@ class DadaRaw_Yogourt_Opened: DadaRaw_Base
 	
 	override bool IsOpen()
 	{
-		return false;
+		return true;
 	}
 };

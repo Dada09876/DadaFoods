@@ -43,7 +43,8 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaDish_Bowties);
     RegisterRecipe(new CraftDadaDish_Lasagna);
     RegisterRecipe(new CraftDadaDish_Rigatoni);
-    RegisterRecipe(new CraftDadaBread_PizzaBase);
+    RegisterRecipe(new CraftDadaBread_PizzaMarinara);
+    RegisterRecipe(new CraftDadaBread_PizzaMargherita);
     RegisterRecipe(new CraftDadaDish_GroundMeat);
     RegisterRecipe(new CraftDadaDish_MashedPotatoes);
     RegisterRecipe(new CraftDadaDish_MashedPotatoes1);
@@ -70,7 +71,10 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaDish_ShepardsPie);
     RegisterRecipe(new CraftDadaDish_PulledPork);
     RegisterRecipe(new CraftDadaDish_Sausage);
-
+    RegisterRecipe(new CraftDadaDish_Fries);
+    RegisterRecipe(new CraftDadaDish_Fries1);
+    RegisterRecipe(new CraftDadaDish_FriteSauce);
+    RegisterRecipe(new CraftDadaDish_Poutine);
 
     // FOOD CANNED
 

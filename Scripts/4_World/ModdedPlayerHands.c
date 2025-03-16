@@ -72,6 +72,8 @@ modded class ModItemRegisterCallbacks
         pType.AddItemInHandsProfileIK("DadaBoneMeal",	"dz/anims/workspaces/player/player_main/weapons/player_main_2h_extinguisher.asi",pBehavior,	"dz/anims/anm/player/ik/two_handed/gardenlime.anm");
         pType.AddItemInHandsProfileIK("DadaSaltBag",	"dz/anims/workspaces/player/player_main/weapons/player_main_2h_extinguisher.asi",pBehavior,	"dz/anims/anm/player/ik/two_handed/gardenlime.anm");
         pType.AddItemInHandsProfileIK("DadaCannibal_WasteBread", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
+        pType.AddItemInHandsProfileIK("DadaDish_FriteSauce", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
+        pType.AddItemInHandsProfileIK("DadaDish_Poutine", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");  
     };
 
     override void RegisterHeavy(DayZPlayerType pType, DayzPlayerItemBehaviorCfg pBehavior)

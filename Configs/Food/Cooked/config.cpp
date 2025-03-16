@@ -289,9 +289,9 @@ class CfgVehicles
 		weight = 4;
 		quantityBar = 1;
 		canBeSplit = 1;
-		varQuantityInit = 200;
+		varQuantityInit = 125;
 		varQuantityMin = 0;
-		varQuantityMax = 200;
+		varQuantityMax = 300;
 		itemSize[] = {2,3};
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\RoundDough.p3d";
 		hiddenSelections[] = {"cs_raw"};
@@ -467,6 +467,9 @@ class CfgVehicles
 	{
 		scope = 2;
 		displayName = "Mashed Potatoes";
+		varQuantityInit = 65;
+		varQuantityMin = 0;
+		varQuantityMax = 150;
 		descriptionShort = "Potatoes beaten into a delicious purée.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_rotten_co.paa"};
@@ -533,6 +536,9 @@ class CfgVehicles
 	{
 		scope = 2;
 		itemSize[] = {2,3};
+		varQuantityInit = 65;
+		varQuantityMin = 0;
+		varQuantityMax = 150;
 		displayName = "Ground Meat";
 		descriptionShort = "Can be used to make a lot of delicious dishes. Oh and also burgers";
 		hiddenSelections[] = {"cs_raw"};
@@ -670,6 +676,9 @@ class CfgVehicles
 		model = "Source_Files\DadaFoods\Configs\Food\Cooked\data\Sausage.p3d";
 		scope = 2;
 		weight = 0.5;
+		varQuantityInit = 65;
+		varQuantityMin = 0;
+		varQuantityMax = 150;
 		itemSize[] = {2,1};
 		displayName = "Sausage";
 		descriptionShort = "Better when grilled on the barbecue";
@@ -695,6 +704,9 @@ class CfgVehicles
 		scope = 2;
 		weight = 0.5;
 		itemSize[] = {2,1};
+		varQuantityInit = 65;
+		varQuantityMin = 0;
+		varQuantityMax = 150;
 		displayName = "Fries";
 		descriptionShort = "Crispy and Salty";
 		hiddenSelections[] = {"cs_raw"};
@@ -707,14 +719,53 @@ class CfgVehicles
 				class Health
 				{
 					hitpoints = 200;
-					healthLevels[] = {{1,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"}},{0.7,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"}},{0.5,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"}},{0.3,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"}},{0,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"}}};
+					healthLevels[] = {{1,{"Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"}},{0,{"Source_Files\DadaFoods\Configs\Food\Cooked\data\Fries.rvmat"}}};
 				};
 			};
 		};	
 	};
-// FRIED
 
+	class DadaDish_FriteSauce: DadaDish_Base
+	{
+		scope = 2;
+		displayName = "Frite Sauce";
+		descriptionShort = "Fries And Gravy in a Bowl";
+		model = "Source_Files\DadaFoods\Configs\Food\Cooked\data\FriteSauce.p3d";
+		hiddenSelections[] = {"camoGround","cs_raw"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPoutine_Baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPoutine_Raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPoutine_Baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPoutine_Boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPoutine_Dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPoutine_Burned_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPoutine_Rotten_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat"};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 200;
+					healthLevels[] = {{1,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat"}},{0.7,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat"}},{0.5,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine_damage.rvmat"}},{0.3,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine_damage.rvmat"}},{0,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine_destruct.rvmat"}}};
+				};
+			};
+		};	
+	};
 
-// CURED
-
+	class DadaDish_Poutine: DadaDish_Base
+	{
+		scope = 2;
+		displayName = "Poutine";
+		descriptionShort = "Un Classique Québecois";
+		model = "Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.p3d";
+		hiddenSelections[] = {"camoGround","cs_raw"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPoutine_Baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPoutine_Raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPoutine_Baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPoutine_Boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPoutine_Dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPoutine_Burned_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPoutine_Rotten_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat"};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 200;
+					healthLevels[] = {{1,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat"}},{0.7,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine.rvmat"}},{0.5,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine_damage.rvmat"}},{0.3,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine_damage.rvmat"}},{0,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Poutine_destruct.rvmat"}}};
+				};
+			};
+		};	
+	};
 };

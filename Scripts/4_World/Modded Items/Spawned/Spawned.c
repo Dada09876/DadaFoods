@@ -1,0 +1,1 @@
+class DadaSpawned_CerealCrunchin extends BoxCerealCrunchin {};
