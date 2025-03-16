@@ -1,1 +1,10 @@
-class DadaSpawned_CerealCrunchin extends BoxCerealCrunchin {};
+class DadaSpawned_CerealBase extends BoxCerealCrunchin {};
+
+class DadaSpawned_Flour extends DadaSpawned_CerealBase {};
+class DadaSpawned_BoxCerealCrunchin_Frosties extends DadaSpawned_CerealBase {};
+class DadaSpawned_BoxCerealCrunchin_Nesquik extends DadaSpawned_CerealBase {};
+class DadaSpawned_BoxCerealCrunchin_Kosmostar extends DadaSpawned_CerealBase {};
+class DadaSpawned_Yeast extends PowderedMilk {};
+class DadaSpawned_Coffee extends Rice {};
+class DadaSpawned_GreenTea extends Rice {};
+class DadaSpawned_BlackTea extends Rice {};
