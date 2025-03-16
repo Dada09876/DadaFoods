@@ -178,7 +178,8 @@ class CfgVehicles
 		};
 	};
 	
-	class DadaCannibal_Jerky: DadaCannibal_Base
+	class Snack_ColorBase;
+	class DadaCannibal_Jerky: Snack_ColorBase
 	{
 		scope = 2;
 		model = "\DZ\gear\food\salty_chips.p3d";
@@ -187,7 +188,7 @@ class CfgVehicles
 		debug_ItemCategory = 6;
 		rotationFlags = 1;
 		weight = 10;
-		itemSize[] = {2,3};
+		itemSize[] = {2,2};
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Jerky_co.paa"};
 		class Nutrition

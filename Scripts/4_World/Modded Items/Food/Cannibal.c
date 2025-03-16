@@ -67,8 +67,8 @@ class DadaCannibal_Jerky extends DadaCannibal_Base
 	override void SetActions()
 	{
 		super.SetActions();
-		
-		AddAction(ActionEatMeat);
+		RemoveAction(ActionDrinkCookingPot);
+		AddAction(ActionEatMeat);	
 	}
 };
 
