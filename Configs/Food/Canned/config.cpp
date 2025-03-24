@@ -171,38 +171,38 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,50,50,1,0,4};
+					nutrition_properties[] = {4,50,25,1,0,4};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
 					visual_properties[] = {-1,-1,5};
-					nutrition_properties[] = {10,25,25,1,0,"4 + 16"};
+					nutrition_properties[] = {5,25,10,1,0,"4 + 16",1,25};
 					cooking_properties[] = {0,0};
 				};
 				class Baked
 				{
 					visual_properties[] = {0,1,1};
-					nutrition_properties[] = {1,300,50,1,0};
+					nutrition_properties[] = {2,150,15,1,0,2};
 					cooking_properties[] = {70,45};
 				};
 				class Boiled
 				{
 					visual_properties[] = {0,2,2};
-					nutrition_properties[] = {1,250,100,1,0};
+					nutrition_properties[] = {2,125,40,1,0,2};
 					cooking_properties[] = {70,55};
 				};
 				class Dried
 				{
 					visual_properties[] = {0,3,3};
-					nutrition_properties[] = {1,250,0,1,0};
+					nutrition_properties[] = {3,125,5,1,0,2};
 					cooking_properties[] = {70,120,80};
 				};
 				class Burned
 				{
 					visual_properties[] = {0,4,4};
-					nutrition_properties[] = {5,50,0,1,0,16};
-					cooking_properties[] = {100,30};
+					nutrition_properties[] = {4,50,0,1,0,16,1,5};
+					cooking_properties[] = {100,150};
 				};
 			};
 			class FoodStageTransitions: DadaCanStageTransitions{};
@@ -321,6 +321,17 @@ class CfgVehicles
 		varQuantityMin = 0;
 		varQuantityMax = 400;
 		isMeleeWeapon = 1;
+	
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 200;
+			water = 20;
+			nutritionalIndex = 1;
+			toxicity = 0;
+			digestibility = 2;
+		};
+
 		class DamageSystem
 		{
 			class GlobalHealth
