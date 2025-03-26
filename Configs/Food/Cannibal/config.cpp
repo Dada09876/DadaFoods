@@ -378,7 +378,7 @@ class DadaCannibal_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 		};
 	};
 
-class Dada_RawFoodCan_LSSPAM: Dada_RawFoodCan_Colorbase
+class DadaCannibal_RawFoodCan_LSSPAM: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "SPAM";
@@ -387,7 +387,7 @@ class Dada_RawFoodCan_LSSPAM: Dada_RawFoodCan_Colorbase
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
 	};
-	class Dada_PreservedFoodCan_LSSPAM: Dada_PreservedFoodCan_Colorbase
+	class DadaCannibal_PreservedFoodCan_LSSPAM: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "SPAM";
@@ -396,7 +396,7 @@ class Dada_RawFoodCan_LSSPAM: Dada_RawFoodCan_Colorbase
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
 	};
-	class Dada_PreservedFoodCan_LSSPAM_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	class DadaCannibal_PreservedFoodCan_LSSPAM_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
 		displayName = "SPAM";
@@ -414,7 +414,7 @@ class Dada_RawFoodCan_LSSPAM: Dada_RawFoodCan_Colorbase
 		};
 	};
 
-class Dada_RawFoodCan_Ketchup: Dada_RawFoodCan_Colorbase
+class DadaCannibal_RawFoodCan_Ketchup: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		color = "Ketchup";
@@ -423,7 +423,7 @@ class Dada_RawFoodCan_Ketchup: Dada_RawFoodCan_Colorbase
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
 	};
-	class Dada_PreservedFoodCan_Ketchup: Dada_PreservedFoodCan_Colorbase
+	class DadaCannibal_PreservedFoodCan_Ketchup: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Ketchup";
@@ -432,7 +432,7 @@ class Dada_RawFoodCan_Ketchup: Dada_RawFoodCan_Colorbase
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
 	};
-	class Dada_PreservedFoodCan_Ketchup_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	class DadaCannibal_PreservedFoodCan_Ketchup_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
 		displayName = "Ketchup";
@@ -450,7 +450,7 @@ class Dada_RawFoodCan_Ketchup: Dada_RawFoodCan_Colorbase
 		};
 	};
 
-	class Dada_RawFoodCan_DicedTomatoes: Dada_RawFoodCan_Colorbase
+	class DadaCannibal_RawFoodCan_DicedTomatoes: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Diced Tomatoes";
@@ -459,7 +459,7 @@ class Dada_RawFoodCan_Ketchup: Dada_RawFoodCan_Colorbase
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_co.paa"};
 	};
-	class Dada_PreservedFoodCan_DicedTomatoes: Dada_PreservedFoodCan_Colorbase
+	class DadaCannibal_PreservedFoodCan_DicedTomatoes: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Diced Tomatoes";
@@ -468,7 +468,7 @@ class Dada_RawFoodCan_Ketchup: Dada_RawFoodCan_Colorbase
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_co.paa"};
 	};
-	class Dada_PreservedFoodCan_DicedTomatoes_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	class DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
 		displayName = "Diced Tomatoes";
@@ -486,7 +486,7 @@ class Dada_RawFoodCan_Ketchup: Dada_RawFoodCan_Colorbase
 		};
 	};
 
-class Dada_RawFoodCan_HomemadeChili: Dada_RawFoodCan_Colorbase
+class DadaCannibal_RawFoodCan_HomemadeChili: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Homemade Chili";
@@ -495,7 +495,7 @@ class Dada_RawFoodCan_HomemadeChili: Dada_RawFoodCan_Colorbase
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
 	};
-	class Dada_PreservedFoodCan_HomemadeChili: Dada_PreservedFoodCan_Colorbase
+	class DadaCannibal_PreservedFoodCan_HomemadeChili: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Homemade Chili";
@@ -504,7 +504,7 @@ class Dada_RawFoodCan_HomemadeChili: Dada_RawFoodCan_Colorbase
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
 	};
-	class Dada_PreservedFoodCan_HomemadeChili_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	class DadaCannibal_PreservedFoodCan_HomemadeChili_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
 		displayName = "Homemade Chili";
@@ -522,7 +522,7 @@ class Dada_RawFoodCan_HomemadeChili: Dada_RawFoodCan_Colorbase
 		};
 	};
 
-class Dada_RawFoodCan_ESPENChunkySoup: Dada_RawFoodCan_Colorbase
+class DadaCannibal_RawFoodCan_ESPENChunkySoup: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Chunky Soup";
@@ -531,7 +531,7 @@ class Dada_RawFoodCan_ESPENChunkySoup: Dada_RawFoodCan_Colorbase
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
 	};
-	class Dada_PreservedFoodCan_ESPENChunkySoup: Dada_PreservedFoodCan_Colorbase
+	class DadaCannibal_PreservedFoodCan_ESPENChunkySoup: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Chunky Soup";
@@ -540,7 +540,7 @@ class Dada_RawFoodCan_ESPENChunkySoup: Dada_RawFoodCan_Colorbase
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
 	};
-	class Dada_PreservedFoodCan_ESPENChunkySoup_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	class DadaCannibal_PreservedFoodCan_ESPENChunkySoup_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
 		displayName = "Chunky Soup";
@@ -558,7 +558,7 @@ class Dada_RawFoodCan_ESPENChunkySoup: Dada_RawFoodCan_Colorbase
 		};
 	};
 
-class Dada_RawFoodCan_STAGchili: Dada_RawFoodCan_Colorbase
+class DadaCannibal_RawFoodCan_STAGchili: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "STAG Chili";
@@ -567,7 +567,7 @@ class Dada_RawFoodCan_STAGchili: Dada_RawFoodCan_Colorbase
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_co.paa"};
 	};
-	class Dada_PreservedFoodCan_STAGchili: Dada_PreservedFoodCan_Colorbase
+	class DadaCannibal_PreservedFoodCan_STAGchili: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "STAG Chili";
@@ -576,7 +576,7 @@ class Dada_RawFoodCan_STAGchili: Dada_RawFoodCan_Colorbase
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_co.paa"};
 	};
-	class Dada_PreservedFoodCan_STAGchili_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	class DadaCannibal_PreservedFoodCan_STAGchili_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
 		displayName = "STAG Chili";
@@ -594,7 +594,7 @@ class Dada_RawFoodCan_STAGchili: Dada_RawFoodCan_Colorbase
 		};
 	};
 
-class DadaBread_Pita: DadaBread_Base
+class DadaWasteBread_Pita: DadaBread_Base
 	{
 		scope = 2;
 		displayName = "Flat Bread";
@@ -605,7 +605,7 @@ class DadaBread_Pita: DadaBread_Base
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"};
 	};
 
-	class DadaBread_Loaf: DadaBread_Base
+	class DadaWasteBread_Loaf: DadaBread_Base
 	{
 		scope = 2;
 		itemSize[] = {3,2};
@@ -628,7 +628,7 @@ class DadaBread_Pita: DadaBread_Base
 		};	
 	};
 
-	class DadaBread_Baguette: DadaBread_Base
+	class DadaWasteBread_Baguette: DadaBread_Base
 	{
 		scope = 2;
 		itemSize[] = {3,2};
@@ -640,14 +640,14 @@ class DadaBread_Pita: DadaBread_Base
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"};
 	};
 
-	class DadaBread_Pasta: DadaBread_Base
+	class DadaWasteBread_Pasta: DadaBread_Base
 	{
 		scope = 2;
 		displayName = "Pasta Dough";
 		descriptionShort = "Good, just need the tomato sauce now";
 	};
 	
-	class DadaBread_Pizza: DadaBread_Base
+	class DadaWasteBread_Pizza: DadaBread_Base
 	{
 		scope = 2;
 		displayName = "Pizza Bianca";
@@ -658,7 +658,7 @@ class DadaBread_Pita: DadaBread_Base
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat"};
 	};
 
-	class DadaBread_PizzaBase: DadaBread_Base
+	class DadaWasteBread_PizzaBase: DadaBread_Base
 	{
 		scope = 2;
 		displayName = "Pizza Marinara";
@@ -669,7 +669,7 @@ class DadaBread_Pita: DadaBread_Base
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat"};
 	};
 
-class DadaDish_Rigatoni: DadaDish_Base
+class DadaCannibalDish_Rigatoni: DadaDish_Base
 	{
 		scope = 2;
 		displayName = "Rigatoni";
@@ -678,7 +678,7 @@ class DadaDish_Rigatoni: DadaDish_Base
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_rotten_co.paa"};
 	};
 
-class DadaDish_Chili: DadaDish_Base
+class DadaCannibalDish_Chili: DadaDish_Base
 	{
 		scope = 2;
 		displayName = "Chili";
@@ -686,7 +686,7 @@ class DadaDish_Chili: DadaDish_Base
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_rotten_co.paa"};
 	};
-	class DadaDish_Pie: DadaDish_Base
+	class DadaCannibalDish_Pie: DadaDish_Base
 	{
 		model = "Source_Files\DadaFoods\Configs\Food\Cooked\data\Pie.p3d";
 		scope = 2;
@@ -697,7 +697,7 @@ class DadaDish_Chili: DadaDish_Base
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"};
 	};
 
-class DadaSoup_TomatoSoup: DadaSoup_Base
+class DadaCannibalSoup_TomatoSoup: DadaSoup_Base
 	{
 		scope = 2;
 		displayName = "Tomato Soup";
@@ -705,7 +705,7 @@ class DadaSoup_TomatoSoup: DadaSoup_Base
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_rotten_co.paa"};
 	};
-	class DadaSoup_Ragout: DadaSoup_Base
+	class DadaCannibalSoup_Ragout: DadaSoup_Base
 	{
 		scope = 2;
 		displayName = "Ragout";
@@ -713,7 +713,7 @@ class DadaSoup_TomatoSoup: DadaSoup_Base
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_rotten_co.paa"};
 	};
-	class DadaDish_GroundMeat: DadaDish_Base
+	class DadaCannibalDish_GroundMeat: DadaDish_Base
 	{
 		scope = 2;
 		itemSize[] = {2,3};
@@ -725,7 +725,7 @@ class DadaSoup_TomatoSoup: DadaSoup_Base
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_rotten_co.paa"};
 	};
-	class DadaSoup_TomatoSauce: DadaSoup_Base
+	class DadaCannibalSoup_TomatoSauce: DadaSoup_Base
 	{
 		scope = 2;
 		displayName = "Tomato Sauce";
@@ -734,7 +734,7 @@ class DadaSoup_TomatoSoup: DadaSoup_Base
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_rotten_co.paa"};
 	};
 
-	class DadaDish_Spaghetti: DadaDish_Base
+	class DadaCannibalDish_Spaghetti: DadaDish_Base
 	{
 		scope = 2;
 		displayName = "Spaghetti bolognese";
@@ -743,7 +743,7 @@ class DadaSoup_TomatoSoup: DadaSoup_Base
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_rotten_co.paa"};
 	};
 
-	class DadaDish_Cannelloni: DadaDish_Base
+	class DadaCannibalDish_Cannelloni: DadaDish_Base
 	{
 		scope = 2;
 		displayName = "Cannelloni";
@@ -752,7 +752,7 @@ class DadaSoup_TomatoSoup: DadaSoup_Base
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_rotten_co.paa"};
 	};
 
-	class DadaDish_Bowties: DadaDish_Base
+	class DadaCannibalDish_Bowties: DadaDish_Base
 	{
 		scope = 2;
 		displayName = "Bowties";
@@ -761,7 +761,7 @@ class DadaSoup_TomatoSoup: DadaSoup_Base
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_rotten_co.paa"};
 	};
 
-	class DadaDish_Lasagna: DadaDish_Base
+	class DadaCannibalDish_Lasagna: DadaDish_Base
 	{
 		scope = 2;
 		displayName = "Lasagna";
@@ -770,7 +770,7 @@ class DadaSoup_TomatoSoup: DadaSoup_Base
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_rotten_co.paa"};
 	};
 
-class DadaDish_PulledPork: DadaDish_Base
+class DadaCannibalDish_PulledPork: DadaDish_Base
 	{
 		scope = 2;
 		displayName = "Pulled Pork";
@@ -779,7 +779,7 @@ class DadaDish_PulledPork: DadaDish_Base
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_rotten_co.paa"};
 	};
 
-class DadaDish_Sausage: DadaDish_Base
+class DadaCannibalDish_Sausage: DadaDish_Base
 	{
 		model = "Source_Files\DadaFoods\Configs\Food\Cooked\data\Sausage.p3d";
 		scope = 2;
@@ -806,7 +806,7 @@ class DadaDish_Sausage: DadaDish_Base
 		};	
 	};
 
-class DadaDrink_MilkShake: DadaDrinks_ColorBase
+class DadaCannibalDrink_MilkShake: DadaDrinks_ColorBase
 	{
 		scope = 2;
 		canBeSplit = 1;
