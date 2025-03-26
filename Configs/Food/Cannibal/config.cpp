@@ -805,4 +805,86 @@ class DadaDish_Sausage: DadaDish_Base
 			};
 		};	
 	};
+
+class DadaDrink_MilkShake: DadaDrinks_ColorBase
+	{
+		scope = 2;
+		canBeSplit = 1;
+		displayName = "Milkshake";
+		descriptionShort = "Shake it like a polaroid picture";
+		hiddenSelections[] = {"cs_raw","zbytek"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\Milkshake_co.paa","Source_Files\DadaFoods\Configs\Drinks\data\Milkshake_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Drinks\data\MilkCarton.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"};
+		model = "Source_Files\DadaFoods\Configs\Drinks\data\Milkshake.p3d";
+		weight = 3;
+		itemSize[] = {1,3};
+		varQuantityInit = 300;
+		varQuantityMax = 300;
+		class Nutrition
+		{
+			energy = 50;
+			water = 150;
+			nutritionalIndex = 1;
+			toxicity = 0;
+			fullnessIndex = 2;
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 50;
+					healthLevels[] = {{1,{"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0,{"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}}};
+				};
+			};
+		};
+		soundImpactType = "plastic";
+		class AnimEvents
+		{
+			class SoundWeapon
+			{
+				class WaterBottle_in_B
+				{
+					soundSet = "WaterBottle_in_B_SoundSet";
+					id = 202;
+				};
+				class WaterBottle_in_C
+				{
+					soundSet = "WaterBottle_in_C_SoundSet";
+					id = 203;
+				};
+				class WaterBottle_in_C1
+				{
+					soundSet = "WaterBottle_in_C1_SoundSet";
+					id = 204;
+				};
+				class WaterBottle_out_A
+				{
+					soundSet = "WaterBottle_out_A_SoundSet";
+					id = 205;
+				};
+				class WaterBottle_out_B
+				{
+					soundSet = "WaterBottle_out_B_SoundSet";
+					id = 206;
+				};
+				class WellPond_loop
+				{
+					soundSet = "WellPond_loop_SoundSet";
+					id = 209;
+				};
+				class WellBottle_loop
+				{
+					soundSet = "WellBottle_loop_SoundSet";
+					id = 210;
+				};
+				class pickup
+				{
+					soundSet = "WaterBottle_pickup_SoundSet";
+					id = 797;
+				};
+			};
+		};
+	};
 };
