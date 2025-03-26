@@ -341,4 +341,40 @@ class CfgVehicles
 			};
 		};
 	};
+
+class DadaCannibal_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
+	{
+		scope = 2;
+		displayName = "Reconstituted Meat";
+		descriptionShort = "Our ham will make you smile, or else";
+		color = "STAGham";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_co.paa"};
+	};
+	class DadaCannibal_PreservedFoodCan_STAGham: Dada_PreservedFoodCan_Colorbase
+	{
+		scope = 2;
+		displayName = "Reconstituted Meat";
+		descriptionShort = "Our ham will make you smile, or else";
+		color = "STAGham";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_co.paa"};
+	};
+	class DadaCannibal_PreservedFoodCan_STAGham_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	{
+		scope = 2;
+		displayName = "Reconstituted Meat";
+		descriptionShort = "Our ham will make you smile, or else";
+		color = "STAGham";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 200;
+			water = 350;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+	};
 };
