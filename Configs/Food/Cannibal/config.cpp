@@ -377,4 +377,220 @@ class DadaCannibal_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 			toxicity = 0;
 		};
 	};
+
+class Dada_RawFoodCan_LSSPAM: Dada_RawFoodCan_Colorbase
+	{
+		scope = 2;
+		displayName = "SPAM";
+		descriptionShort = "An ESPENLock staple";
+		color = "LSSPAM";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
+	};
+	class Dada_PreservedFoodCan_LSSPAM: Dada_PreservedFoodCan_Colorbase
+	{
+		scope = 2;
+		displayName = "SPAM";
+		descriptionShort = "An ESPENLock staple";
+		color = "LSSPAM";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
+	};
+	class Dada_PreservedFoodCan_LSSPAM_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	{
+		scope = 2;
+		displayName = "SPAM";
+		descriptionShort = "An ESPENLock staple";
+		color = "LSSPAM";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 200;
+			water = 350;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+	};
+
+class Dada_RawFoodCan_Ketchup: Dada_RawFoodCan_Colorbase
+	{
+		scope = 2;
+		color = "Ketchup";
+		displayName = "Ketchup";
+		descriptionShort = "Just put it on everithing you eat already";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
+	};
+	class Dada_PreservedFoodCan_Ketchup: Dada_PreservedFoodCan_Colorbase
+	{
+		scope = 2;
+		displayName = "Ketchup";
+		descriptionShort = "Just put it on everithing you eat already";
+		color = "Ketchup";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
+	};
+	class Dada_PreservedFoodCan_Ketchup_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	{
+		scope = 2;
+		displayName = "Ketchup";
+		descriptionShort = "Just put it on everithing you eat already";
+		color = "Ketchup";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 200;
+			water = 350;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+	};
+
+	class Dada_RawFoodCan_DicedTomatoes: Dada_RawFoodCan_Colorbase
+	{
+		scope = 2;
+		displayName = "Diced Tomatoes";
+		descriptionShort = "Start your tomato sauce from scratch... Almost";
+		color = "DicedTomatoes";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_co.paa"};
+	};
+	class Dada_PreservedFoodCan_DicedTomatoes: Dada_PreservedFoodCan_Colorbase
+	{
+		scope = 2;
+		displayName = "Diced Tomatoes";
+		descriptionShort = "Start your tomato sauce from scratch... Almost";
+		color = "DicedTomatoes";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_co.paa"};
+	};
+	class Dada_PreservedFoodCan_DicedTomatoes_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	{
+		scope = 2;
+		displayName = "Diced Tomatoes";
+		descriptionShort = "Start your tomato sauce from scratch... Almost";
+		color = "DicedTomatoes";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 200;
+			water = 350;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+	};
+
+class Dada_RawFoodCan_HomemadeChili: Dada_RawFoodCan_Colorbase
+	{
+		scope = 2;
+		displayName = "Homemade Chili";
+		descriptionShort = "The Original Bear Valley Chili Recipe";
+		color = "HomemadeChili";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
+	};
+	class Dada_PreservedFoodCan_HomemadeChili: Dada_PreservedFoodCan_Colorbase
+	{
+		scope = 2;
+		displayName = "Homemade Chili";
+		descriptionShort = "The Original Bear Valley Chili Recipe";
+		color = "HomemadeChili";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
+	};
+	class Dada_PreservedFoodCan_HomemadeChili_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	{
+		scope = 2;
+		displayName = "Homemade Chili";
+		descriptionShort = "The Original Bear Valley Chili Recipe";
+		color = "HomemadeChili";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 200;
+			water = 350;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+	};
+
+class Dada_RawFoodCan_ESPENChunkySoup: Dada_RawFoodCan_Colorbase
+	{
+		scope = 2;
+		displayName = "Chunky Soup";
+		descriptionShort = "ESPENLock Beef and Vegetable soup, as chunky as ever";
+		color = "ESPENChunkySoup";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
+	};
+	class Dada_PreservedFoodCan_ESPENChunkySoup: Dada_PreservedFoodCan_Colorbase
+	{
+		scope = 2;
+		displayName = "Chunky Soup";
+		descriptionShort = "ESPENLock Beef and Vegetable soup, as chunky as ever";
+		color = "ESPENChunkySoup";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
+	};
+	class Dada_PreservedFoodCan_ESPENChunkySoup_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	{
+		scope = 2;
+		displayName = "Chunky Soup";
+		descriptionShort = "ESPENLock Beef and Vegetable soup, as chunky as ever";
+		color = "ESPENChunkySoup";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 200;
+			water = 350;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+	};
+
+class Dada_RawFoodCan_STAGchili: Dada_RawFoodCan_Colorbase
+	{
+		scope = 2;
+		displayName = "STAG Chili";
+		descriptionShort = "The best chili ever made";
+		color = "STAGchili";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_co.paa"};
+	};
+	class Dada_PreservedFoodCan_STAGchili: Dada_PreservedFoodCan_Colorbase
+	{
+		scope = 2;
+		displayName = "STAG Chili";
+		descriptionShort = "The best chili ever made";
+		color = "STAGchili";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_co.paa"};
+	};
+	class Dada_PreservedFoodCan_STAGchili_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	{
+		scope = 2;
+		displayName = "STAG Chili";
+		descriptionShort = "The best chili ever made";
+		color = "STAGchili";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 200;
+			water = 350;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+	};
 };
