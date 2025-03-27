@@ -30,8 +30,7 @@ class DadaCannibal_Base extends HumanSteakMeat
 };
 
 class DadaCannibal_RawFoodCan_Colorbase extends DadaCannibal_Base
-{
-};
+{};
 
 class DadaCannibal_PreservedFoodCan_Colorbase extends DadaCannibal_Base 
 {
@@ -85,4 +84,31 @@ class DadaCannibal_WasteBread extends DadaCannibal_Base
 {
 };
 
+class DadaCannibal_RawFoodCan_STAGham extends DadaCannibal_RawFoodCan_Colorbase {};
+class DadaCannibal_PreservedFoodCan_STAGham extends DadaCannibal_PreservedFoodCan_Colorbase {};
+class DadaCannibal_PreservedFoodCan_STAGham_Opened extends DadaCannibal_PreservedFoodCan_Colorbase_Opened {};
+
+class DadaCannibal_RawFoodCan_LSSPAM extends DadaCannibal_RawFoodCan_Colorbase {};
+class DadaCannibal_PreservedFoodCan_LSSPAM extends DadaCannibal_PreservedFoodCan_Colorbase {};
+class DadaCannibal_PreservedFoodCan_LSSPAM_Opened extends DadaCannibal_PreservedFoodCan_Colorbase_Opened {};
+
+class DadaCannibal_RawFoodCan_Ketchup extends DadaCannibal_RawFoodCan_Colorbase {};
+class DadaCannibal_PreservedFoodCan_Ketchup extends DadaCannibal_PreservedFoodCan_Colorbase {};
+class DadaCannibal_PreservedFoodCan_Ketchup_Opened extends DadaCannibal_PreservedFoodCan_Colorbase_Opened {};
+
+class DadaCannibal_RawFoodCan_DicedTomatoes extends DadaCannibal_RawFoodCan_Colorbase {};
+class DadaCannibal_PreservedFoodCan_DicedTomatoes extends DadaCannibal_PreservedFoodCan_Colorbase {};
+class DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened extends DadaCannibal_PreservedFoodCan_Colorbase_Opened {};
+
+class DadaCannibal_RawFoodCan_HomemadeChili extends DadaCannibal_RawFoodCan_Colorbase {};
+class DadaCannibal_PreservedFoodCan_HomemadeChili extends DadaCannibal_PreservedFoodCan_Colorbase {};
+class DadaCannibal_PreservedFoodCan_HomemadeChili_Opened extends DadaCannibal_PreservedFoodCan_Colorbase_Opened {};
+
+class DadaCannibal_RawFoodCan_ESPENChunkySoup extends DadaCannibal_RawFoodCan_Colorbase {};
+class DadaCannibal_PreservedFoodCan_ESPENChunkySoup extends DadaCannibal_PreservedFoodCan_Colorbase {};
+class DadaCannibal_PreservedFoodCan_ESPENChunkySoup_Opened extends DadaCannibal_PreservedFoodCan_Colorbase_Opened {};
+
+class DadaCannibal_RawFoodCan_STAGchili extends DadaCannibal_RawFoodCan_Colorbase {};
+class DadaCannibal_PreservedFoodCan_STAGchili extends DadaCannibal_PreservedFoodCan_Colorbase {};
+class DadaCannibal_PreservedFoodCan_STAGchili_Opened extends DadaCannibal_PreservedFoodCan_Colorbase_Opened {};
 
