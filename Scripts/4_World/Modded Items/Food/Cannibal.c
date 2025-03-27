@@ -54,6 +54,7 @@ class DadaCannibal_EyeballSoup extends DadaCannibal_Base
 	{
 	super.SetActions();
 	AddAction(ActionDrinkCookingPot);
+	RemoveAction(ActionEatMeat);
 	}
 };
 
@@ -160,5 +161,6 @@ class DadaCannibalDrink_MilkShake extends DadaCannibal_Base
 	{
 	super.SetActions();
 	AddAction(ActionDrink);
+	RemoveAction(ActionEatMeat);
 	}
 };
