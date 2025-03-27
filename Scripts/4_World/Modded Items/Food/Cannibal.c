@@ -50,7 +50,11 @@ class Dada_PreservedFoodCan_Colorbase_Opened: Edible_Base
 
 class DadaCannibal_EyeballSoup extends DadaCannibal_Base
 {
+	override void SetActions()
+	{
+	super.SetActions();
 	AddAction(ActionDrinkCookingPot);
+	}
 };
 
 class DadaCannibal_EntrailsSpaghetti extends DadaCannibal_Base
@@ -112,3 +116,49 @@ class DadaCannibal_RawFoodCan_STAGchili extends DadaCannibal_RawFoodCan_Colorbas
 class DadaCannibal_PreservedFoodCan_STAGchili extends DadaCannibal_PreservedFoodCan_Colorbase {};
 class DadaCannibal_PreservedFoodCan_STAGchili_Opened extends DadaCannibal_PreservedFoodCan_Colorbase_Opened {};
 
+class DadaWasteBread_Pita extends DadaCannibal_Base {};
+
+class DadaWasteBread_Loaf extends DadaCannibal_Base {};
+
+class DadaWasteBread_Baguette extends DadaCannibal_Base {};
+
+class DadaWasteBread_Pasta extends DadaCannibal_Base {};
+
+class DadaWasteBread_Pizza extends DadaCannibal_Base {};
+
+class DadaWasteBread_PizzaBase extends DadaCannibal_Base {};
+
+class DadaCannibalDish_Rigatoni extends DadaCannibal_Base {};
+
+class DadaCannibalDish_Chili extends DadaCannibal_Base {};
+
+class DadaCannibalDish_Pie extends DadaCannibal_Base {};
+
+class DadaCannibalSoup_TomatoSoup extends DadaCannibal_Base {};
+
+class DadaCannibalSoup_Ragout extends DadaCannibal_Base {};
+
+class DadaCannibalDish_GroundMeat extends DadaCannibal_Base {};
+
+class DadaCannibalSoup_TomatoSauce extends DadaCannibal_Base {};
+
+class DadaCannibalDish_Spaghetti extends DadaCannibal_Base {};
+
+class DadaCannibalDish_Cannelloni extends DadaCannibal_Base {};
+
+class DadaCannibalDish_Bowties extends DadaCannibal_Base {};
+
+class DadaCannibalDish_Lasagna extends DadaCannibal_Base {};
+
+class DadaCannibalDish_PulledPork extends DadaCannibal_Base {};
+
+class DadaCannibalDish_Sausage extends DadaCannibal_Base {};
+
+class DadaCannibalDrink_MilkShake extends DadaCannibal_Base 
+{
+	override void SetActions()
+	{
+	super.SetActions();
+	AddAction(ActionDrinkCookingPot);
+	}
+};
