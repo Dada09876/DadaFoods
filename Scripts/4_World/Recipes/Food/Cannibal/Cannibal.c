@@ -465,7 +465,44 @@ class CraftDadaCannibalDish_GroundMeat extends
 
 class CraftDadaCannibalSoup_TomatoSauce extends 
 
-class CraftDadaCannibalDish_Spaghetti extends 
+class CraftDadaCannibalDish_Spaghetti extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Spaghetti dish";
+		
+		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(0,"DadaWasteBread_Pasta");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[0] = -50;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibal_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_STAGchili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibal_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_HomemadeChili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
+		
+		
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaCannibalDish_Spaghetti");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;
+	}
+};
 
 class CraftDadaCannibalDish_Cannelloni extends 
 
