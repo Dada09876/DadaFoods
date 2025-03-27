@@ -248,7 +248,38 @@ class CraftDadaCannibal_WasteBread extends Craft_DadaTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaWasteBread_Pita extends 
+class CraftDadaWasteBread_Pita extends Craft_DadaTempStage_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Mold Into Flat Bread";
+		
+		//conditions
+		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = -1;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"DadaCannibal_WasteBread");//you can insert multiple ingredients this way
+	
+		m_IngredientAddQuantity[0] = -100;// 0 = do nothing
+		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Hammer");//you can insert multiple ingredients this way
+		InsertIngredient(1,"MeatTenderizer");//you can insert multiple ingredients this way
+		
+		m_IngredientAddHealth[1] = -5;// 0 = do nothing
+		m_IngredientDestroy[1] = -1;// false = do nothing
+	
+		//result1
+		AddResult("DadaWasteBread_Pita");//add results here
+
+		m_ResultSetQuantity[0] = 50;//-1 = do nothing
+		m_ResultInheritsHealth[0] = 0;// (
+	}
+};
 
 class CraftDadaWasteBread_Loaf extends 
 
