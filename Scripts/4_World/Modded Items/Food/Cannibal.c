@@ -159,6 +159,6 @@ class DadaCannibalDrink_MilkShake extends DadaCannibal_Base
 	override void SetActions()
 	{
 	super.SetActions();
-	AddAction(ActionDrinkCookingPot);
+	AddAction(ActionDrink);
 	}
 };
