@@ -247,3 +247,51 @@ class CraftDadaCannibal_WasteBread extends Craft_DadaTemp1Stage1_BaseRecipe
 		m_ResultSetQuantity[0] = 90;//-1 = do nothing
 	}
 };
+
+class CraftDadaWasteBread_Pita extends DadaCannibal_Base {};
+
+class CraftDadaWasteBread_Loaf extends DadaCannibal_Base {};
+
+class CraftDadaWasteBread_Baguette extends DadaCannibal_Base {};
+
+class CraftDadaWasteBread_Pasta extends DadaCannibal_Base {};
+
+class CraftDadaWasteBread_Pizza extends DadaCannibal_Base {};
+
+class CraftDadaWasteBread_PizzaBase extends DadaCannibal_Base {};
+
+class CraftDadaCannibalDish_Rigatoni extends DadaCannibal_Base {};
+
+class CraftDadaCannibalDish_Chili extends DadaCannibal_Base {};
+
+class CraftDadaCannibalDish_Pie extends DadaCannibal_Base {};
+
+class CraftDadaCannibalSoup_TomatoSoup extends DadaCannibal_Base {};
+
+class CraftDadaCannibalSoup_Ragout extends DadaCannibal_Base {};
+
+class CraftDadaCannibalDish_GroundMeat extends DadaCannibal_Base {};
+
+class CraftDadaCannibalSoup_TomatoSauce extends DadaCannibal_Base {};
+
+class CraftDadaCannibalDish_Spaghetti extends DadaCannibal_Base {};
+
+class CraftDadaCannibalDish_Cannelloni extends DadaCannibal_Base {};
+
+class CraftDadaCannibalDish_Bowties extends DadaCannibal_Base {};
+
+class CraftDadaCannibalDish_Lasagna extends DadaCannibal_Base {};
+
+class CraftDadaCannibalDish_PulledPork extends DadaCannibal_Base {};
+
+class CraftDadaCannibalDish_Sausage extends DadaCannibal_Base {};
+
+class CraftDadaCannibalDrink_MilkShake extends DadaCannibal_Base 
+{
+	override void SetActions()
+	{
+	super.SetActions();
+	AddAction(ActionDrink);
+	RemoveAction(ActionEatMeat);
+	}
+};
