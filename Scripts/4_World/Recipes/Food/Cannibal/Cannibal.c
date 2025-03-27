@@ -166,8 +166,8 @@ class CraftDadaCannibal_Jerky extends Craft_DadaTemp1Stage1_BaseRecipe
 		
 		//INGREDIENTS
 		//ingredient 1
-		InsertIngredient(0,"KitchenKnife");//you can insert multiple ingredients this way
-		InsertIngredient(0,"SteakKnife");//you can insert multiple ingredients this way
+								InsertIngredient(0,"KitchenKnife");//you can insert multiple ingredients this way
+								InsertIngredient(0,"SteakKnife");//you can insert multiple ingredients this way
         InsertIngredient(0,"StoneKnife");//you can insert multiple ingredients this way
         InsertIngredient(0,"BoneKnife");//you can insert multiple ingredients this way
         InsertIngredient(0,"HandSaw");//you can insert multiple ingredients this way
@@ -286,7 +286,7 @@ class CraftDadaWasteBread_Loaf extends Craft_DadaTempStage_BaseRecipe
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Mold Into Flat Bread";
+		m_Name = "Mold Into Loaf";
 		
 		//conditions
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -307,7 +307,7 @@ class CraftDadaWasteBread_Loaf extends Craft_DadaTempStage_BaseRecipe
 		m_IngredientDestroy[1] = -1;// false = do nothing
 	
 		//result1
-		AddResult("DadaWasteBread_Pita");//add results here
+		AddResult("DadaWasteBread_Loaf");//add results here
 
 		m_ResultSetQuantity[0] = 50;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;// (
@@ -319,7 +319,7 @@ class CraftDadaWasteBread_Baguette extends Craft_DadaTempStage_BaseRecipe
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Mold Into Flat Bread";
+		m_Name = "Mold Into Baguette";
 		
 		//conditions
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -340,7 +340,7 @@ class CraftDadaWasteBread_Baguette extends Craft_DadaTempStage_BaseRecipe
 		m_IngredientDestroy[1] = -1;// false = do nothing
 	
 		//result1
-		AddResult("DadaWasteBread_Pita");//add results here
+		AddResult("DadaWasteBread_Baguette");//add results here
 
 		m_ResultSetQuantity[0] = 50;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;// (
@@ -352,7 +352,7 @@ class CraftDadaWasteBread_Pasta extends Craft_DadaTempStage_BaseRecipe
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Mold Into Flat Bread";
+		m_Name = "Mold Into Raw Pasta";
 		
 		//conditions
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -373,7 +373,7 @@ class CraftDadaWasteBread_Pasta extends Craft_DadaTempStage_BaseRecipe
 		m_IngredientDestroy[1] = -1;// false = do nothing
 	
 		//result1
-		AddResult("DadaWasteBread_Pita");//add results here
+		AddResult("DadaWasteBread_Pasta");//add results here
 
 		m_ResultSetQuantity[0] = 50;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;// (
@@ -385,7 +385,7 @@ class CraftDadaWasteBread_Pizza extends Craft_DadaTempStage_BaseRecipe
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Mold Into Flat Bread";
+		m_Name = "Mold Into Pizza Dough";
 		
 		//conditions
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -406,7 +406,7 @@ class CraftDadaWasteBread_Pizza extends Craft_DadaTempStage_BaseRecipe
 		m_IngredientDestroy[1] = -1;// false = do nothing
 	
 		//result1
-		AddResult("DadaWasteBread_Pita");//add results here
+		AddResult("DadaWasteBread_Pizza");//add results here
 
 		m_ResultSetQuantity[0] = 50;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;// (
