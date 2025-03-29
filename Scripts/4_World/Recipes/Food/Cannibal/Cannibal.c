@@ -451,7 +451,43 @@ class CraftDadaWasteBread_PizzaBase extends Craft_DadaTempStageTemp1Stage1_BaseR
 	}
 };
 
-class CraftDadaCannibalDish_Rigatoni extends 
+class CraftDadaCannibalDish_Rigatoni extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Pizza Marinara";
+	
+		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(0,"DadaWasteBread_Pasta");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[0] = -50;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibal_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_STAGchili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibal_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_HomemadeChili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaCannibalDish_Rigatoni");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
 
 class CraftDadaCannibalDish_Chili extends 
 
