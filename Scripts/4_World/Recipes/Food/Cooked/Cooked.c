@@ -193,7 +193,7 @@ class CraftDadaDish_Spaghetti extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Make Spaghetti dish";
+		m_Name = "Make Spaghetti";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
 		m_MinQuantityIngredient[1] = 100;//-1 = disable check
@@ -232,7 +232,7 @@ class CraftDadaDish_Cannelloni extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Make Cannelloni dish";
+		m_Name = "Make Cannelloni";
 
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
 		m_MinQuantityIngredient[1] = 100;//-1 = disable check
@@ -270,7 +270,7 @@ class CraftDadaDish_Bowties extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Make Bowties dish";
+		m_Name = "Make Bowties";
 		
 		//conditions
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -311,7 +311,7 @@ class CraftDadaDish_Lasagna extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Make Lasagna dish";
+		m_Name = "Make Lasagna";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
 		m_MinQuantityIngredient[1] = 100;//-1 = disable check
