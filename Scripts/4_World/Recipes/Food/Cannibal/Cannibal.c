@@ -657,3 +657,24 @@ class CraftDadaCannibalSoup_Ragout extends
 class CraftDadaCannibalDish_GroundMeat extends 
 
 class CraftDadaCannibalSoup_TomatoSauce extends 
+
+class Craft_Dada_RawFoodCan_STAGham extends
+Craft STAG Ham Can
+
+class Craft_Dada_RawFoodCan_ESPENChunkySoup extends
+Craft ESPENLock Chunky Soup
+
+class Craft_Dada_RawFoodCan_LSSPAM extends
+Craft ESPENLock SPAM Can
+
+Craft_Dada_RawFoodCan_STAGchili extends
+Craft STAG Chili Can
+
+Craft_Dada_RawFoodCan_DicedTomatoes extends
+Craft Diced Tomatoes Can
+
+class Craft_Dada_RawFoodCan_Ketchup extends
+Craft Ketchup Can
+
+class Craft_Dada_RawFoodCan_HomemadeChili extends
+Craft Homemade Chili Can
