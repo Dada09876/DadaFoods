@@ -506,7 +506,7 @@ class CraftDadaCannibalDish_Spaghetti extends Craft_DadaTempStageTemp1Stage1_Bas
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Make Spaghetti dish";
+		m_Name = "Make Spaghetti";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
 		m_MinQuantityIngredient[1] = 100;//-1 = disable check
@@ -545,7 +545,7 @@ class CraftDadaCannibalDish_Cannelloni extends  Craft_DadaTempStageTemp1Stage1_B
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Make Rigatoni";
+		m_Name = "Make Cannelloni";
 	
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
 		m_MinQuantityIngredient[1] = 100;//-1 = disable check
@@ -571,7 +571,7 @@ class CraftDadaCannibalDish_Cannelloni extends  Craft_DadaTempStageTemp1Stage1_B
 		m_IngredientDestroy[1] = false;// false = do nothing
 		
 		//result1
-		AddResult("DadaCannibalDish_Rigatoni");//add results here
+		AddResult("DadaCannibalDish_Cannelloni");//add results here
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
@@ -583,7 +583,7 @@ class CraftDadaCannibalDish_Bowties extends  Craft_DadaTempStageTemp1Stage1_Base
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Make Rigatoni";
+		m_Name = "Make Bowties";
 	
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
 		m_MinQuantityIngredient[1] = 100;//-1 = disable check
@@ -609,7 +609,7 @@ class CraftDadaCannibalDish_Bowties extends  Craft_DadaTempStageTemp1Stage1_Base
 		m_IngredientDestroy[1] = false;// false = do nothing
 		
 		//result1
-		AddResult("DadaCannibalDish_Rigatoni");//add results here
+		AddResult("DadaCannibalDish_Bowties");//add results here
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
@@ -621,7 +621,7 @@ class CraftDadaCannibalDish_Lasagna extends  Craft_DadaTempStageTemp1Stage1_Base
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Make Rigatoni";
+		m_Name = "Make Lasagna";
 	
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
 		m_MinQuantityIngredient[1] = 100;//-1 = disable check
@@ -647,7 +647,7 @@ class CraftDadaCannibalDish_Lasagna extends  Craft_DadaTempStageTemp1Stage1_Base
 		m_IngredientDestroy[1] = false;// false = do nothing
 		
 		//result1
-		AddResult("DadaCannibalDish_Rigatoni");//add results here
+		AddResult("DadaCannibalDish_Lasagna");//add results here
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
