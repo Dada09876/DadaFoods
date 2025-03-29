@@ -456,7 +456,7 @@ class CraftDadaCannibalDish_Rigatoni extends Craft_DadaTempStageTemp1Stage1_Base
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Make Pizza Marinara";
+		m_Name = "Make Rigatoni";
 	
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
 		m_MinQuantityIngredient[1] = 100;//-1 = disable check
