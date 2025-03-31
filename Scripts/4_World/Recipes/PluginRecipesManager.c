@@ -165,6 +165,31 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaCannibal_EyeballSoup1);
     RegisterRecipe(new CraftDadaCannibal_Jerky);
     RegisterRecipe(new CraftDadaCannibal_WasteBread);
+    RegisterRecipe(new CraftDadaWasteBread_Pita);
+    RegisterRecipe(new CraftDadaWasteBread_Loaf);
+    RegisterRecipe(new CraftDadaWasteBread_Baguette);
+    RegisterRecipe(new CraftDadaWasteBread_Pasta);
+    RegisterRecipe(new CraftDadaWasteBread_Pizza);
+    RegisterRecipe(new CraftDadaWasteBread_PizzaBase);
+    RegisterRecipe(new CraftDadaCannibalDish_Spaghetti);
+    RegisterRecipe(new CraftDadaCannibalDish_Cannelloni);
+    RegisterRecipe(new CraftDadaCannibalDish_Bowties);
+    RegisterRecipe(new CraftDadaCannibalDish_Lasagna);
+    RegisterRecipe(new CraftDadaCannibalDish_Rigatoni);
+    RegisterRecipe(new CraftDadaCannibalDish_Sausage);
+    RegisterRecipe(new CraftDadaCannibalDish_Chili);
+    RegisterRecipe(new CraftDadaCannibalDish_Pie);
+    RegisterRecipe(new CraftDadaCannibalSoup_TomatoSoup);
+    RegisterRecipe(new CraftDadaCannibalSoup_Ragout);
+    RegisterRecipe(new CraftDadaCannibalSoup_TomatoSauce);
+    RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_STAGham);
+    RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_LSSPAM);
+    RegisterRecipe(new CraftDadaCannibalDish_GroundMeat);
+    RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_ESPENChunkySoup);
+    RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_STAGchili);
+    RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_DicedTomatoes);
+    RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_Ketchup);
+    RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_HomemadeChili);
 
    // CRAFTING
 

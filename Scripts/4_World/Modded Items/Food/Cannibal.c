@@ -40,7 +40,7 @@ class DadaCannibal_PreservedFoodCan_Colorbase extends DadaCannibal_Base
 	}
 };
 
-class Dada_PreservedFoodCan_Colorbase_Opened: Edible_Base
+class DadaCannibal_PreservedFoodCan_Colorbase_Opened: Edible_Base
 {
 	override bool CanProcessDecay()
 	{

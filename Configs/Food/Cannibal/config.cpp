@@ -342,7 +342,8 @@ class CfgVehicles
 		};
 	};
 
-class DadaCannibal_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
+	class Dada_RawFoodCan_Colorbase;
+	class DadaCannibal_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Reconstituted Meat";
@@ -351,6 +352,7 @@ class DadaCannibal_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_co.paa"};
 	};
+	class Dada_PreservedFoodCan_Colorbase;
 	class DadaCannibal_PreservedFoodCan_STAGham: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
@@ -360,6 +362,7 @@ class DadaCannibal_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_co.paa"};
 	};
+	class Dada_PreservedFoodCan_Colorbase_Opened;
 	class DadaCannibal_PreservedFoodCan_STAGham_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
@@ -594,6 +597,7 @@ class DadaCannibal_RawFoodCan_STAGchili: Dada_RawFoodCan_Colorbase
 		};
 	};
 
+class DadaBread_Base;
 class DadaWasteBread_Pita: DadaBread_Base
 	{
 		scope = 2;
@@ -669,6 +673,7 @@ class DadaWasteBread_Pita: DadaBread_Base
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat"};
 	};
 
+class DadaDish_Base;
 class DadaCannibalDish_Rigatoni: DadaDish_Base
 	{
 		scope = 2;
@@ -697,6 +702,7 @@ class DadaCannibalDish_Chili: DadaDish_Base
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"};
 	};
 
+class DadaSoup_Base;
 class DadaCannibalSoup_TomatoSoup: DadaSoup_Base
 	{
 		scope = 2;
@@ -805,7 +811,8 @@ class DadaCannibalDish_Sausage: DadaDish_Base
 			};
 		};	
 	};
-
+	
+class DadaDrinks_ColorBase;
 class DadaCannibalDrink_MilkShake: DadaDrinks_ColorBase
 	{
 		scope = 2;
