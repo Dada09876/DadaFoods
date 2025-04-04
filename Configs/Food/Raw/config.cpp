@@ -653,4 +653,82 @@ class CfgVehicles
 			};
 		};
 	};
+
+	class DadaRaw_Jerky: Snack_ColorBase
+	{
+		scope = 2;
+		model = "\DZ\gear\food\salty_chips.p3d";
+		displayName = "Jerky";
+		descriptionShort = "Dried meat strips";
+		debug_ItemCategory = 6;
+		rotationFlags = 1;
+		weight = 10;
+		itemSize[] = {2,2};
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"P:\Source_Files\DadaFoods\Configs\Food\Raw\data\DadaRaw_Jerky_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 3;
+			energy = 100;
+			water = 0;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+		varQuantityInit = 50;
+		varQuantityMin = 0;
+		varQuantityMax = 50;
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 200;
+					healthLevels[] = {{1,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"}},{0.7,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"}},{0.5,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"}},{0.3,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"}},{0,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"}}};
+				};
+			};
+		};
+		soundImpactType = "plastic";
+		class AnimEvents
+		{
+			class SoundWeapon
+			{
+				class openTunaCan
+				{
+					soundSet = "openTunaCan_SoundSet";
+					id = 204;
+				};
+				class pickUpItem
+				{
+					soundSet = "pickUpBloodBag_SoundSet";
+					id = 797;
+				};
+				class Eating_TakeFood
+				{
+					soundSet = "Eating_TakeFood_Soundset";
+					id = 889;
+				};
+				class Eating_BoxOpen
+				{
+					soundSet = "Eating_BoxOpen_Soundset";
+					id = 893;
+				};
+				class Eating_BoxShake
+				{
+					soundSet = "Eating_BoxShake_Soundset";
+					id = 894;
+				};
+				class Eating_BoxEnd
+				{
+					soundSet = "Eating_BoxEnd_Soundset";
+					id = 895;
+				};
+				class drop
+				{
+					soundset = "bloodbag_drop_SoundSet";
+					id = 898;
+				};
+			};
+		};
+	};
 };

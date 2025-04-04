@@ -103,7 +103,6 @@ modded class PluginRecipesManager
     // FOOD RAW
 
     RegisterRecipe(new CraftDadaRaw_PumpkinSeeds);
-    //RegisterRecipe(new Craft_Chips_Jerky);
     RegisterRecipe(new CraftDadaRaw_SmallButter);
     RegisterRecipe(new CraftDadaRaw_BigButter);
     RegisterRecipe(new CraftDadaRaw_Yogourt);
@@ -126,6 +125,7 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaRaw_VanillaChocoSwirl);
     RegisterRecipe(new CraftDadaRaw_VanillaIceCream);
     RegisterRecipe(new CraftDadaRaw_ChocoIScream);
+    RegisterRecipe(new CraftDadaRaw_Jerky);
 
 
     // FOOD PIZZA TOPPINGS
@@ -178,18 +178,26 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaCannibalDish_Rigatoni);
     RegisterRecipe(new CraftDadaCannibalDish_Sausage);
     RegisterRecipe(new CraftDadaCannibalDish_Chili);
+    RegisterRecipe(new CraftDadaCannibalDish_Chili1);
     RegisterRecipe(new CraftDadaCannibalDish_Pie);
     RegisterRecipe(new CraftDadaCannibalSoup_TomatoSoup);
     RegisterRecipe(new CraftDadaCannibalSoup_Ragout);
     RegisterRecipe(new CraftDadaCannibalSoup_TomatoSauce);
+    RegisterRecipe(new CraftDadaCannibalSoup_TomatoSauce1);
     RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_STAGham);
     RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_LSSPAM);
     RegisterRecipe(new CraftDadaCannibalDish_GroundMeat);
     RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_ESPENChunkySoup);
+    RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_ESPENChunkySoup1);
     RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_STAGchili);
+    RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_STAGchili1);
     RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_DicedTomatoes);
+    RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_DicedTomatoes1);
     RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_Ketchup);
+    RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_Ketchup1);
+    RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_Ketchup2);
     RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_HomemadeChili);
+    RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_HomemadeChili1);
 
    // CRAFTING
 

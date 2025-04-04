@@ -969,3 +969,86 @@ class CraftDadaRaw_PumpkinSeeds extends Craft_Dada_BaseRecipe
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };	
+
+class CraftDadaRaw_Jerky extends Craft_DadaTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Jerky";
+	
+		m_MinQuantityIngredient[0] = -1;//-1 = disable check
+		m_MinQuantityIngredient[1] = 50;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"KitchenKnife");//you can insert multiple ingredients this way
+		InsertIngredient(0,"SteakKnife");//you can insert multiple ingredients this way
+        InsertIngredient(0,"StoneKnife");//you can insert multiple ingredients this way
+        InsertIngredient(0,"BoneKnife");//you can insert multiple ingredients this way
+        InsertIngredient(0,"HandSaw");//you can insert multiple ingredients this way
+        InsertIngredient(0,"Hacksaw");//you can insert multiple ingredients this way
+        InsertIngredient(0,"Sickle");//you can insert multiple ingredients this way
+        InsertIngredient(0,"Cleaver");//you can insert multiple ingredients this way
+        InsertIngredient(0,"CombatKnife");//you can insert multiple ingredients this way
+        InsertIngredient(0,"HuntingKnife");//you can insert multiple ingredients this way
+        InsertIngredient(0,"Machete");//you can insert multiple ingredients this way
+        InsertIngredient(0,"Sword");//you can insert multiple ingredients this way
+        InsertIngredient(0,"KukriKnife");//you can insert multiple ingredients this way
+        InsertIngredient(0,"FangeKnife");//you can insert multiple ingredients this way
+        InsertIngredient(0,"CrudeMachete");//you can insert multiple ingredients this way
+        InsertIngredient(0,"OrientalMachete");//you can insert multiple ingredients this w
+		
+		m_IngredientAddHealth[0] = -5;// 0 = do nothing
+		m_IngredientDestroy[0] = false;// false = do nothing
+
+	
+		//ingredient 2
+		InsertIngredient(1,"GoatSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"MouflonSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"BoarSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"PigSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DeerSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"WolfSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"BearSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"CowSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"SheepSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"FoxSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"ChickenBreastMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"RabbitLegMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"ReindeerSteakMeat");//you can insert multiple ingredients this wayç
+		
+		m_IngredientAddQuantity[1] = -100;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaRaw_Jerky");//add results here
+
+		m_ResultSetQuantity[0] = 90;//-1 = do nothing
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{
+		// define my variables
+		ItemBase ingredient1;
+
+		if (Class.CastTo(ingredient1, ingredients[1]))
+		{
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			{
+				return false;
+			}
+			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if the food is raw, burnt or rotten
+			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten() || foodStage1.IsFoodRaw() || foodStage1.IsFoodBaked() || foodStage1.IsFoodBoiled())
+			{
+				return false;
+			}
+			// by this point we know the 2 ingredients are both good temperatures and have good food stages
+			return true;
+		}
+		// initial ingredients are wrong, false
+   		return false;
+   	}
+};
