@@ -481,6 +481,7 @@ class CraftDadaDish_GroundMeat extends Craft_DadaTemp1Stage1_BaseRecipe
 		InsertIngredient(1,"ChickenBreastMeat");//you can insert multiple ingredients this way
 		InsertIngredient(1,"RabbitLegMeat");//you can insert multiple ingredients this way
 		InsertIngredient(1,"ReindeerSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDish_Sausage");
 
 		//result1
 		AddResult("DadaDish_GroundMeat");//add results here
@@ -1091,6 +1092,7 @@ class CraftDadaDish_ShepardsPie extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 		
 		//ingredient 2
 		InsertIngredient(1,"DadaDish_GroundMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaDish_Sausage");
 		
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
@@ -1282,6 +1284,7 @@ class CraftDadaDish_Gumbo extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		InsertIngredient(0,"Dada_PreservedFoodCan_Paella_Opened");
 		InsertIngredient(0,"Dada_RawFoodCan_Quail");//you can insert multi
 		InsertIngredient(0,"Dada_PreservedFoodCan_Quail_Opened");
+		InsertIngredient(0,"DadaDish_Sausage");
 
 		//ingredient 2
 		InsertIngredient(1,"DadaRawRice");//you can insert multiple ingredients this way
