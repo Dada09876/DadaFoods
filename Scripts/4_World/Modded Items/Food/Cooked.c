@@ -38,8 +38,7 @@ override void SetActions()
 	}
 };
 
-class DadaBread_Base: DadaDish_Base
-{};
+class DadaBread_Base: DadaDish_Base{};
 
 class DadaSoup_ChickenBroth: DadaSoup_Base{};
 class DadaSoup_ChickenNoodleSoup: DadaSoup_Base{};
@@ -68,6 +67,8 @@ class DadaDish_ShepherdsPie: DadaDish_Base{};
 class DadaDish_PulledPork: DadaDish_Base{};
 class DadaDish_Rigatoni: DadaDish_Base{};
 class DadaDish_Fries: DadaDish_Base{};
+class DadaDish_FriteSauce: DadaDish_Base{};
+class DadaDish_Poutine: DadaDish_Base{};
 
 class DadaBread_Pita: DadaBread_Base{};
 class DadaBread_Loaf: DadaBread_Base{};
@@ -75,5 +76,5 @@ class DadaBread_Baguette: DadaBread_Base{};
 class DadaBread_Pasta: DadaBread_Base{};
 class DadaBread_Pizza: DadaBread_Base{};
 class DadaBread_PizzaBase: DadaBread_Base{};
-class DadaBread_Pancakes: DadaBread_Base{};
-class DadaBread_Brioche: DadaBread_Base{};
+class DadaBread_PizzaBase: DadaBread_Base{};
+class DadaBread_PizzaMargherita: DadaBread_Base{};

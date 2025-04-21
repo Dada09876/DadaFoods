@@ -698,7 +698,8 @@ class CraftDadaCannibalDish_Sausage extends Craft_DadaTempTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaCannibalDish_Sausage");//add results here
 
-		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultSetQuantity[0] = -1;//-1 = do nothing
+		m_ResultReplacesIngredient[0] = 1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 };
 

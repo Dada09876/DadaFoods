@@ -1,3 +1,76 @@
+class DadaCheeseMold extends ItemBase
+{
+	override void SetActions()
+	{
+		super.SetActions();
+		AddAction (HandActionTake);
+		AddAction (HandActionDrop);
+		AddAction (HandActionThrow);
+		AddAction (ActionAttach);
+		AddAction (ActionDetach);
+	}	
+};
+
+class DadaCheesePress extends ItemBase{};
+
+class DadaCharcoalPiece extends ItemBase
+{
+	override void SetActions()
+	{
+		super.SetActions();
+		AddAction (HandActionTake);
+		AddAction (HandActionDrop);
+		AddAction (HandActionThrow);
+	}	
+};
+
+class DadaSaltBag extends ItemBase
+{
+	override void SetActions()
+	{
+		super.SetActions();
+		AddAction (HandActionTake);
+		AddAction (HandActionDrop);
+		AddAction (HandActionThrow);
+	}	
+};
+
+class DadaCoffeePacket extends ItemBase
+{
+	override void SetActions()
+	{
+		super.SetActions();
+		AddAction (HandActionTake);
+		AddAction (HandActionDrop);
+		AddAction (HandActionThrow);
+		AddAction (ActionEatSmall);
+	}	
+};
+
+class DadaGreenTeaPacket extends ItemBase
+{
+	override void SetActions()
+	{
+		super.SetActions();
+		AddAction (HandActionTake);
+		AddAction (HandActionDrop);
+		AddAction (HandActionThrow);
+		AddAction (ActionEatSmall);
+	}	
+};
+
+class DadaBlackTeaPacket extends ItemBase
+{
+	override void SetActions()
+	{
+		super.SetActions();
+		AddAction (HandActionTake);
+		AddAction (HandActionDrop);
+		AddAction (HandActionThrow);
+		AddAction (ActionEatSmall);
+	}	
+};
+
 class DadaBoneMeal extends ItemBase
 {
 	override bool CanPutAsAttachment( EntityAI parent )
@@ -71,4 +144,4 @@ class DadaBoneMeal extends ItemBase
 		//AddAction(ActionClapBearTrapWithThisItem);
 		AddAction(ActionFertilizeSlot);
 	}
-}
+};

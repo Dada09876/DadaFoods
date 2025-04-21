@@ -1,6 +1,5 @@
-class DadaSpawned_CerealBase extends BoxCerealCrunchin {};
-
 class DadaSpawned_Flour extends DadaSpawned_CerealBase {};
+class DadaSpawned_CerealBase extends BoxCerealCrunchin {};
 class DadaSpawned_BoxCerealCrunchin_Frosties extends DadaSpawned_CerealBase {};
 class DadaSpawned_BoxCerealCrunchin_Nesquik extends DadaSpawned_CerealBase {};
 class DadaSpawned_BoxCerealCrunchin_Kosmostar extends DadaSpawned_CerealBase {};

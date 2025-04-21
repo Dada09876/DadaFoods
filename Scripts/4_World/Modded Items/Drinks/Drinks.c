@@ -5,7 +5,10 @@ class DadaDrinks_ColorBase: Edible_Base
 		super.SetActions();
 		
 		//AddAction(ActionWashHandsItemContinuous);
-		AddAction(ActionDrink);
+		AddAction (ActionDrink);
+		AddAction (HandActionTake);
+		AddAction (HandActionDrop);
+		AddAction (HandActionThrow);
 	}
 	override bool CanBeCooked()
 	{
@@ -25,26 +28,21 @@ class DadaDrinks_ColorBase: Edible_Base
 	}
 };
 
-class DadaDrink_FreshMilk: DadaDrinks_ColorBase
-{
-};
+class DadaDrink_FreshMilk: DadaDrinks_ColorBase{};
 
-class DadaDrink_MilkBottle: DadaDrinks_ColorBase
-{
-};
+class DadaDrink_CurdsAndWhey: DadaDrinks_ColorBase{};
 
-class DadaDrink_MilkCarton: DadaDrinks_ColorBase
-{
-};
+class DadaDrink_Whey: DadaDrinks_ColorBase{};
+
+class DadaDrink_MilkBottle: DadaDrinks_ColorBase{};
+
+class DadaDrink_MilkCarton: DadaDrinks_ColorBase{};
 
 class DadaDrink_MilkGallon: DadaDrinks_ColorBase
 {
 		override void SetActions()
 	{
 		super.SetActions();
-		AddAction (HandActionTake);
-		AddAction (HandActionDrop);
-		AddAction (HandActionThrow);
 		RemoveAction(ActionDrink);
 		AddAction(ActionDrinkCookingPot);
 	};	
@@ -114,3 +112,5 @@ class DadaDrink_BlackTea: DadaDrinks_ColorBase
 		consumer.GetModifiersManager().ActivateModifier(eModifiers.MDF_IMMUNITYBOOST);
 	}
 };
+
+class DadaDrink_MilkShake: DadaDrinks_ColorBase{};

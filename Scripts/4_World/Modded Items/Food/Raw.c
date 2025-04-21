@@ -259,3 +259,21 @@ class DadaRaw_Yogourt_Opened: DadaRaw_Base
 		return true;
 	}
 };
+
+class DadaRaw_Jerky: Snack_ColorBase
+{
+	override void SetActions()
+	{
+		super.SetActions();
+        RemoveAction(ActionForceFeedSmall);
+	}
+};
+
+class DadaRaw_PumpkinSeeds: Snack_ColorBase
+{
+	override void SetActions()
+	{
+		super.SetActions();
+        RemoveAction(ActionForceFeedSmall);
+	}
+};

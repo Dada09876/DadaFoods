@@ -104,58 +104,22 @@ class Dada_RawFoodCan_Relish extends Dada_RawFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_Relish extends Dada_PreservedFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_Relish_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
 
-class Dada_RawFoodCan_HomemadeChili extends Dada_RawFoodCan_Colorbase {};
-class Dada_PreservedFoodCan_HomemadeChili extends Dada_PreservedFoodCan_Colorbase {};
-class Dada_PreservedFoodCan_HomemadeChili_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
-
 class Dada_RawFoodCan_Samosa extends Dada_RawFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_Samosa extends Dada_PreservedFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_Samosa_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
+
+class Dada_RawFoodCan_HomemadeChili extends Dada_RawFoodCan_Colorbase {};
+class Dada_PreservedFoodCan_HomemadeChili extends Dada_PreservedFoodCan_Colorbase {};
+class Dada_PreservedFoodCan_HomemadeChili_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
 
 class Dada_RawFoodCan_HomemadePumpkinPuree extends Dada_RawFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_HomemadePumpkinPuree extends Dada_PreservedFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_HomemadePumpkinPuree_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
 
-class srpClamCan : Edible_Base {};
+class Dada_RawFoodCan_Crab : Dada_RawFoodCan_Colorbase {};
+class Dada_PreservedFoodCan_Crab extends Dada_PreservedFoodCan_Colorbase {};
+class Dada_PreservedFoodCan_Crab extends Dada_PreservedFoodCan_Colorbase_Opened {};
 
-class srpCrabCan : Edible_Base {};
-
-class srpClamCan_Opened : Edible_Base
-{
-    override void SetActions()
-	{
-		super.SetActions();
-		
-		AddAction(ActionEatSmallCan);
-	}
-    
-    override bool CanDecay()
-	{
-		return true;
-	}
-	
-	override bool CanProcessDecay()
-	{
-		return !( GetAgents() & eAgents.FOOD_POISON );
-	}
-};
-
-class srpCrabCan_Opened : Edible_Base
-{
-    override void SetActions()
-    {
-		super.SetActions();
-		
-		AddAction(ActionEatSmallCan);
-	}
-
-    override bool CanDecay()
-	{
-		return true;
-	}
-	
-	override bool CanProcessDecay()
-	{
-		return !( GetAgents() & eAgents.FOOD_POISON );
-	}
-};
+class Dada_RawFoodCan_Clam : Dada_RawFoodCan_Colorbase {};
+class Dada_PreservedFoodCan_Clam extends Dada_PreservedFoodCan_Colorbase {};
+class Dada_PreservedFoodCan_Clam extends Dada_PreservedFoodCan_Colorbase_Opened {};

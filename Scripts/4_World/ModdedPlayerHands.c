@@ -40,7 +40,8 @@ modded class ModItemRegisterCallbacks
         pType.AddItemInHandsProfileIK("Dada_RawFoodCan_Crab","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/sardines.anm");
         pType.AddItemInHandsProfileIK("Dada_PreservedFoodCan_Crab","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/sardines.anm");
         pType.AddItemInHandsProfileIK("Dada_PreservedFoodCan_Crab_Opened","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/sardines.anm");
-        pType.AddItemInHandsProfileIK("DadaDish_Sausage","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/zucchini_fresh.anm");
+        pType.AddItemInHandsProfileIK("DadaDish_Sausage","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/WoodenStick.anm");
+        pType.AddItemInHandsProfileIK("DadaCannibalDish_Sausage","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/WoodenStick.anm");
         pType.AddItemInHandsProfileIK("DadaBread_Baguette","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/Nails_box.anm");
         pType.AddItemInHandsProfileIK("DadaRaw_SushiOnigiri","dz/anims/workspaces/player/player_main/props/player_main_1h_matchbox.asi",pBehavior,"dz/anims/anm/player/ik/gear/Matchbox.anm");
         pType.AddItemInHandsProfileIK("DadaRaw_SushiMaki","dz/anims/workspaces/player/player_main/props/player_main_1h_matchbox.asi",pBehavior,"dz/anims/anm/player/ik/gear/Matchbox.anm");

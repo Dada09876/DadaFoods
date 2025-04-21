@@ -1150,7 +1150,7 @@ class CraftDadaDish_Sausage extends Craft_DadaTempTemp1Stage1_BaseRecipe
 		m_Name = "Craft Sausage";
 		
 		m_MinQuantityIngredient[0] = 150;//-1 = disable check
-		m_MinQuantityIngredient[1] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 30;//-1 = disable check
 		
 		
 		//INGREDIENTS
@@ -1166,8 +1166,9 @@ class CraftDadaDish_Sausage extends Craft_DadaTempTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaDish_Sausage");//add results here
 
-		m_ResultSetQuantity[0] = 65;//-1 = do nothing
+		m_ResultSetQuantity[0] = -1;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultReplacesIngredient[0] = 1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 };
 
