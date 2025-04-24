@@ -263,6 +263,7 @@ class CfgVehicles
 
     class DadaDish_Base: DadaSoup_Base
 	{
+		scope = 1;
         displayName = "Dish";
 		descriptionShort = "Dish.";
 		hiddenSelectionsTextures[] = {"\Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_baked_co.paa"};
@@ -282,7 +283,7 @@ class CfgVehicles
 
 	class DadaBread_Base: DadaDish_Base
 	{
-		scope = 1;
+		scope = 2;
 		displayName = "Simple Round Dough";
 		descriptionShort = "A round, plain dough. Should be baked before consuming... but I guess no one can stop you if you don't.";
 		interactionWeight = 1;

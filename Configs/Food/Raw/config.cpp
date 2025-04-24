@@ -22,7 +22,7 @@ class CfgVehicles
 	class Edible_Base;
 	class DadaRaw_Base: Edible_Base
 	{
-		scope = 2;
+		scope = 1;
 		model = "Source_Files\DadaFoods\Configs\Food\Cooked\data\bowl.p3d";
 		weight = 2.5;
 		canBeSplit = 1;
@@ -115,6 +115,7 @@ class CfgVehicles
 	};
 	class DadaRaw_Salad: DadaRaw_Base
 	{
+		scope = 2;
 		displayName = "Salad";
 		descriptionShort = "Lettuce and dressing, perfect meal for the calorie averse or starter for everyone else";
 		hiddenSelections[] = {"camoGround","cs_raw"};
@@ -122,6 +123,7 @@ class CfgVehicles
 	};
 	class DadaRaw_Rice: DadaRaw_Base
 	{
+		scope = 2;
 		displayName = "Plain Rice";
 		descriptionShort = "It's rice. Not sure what you were hoping for";
 		hiddenSelections[] = {"camoGround","cs_raw"};
@@ -129,6 +131,7 @@ class CfgVehicles
 	};
 	class DadaRaw_PokeBowl: DadaRaw_Base
 	{
+		scope = 2;
 		varQuantityInit = 275;
 		varQuantityMin = 0;
 		varQuantityMax = 300;
@@ -140,6 +143,7 @@ class CfgVehicles
 	};
 	class DadaRaw_TomatoSalad: DadaRaw_Base
 	{
+		scope = 2;
 		displayName = "Tomato Salad";
 		descriptionShort = "Tomato and Mozzarella Salad";
 		hiddenSelections[] = {"camoGround","cs_raw"};
@@ -372,6 +376,7 @@ class CfgVehicles
 
 	class DadaRaw_CheeseBase: DadaRaw_Base
 	{
+		scope = 1;
 		weight = 1;
 		canBeSplit = 1;
 		interactionWeight = 1;
@@ -568,18 +573,21 @@ class CfgVehicles
 	};
 	class DadaRaw_VanillaIceCream: DadaRaw_VanillaChocoSwirl
 	{
+		scope = 2;
 		displayName = "Vanilla Ice cream";
 		descriptionShort = "Because life is exciting enough already";
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\IScreamVanilla_co.paa"};
 	};
 	class DadaRaw_ChocoIScream: DadaRaw_VanillaIceCream
 	{
+		scope = 2;
 		displayName = "Chocolate Ice cream";
 		descriptionShort = "Chocolate chunks ice cream";
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\IScreamChoco_co.paa"};
 	};
 	class DadaRaw_FrozenYogurt: DadaRaw_VanillaIceCream
 	{
+		scope = 2;
 		displayName = "Frozen Yogurt";
 		descriptionShort = "frozen yogurt";
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\FrozenYogurt_co.paa"};

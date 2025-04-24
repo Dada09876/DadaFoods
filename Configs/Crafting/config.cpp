@@ -80,7 +80,7 @@ class CfgVehicles
 	
 	class DadaCheesePress: Inventory_Base
 	{
-		scope = 2;
+		scope = 1;
 		displayName = "Cheese Press";
 		descriptionShort = "A press for crafting different cheeses";
 		model = "Source_Files\DadaFoods\Configs\Crafting\data\CheeseTable.p3d";
