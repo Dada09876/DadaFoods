@@ -76,5 +76,4 @@ class DadaBread_Baguette: DadaBread_Base{};
 class DadaBread_Pasta: DadaBread_Base{};
 class DadaBread_Pizza: DadaBread_Base{};
 class DadaBread_PizzaBase: DadaBread_Base{};
-class DadaBread_PizzaBase: DadaBread_Base{};
 class DadaBread_PizzaMargherita: DadaBread_Base{};

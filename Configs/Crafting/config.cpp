@@ -77,15 +77,16 @@ class CfgVehicles
 			};
 		};
 	};
+	
 	class DadaCheesePress: Inventory_Base
 	{
 		scope = 2;
-		displayName = "CheesePress";
+		displayName = "Cheese Press";
 		descriptionShort = "A press for crafting different cheeses";
 		model = "Source_Files\DadaFoods\Configs\Crafting\data\CheeseTable.p3d";
 		hiddenSelections[] = {"zbytek"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Crafting\data\CheeseTable_co.paa"};
-		itemSize[] = {5,5};
+		itemSize[] = {10,4};
 		overrideDrawArea = 8;
 		useEntityHierarchy = "true";
 		attachments[] = {"DadaCheeseMold1","DadaMilkGallon","DadaYeast"};
@@ -167,6 +168,7 @@ class CfgVehicles
 			};
 		};
 	};
+
 	class DadaCharcoalPiece: Inventory_Base
 	{
 		scope = 2;

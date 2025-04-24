@@ -118,8 +118,8 @@ class Dada_PreservedFoodCan_HomemadePumpkinPuree_Opened extends Dada_PreservedFo
 
 class Dada_RawFoodCan_Crab : Dada_RawFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_Crab extends Dada_PreservedFoodCan_Colorbase {};
-class Dada_PreservedFoodCan_Crab extends Dada_PreservedFoodCan_Colorbase_Opened {};
+class Dada_PreservedFoodCan_Crab_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
 
 class Dada_RawFoodCan_Clam : Dada_RawFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_Clam extends Dada_PreservedFoodCan_Colorbase {};
-class Dada_PreservedFoodCan_Clam extends Dada_PreservedFoodCan_Colorbase_Opened {};
+class Dada_PreservedFoodCan_Clam_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};

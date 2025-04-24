@@ -43,6 +43,7 @@ modded class ModItemRegisterCallbacks
         pType.AddItemInHandsProfileIK("DadaDish_Sausage","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/WoodenStick.anm");
         pType.AddItemInHandsProfileIK("DadaCannibalDish_Sausage","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/WoodenStick.anm");
         pType.AddItemInHandsProfileIK("DadaBread_Baguette","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/Nails_box.anm");
+        pType.AddItemInHandsProfileIK("DadaWasteBread_Baguette","dz/anims/workspaces/player/player_main/player_main_1h.asi",pBehavior,"dz/anims/anm/player/ik/gear/Nails_box.anm");
         pType.AddItemInHandsProfileIK("DadaRaw_SushiOnigiri","dz/anims/workspaces/player/player_main/props/player_main_1h_matchbox.asi",pBehavior,"dz/anims/anm/player/ik/gear/Matchbox.anm");
         pType.AddItemInHandsProfileIK("DadaRaw_SushiMaki","dz/anims/workspaces/player/player_main/props/player_main_1h_matchbox.asi",pBehavior,"dz/anims/anm/player/ik/gear/Matchbox.anm");
         pType.AddItemInHandsProfileIK("DadaSpawned_Flour","dz/anims/workspaces/player/player_main/props/player_main_1h_food_box.asi",pBehavior,"dz/anims/anm/player/ik/gear/box_cereal.anm");
@@ -65,14 +66,16 @@ modded class ModItemRegisterCallbacks
         pType.AddItemInHandsProfileIK("DadaRaw_Base", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
         pType.AddItemInHandsProfileIK("DadaDish_Base", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
         pType.AddItemInHandsProfileIK("DadaBread_Base", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
+        pType.AddItemInHandsProfileIK("DadaCannibal_WasteBread", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
         pType.AddItemInHandsProfileIK("DadaBread_Pizza", "dz/anims/workspaces/player/player_main/player_main_2h.asi", pBehavior, "dz/anims/anm/player/ik/vehicles/BatteryTruck.anm");
+        pType.AddItemInHandsProfileIK("DadaWasteBread_Pizza", "dz/anims/workspaces/player/player_main/player_main_2h.asi", pBehavior, "dz/anims/anm/player/ik/vehicles/BatteryTruck.anm");
         pType.AddItemInHandsProfileIK("DadaBread_PizzaBase", "dz/anims/workspaces/player/player_main/player_main_2h.asi", pBehavior, "dz/anims/anm/player/ik/vehicles/BatteryTruck.anm");
+        pType.AddItemInHandsProfileIK("DadaWasteBread_PizzaBase", "dz/anims/workspaces/player/player_main/player_main_2h.asi", pBehavior, "dz/anims/anm/player/ik/vehicles/BatteryTruck.anm");
         pType.AddItemInHandsProfileIK("DadaBread_PizzaMargherita", "dz/anims/workspaces/player/player_main/player_main_2h.asi", pBehavior, "dz/anims/anm/player/ik/vehicles/BatteryTruck.anm");
         pType.AddItemInHandsProfileIK("DadaCheeseMold", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm"); 
         pType.AddItemInHandsProfileIK("DadaCannibal_Base", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
         pType.AddItemInHandsProfileIK("DadaBoneMeal",	"dz/anims/workspaces/player/player_main/weapons/player_main_2h_extinguisher.asi",pBehavior,	"dz/anims/anm/player/ik/two_handed/gardenlime.anm");
         pType.AddItemInHandsProfileIK("DadaSaltBag",	"dz/anims/workspaces/player/player_main/weapons/player_main_2h_extinguisher.asi",pBehavior,	"dz/anims/anm/player/ik/two_handed/gardenlime.anm");
-        pType.AddItemInHandsProfileIK("DadaCannibal_WasteBread", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
         pType.AddItemInHandsProfileIK("DadaDish_FriteSauce", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");
         pType.AddItemInHandsProfileIK("DadaDish_Poutine", "dz/anims/workspaces/player/player_main/props/player_main_2h_pot.asi", pBehavior, "dz/anims/anm/player/ik/two_handed/CookingPot.anm");  
     };
