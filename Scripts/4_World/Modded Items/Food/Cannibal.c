@@ -3,7 +3,7 @@ class DadaCannibal_Base extends HumanSteakMeat
   	override bool CanBeCooked()
  	{
 		return true;
- 	}		
+ 	}
  	override bool IsMeat()
  	{
 		return true;
@@ -19,7 +19,7 @@ class DadaCannibal_Base extends HumanSteakMeat
  	override void SetActions()
 	{
 		super.SetActions();
-		
+
 		RemoveAction(ActionForceFeed);
 		AddAction(ActionEatMeat);
 		RemoveAction(ActionDrinkCookingPot);
@@ -32,7 +32,7 @@ class DadaCannibal_Base extends HumanSteakMeat
 class DadaCannibal_RawFoodCan_Colorbase extends DadaCannibal_Base
 {};
 
-class DadaCannibal_PreservedFoodCan_Colorbase extends DadaCannibal_Base 
+class DadaCannibal_PreservedFoodCan_Colorbase extends DadaCannibal_Base
 {
   override bool CanDecay()
 	{
@@ -67,21 +67,21 @@ class DadaCannibal_Jerky extends DadaCannibal_Base
 	override bool CanBeCooked()
 	{
 		return false;
-	}		
-	
+	}
+
 	override bool CanBeCookedOnStick()
 	{
 		return false;
 	}
-	
+
 	override bool IsMeat()
 	{
 		return true;
 	}
-	
+
 	override bool CanDecay()
 	{
-		return true;
+		return false;
 	}
 };
 
@@ -155,7 +155,7 @@ class DadaCannibalDish_PulledPork extends DadaCannibal_Base {};
 
 class DadaCannibalDish_Sausage extends DadaCannibal_Base {};
 
-class DadaCannibalDrink_MilkShake extends DadaCannibal_Base 
+class DadaCannibalDrink_MilkShake extends DadaCannibal_Base
 {
 	override void SetActions()
 	{
