@@ -81,7 +81,7 @@ class DadaCannibal_Jerky extends DadaCannibal_Base
 	
 	override bool CanDecay()
 	{
-		return true;
+		return false;
 	}
 };
 
