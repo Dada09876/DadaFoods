@@ -989,7 +989,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_RawFoodCan_STAGham">
+    <type name="Dada_RawFoodCan_CannibalSTAGham">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1001,7 +1001,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_PreservedFoodCan_STAGham">
+    <type name="Dada_PreservedFoodCan_CannibalSTAGham">
          <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1013,7 +1013,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_PreservedFoodCan_STAGham_Opened">
+    <type name="Dada_PreservedFoodCan_CannibalSTAGham_Opened">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1025,7 +1025,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_RawFoodCan_LSSPAM">
+    <type name="Dada_RawFoodCan_CannibalLSSPAM">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1037,7 +1037,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_PreservedFoodCan_LSSPAM">
+    <type name="Dada_PreservedFoodCan_CannibalLSSPAM">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1049,7 +1049,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_PreservedFoodCan_LSSPAM_Opened">
+    <type name="Dada_PreservedFoodCan_CannibalLSSPAM_Opened">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1061,7 +1061,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_RawFoodCan_Ketchup">
+    <type name="Dada_RawFoodCan_CannibalKetchup">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1073,7 +1073,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_PreservedFoodCan_Ketchup">
+    <type name="Dada_PreservedFoodCan_CannibalKetchup">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1085,7 +1085,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_PreservedFoodCan_Ketchup_Opened">
+    <type name="Dada_PreservedFoodCan_CannibalKetchup_Opened">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1097,7 +1097,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_RawFoodCan_DicedTomatoes">
+    <type name="Dada_RawFoodCan_CannibalDicedTomatoes">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1109,7 +1109,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_PreservedFoodCan_DicedTomatoes">
+    <type name="Dada_PreservedFoodCan_CannibalDicedTomatoes">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1121,7 +1121,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened">
+    <type name="Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1133,7 +1133,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_RawFoodCan_HomemadeChili">
+    <type name="Dada_RawFoodCan_CannibalHomemadeChili">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1145,7 +1145,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_PreservedFoodCan_HomemadeChili">
+    <type name="Dada_PreservedFoodCan_CannibalHomemadeChili">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1157,7 +1157,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_PreservedFoodCan_HomemadeChili_Opened">
+    <type name="Dada_PreservedFoodCan_CannibalHomemadeChili_Opened">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1169,7 +1169,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_RawFoodCan_ESPENChunkySoup">
+    <type name="Dada_RawFoodCan_CannibalESPENChunkySoup">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1181,7 +1181,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_PreservedFoodCan_ESPENChunkySoup">
+    <type name="Dada_PreservedFoodCan_CannibalESPENChunkySoup">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1193,7 +1193,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_PreservedFoodCan_ESPENChunkySoup_Opened">
+    <type name="Dada_PreservedFoodCan_CannibalESPENChunkySoup_Opened">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1205,7 +1205,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_RawFoodCan_STAGchili">
+    <type name="Dada_RawFoodCan_CannibalSTAGchili">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1217,7 +1217,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_PreservedFoodCan_STAGchili">
+    <type name="Dada_PreservedFoodCan_CannibalSTAGchili">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
@@ -1229,7 +1229,7 @@
         <category name="food"/>
     </type>
     
-    <type name="DadaCannibal_PreservedFoodCan_STAGchili_Opened">
+    <type name="Dada_PreservedFoodCan_CannibalSTAGchili_Opened">
         <nominal>0</nominal>
         <lifetime>14400</lifetime>
         <restock>0</restock>
