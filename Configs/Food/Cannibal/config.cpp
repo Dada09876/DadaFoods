@@ -343,32 +343,32 @@ class CfgVehicles
 	};
 
 	class Dada_RawFoodCan_Colorbase;
-	class DadaCannibal_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
+	class Dada_RawFoodCan_CannibalSTAGham: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Reconstituted Meat";
 		descriptionShort = "Our ham will make you smile, or else";
-		color = "STAGham";
+		color = "CannibalSTAGham";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_co.paa"};
 	};
 	class Dada_PreservedFoodCan_Colorbase;
-	class DadaCannibal_PreservedFoodCan_STAGham: Dada_PreservedFoodCan_Colorbase
+	class Dada_PreservedFoodCan_CannibalSTAGham: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Reconstituted Meat";
 		descriptionShort = "Our ham will make you smile, or else";
-		color = "STAGham";
+		color = "CannibalSTAGham";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_co.paa"};
 	};
 	class Dada_PreservedFoodCan_Colorbase_Opened;
-	class DadaCannibal_PreservedFoodCan_STAGham_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	class Dada_PreservedFoodCan_CannibalSTAGham_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
 		displayName = "Reconstituted Meat";
 		descriptionShort = "Our ham will make you smile, or else";
-		color = "STAGham";
+		color = "CannibalSTAGham";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_co.paa"};
 		class Nutrition
@@ -381,30 +381,30 @@ class CfgVehicles
 		};
 	};
 
-class DadaCannibal_RawFoodCan_LSSPAM: Dada_RawFoodCan_Colorbase
+	class Dada_RawFoodCan_CannibalLSSPAM: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "SPAM";
 		descriptionShort = "An ESPENLock staple";
-		color = "LSSPAM";
+		color = "CannibalLSSPAM";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
 	};
-	class DadaCannibal_PreservedFoodCan_LSSPAM: Dada_PreservedFoodCan_Colorbase
+	class Dada_PreservedFoodCan_CannibalLSSPAM: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "SPAM";
 		descriptionShort = "An ESPENLock staple";
-		color = "LSSPAM";
+		color = "CannibalLSSPAM";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
 	};
-	class DadaCannibal_PreservedFoodCan_LSSPAM_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	class Dada_PreservedFoodCan_CannibalLSSPAM_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
 		displayName = "SPAM";
 		descriptionShort = "An ESPENLock staple";
-		color = "LSSPAM";
+		color = "CannibalLSSPAM";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
 		class Nutrition
@@ -417,30 +417,30 @@ class DadaCannibal_RawFoodCan_LSSPAM: Dada_RawFoodCan_Colorbase
 		};
 	};
 
-class DadaCannibal_RawFoodCan_Ketchup: Dada_RawFoodCan_Colorbase
-	{
-		scope = 2;
-		color = "Ketchup";
-		displayName = "Ketchup";
-		descriptionShort = "Just put it on everithing you eat already";
-		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
-	};
-	class DadaCannibal_PreservedFoodCan_Ketchup: Dada_PreservedFoodCan_Colorbase
+	class Dada_RawFoodCan_CannibalKetchup: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Ketchup";
 		descriptionShort = "Just put it on everithing you eat already";
-		color = "Ketchup";
+		color = "CannibalKetchup";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
 	};
-	class DadaCannibal_PreservedFoodCan_Ketchup_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	class Dada_PreservedFoodCan_CannibalKetchup: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Ketchup";
 		descriptionShort = "Just put it on everithing you eat already";
-		color = "Ketchup";
+		color = "CannibalKetchup";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
+	};
+	class Dada_PreservedFoodCan_CannibalKetchup_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	{
+		scope = 2;
+		displayName = "Ketchup";
+		descriptionShort = "Just put it on everithing you eat already";
+		color = "CannibalKetchup";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
 		class Nutrition
@@ -453,30 +453,30 @@ class DadaCannibal_RawFoodCan_Ketchup: Dada_RawFoodCan_Colorbase
 		};
 	};
 
-	class DadaCannibal_RawFoodCan_DicedTomatoes: Dada_RawFoodCan_Colorbase
+	class Dada_RawFoodCan_CannibalDicedTomatoes: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Diced Tomatoes";
 		descriptionShort = "Start your tomato sauce from scratch... Almost";
-		color = "DicedTomatoes";
+		color = "CannibalDicedTomatoes";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_co.paa"};
 	};
-	class DadaCannibal_PreservedFoodCan_DicedTomatoes: Dada_PreservedFoodCan_Colorbase
+	class Dada_PreservedFoodCan_CannibalDicedTomatoes: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Diced Tomatoes";
 		descriptionShort = "Start your tomato sauce from scratch... Almost";
-		color = "DicedTomatoes";
+		color = "CannibalDicedTomatoes";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_co.paa"};
 	};
-	class DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	class Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
 		displayName = "Diced Tomatoes";
 		descriptionShort = "Start your tomato sauce from scratch... Almost";
-		color = "DicedTomatoes";
+		color = "CannibalDicedTomatoes";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_co.paa"};
 		class Nutrition
@@ -489,30 +489,30 @@ class DadaCannibal_RawFoodCan_Ketchup: Dada_RawFoodCan_Colorbase
 		};
 	};
 
-class DadaCannibal_RawFoodCan_HomemadeChili: Dada_RawFoodCan_Colorbase
+	class Dada_RawFoodCan_CannibalHomemadeChili: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Homemade Chili";
 		descriptionShort = "The Original Bear Valley Chili Recipe";
-		color = "HomemadeChili";
+		color = "CannibalHomemadeChili";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
 	};
-	class DadaCannibal_PreservedFoodCan_HomemadeChili: Dada_PreservedFoodCan_Colorbase
+	class Dada_PreservedFoodCan_CannibalHomemadeChili: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Homemade Chili";
 		descriptionShort = "The Original Bear Valley Chili Recipe";
-		color = "HomemadeChili";
+		color = "CannibalHomemadeChili";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
 	};
-	class DadaCannibal_PreservedFoodCan_HomemadeChili_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	class Dada_PreservedFoodCan_CannibalHomemadeChili_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
 		displayName = "Homemade Chili";
 		descriptionShort = "The Original Bear Valley Chili Recipe";
-		color = "HomemadeChili";
+		color = "CannibalHomemadeChili";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
 		class Nutrition
@@ -525,30 +525,30 @@ class DadaCannibal_RawFoodCan_HomemadeChili: Dada_RawFoodCan_Colorbase
 		};
 	};
 
-class DadaCannibal_RawFoodCan_ESPENChunkySoup: Dada_RawFoodCan_Colorbase
+	class Dada_RawFoodCan_CannibalESPENChunkySoup: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Chunky Soup";
 		descriptionShort = "ESPENLock Beef and Vegetable soup, as chunky as ever";
-		color = "ESPENChunkySoup";
+		color = "CannibalESPENChunkySoup";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
 	};
-	class DadaCannibal_PreservedFoodCan_ESPENChunkySoup: Dada_PreservedFoodCan_Colorbase
+	class Dada_PreservedFoodCan_CannibalESPENChunkySoup: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "Chunky Soup";
 		descriptionShort = "ESPENLock Beef and Vegetable soup, as chunky as ever";
-		color = "ESPENChunkySoup";
+		color = "CannibalESPENChunkySoup";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
 	};
-	class DadaCannibal_PreservedFoodCan_ESPENChunkySoup_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	class Dada_PreservedFoodCan_CannibalESPENChunkySoup_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
 		displayName = "Chunky Soup";
 		descriptionShort = "ESPENLock Beef and Vegetable soup, as chunky as ever";
-		color = "ESPENChunkySoup";
+		color = "CannibalESPENChunkySoup";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
 		class Nutrition
@@ -561,30 +561,30 @@ class DadaCannibal_RawFoodCan_ESPENChunkySoup: Dada_RawFoodCan_Colorbase
 		};
 	};
 
-class DadaCannibal_RawFoodCan_STAGchili: Dada_RawFoodCan_Colorbase
+	class Dada_RawFoodCan_CannibalSTAGchili: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "STAG Chili";
 		descriptionShort = "The best chili ever made";
-		color = "STAGchili";
+		color = "CannibalSTAGchili";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_co.paa"};
 	};
-	class DadaCannibal_PreservedFoodCan_STAGchili: Dada_PreservedFoodCan_Colorbase
+	class Dada_PreservedFoodCan_CannibalSTAGchili: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
 		displayName = "STAG Chili";
 		descriptionShort = "The best chili ever made";
-		color = "STAGchili";
+		color = "CannibalSTAGchili";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_co.paa"};
 	};
-	class DadaCannibal_PreservedFoodCan_STAGchili_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	class Dada_PreservedFoodCan_CannibalSTAGchili_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
 		displayName = "STAG Chili";
 		descriptionShort = "The best chili ever made";
-		color = "STAGchili";
+		color = "CannibalSTAGchili";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_co.paa"};
 		class Nutrition
@@ -597,8 +597,8 @@ class DadaCannibal_RawFoodCan_STAGchili: Dada_RawFoodCan_Colorbase
 		};
 	};
 
-class DadaBread_Base;
-class DadaWasteBread_Pita: DadaBread_Base
+	class DadaBread_Base;
+	class DadaWasteBread_Pita: DadaBread_Base
 	{
 		scope = 2;
 		displayName = "Flat Bread";
@@ -674,8 +674,8 @@ class DadaWasteBread_Pita: DadaBread_Base
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat"};
 	};
 
-class DadaDish_Base;
-class DadaCannibalDish_Rigatoni: DadaDish_Base
+	class DadaDish_Base;
+	class DadaCannibalDish_Rigatoni: DadaDish_Base
 	{
 		scope = 2;
 		displayName = "Rigatoni";
@@ -684,7 +684,7 @@ class DadaCannibalDish_Rigatoni: DadaDish_Base
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_rotten_co.paa"};
 	};
 
-class DadaCannibalDish_Chili: DadaDish_Base
+	class DadaCannibalDish_Chili: DadaDish_Base
 	{
 		scope = 2;
 		displayName = "Chili";
@@ -703,8 +703,8 @@ class DadaCannibalDish_Chili: DadaDish_Base
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"};
 	};
 
-class DadaSoup_Base;
-class DadaCannibalSoup_TomatoSoup: DadaSoup_Base
+	class DadaSoup_Base;
+	class DadaCannibalSoup_TomatoSoup: DadaSoup_Base
 	{
 		scope = 2;
 		displayName = "Tomato Soup";
@@ -777,7 +777,7 @@ class DadaCannibalSoup_TomatoSoup: DadaSoup_Base
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_rotten_co.paa"};
 	};
 
-class DadaCannibalDish_PulledPork: DadaDish_Base
+	class DadaCannibalDish_PulledPork: DadaDish_Base
 	{
 		scope = 2;
 		displayName = "Pulled Pork";
@@ -786,7 +786,7 @@ class DadaCannibalDish_PulledPork: DadaDish_Base
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_rotten_co.paa"};
 	};
 
-class DadaCannibalDish_Sausage: DadaDish_Base
+	class DadaCannibalDish_Sausage: DadaDish_Base
 	{
 		model = "Source_Files\DadaFoods\Configs\Food\Cooked\data\Sausage.p3d";
 		scope = 2;
@@ -813,8 +813,8 @@ class DadaCannibalDish_Sausage: DadaDish_Base
 		};	
 	};
 	
-class DadaDrinks_ColorBase;
-class DadaCannibalDrink_MilkShake: DadaDrinks_ColorBase
+	class DadaDrinks_ColorBase;
+	class DadaCannibalDrink_MilkShake: DadaDrinks_ColorBase
 	{
 		scope = 2;
 		canBeSplit = 1;
@@ -893,6 +893,269 @@ class DadaCannibalDrink_MilkShake: DadaDrinks_ColorBase
 					id = 797;
 				};
 			};
+		};
+	};
+
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////// Scope 0 and delete ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+	class DadaCannibal_RawFoodCan_STAGham: Dada_RawFoodCan_Colorbase
+	{
+		scope = 0;
+		displayName = "Reconstituted Meat - Deprecated";
+		descriptionShort = "Our ham will make you smile, or else - This item will be deleted, eat it before it's too late!";
+		color = "CannibalSTAGham1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_co.paa"};
+	};
+
+	class DadaCannibal_PreservedFoodCan_STAGham: Dada_PreservedFoodCan_Colorbase
+	{
+		scope = 0;
+		displayName = "Reconstituted Meat - Deprecated";
+		descriptionShort = "Our ham will make you smile, or else - This item will be deleted, eat it before it's too late!";
+		color = "CannibalSTAGham1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_co.paa"};
+	};
+
+	class DadaCannibal_PreservedFoodCan_STAGham_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	{
+		scope = 0;
+		displayName = "Reconstituted Meat - Deprecated";
+		descriptionShort = "Our ham will make you smile, or else - This item will be deleted, eat it before it's too late!";
+		color = "CannibalSTAGham1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 200;
+			water = 350;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+	};
+
+	class DadaCannibal_RawFoodCan_LSSPAM: Dada_RawFoodCan_Colorbase
+	{
+		scope = 0;
+		displayName = "SPAM - Deprecated";
+		descriptionShort = "An ESPENLock staple - This item will be deleted, eat it before it's too late!";
+		color = "CannibalLSSPAM1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
+	};
+	class DadaCannibal_PreservedFoodCan_LSSPAM: Dada_PreservedFoodCan_Colorbase
+	{
+		scope = 0;
+		displayName = "SPAM - Deprecated";
+		descriptionShort = "An ESPENLock staple - This item will be deleted, eat it before it's too late!";
+		color = "CannibalLSSPAM1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
+	};
+	class DadaCannibal_PreservedFoodCan_LSSPAM_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	{
+		scope = 0;
+		displayName = "SPAM - Deprecated";
+		descriptionShort = "An ESPENLock staple - This item will be deleted, eat it before it's too late!";
+		color = "CannibalLSSPAM1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 200;
+			water = 350;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+	};
+
+	class DadaCannibal_RawFoodCan_Ketchup: Dada_RawFoodCan_Colorbase
+	{
+		scope = 0;
+		displayName = "Ketchup - Deprecated";
+		descriptionShort = "Just put it on everithing you eat already - This item will be deleted, eat it before it's too late!";
+		color = "CannibalKetchup1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
+	};
+	class DadaCannibal_PreservedFoodCan_Ketchup: Dada_PreservedFoodCan_Colorbase
+	{
+		scope = 0;
+		displayName = "Ketchup - Deprecated";
+		descriptionShort = "Just put it on everithing you eat already - This item will be deleted, eat it before it's too late!";
+		color = "CannibalKetchup1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
+	};
+	class DadaCannibal_PreservedFoodCan_Ketchup_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	{
+		scope = 0;
+		displayName = "Ketchup - Deprecated";
+		descriptionShort = "Just put it on everithing you eat already - This item will be deleted, eat it before it's too late!";
+		color = "CannibalKetchup1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 200;
+			water = 350;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+	};
+
+	class DadaCannibal_RawFoodCan_DicedTomatoes: Dada_RawFoodCan_Colorbase
+	{
+		scope = 0;
+		displayName = "Diced Tomatoes - Deprecated";
+		descriptionShort = "Start your tomato sauce from scratch... Almost - This item will be deleted, eat it before it's too late!";
+		color = "CannibalDicedTomatoes1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_co.paa"};
+	};
+	class DadaCannibal_PreservedFoodCan_DicedTomatoes: Dada_PreservedFoodCan_Colorbase
+	{
+		scope = 0;
+		displayName = "Diced Tomatoes - Deprecated";
+		descriptionShort = "Start your tomato sauce from scratch... Almost - This item will be deleted, eat it before it's too late!";
+		color = "CannibalDicedTomatoes1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_co.paa"};
+	};
+	class DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	{
+		scope = 0;
+		displayName = "Diced Tomatoes - Deprecated";
+		descriptionShort = "Start your tomato sauce from scratch... Almost - This item will be deleted, eat it before it's too late!";
+		color = "CannibalDicedTomatoes1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 200;
+			water = 350;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+	};
+
+	class DadaCannibal_RawFoodCan_HomemadeChili: Dada_RawFoodCan_Colorbase
+	{
+		scope = 0;
+		displayName = "Homemade Chili - Deprecated";
+		descriptionShort = "The Original Bear Valley Chili Recipe - This item will be deleted, eat it before it's too late!";
+		color = "CannibalHomemadeChili1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
+	};
+	class DadaCannibal_PreservedFoodCan_HomemadeChili: Dada_PreservedFoodCan_Colorbase
+	{
+		scope = 0;
+		displayName = "Homemade Chili - Deprecated";
+		descriptionShort = "The Original Bear Valley Chili Recipe - This item will be deleted, eat it before it's too late!";
+		color = "CannibalHomemadeChili1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
+	};
+	class DadaCannibal_PreservedFoodCan_HomemadeChili_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	{
+		scope = 0;
+		displayName = "Homemade Chili - Deprecated";
+		descriptionShort = "The Original Bear Valley Chili Recipe - This item will be deleted, eat it before it's too late!";
+		color = "CannibalHomemadeChili1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 200;
+			water = 350;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+	};
+
+	class DadaCannibal_RawFoodCan_ESPENChunkySoup: Dada_RawFoodCan_Colorbase
+	{
+		scope = 0;
+		displayName = "Chunky Soup - Deprecated";
+		descriptionShort = "ESPENLock Beef and Vegetable soup, as chunky as ever - This item will be deleted, eat it before it's too late!";
+		color = "CannibalESPENChunkySoup1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
+	};
+	class DadaCannibal_PreservedFoodCan_ESPENChunkySoup: Dada_PreservedFoodCan_Colorbase
+	{
+		scope = 0;
+		displayName = "Chunky Soup - Deprecated";
+		descriptionShort = "ESPENLock Beef and Vegetable soup, as chunky as ever - This item will be deleted, eat it before it's too late!";
+		color = "CannibalESPENChunkySoup1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
+	};
+	class DadaCannibal_PreservedFoodCan_ESPENChunkySoup_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	{
+		scope = 0;
+		displayName = "Chunky Soup - Deprecated";
+		descriptionShort = "ESPENLock Beef and Vegetable soup, as chunky as ever - This item will be deleted, eat it before it's too late!";
+		color = "CannibalESPENChunkySoup1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 200;
+			water = 350;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+	};
+
+	class DadaCannibal_RawFoodCan_STAGchili: Dada_RawFoodCan_Colorbase
+	{
+		scope = 0;
+		displayName = "STAG Chili - Deprecated";
+		descriptionShort = "The best chili ever made - This item will be deleted, eat it before it's too late!";
+		color = "CannibalSTAGchili1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_co.paa"};
+	};
+	class DadaCannibal_PreservedFoodCan_STAGchili: Dada_PreservedFoodCan_Colorbase
+	{
+		scope = 0;
+		displayName = "STAG Chili - Deprecated";
+		descriptionShort = "The best chili ever made - This item will be deleted, eat it before it's too late!";
+		color = "CannibalSTAGchili1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_co.paa"};
+	};
+	class DadaCannibal_PreservedFoodCan_STAGchili_Opened: Dada_PreservedFoodCan_Colorbase_Opened
+	{
+		scope = 0;
+		displayName = "STAG Chili - Deprecated";
+		descriptionShort = "The best chili ever made - This item will be deleted, eat it before it's too late!";
+		color = "CannibalSTAGchili1";
+		hiddenSelections[] = {"camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_co.paa"};
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 200;
+			water = 350;
+			nutritionalIndex = 1;
+			toxicity = 0;
 		};
 	};
 };
