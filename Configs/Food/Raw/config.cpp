@@ -22,7 +22,7 @@ class CfgVehicles
 	class Edible_Base;
 	class DadaRaw_Base: Edible_Base
 	{
-		scope = 1;
+		scope = 0;
 		model = "Source_Files\DadaFoods\Configs\Food\Cooked\data\bowl.p3d";
 		weight = 2.5;
 		canBeSplit = 1;
@@ -376,7 +376,7 @@ class CfgVehicles
 
 	class DadaRaw_CheeseBase: DadaRaw_Base
 	{
-		scope = 1;
+		scope = 0;
 		weight = 1;
 		canBeSplit = 1;
 		interactionWeight = 1;
