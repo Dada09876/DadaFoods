@@ -25,7 +25,7 @@ class CfgVehicles
 	class HumanSteakMeat;
 	class DadaCannibal_Base: HumanSteakMeat
 	{
-		scope = 1;
+		scope = 0;
 		canBeSplit = 1;
 		quantityBar = 1;
 		hiddenSelections[] = {"camoGround","cs_raw"};
