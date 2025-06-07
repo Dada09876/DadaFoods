@@ -100,7 +100,7 @@ class CfgVehicles
 	};
 	class DadaSpawned_CerealBase: Edible_Base
 	{
-		scope = 1;
+		scope = 0;
 		displayName = "Cereals";
 		descriptionShort = "cereals";
 		model = "\dz\gear\food\BoxCereal.p3d";
