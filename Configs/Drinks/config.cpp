@@ -22,7 +22,7 @@ class CfgVehicles
 	class Edible_Base;
 	class DadaDrinks_ColorBase: Edible_Base
 	{
-		scope = 1;
+		scope = 0;
 		model = "\dz\gear\drinks\SodaCan.p3d";
 		debug_ItemCategory = 6;
 		stackedRandom = 0;
