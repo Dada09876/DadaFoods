@@ -142,7 +142,7 @@ class CfgVehicles
 	class Edible_Base;
 	class DadaSoup_Base: Edible_Base
 	{
-		scope = 1;
+		scope = 0;
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\bowl.p3d";
 		weight = 2;
 		interactionWeight = 1;
@@ -263,7 +263,7 @@ class CfgVehicles
 
     class DadaDish_Base: DadaSoup_Base
 	{
-		scope = 1;
+		scope = 0;
         displayName = "Dish";
 		descriptionShort = "Dish.";
 		hiddenSelectionsTextures[] = {"\Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_baked_co.paa"};
