@@ -22,7 +22,7 @@ class CraftDadaBread_Base extends Craft_DadaTempTemp1_BaseRecipe
 		m_IngredientDestroy[1] = -1;// false = do nothing
 		
 		//result1
-		AddResult("DadaBread_Base");//add results here
+		AddResult("DadaBread_RoundDough");//add results here
 
 		m_ResultSetFullQuantity[0] = 125;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = -1;//-1 = do nothing
