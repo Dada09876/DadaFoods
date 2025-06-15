@@ -385,7 +385,7 @@ class CfgVehicles
 
 	class DadaBread_Base: Edible_Base
 	{
-		scope = 2;
+		scope = 0;
 		displayName = "Simple Round Dough";
 		descriptionShort = "A round, plain dough. Should be baked before consuming... but I guess no one can stop you if you don't.";
 		interactionWeight = 1;
@@ -512,6 +512,11 @@ class CfgVehicles
 				};
 			};
 		};
+	};
+
+	class DadaBread_RoundDough: DadaBread_Base
+	{
+		scope = 2;
 	};
 
 	class DadaBread_Pita: DadaBread_Base
