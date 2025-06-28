@@ -51,7 +51,7 @@ class CfgVehicles
 		class Nutrition
 		{
 			fullnessIndex = 2;
-			energy = 100;
+			energy = 40;
 			water = 0;
 			nutritionalIndex = 1;
 			toxicity = 0;
@@ -217,7 +217,7 @@ class CfgVehicles
 		class Nutrition
 		{
 			fullnessIndex = 2;
-			energy = 20;
+			energy = 50;
 			water = 0;
 			nutritionalIndex = 1;
 			toxicity = 0;
@@ -275,7 +275,7 @@ class CfgVehicles
 		class Nutrition
 		{
 			fullnessIndex = 3;
-			energy = 100;
+			energy = 20;
 			water = 0;
 			nutritionalIndex = 1;
 			toxicity = 0;
@@ -344,7 +344,7 @@ class CfgVehicles
 		class Nutrition
 		{
 			fullnessIndex = 3;
-			energy = 100;
+			energy = 20;
 			water = 0;
 			nutritionalIndex = 1;
 			toxicity = 0;
@@ -413,7 +413,7 @@ class CfgVehicles
 		class Nutrition
 		{
 			fullnessIndex = 3;
-			energy = 100;
+			energy = 20;
 			water = 0;
 			nutritionalIndex = 1;
 			toxicity = 0;
