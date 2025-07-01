@@ -11,16 +11,16 @@ class CfgPatches
 {
 	class DadaFoods_Configs_Food_Spawned
 	{
-		units[] = {"DadaSpawned_Flour","DadaSpawned_BoxCerealCrunchin_Frosties","DadaSpawned_BoxCerealCrunchin_Nesquik","DadaSpawned_BoxCerealCrunchin_Kosmostar","DadaSpawned_Yeast","PowderedMilk","DadaSpawned_Coffee","DadaSpawned_GreenTea","DadaSpawned_BlackTea"};
+		units[] = { "DadaSpawned_Flour","DadaSpawned_BoxCerealCrunchin_Frosties","DadaSpawned_BoxCerealCrunchin_Nesquik","DadaSpawned_BoxCerealCrunchin_Kosmostar","DadaSpawned_Yeast","PowderedMilk","DadaSpawned_Coffee","DadaSpawned_GreenTea","DadaSpawned_BlackTea" };
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"DadaFoods"};
+		requiredAddons[] = { "DadaFoods" };
 	};
 };
 class CfgVehicles
 {
 	class Edible_Base;
-	class DadaSpawned_Flour: Edible_Base
+	class DadaSpawned_Flour : Edible_Base
 	{
 		scope = 2;
 		displayName = "Flour";
@@ -30,13 +30,13 @@ class CfgVehicles
 		weight = 4;
 		debug_ItemCategory = 6;
 		rotationFlags = 17;
-		itemSize[] = {3,3};
+		itemSize[] = { 3,3 };
 		varQuantityInit = 250;
 		varQuantityMin = 0;
 		varQuantityMax = 250;
 		isMeleeWeapon = 1;
-		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_Flour_co.paa"};
+		hiddenSelections[] = { "camoGround" };
+		hiddenSelectionsTextures[] = { "Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_Flour_co.paa" };
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -44,7 +44,7 @@ class CfgVehicles
 				class Health
 				{
 					hitpoints = 20;
-					healthLevels[] = {{1.0,{"DZ\gear\food\data\Cereal_box.rvmat"}},{0.7,{"DZ\gear\food\data\Cereal_box.rvmat"}},{0.5,{"DZ\gear\food\data\Cereal_box_damage.rvmat"}},{0.3,{"DZ\gear\food\data\Cereal_box_damage.rvmat"}},{0.0,{"DZ\gear\food\data\Cereal_box_destruct.rvmat"}}};
+					healthLevels[] = { {1.0,{"DZ\gear\food\data\Cereal_box.rvmat"}},{0.7,{"DZ\gear\food\data\Cereal_box.rvmat"}},{0.5,{"DZ\gear\food\data\Cereal_box_damage.rvmat"}},{0.3,{"DZ\gear\food\data\Cereal_box_damage.rvmat"}},{0.0,{"DZ\gear\food\data\Cereal_box_destruct.rvmat"}} };
 				};
 			};
 		};
@@ -98,9 +98,9 @@ class CfgVehicles
 			};
 		};
 	};
-	class DadaSpawned_CerealBase: Edible_Base
+	class DadaSpawned_CerealBase : Edible_Base
 	{
-		scope = 1;
+		scope = 0;
 		displayName = "Cereals";
 		descriptionShort = "cereals";
 		model = "\dz\gear\food\BoxCereal.p3d";
@@ -108,13 +108,13 @@ class CfgVehicles
 		weight = 4;
 		debug_ItemCategory = 6;
 		rotationFlags = 17;
-		itemSize[] = {3,3};
+		itemSize[] = { 3,3 };
 		varQuantityInit = 250;
 		varQuantityMin = 0;
 		varQuantityMax = 250;
 		isMeleeWeapon = 1;
-		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_Flour_co.paa"};
+		hiddenSelections[] = { "camoGround" };
+		hiddenSelectionsTextures[] = { "Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_Flour_co.paa" };
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -122,7 +122,7 @@ class CfgVehicles
 				class Health
 				{
 					hitpoints = 20;
-					healthLevels[] = {{1.0,{"DZ\gear\food\data\Cereal_box.rvmat"}},{0.7,{"DZ\gear\food\data\Cereal_box.rvmat"}},{0.5,{"DZ\gear\food\data\Cereal_box_damage.rvmat"}},{0.3,{"DZ\gear\food\data\Cereal_box_damage.rvmat"}},{0.0,{"DZ\gear\food\data\Cereal_box_destruct.rvmat"}}};
+					healthLevels[] = { {1.0,{"DZ\gear\food\data\Cereal_box.rvmat"}},{0.7,{"DZ\gear\food\data\Cereal_box.rvmat"}},{0.5,{"DZ\gear\food\data\Cereal_box_damage.rvmat"}},{0.3,{"DZ\gear\food\data\Cereal_box_damage.rvmat"}},{0.0,{"DZ\gear\food\data\Cereal_box_destruct.rvmat"}} };
 				};
 			};
 		};
@@ -176,44 +176,44 @@ class CfgVehicles
 			};
 		};
 	};
-	class DadaSpawned_BoxCerealCrunchin_Frosties: DadaSpawned_CerealBase
+	class DadaSpawned_BoxCerealCrunchin_Frosties : DadaSpawned_CerealBase
 	{
 		scope = 2;
 		displayName = "Corn Flakes";
 		descriptionShort = "Cereals";
-		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_BoxCerealCrunchin_Frosties_co.paa"};
+		hiddenSelections[] = { "camoGround" };
+		hiddenSelectionsTextures[] = { "Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_BoxCerealCrunchin_Frosties_co.paa" };
 	};
-	class DadaSpawned_BoxCerealCrunchin_Nesquik: DadaSpawned_CerealBase
+	class DadaSpawned_BoxCerealCrunchin_Nesquik : DadaSpawned_CerealBase
 	{
 		scope = 2;
 		displayName = "Nesquik";
 		descriptionShort = "Cereals";
-		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_BoxCerealCrunchin_Nesquik_co.paa"};
+		hiddenSelections[] = { "camoGround" };
+		hiddenSelectionsTextures[] = { "Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_BoxCerealCrunchin_Nesquik_co.paa" };
 	};
-	class DadaSpawned_BoxCerealCrunchin_Kosmostar: DadaSpawned_CerealBase
+	class DadaSpawned_BoxCerealCrunchin_Kosmostar : DadaSpawned_CerealBase
 	{
 		scope = 2;
 		displayName = "Stars";
 		descriptionShort = "Cereals";
-		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_BoxCerealCrunchin_Kosmostar_co.paa"};
+		hiddenSelections[] = { "camoGround" };
+		hiddenSelectionsTextures[] = { "Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_BoxCerealCrunchin_Kosmostar_co.paa" };
 	};
-	class DadaSpawned_Yeast: Edible_Base
+	class DadaSpawned_Yeast : Edible_Base
 	{
 		scope = 2;
 		weight = 0.5;
-		itemSize[] = {1,2};
-		inventorySlot[] = {"DadaYeast"};
+		itemSize[] = { 1,2 };
+		inventorySlot[] = { "DadaYeast" };
 		displayName = "Yeast Pack";
 		descriptionShort = "Pack of Yeast.";
 		model = "\dz\gear\food\PowderedMilk.p3d";
 		canBeSplit = 1;
 		debug_ItemCategory = 6;
 		rotationFlags = 17;
-		hiddenSelections[] = {"zbytek"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_Yeast_co.paa"};
+		hiddenSelections[] = { "zbytek" };
+		hiddenSelectionsTextures[] = { "Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_Yeast_co.paa" };
 		class Nutrition
 		{
 			fullnessIndex = 2;
@@ -223,7 +223,7 @@ class CfgVehicles
 			toxicity = 0;
 		};
 	};
-	class PowderedMilk: Edible_Base
+	class PowderedMilk : Edible_Base
 	{
 		scope = 2;
 		canBeSplit = 1;
@@ -239,23 +239,23 @@ class CfgVehicles
 			toxicity = 0;
 		};
 	};
-	class BoxCerealCrunchin: Edible_Base
+	class BoxCerealCrunchin : Edible_Base
 	{
 		canBeSplit = 1;
 	};
-	class DadaSpawned_Coffee: Edible_Base
+	class DadaSpawned_Coffee : Edible_Base
 	{
 		scope = 2;
 		displayName = "Coffee Bag";
 		descriptionShort = "Bag full of ground coffee beans";
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_CoffeeBag_co.paa"};
-		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"};
+		hiddenSelectionsTextures[] = { "Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_CoffeeBag_co.paa" };
+		hiddenSelectionsMaterials[] = { "Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat" };
 		model = "\DZ\gear\food\Rice.p3d";
-		hiddenSelections[] = {"zbytek"};
+		hiddenSelections[] = { "zbytek" };
 		canBeSplit = 1;
 		debug_ItemCategory = 6;
 		weight = 1;
-		itemSize[] = {2,3};
+		itemSize[] = { 2,3 };
 		varQuantityInit = 500;
 		varQuantityMin = 0;
 		varQuantityMax = 500;
@@ -268,7 +268,7 @@ class CfgVehicles
 				class Health
 				{
 					hitpoints = 40;
-					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_destruct.rvmat"}}};
+					healthLevels[] = { {1.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_destruct.rvmat"}} };
 				};
 			};
 		};
@@ -312,19 +312,19 @@ class CfgVehicles
 			};
 		};
 	};
-	class DadaSpawned_GreenTea: Edible_Base
+	class DadaSpawned_GreenTea : Edible_Base
 	{
 		scope = 2;
 		displayName = "Green Tea Bag";
 		descriptionShort = "Bag full of tea leaves";
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_GreenTeaBag_co.paa"};
-		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"};
+		hiddenSelectionsTextures[] = { "Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_GreenTeaBag_co.paa" };
+		hiddenSelectionsMaterials[] = { "Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat" };
 		model = "\DZ\gear\food\Rice.p3d";
-		hiddenSelections[] = {"zbytek"};
+		hiddenSelections[] = { "zbytek" };
 		canBeSplit = 1;
 		debug_ItemCategory = 6;
 		weight = 1;
-		itemSize[] = {2,3};
+		itemSize[] = { 2,3 };
 		varQuantityInit = 500;
 		varQuantityMin = 0;
 		varQuantityMax = 500;
@@ -337,7 +337,7 @@ class CfgVehicles
 				class Health
 				{
 					hitpoints = 40;
-					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_destruct.rvmat"}}};
+					healthLevels[] = { {1.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_destruct.rvmat"}} };
 				};
 			};
 		};
@@ -381,19 +381,19 @@ class CfgVehicles
 			};
 		};
 	};
-	class DadaSpawned_BlackTea: Edible_Base
+	class DadaSpawned_BlackTea : Edible_Base
 	{
 		scope = 2;
 		displayName = "Black Tea Bag";
 		descriptionShort = "Bag full of tea leaves";
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_BlackTeaBag_co.paa"};
-		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"};
+		hiddenSelectionsTextures[] = { "Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_BlackTeaBag_co.paa" };
+		hiddenSelectionsMaterials[] = { "Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat" };
 		model = "\DZ\gear\food\Rice.p3d";
-		hiddenSelections[] = {"zbytek"};
+		hiddenSelections[] = { "zbytek" };
 		canBeSplit = 1;
 		debug_ItemCategory = 6;
 		weight = 1;
-		itemSize[] = {2,3};
+		itemSize[] = { 2,3 };
 		varQuantityInit = 500;
 		varQuantityMin = 0;
 		varQuantityMax = 500;
@@ -406,7 +406,7 @@ class CfgVehicles
 				class Health
 				{
 					hitpoints = 40;
-					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_destruct.rvmat"}}};
+					healthLevels[] = { {1.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_damage.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Spawned\data\CoffeeBag_destruct.rvmat"}} };
 				};
 			};
 		};
