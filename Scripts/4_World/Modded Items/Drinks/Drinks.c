@@ -3,17 +3,14 @@ class DadaDrinks_ColorBase: Edible_Base
 	override void SetActions()
 	{
 		super.SetActions();
-		
+
 		//AddAction(ActionWashHandsItemContinuous);
-		AddAction (ActionDrink);
-		AddAction (HandActionTake);
-		AddAction (HandActionDrop);
-		AddAction (HandActionThrow);
+		AddAction(ActionDrink);
 	}
 	override bool CanBeCooked()
 	{
 		return false;
-	}		
+	}
 	override bool IsFruit()
 	{
 		return true;
@@ -45,7 +42,7 @@ class DadaDrink_MilkGallon: DadaDrinks_ColorBase
 		super.SetActions();
 		RemoveAction(ActionDrink);
 		AddAction(ActionDrinkCookingPot);
-	};	
+	};
 };
 
 class DadaDrink_Coffee: DadaDrinks_ColorBase
