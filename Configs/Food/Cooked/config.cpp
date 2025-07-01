@@ -155,7 +155,7 @@ class CfgVehicles
 		varQuantityInit = 125;
 		varQuantityMin = 0;
 		varQuantityMax = 300;
-		hiddenSelections[] = { "camoGround","cs_raw" };
+		hiddenSelections[] = { "camo","cs_raw" };
 		hiddenSelectionsTextures[] = { "\Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_rotten_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_burnt_co.paa", };
 
 		class DamageSystem
@@ -164,7 +164,7 @@ class CfgVehicles
 			{
 				class Health
 				{
-					hitpoints = 50;
+					hitpoints = 100;
 					healthLevels[] = { {1,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl.rvmat","\Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0.7,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl.rvmat","\Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0.5,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl_damage.rvmat","\Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0.3,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl_damage.rvmat","\Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl_destruct.rvmat","\Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}} };
 				};
 			};
@@ -261,29 +261,131 @@ class CfgVehicles
 		};
 	};
 
-	class DadaDish_Base : DadaSoup_Base
+	class DadaDish_Base : Edible_Base
 	{
 		scope = 0;
+		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\bowl.p3d";
+		weight = 2;
+		interactionWeight = 1;
+		quantityBar = 1;
+		canBeSplit = 1;
+		inventorySlot[] = { "Ingredient","DirectCookingA","DirectCookingB","DirectCookingC","SmokingA","SmokingB","SmokingC","SmokingD","Ingredient1","Ingredient2","Ingredient3","Ingredient4","Ingredient5","Ingredient6","Ingredient7","Ingredient8" };
+		itemSize[] = { 3,2 };
 		displayName = "Dish";
 		descriptionShort = "Dish.";
+		varQuantityInit = 125;
+		varQuantityMin = 0;
+		varQuantityMax = 300;
+		hiddenSelections[] = { "camo","cs_raw" };
 		hiddenSelectionsTextures[] = { "\Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_baked_co.paa" };
 		hiddenSelectionsMaterials[] = { "\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat" };
+
 		class DamageSystem
 		{
 			class GlobalHealth
 			{
 				class Health
 				{
-					hitpoints = 200;
-					healthLevels[] = { {1,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl.rvmat","\Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"}},{0.7,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl.rvmat","\Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"}},{0.5,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl_damage.rvmat","\Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"}},{0.3,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl_damage.rvmat","\Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"}},{0,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl_destruct.rvmat","\Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"}} };
+					hitpoints = 100;
+					healthLevels[] = { {1,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl.rvmat","\Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0.7,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl.rvmat","\Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0.5,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl_damage.rvmat","\Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0.3,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl_damage.rvmat","\Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl_destruct.rvmat","\Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}} };
+				};
+			};
+		};
+		class FoodAnimationSources;
+		class AnimationSources : FoodAnimationSources {};
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[] = { 0,0,0 };
+					nutrition_properties[] = { 5,50,50,1,0,4 };
+					cooking_properties[] = { 0,0 };
+				};
+				class Rotten
+				{
+					visual_properties[] = { -1,-1,5 };
+					nutrition_properties[] = { 10,25,25,1,0,"4 +     16" };
+					cooking_properties[] = { 0,0 };
+				};
+				class Baked
+				{
+					visual_properties[] = { 0,1,1 };
+					nutrition_properties[] = { 1,300,50,1,0 };
+					cooking_properties[] = { 70,45 };
+				};
+				class Boiled
+				{
+					visual_properties[] = { 0,2,2 };
+					nutrition_properties[] = { 1,250,100,1,0 };
+					cooking_properties[] = { 70,55 };
+				};
+				class Dried
+				{
+					visual_properties[] = { 0,3,3 };
+					nutrition_properties[] = { 1,250,0,1,0 };
+					cooking_properties[] = { 70,120,80 };
+				};
+				class Burned
+				{
+					visual_properties[] = { 0,4,4 };
+					nutrition_properties[] = { 5,50,0,1,0,16 };
+					cooking_properties[] = { 100,90 };
+				};
+			};
+			class FoodStageTransitions : DadaDishStageTransitions {};
+		};
+
+		class Nutrition
+		{
+			fullnessIndex = 3;
+			energy = 100;
+			water = 50;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+		class NoiseImpact
+		{
+			strength = 600;
+			type = "sound";
+		};
+		class AnimEvents
+		{
+			class SoundWeapon
+			{
+				class openTunaCan
+				{
+					soundSet = "openTunaCan_SoundSet";
+					id = 204;
+				};
+				class Eating_TakeFood
+				{
+					soundSet = "Eating_TakeFood_Soundset";
+					id = 889;
+				};
+				class Eating_BoxOpen
+				{
+					soundSet = "Eating_BoxOpen_Soundset";
+					id = 893;
+				};
+				class Eating_BoxShake
+				{
+					soundSet = "Eating_BoxShake_Soundset";
+					id = 894;
+				};
+				class Eating_BoxEnd
+				{
+					soundSet = "Eating_BoxEnd_Soundset";
+					id = 895;
 				};
 			};
 		};
 	};
 
-	class DadaBread_Base : DadaDish_Base
+	class DadaBread_Base : Edible_Base
 	{
-		scope = 2;
+		scope = 0;
 		displayName = "Simple Round Dough";
 		descriptionShort = "A round, plain dough. Should be baked before consuming... but I guess no one can stop you if you don't.";
 		interactionWeight = 1;
@@ -298,18 +400,77 @@ class CfgVehicles
 		hiddenSelections[] = { "cs_raw" };
 		hiddenSelectionsTextures[] = { "Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_rotten_co.paa" };
 		hiddenSelectionsMaterials[] = { "Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat" };
+
 		class DamageSystem
 		{
 			class GlobalHealth
 			{
 				class Health
 				{
-					hitpoints = 200;
+					hitpoints = 100;
 					healthLevels[] = { {1,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"}},{0.7,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"}},{0.5,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"}},{0.3,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"}},{0,{"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"}} };
 				};
 			};
 		};
+		class FoodAnimationSources;
+		class AnimationSources : FoodAnimationSources {};
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[] = { 0,0,0 };
+					nutrition_properties[] = { 5,50,50,1,0,4 };
+					cooking_properties[] = { 0,0 };
+				};
+				class Rotten
+				{
+					visual_properties[] = { -1,-1,5 };
+					nutrition_properties[] = { 10,25,25,1,0,"4 +     16" };
+					cooking_properties[] = { 0,0 };
+				};
+				class Baked
+				{
+					visual_properties[] = { 0,1,1 };
+					nutrition_properties[] = { 1,300,50,1,0 };
+					cooking_properties[] = { 70,45 };
+				};
+				class Boiled
+				{
+					visual_properties[] = { 0,2,2 };
+					nutrition_properties[] = { 1,250,100,1,0 };
+					cooking_properties[] = { 70,55 };
+				};
+				class Dried
+				{
+					visual_properties[] = { 0,3,3 };
+					nutrition_properties[] = { 1,250,0,1,0 };
+					cooking_properties[] = { 70,120,80 };
+				};
+				class Burned
+				{
+					visual_properties[] = { 0,4,4 };
+					nutrition_properties[] = { 5,50,0,1,0,16 };
+					cooking_properties[] = { 100,90 };
+				};
+			};
+			class FoodStageTransitions : DadaDishStageTransitions {};
+		};
 
+		class Nutrition
+		{
+			fullnessIndex = 3;
+			energy = 100;
+			water = 50;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
+		class NoiseImpact
+		{
+			strength = 600;
+			type = "sound";
+		};
 		class AnimEvents
 		{
 			class SoundWeapon
@@ -353,12 +514,10 @@ class CfgVehicles
 		};
 	};
 
-
-
-
-
-
-
+	class DadaBread_RoundDough : DadaBread_Base
+	{
+		scope = 2;
+	};
 
 	class DadaBread_Pita : DadaBread_Base
 	{

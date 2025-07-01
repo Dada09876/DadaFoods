@@ -420,7 +420,6 @@ class CfgVehicles
 	class DadaCannibal_RawFoodCan_Ketchup : Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
-		color = "Ketchup";
 		displayName = "Ketchup";
 		descriptionShort = "Just put it on everithing you eat already";
 		hiddenSelections[] = { "camoGround" };

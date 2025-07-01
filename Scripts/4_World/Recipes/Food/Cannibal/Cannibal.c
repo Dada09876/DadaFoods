@@ -432,17 +432,15 @@ class CraftDadaWasteBread_PizzaBase extends Craft_DadaTempStageTemp1Stage1_BaseR
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this wainsert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
 		
 		//result1
-		AddResult("DadaBread_PizzaBase");//add results here
+		AddResult("DadaWasteBread_PizzaBase");//add results here
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
@@ -466,14 +464,12 @@ class CraftDadaCannibalDish_Spaghetti extends Craft_DadaTempStageTemp1Stage1_Bas
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_STAGchili_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_HomemadeChili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalSTAGchili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalSTAGchili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalHomemadeChili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalHomemadeChili_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		
@@ -505,14 +501,12 @@ class CraftDadaCannibalDish_Cannelloni extends  Craft_DadaTempStageTemp1Stage1_B
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_STAGchili_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_HomemadeChili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalSTAGchili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalSTAGchili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalHomemadeChili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalHomemadeChili_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
@@ -543,14 +537,12 @@ class CraftDadaCannibalDish_Bowties extends  Craft_DadaTempStageTemp1Stage1_Base
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_STAGchili_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_HomemadeChili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalSTAGchili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalSTAGchili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalHomemadeChili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalHomemadeChili_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
@@ -581,14 +573,12 @@ class CraftDadaCannibalDish_Lasagna extends  Craft_DadaTempStageTemp1Stage1_Base
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_STAGchili_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_HomemadeChili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalSTAGchili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalSTAGchili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalHomemadeChili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalHomemadeChili_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
@@ -619,14 +609,12 @@ class CraftDadaCannibalDish_Rigatoni extends Craft_DadaTempStageTemp1Stage1_Base
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_STAGchili_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_HomemadeChili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalSTAGchili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalSTAGchili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalHomemadeChili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalHomemadeChili_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
@@ -657,10 +645,8 @@ class CraftDadaCannibalDish_PulledPork extends Craft_DadaTempStageTemp1Stage1_Ba
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
@@ -877,10 +863,8 @@ class CraftDadaCannibalSoup_TomatoSoup extends Craft_DadaTempLiquidTemp1Stage1_B
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
@@ -951,10 +935,8 @@ class CraftDadaCannibalSoup_Ragout extends Craft_DadaTempLiquidTemp1Stage1_BaseR
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaCannibal_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
@@ -1156,7 +1138,7 @@ class Craft_DadaCannibal_RawFoodCan_STAGham extends Craft_DadaTempStageTemp1Stag
 		m_IngredientDestroy[1] = false;// false = do nothing
 		
 		//result1
-		AddResult("DadaCannibal_RawFoodCan_STAGham");//add results here
+		AddResult("Dada_RawFoodCan_CannibalSTAGham");//add results here
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
@@ -1186,7 +1168,7 @@ class Craft_DadaCannibal_RawFoodCan_LSSPAM extends Craft_DadaTempStageTemp1Stage
 		m_IngredientDestroy[1] = false;// false = do nothing
 		
 		//result1
-		AddResult("DadaCannibal_RawFoodCan_LSSPAM");//add results here
+		AddResult("Dada_RawFoodCan_CannibalLSSPAM");//add results here
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
@@ -1245,7 +1227,7 @@ class Craft_DadaCannibal_RawFoodCan_ESPENChunkySoup extends Craft_DadaTempLiquid
 		m_IngredientDestroy[1] = false;// false = do nothing
 		
 		//result1
-		AddResult("DadaCannibal_RawFoodCan_ESPENChunkySoup");//add results here
+		AddResult("Dada_RawFoodCan_CannibalESPENChunkySoup");//add results here
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
@@ -1301,7 +1283,7 @@ class Craft_DadaCannibal_RawFoodCan_ESPENChunkySoup1 extends Craft_DadaTempLiqui
 		m_IngredientDestroy[1] = false;// false = do nothing
 		
 		//result1
-		AddResult("DadaCannibal_RawFoodCan_ESPENChunkySoup");//add results here
+		AddResult("Dada_RawFoodCan_CannibalESPENChunkySoup");//add results here
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
@@ -1373,7 +1355,7 @@ class Craft_DadaCannibal_RawFoodCan_STAGchili extends Craft_DadaTemp1Stage1_Base
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		
 		//result1
-		AddResult("DadaCannibal_RawFoodCan_STAGchili");//add results here
+		AddResult("Dada_RawFoodCan_CannibalSTAGchili");//add results here
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 	}
@@ -1429,7 +1411,7 @@ class Craft_DadaCannibal_RawFoodCan_STAGchili1 extends Craft_DadaTempLiquidTemp1
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		
 		//result1
-		AddResult("DadaCannibal_RawFoodCan_STAGchili");//add results here
+		AddResult("Dada_RawFoodCan_CannibalSTAGchili");//add results here
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 	}
@@ -1500,7 +1482,7 @@ class Craft_DadaCannibal_RawFoodCan_DicedTomatoes extends Craft_DadaTemp1Stage1_
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		
 		//result1
-		AddResult("DadaCannibal_RawFoodCan_DicedTomatoes");//add results here
+		AddResult("Dada_RawFoodCan_CannibalDicedTomatoes");//add results here
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 	}
@@ -1556,7 +1538,7 @@ class Craft_DadaCannibal_RawFoodCan_DicedTomatoes1 extends Craft_DadaTempLiquidT
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		
 		//result1
-		AddResult("DadaCannibal_RawFoodCan_DicedTomatoes");//add results here
+		AddResult("Dada_RawFoodCan_CannibalDicedTomatoes");//add results here
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 	}
@@ -1646,7 +1628,7 @@ class Craft_DadaCannibal_RawFoodCan_Ketchup extends RecipeBase //works
 		//----------------------------------------------------------------------------------------------------------------------
 
 		//result1
-		AddResult("DadaCannibal_RawFoodCan_Ketchup");//add results here
+		AddResult("Dada_RawFoodCan_CannibalKetchup");//add results here
 
 		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
@@ -1712,7 +1694,7 @@ class Craft_DadaCannibal_RawFoodCan_Ketchup1 extends RecipeBase
 		//----------------------------------------------------------------------------------------------------------------------
 
 		//result1
-		AddResult("DadaCannibal_RawFoodCan_Ketchup");//add results here
+		AddResult("Dada_RawFoodCan_CannibalKetchup");//add results here
 
 		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
@@ -1797,7 +1779,7 @@ class Craft_DadaCannibal_RawFoodCan_Ketchup2 extends RecipeBase
 		//----------------------------------------------------------------------------------------------------------------------
 
 		//result1
-		AddResult("DadaCannibal_RawFoodCan_Ketchup");//add results here
+		AddResult("Dada_RawFoodCan_CannibalKetchup");//add results here
 
 		m_ResultSetFullQuantity[0] = -1;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
@@ -1864,7 +1846,7 @@ class Craft_DadaCannibal_RawFoodCan_HomemadeChili extends Craft_DadaTemp1Stage1_
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		
 		//result1
-		AddResult("DadaCannibal_RawFoodCan_STAGchili");//add results here
+		AddResult("Dada_RawFoodCan_CannibalSTAGchili");//add results here
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 	}
@@ -1920,7 +1902,7 @@ class Craft_DadaCannibal_RawFoodCan_HomemadeChili1 extends Craft_DadaTempLiquidT
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		
 		//result1
-		AddResult("DadaCannibal_RawFoodCan_STAGchili");//add results here
+		AddResult("Dada_RawFoodCan_CannibalSTAGchili");//add results here
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 	}
