@@ -66,8 +66,11 @@ class Craft_DadaTempStageLiquidTemp1Stage1Liquid1_BaseRecipe extends RecipeBase
 				return false;
 			}
 			FoodStage foodStage0 = ingredient0.GetFoodStage();
+			// if no food stage (is null)
+			if (!foodStage0)
+				return false;
 			// if the food is raw, burnt or rotten
-			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten() || foodStage1.IsFoodRaw() || foodStage1.IsFoodDried() || foodStage1.IsFoodBaked() || foodStage1.IsFoodBoiled()) 
+			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten() || foodStage1.IsFoodRaw() || foodStage1.IsFoodDried() || foodStage1.IsFoodBaked() || foodStage1.IsFoodBoiled())
 			{
 				return false;
 			}
@@ -83,6 +86,9 @@ class Craft_DadaTempStageLiquidTemp1Stage1Liquid1_BaseRecipe extends RecipeBase
 				return false;
 			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if no food stage (is null)
+			if (!foodStage1)
+				return false;
 			// if the food is raw, burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
 			{
@@ -171,7 +177,7 @@ class Craft_Dada_BaseRecipe extends RecipeBase
 	}
 
 	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
-	{  
+	{
 		return true
     }
 
@@ -490,6 +496,9 @@ class Craft_DadaTempStage_BaseRecipe extends RecipeBase
 				return false;
 			}
 			FoodStage foodStage0 = ingredient0.GetFoodStage();
+			// if no food stage (is null)
+			if (!foodStage0)
+				return false;
 			// if the food is raw, burnt or rotten
 			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
 			{
@@ -576,6 +585,9 @@ class Craft_DadaTemp1Stage1_BaseRecipe extends RecipeBase
 				return false;
 			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if no food stage (is null)
+			if (!foodStage1)
+				return false;
 			// if the food is raw, burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
 			{
@@ -661,6 +673,9 @@ class Craft_DadaTempStageTemp1_BaseRecipe extends RecipeBase
 				return false;
 			}
 			FoodStage foodStage0 = ingredient0.GetFoodStage();
+			// if no food stage (is null)
+			if (!foodStage0)
+				return false;
 			// if the food is raw, burnt or rotten
 			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
 			{
@@ -758,6 +773,9 @@ class Craft_DadaTempTemp1Stage1_BaseRecipe extends RecipeBase
 				return false;
 			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if no food stage (is null)
+			if (!foodStage1)
+				return false;
 			// if the food is raw, burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
 			{
@@ -843,6 +861,9 @@ class Craft_DadaTempStageTemp1Stage1_BaseRecipe extends RecipeBase
 				return false;
 			}
 			FoodStage foodStage0 = ingredient0.GetFoodStage();
+			// if no food stage (is null)
+			if (!foodStage0)
+				return false;
 			// if the food is raw, burnt or rotten
 			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
 			{
@@ -855,6 +876,9 @@ class Craft_DadaTempStageTemp1Stage1_BaseRecipe extends RecipeBase
 				return false;
 			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if no food stage (is null)
+			if (!foodStage1)
+				return false;
 			// if the food is raw, burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
 			{
@@ -939,7 +963,7 @@ class Craft_DadaTempLiquid_BaseRecipe extends RecipeBase
 			{
 				return false;
 			}
-			
+
 			if (ingredient0.GetLiquidType() == LIQUID_NONE || ingredient0.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient0.GetLiquidType() == LIQUID_SALINE || ingredient0.GetLiquidType() == LIQUID_VODKA || ingredient0.GetLiquidType() == LIQUID_BEER || ingredient0.GetLiquidType() == LIQUID_GASOLINE || ingredient0.GetLiquidType() == LIQUID_DIESEL || ingredient0.GetLiquidType() == LIQUID_DISINFECTANT || ingredient0.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
@@ -1016,13 +1040,13 @@ class Craft_DadaTemp1Liquid1_BaseRecipe extends RecipeBase
 		ItemBase ingredient1;
 		if (Class.CastTo(ingredient1, ingredients[1]))
 		{
-			
+
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
 			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
 			{
 				return false;
 			}
-		
+
 			if (ingredient1.GetLiquidType() == LIQUID_NONE || ingredient1.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient1.GetLiquidType() == LIQUID_SALINE || ingredient1.GetLiquidType() == LIQUID_VODKA || ingredient1.GetLiquidType() == LIQUID_BEER || ingredient1.GetLiquidType() == LIQUID_GASOLINE || ingredient1.GetLiquidType() == LIQUID_DIESEL || ingredient1.GetLiquidType() == LIQUID_DISINFECTANT || ingredient1.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
@@ -1107,7 +1131,7 @@ class Craft_DadaTempLiquidTemp1_BaseRecipe extends RecipeBase
 			{
 				return false;
 			}
-			
+
 			if (ingredient0.GetLiquidType() == LIQUID_NONE || ingredient0.GetLiquidType() == GROUP_LIQUID_BLOOD || ingredient0.GetLiquidType() == LIQUID_SALINE || ingredient0.GetLiquidType() == LIQUID_VODKA || ingredient0.GetLiquidType() == LIQUID_BEER || ingredient0.GetLiquidType() == LIQUID_GASOLINE || ingredient0.GetLiquidType() == LIQUID_DIESEL || ingredient0.GetLiquidType() == LIQUID_DISINFECTANT || ingredient0.GetLiquidType() == LIQUID_SOLUTION)
 			{
 				return false;
@@ -1291,6 +1315,9 @@ class Craft_DadaTempStageTemp1Liquid1_BaseRecipe extends RecipeBase
 				return false;
 			}
 			FoodStage foodStage0 = ingredient0.GetFoodStage();
+			// if no food stage (is null)
+			if (!foodStage0)
+				return false;
 			// if the food is raw, burnt or rotten
 			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
 			{
@@ -1399,6 +1426,9 @@ class Craft_DadaTempLiquidTemp1Stage1_BaseRecipe extends RecipeBase
 				return false;
 			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if no food stage (is null)
+			if (!foodStage1)
+				return false;
 			// if the food is raw, burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
 			{
