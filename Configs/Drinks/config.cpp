@@ -190,8 +190,8 @@ class CfgVehicles
 		varQuantityMax = 1000;
 		class Nutrition
 		{
-			energy = 50;
-			water = 150;
+			energy = 66;
+			water = 200;
 			nutritionalIndex = 1;
 			toxicity = 0;
 			fullnessIndex = 2;
@@ -270,8 +270,8 @@ class CfgVehicles
 		varQuantityMax = 1000;
 		class Nutrition
 		{
-			energy = 50;
-			water = 150;
+			energy = 66;
+			water = 200;
 			nutritionalIndex = 1;
 			toxicity = 0;
 			fullnessIndex = 2;
@@ -352,8 +352,8 @@ class CfgVehicles
 		varQuantityMax = 4000;
 		class Nutrition
 		{
-			energy = 50;
-			water = 150;
+			energy = 66;
+			water = 200;
 			nutritionalIndex = 1;
 			toxicity = 0;
 			fullnessIndex = 2;
@@ -614,7 +614,7 @@ class CfgVehicles
 		varQuantityMax = 300;
 		class Nutrition
 		{
-			energy = 50;
+			energy = 120;
 			water = 150;
 			nutritionalIndex = 1;
 			toxicity = 0;
