@@ -615,7 +615,7 @@ class CfgVehicles
 		class Nutrition
 		{
 			energy = 66;
-			water = 150;
+			water = 170;
 			nutritionalIndex = 1;
 			toxicity = 0;
 			fullnessIndex = 2;
