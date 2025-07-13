@@ -8,24 +8,65 @@ class Craft_Dada_RawFoodCan_LSVeggies extends Craft_DadaTempStageTemp1Stage1_Bas
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"Tomato");
-        InsertIngredient(0,"GreenBellPepper");
-        InsertIngredient(0,"Zucchini");
-        InsertIngredient(0,"SlicedPumpkin");
-        InsertIngredient(0,"Potato");
-        InsertIngredient(0,"PotatoSeed");
+        	InsertIngredient(0,"GreenBellPepper");
+        	InsertIngredient(0,"Zucchini");
+        	InsertIngredient(0,"SlicedPumpkin");
+        	InsertIngredient(0,"Potato");
 
 		//ingredient 2
-        InsertIngredient(1,"Tomato");//you can insert multiple ingredients this way
-        InsertIngredient(1,"GreenBellPepper");//you can insert multiple ingredients this way
-        InsertIngredient(1,"Zucchini");//you can insert multiple ingredients this way
-        InsertIngredient(1,"SlicedPumpkin");//you can insert multiple ingredients this way
-        InsertIngredient(1,"Potato");//you can insert multiple ingredients this way
-        InsertIngredient(1,"PotatoSeed");//you can insert multiple ingredients this way
+        	InsertIngredient(1,"Tomato");//you can insert multiple ingredients this way
+       	 	InsertIngredient(1,"GreenBellPepper");//you can insert multiple ingredients this way
+        	InsertIngredient(1,"Zucchini");//you can insert multiple ingredients this way
+        	InsertIngredient(1,"SlicedPumpkin");//you can insert multiple ingredients this way
+        	InsertIngredient(1,"Potato");//you can insert multiple ingredients this way
+        
+		//result1
+		AddResult("Dada_RawFoodCan_LSVeggies");//add results here
+	}
+};
+
+class Craft_Dada_RawFoodCan_LSVeggies1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft ESPENLock Veggies Can";
+
+		//INGREDIENTS
+		//ingredient 1
+        	InsertIngredient(0,"PotatoSeed");
+
+		//ingredient 2
+        	InsertIngredient(1,"Tomato");//you can insert multiple ingredients this way
+        	InsertIngredient(1,"GreenBellPepper");//you can insert multiple ingredients this way
+        	InsertIngredient(1,"Zucchini");//you can insert multiple ingredients this way
+	        InsertIngredient(1,"SlicedPumpkin");//you can insert multiple ingredients this way
+        	InsertIngredient(1,"Potato");//you can insert multiple ingredients this way
 
 		//result1
 		AddResult("Dada_RawFoodCan_LSVeggies");//add results here
 	}
 };
+
+class Craft_Dada_RawFoodCan_LSVeggies2 extends Craft_DadaTempTemp1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft ESPENLock Veggies Can";
+
+		//INGREDIENTS
+		//ingredient 1
+        	InsertIngredient(0,"PotatoSeed");
+
+		//ingredient 2
+        	InsertIngredient(1,"PotatoSeed");//you can insert multiple ingredients this way
+
+		//result1
+		AddResult("Dada_RawFoodCan_LSVeggies");//add results here
+	}
+};
+
 class Craft_Dada_RawFoodCan_STAGham extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
