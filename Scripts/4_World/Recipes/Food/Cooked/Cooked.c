@@ -1287,6 +1287,13 @@ class CraftDadaDish_Gumbo1 extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		m_MinQuantityIngredient[1] = 150;//-1 = disable check
 		
 		//ingredient 1
+		InsertIngredient(0,"TunaCanDuck");//you can insert multi
+		InsertIngredient(0,"TacticalBaconCan");//you can insert multiple ingredients this way
+		InsertIngredient(0,"UnknownFoodCan");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Dada_PreservedFoodCan_STAGham");//you can insert multi
+		InsertIngredient(0,"Dada_PreservedFoodCan_LSSPAM");//you can insert multi
+		InsertIngredient(0,"Dada_PreservedFoodCan_Paella");//you can insert multi
+		InsertIngredient(0,"Dada_PreservedFoodCan_Quail");//you can insert multi
 		InsertIngredient(0,"TacticalBaconCan_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(0,"UnknownFoodCan_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(0,"TunaCanDuck_Opened");//you can insert multi
@@ -1304,6 +1311,89 @@ class CraftDadaDish_Gumbo1 extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
+
+class CraftDadaDish_Gumbo1 extends Craft_DadaTempTemp1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Gumbo";
+	
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 150;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"TunaCanDuck");//you can insert multi
+		InsertIngredient(0,"TacticalBaconCan");//you can insert multiple ingredients this way
+		InsertIngredient(0,"UnknownFoodCan");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Dada_PreservedFoodCan_STAGham");//you can insert multi
+		InsertIngredient(0,"Dada_PreservedFoodCan_LSSPAM");//you can insert multi
+		InsertIngredient(0,"Dada_PreservedFoodCan_Paella");//you can insert multi
+		InsertIngredient(0,"Dada_PreservedFoodCan_Quail");//you can insert multi
+		
+		//ingredient 2
+		InsertIngredient(1,"Rice");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaDish_Gumbo");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaDish_Gumbo1 extends Craft_DadaTempTemp1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Gumbo";
+	
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 150;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"GoatSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"MouflonSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"BoarSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"DeerSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"PigSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"WolfSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"BearSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"CowSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"SheepSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"FoxSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"ChickenBreastMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"RabbitLegMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"ReindeerSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Dada_RawFoodCan_STAGham");//you can insert multi
+		InsertIngredient(0,"Dada_PreservedFoodCan_STAGham_Opened");//you can insert multi
+		InsertIngredient(0,"Dada_RawFoodCan_LSSPAM");//you can insert multi
+		InsertIngredient(0,"Dada_PreservedFoodCan_LSSPAM_Opened");
+		InsertIngredient(0,"Dada_RawFoodCan_Paella");//you can insert multi
+		InsertIngredient(0,"Dada_PreservedFoodCan_Paella_Opened");
+		InsertIngredient(0,"Dada_RawFoodCan_Quail");//you can insert multi
+		InsertIngredient(0,"Dada_PreservedFoodCan_Quail_Opened");
+		
+		//ingredient 2
+		InsertIngredient(1,"Rice");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaDish_Gumbo");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
 
 class CraftDadaDish_SeafoodGumbo extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
@@ -1346,39 +1436,7 @@ class CraftDadaDish_SeafoodGumbo extends Craft_DadaTempStageTemp1Stage1_BaseReci
 	}
 };
 
-class CraftDadaDish_Gumbo1 extends Craft_DadaTempTemp1_BaseRecipe
-{
-	override void Init()
-	{
-		super.Init();
-		m_Name = "Craft Gumbo";
-	
-		m_MinQuantityIngredient[0] = 60;//-1 = disable check
-		m_MinQuantityIngredient[1] = 150;//-1 = disable check
-		
-		//INGREDIENTS
-		//ingredient 1
-		InsertIngredient(0,"TunaCanDuck");//you can insert multi
-		InsertIngredient(0,"TacticalBaconCan");//you can insert multiple ingredients this way
-		InsertIngredient(0,"UnknownFoodCan");//you can insert multiple ingredients this way
-		InsertIngredient(0,"Dada_PreservedFoodCan_STAGham");//you can insert multi
-		InsertIngredient(0,"Dada_PreservedFoodCan_LSSPAM");//you can insert multi
-		InsertIngredient(0,"Dada_PreservedFoodCan_Paella");//you can insert multi
-		InsertIngredient(0,"Dada_PreservedFoodCan_Quail");//you can insert multi
-		
-		//ingredient 2
-		InsertIngredient(1,"Rice");//you can insert multiple ingredients this way
-		
-		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
-		m_IngredientDestroy[1] = false;// false = do nothing
-		
-		//result1
-		AddResult("DadaDish_Gumbo");//add results here
 
-		m_ResultSetQuantity[0] = 125;//-1 = do nothing
-		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
-	}
-};
 
 class CraftDadaDish_SeafoodGumbo1 extends Craft_DadaTempTemp1_BaseRecipe
 {
