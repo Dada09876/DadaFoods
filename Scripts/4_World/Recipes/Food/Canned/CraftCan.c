@@ -305,48 +305,111 @@ class Craft_Dada_RawFoodCan_Paella extends Craft_DadaTempStageTemp1Stage1_BaseRe
 		//InsertIngredient(0,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
 		InsertIngredient(0,"AcanthopagrusFilletMeat");//you can insert multiple ingredients this way
 		InsertIngredient(0,"ChubFilletMeat");//you can insert multiple ingredients this way
-        InsertIngredient(0,"HerringFilletMeat");//you can insert multiple ingredients this way
-        InsertIngredient(0,"MullowayFilletMeat");//you can insert multiple ingredients this way
-        InsertIngredient(0,"Rice");
-        InsertIngredient(0,"Dada_Raw_Rice");
+        	InsertIngredient(0,"HerringFilletMeat");//you can insert multiple ingredients this way
+        	InsertIngredient(0,"MullowayFilletMeat");//you can insert multiple ingredients this way
+        	InsertIngredient(0,"Dada_Raw_Rice");
 		InsertIngredient(0,"WalleyePollockFilletMeat");
 		InsertIngredient(0,"SteelheadTroutFilletMeat");
 
 		//ingredient 2
-        InsertIngredient(1,"Tomato");
-        InsertIngredient(1,"GreenBellPepper");
-        InsertIngredient(1,"Zucchini");
-        InsertIngredient(1,"SlicedPumpkin");
-        InsertIngredient(1,"Potato");
-        InsertIngredient(1,"PotatoSeed");
-        InsertIngredient(1,"GoatSteakMeat");
-        InsertIngredient(1,"MouflonSteakMeat");
-        InsertIngredient(1,"BoarSteakMeat");
-        InsertIngredient(1,"PigSteakMeat");
-        InsertIngredient(1,"DeerSteakMeat");
-        InsertIngredient(1,"WolfSteakMeat");
-        InsertIngredient(1,"BearSteakMeat");
-        InsertIngredient(1,"CowSteakMeat");
-        InsertIngredient(1,"SheepSteakMeat");
-        InsertIngredient(1,"ReindeerSteakMeat");
+        	InsertIngredient(1,"Tomato");
+        	InsertIngredient(1,"GreenBellPepper");
+       	 	InsertIngredient(1,"Zucchini");
+        	InsertIngredient(1,"SlicedPumpkin");
+        	InsertIngredient(1,"Potato");
+        	InsertIngredient(1,"GoatSteakMeat");
+        	InsertIngredient(1,"MouflonSteakMeat");
+        	InsertIngredient(1,"BoarSteakMeat");
+        	InsertIngredient(1,"PigSteakMeat");
+        	InsertIngredient(1,"DeerSteakMeat");
+        	InsertIngredient(1,"WolfSteakMeat");
+        	InsertIngredient(1,"BearSteakMeat");
+        	InsertIngredient(1,"CowSteakMeat");
+        	InsertIngredient(1,"SheepSteakMeat");
+        	InsertIngredient(1,"ReindeerSteakMeat");
 		InsertIngredient(1,"FoxSteakMeat");
 		InsertIngredient(1,"WalleyePollockFilletMeat");
 		InsertIngredient(1,"SteelheadTroutFilletMeat");
-        InsertIngredient(1,"ChickenBreastMeat");
-        InsertIngredient(1,"RabbitLegMeat");
-        //InsertIngredient(1,"srpChickenleg");
-        //InsertIngredient(1,"srpSausage");
-        //InsertIngredient(1,"srpStew_GroundBeef");
-        InsertIngredient(1,"CarpFilletMeat");
-        InsertIngredient(1,"MackerelFilletMeat");
-        InsertIngredient(1,"Bitterlings");
-        InsertIngredient(1,"Sardines");
-        //InsertIngredient(1,"SRP_FreshWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
+        	InsertIngredient(1,"ChickenBreastMeat");
+        	InsertIngredient(1,"RabbitLegMeat");
+        	//InsertIngredient(1,"srpChickenleg");
+        	//InsertIngredient(1,"srpSausage");
+        	//InsertIngredient(1,"srpStew_GroundBeef");
+        	InsertIngredient(1,"CarpFilletMeat");
+        	InsertIngredient(1,"MackerelFilletMeat");
+        	InsertIngredient(1,"Bitterlings");
+        	InsertIngredient(1,"Sardines");
+        	//InsertIngredient(1,"SRP_FreshWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
 		//InsertIngredient(1,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
 		//result1
 		AddResult("Dada_RawFoodCan_Paella");//add results here
 	}
 };
+
+class Craft_Dada_RawFoodCan_Paella1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Paella Can";
+		//INGREDIENTS
+		//ingredient 1
+        	InsertIngredient(0,"Rice");
+		InsertIngredient(0,"PotatoSeed");
+
+		//ingredient 2
+        	InsertIngredient(1,"Tomato");
+        	InsertIngredient(1,"GreenBellPepper");
+       	 	InsertIngredient(1,"Zucchini");
+        	InsertIngredient(1,"SlicedPumpkin");
+        	InsertIngredient(1,"Potato");
+        	InsertIngredient(1,"GoatSteakMeat");
+        	InsertIngredient(1,"MouflonSteakMeat");
+        	InsertIngredient(1,"BoarSteakMeat");
+        	InsertIngredient(1,"PigSteakMeat");
+        	InsertIngredient(1,"DeerSteakMeat");
+        	InsertIngredient(1,"WolfSteakMeat");
+        	InsertIngredient(1,"BearSteakMeat");
+        	InsertIngredient(1,"CowSteakMeat");
+        	InsertIngredient(1,"SheepSteakMeat");
+        	InsertIngredient(1,"ReindeerSteakMeat");
+		InsertIngredient(1,"FoxSteakMeat");
+		InsertIngredient(1,"WalleyePollockFilletMeat");
+		InsertIngredient(1,"SteelheadTroutFilletMeat");
+        	InsertIngredient(1,"ChickenBreastMeat");
+        	InsertIngredient(1,"RabbitLegMeat");
+        	//InsertIngredient(1,"srpChickenleg");
+        	//InsertIngredient(1,"srpSausage");
+        	//InsertIngredient(1,"srpStew_GroundBeef");
+        	InsertIngredient(1,"CarpFilletMeat");
+        	InsertIngredient(1,"MackerelFilletMeat");
+        	InsertIngredient(1,"Bitterlings");
+        	InsertIngredient(1,"Sardines");
+        	//InsertIngredient(1,"SRP_FreshWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
+		//InsertIngredient(1,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
+		//result1
+		AddResult("Dada_RawFoodCan_Paella");//add results here
+	}
+};
+
+class Craft_Dada_RawFoodCan_Paella2 extends Craft_DadaTempTemp1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Paella Can";
+		//INGREDIENTS
+		//ingredient 1
+        	InsertIngredient(0,"Rice");
+
+		//ingredient 2
+        	InsertIngredient(1,"PotatoSeed");
+        
+		//result1
+		AddResult("Dada_RawFoodCan_Paella");//add results here
+	}
+};
+
 class Craft_Dada_RawFoodCan_PumpkinPuree extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
