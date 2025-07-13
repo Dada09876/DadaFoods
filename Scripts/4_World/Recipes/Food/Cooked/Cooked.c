@@ -1470,7 +1470,7 @@ class CraftDadaDish_SeafoodGumbo1 extends Craft_DadaTempTemp1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_SeafoodGumbo1 extends Craft_DadaTempTemp1_BaseRecipe
+class CraftDadaDish_SeafoodGumbo2 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -1504,7 +1504,7 @@ class CraftDadaDish_SeafoodGumbo1 extends Craft_DadaTempTemp1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_SeafoodGumbo extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+class CraftDadaDish_SeafoodGumbo3 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
