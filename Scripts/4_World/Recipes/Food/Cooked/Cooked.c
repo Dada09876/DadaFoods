@@ -1411,8 +1411,6 @@ class CraftDadaDish_SeafoodGumbo extends Craft_DadaTempStageTemp1Stage1_BaseReci
 		InsertIngredient(0,"MackerelFilletMeat");//you can insert multiple ingredients this way
 		InsertIngredient(0,"Bitterlings");//you can insert multiple ingredients this way
 		InsertIngredient(0,"Sardines");//you can insert multiple ingredients this way
-		InsertIngredient(0,"SardinesCan_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(0,"TunaCan_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(0,"WalleyePollockFilletMeat");//you can insert multiple ingredients this way
 		InsertIngredient(0,"SteelheadTroutFilletMeat");//you can insert multiple ingredients this way
 		InsertIngredient(0,"Dada_RawFoodCan_Paella");//you can insert multiple ingredients this way
@@ -1455,10 +1453,85 @@ class CraftDadaDish_SeafoodGumbo1 extends Craft_DadaTempTemp1_BaseRecipe
 		InsertIngredient(0,"Dada_PreservedFoodCan_Crab");//you can insert multiple ingredients this way
 		InsertIngredient(0,"Dada_PreservedFoodCan_Clam");//you can insert multiple ingredients this way
 		InsertIngredient(0,"BakedBeansCanFishEggs");//you can insert multiple ingredients this way
+		InsertIngredient(0,"SardinesCan_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(0,"TunaCan_Opened");//you can insert multiple ingredients this way
 		
 		//ingredient 2
 		InsertIngredient(1,"Rice");//you can insert multiple ingredients this way
 	
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaDish_SeafoodGumbo");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaDish_SeafoodGumbo1 extends Craft_DadaTempTemp1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Seafood Gumbo";
+		
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 150;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(0,"SardinesCan");//you can insert multiple ingredients this way
+		InsertIngredient(0,"TunaCan");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Dada_PreservedFoodCan_Paella");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Dada_PreservedFoodCan_Crab");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Dada_PreservedFoodCan_Clam");//you can insert multiple ingredients this way
+		InsertIngredient(0,"BakedBeansCanFishEggs");//you can insert multiple ingredients this way
+		InsertIngredient(0,"SardinesCan_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(0,"TunaCan_Opened");//you can insert multiple ingredients this way
+		
+		//ingredient 2
+		InsertIngredient(1,"DadaRawRice");//you can insert multiple ingredients this way
+	
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaDish_SeafoodGumbo");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaDish_SeafoodGumbo extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Seafood Gumbo";
+		
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 150;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"CarpFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"MackerelFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Bitterlings");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Sardines");//you can insert multiple ingredients this way
+		InsertIngredient(0,"WalleyePollockFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"SteelheadTroutFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Dada_RawFoodCan_Paella");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Dada_PreservedFoodCan_Paella_Opened");//you can insert multi
+		InsertIngredient(0,"Dada_RawFoodCan_Crab");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Dada_PreservedFoodCan_Crab_Opened");//you can insert multi
+		InsertIngredient(0,"Dada_RawFoodCan_Clam");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Dada_PreservedFoodCan_Clam_Opened");//you can insert multi
+		
+		//ingredient 2
+		InsertIngredient(1,"Rice");//you can insert multiple ingredients this way
+		
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
 		
