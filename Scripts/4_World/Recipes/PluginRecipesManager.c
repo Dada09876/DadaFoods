@@ -52,6 +52,8 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaSoup_ChickenBroth1);
     RegisterRecipe(new CraftDadaSoup_ChickenNoodleSoup);
     RegisterRecipe(new CraftDadaDish_Chili);
+    RegisterRecipe(new CraftDadaDish_Chili1);
+    RegisterRecipe(new CraftDadaDish_Chili2);
     RegisterRecipe(new CraftDadaSoup_Gravy);
     RegisterRecipe(new CraftDadaDish_Gumbo);
     RegisterRecipe(new CraftDadaDish_Gumbo1);

@@ -740,6 +740,77 @@ class CraftDadaDish_Chili extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	}
 };
 
+class CraftDadaDish_Chili1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Chili";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 2;//animation length in relative time units
+		m_Specialty = -0.01;// value > 0 for roughness, value < 0 for precision
+		
+		//conditions
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"BakedBeansCan_Opened");
+		
+		//ingredient 2
+		InsertIngredient(0,"DadaDish_GroundMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_STAGchili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_HomemadeChili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaSoup_TomatoSauce");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaDish_Chili");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaDish_Chili2 extends Craft_DadaTempTemp1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Chili";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 2;//animation length in relative time units
+		m_Specialty = -0.01;// value > 0 for roughness, value < 0 for precision
+		
+		//conditions
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"BakedBeansCan_Opened");
+		
+		//ingredient 2
+		InsertIngredient(1,"BakedBeansCan_Opened");
+		
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaDish_Chili");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
 class CraftDadaSoup_Gravy extends Craft_DadaTempTemp1Stage1_BaseRecipe
 {
 	override void Init()
@@ -1156,7 +1227,7 @@ class CraftDadaDish_Sausage extends Craft_DadaTempTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Pie2 extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+class CraftDadaDish_Pie2 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{

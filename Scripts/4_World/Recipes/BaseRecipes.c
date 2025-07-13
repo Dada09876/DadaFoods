@@ -67,7 +67,7 @@ class Craft_DadaTempStageLiquidTemp1Stage1Liquid1_BaseRecipe extends RecipeBase
 			}
 			FoodStage foodStage0 = ingredient0.GetFoodStage();
 			// if no food stage, is null
-			if (!foodstage0)
+			if (!foodStage0)
 				return false;
 			// if the food is burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten() || foodStage1.IsFoodRaw() || foodStage1.IsFoodDried() || foodStage1.IsFoodBaked() || foodStage1.IsFoodBoiled()) 
@@ -87,7 +87,7 @@ class Craft_DadaTempStageLiquidTemp1Stage1Liquid1_BaseRecipe extends RecipeBase
 			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if no food stage, is null
-			if (!foodstage1)
+			if (!foodStage1)
 				return false;
 			// if the food is burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
@@ -497,7 +497,7 @@ class Craft_DadaTempStage_BaseRecipe extends RecipeBase
 			}
 			FoodStage foodStage0 = ingredient0.GetFoodStage();
 			// if no food stage, is null
-			if (!foodstage0)
+			if (!foodStage0)
 				return false;
 			// if the food is burnt or rotten
 			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
@@ -586,7 +586,7 @@ class Craft_DadaTemp1Stage1_BaseRecipe extends RecipeBase
 			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if no food stage, is null
-			if (!foodstage1)
+			if (!foodStage1)
 				return false;
 			// if the food is burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
@@ -674,7 +674,7 @@ class Craft_DadaTempStageTemp1_BaseRecipe extends RecipeBase
 			}
 			FoodStage foodStage0 = ingredient0.GetFoodStage();
 			// if no food stage, is null
-			if (!foodstage0)
+			if (!foodStage0)
 				return false;
 			// if the food is burnt or rotten
 			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
@@ -774,7 +774,7 @@ class Craft_DadaTempTemp1Stage1_BaseRecipe extends RecipeBase
 			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if no food stage, is null
-			if (!foodstage1)
+			if (!foodStage1)
 				return false;
 			// if the food is burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
@@ -862,7 +862,7 @@ class Craft_DadaTempStageTemp1Stage1_BaseRecipe extends RecipeBase
 			}
 			FoodStage foodStage0 = ingredient0.GetFoodStage();
 			// if no food stage, is null
-			if (!foodstage0)
+			if (!foodStage0)
 			 return false;
 			// if the food is burnt or rotten
 			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
@@ -877,7 +877,7 @@ class Craft_DadaTempStageTemp1Stage1_BaseRecipe extends RecipeBase
 			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if no food stage, is null
-			if (!foodstage1)
+			if (!foodStage1)
 				return false;
 			// if the food is burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
@@ -1316,7 +1316,7 @@ class Craft_DadaTempStageTemp1Liquid1_BaseRecipe extends RecipeBase
 			}
 			FoodStage foodStage0 = ingredient0.GetFoodStage();
 			// if no food stage, is null
-			if (!foodstage0)
+			if (!foodStage0)
 				return false;
 			// if the food is burnt or rotten
 			if (foodStage0.IsFoodBurned() || foodStage0.IsFoodRotten())
@@ -1427,7 +1427,7 @@ class Craft_DadaTempLiquidTemp1Stage1_BaseRecipe extends RecipeBase
 			}
 			FoodStage foodStage1 = ingredient1.GetFoodStage();
 			// if no food stage, is null
-			if (!foodstage1)
+			if (!foodStage1)
 				return false;
 			// if the food is burnt or rotten
 			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
