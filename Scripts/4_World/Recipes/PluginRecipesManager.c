@@ -81,6 +81,8 @@ modded class PluginRecipesManager
     RegisterRecipe(new Craft_OpenCan);
     RegisterRecipe(new Craft_SealCan);
     RegisterRecipe(new Craft_Dada_RawFoodCan_LSVeggies);
+    RegisterRecipe(new Craft_Dada_RawFoodCan_LSVeggies1);
+    RegisterRecipe(new Craft_Dada_RawFoodCan_LSVeggies2);
     RegisterRecipe(new Craft_Dada_RawFoodCan_STAGham);
     RegisterRecipe(new Craft_Dada_RawFoodCan_ESPENChunkySoup);
     RegisterRecipe(new Craft_Dada_RawFoodCan_LSSPAM);
