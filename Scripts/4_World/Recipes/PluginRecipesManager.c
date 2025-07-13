@@ -91,6 +91,8 @@ modded class PluginRecipesManager
     RegisterRecipe(new Craft_Dada_RawFoodCan_DicedTomatoes);
     RegisterRecipe(new Craft_Dada_RawFoodCan_Ketchup);
     RegisterRecipe(new Craft_Dada_RawFoodCan_Paella);
+    RegisterRecipe(new Craft_Dada_RawFoodCan_Paella1);
+    RegisterRecipe(new Craft_Dada_RawFoodCan_Paella2);
     RegisterRecipe(new Craft_Dada_RawFoodCan_PumpkinPuree);
     RegisterRecipe(new Craft_Dada_RawFoodCan_Quail);
     RegisterRecipe(new Craft_Dada_RawFoodCan_Relish);
