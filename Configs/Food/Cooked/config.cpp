@@ -711,6 +711,14 @@ class CfgVehicles
 		descriptionShort = "Tomato sauce, best mixed with other things";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_rotten_co.paa"};
+	class Nutrition
+		{
+			fullnessIndex = 3;
+			energy = 50;
+			water = 50;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
 	};
 	class DadaSoup_Gravy: DadaSoup_Base
 	{
