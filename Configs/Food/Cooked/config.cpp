@@ -11,9 +11,7 @@ class CfgPatches
 	};
 };
 
-class CfgVehicles
-{
-	class BaseFoodStageTransitions;
+class BaseFoodStageTransitions;
 	class DadaDishStageTransitions: BaseFoodStageTransitions
 	{
 	class Raw
@@ -139,6 +137,8 @@ class CfgVehicles
 	class Burned{};
 	};
 
+class CfgVehicles
+{
 	class Edible_Base;
 	class DadaSoup_Base: Edible_Base
 	{
