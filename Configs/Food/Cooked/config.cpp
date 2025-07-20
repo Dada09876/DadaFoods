@@ -535,7 +535,39 @@ class CfgVehicles
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_rotten_co.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"};
+	class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,50,50,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
+				};
+				class Baked
+				{
+					nutrition_properties[] = {1,300,50,1,0};
+				};
+				class Boiled
+				{
+					nutrition_properties[] = {1,250,100,1,0};
+				};
+				class Dried
+				{
+					nutrition_properties[] = {1,250,0,1,0};
+				};
+				class Burned
+				{
+					nutrition_properties[] = {5,50,0,1,0,16};
+				};
+			};
+			class FoodStageTransitions: DadaDishStageTransitions{};
+		};
 	};
+};
 
 	class DadaBread_Loaf: DadaBread_Base
 	{
@@ -1252,7 +1284,7 @@ class CfgVehicles
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,50,50,1,0,4};
+					nutrition_properties[] = {5,80,80,1,0,4};
 				};
 				class Rotten
 				{
@@ -1260,7 +1292,7 @@ class CfgVehicles
 				};
 				class Baked
 				{
-					nutrition_properties[] = {1,300,50,1,0};
+					nutrition_properties[] = {1,240,48,1,0};
 				};
 				class Boiled
 				{
