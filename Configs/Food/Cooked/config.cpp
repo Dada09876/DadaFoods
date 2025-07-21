@@ -1284,27 +1284,27 @@ class CfgVehicles
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,80,80,1,0,4};
+					nutrition_properties[] = {5,48,48,1,0,4};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
+					nutrition_properties[] = {10,24,19,1,0,"4 +     16"};
 				};
 				class Baked
 				{
-					nutrition_properties[] = {1,240,48,1,0};
+					nutrition_properties[] = {1,144,29,1,0};
 				};
 				class Boiled
 				{
-					nutrition_properties[] = {1,250,100,1,0};
+					nutrition_properties[] = {1,120,77,1,0};
 				};
 				class Dried
 				{
-					nutrition_properties[] = {1,250,0,1,0};
+					nutrition_properties[] = {1,120,10,1,0};
 				};
 				class Burned
 				{
-					nutrition_properties[] = {5,50,0,1,0,16};
+					nutrition_properties[] = {5,48,0,1,0,16};
 				};
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
