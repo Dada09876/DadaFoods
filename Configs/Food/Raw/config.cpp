@@ -148,6 +148,21 @@ class CfgVehicles
 		descriptionShort = "Tomato and Mozzarella Salad";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaTomatoSalad_co.paa"};
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,40,40,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,20,16,1,0,"4 +     16"};
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
+		};
 	};
 	class DadaRaw_CerealCrunchin: DadaRaw_Base
 	{
