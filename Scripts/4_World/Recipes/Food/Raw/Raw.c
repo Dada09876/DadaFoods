@@ -42,6 +42,7 @@ class CraftDadaRaw_TomatoSalad extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 
 		//ingredient 2
         InsertIngredient(1,"Tomato");//you can insert multiple ingredients this way
+	InsertIngredient(1,"DadaRaw_Mozza");//you can insert multiple ingredients this way
 
 		//result1
 		AddResult("DadaRaw_TomatoSalad");//add results here
