@@ -124,6 +124,25 @@ class CfgVehicles
 		descriptionShort = "Lettuce and dressing, perfect meal for the calorie averse or starter for everyone else";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaSalad_co.paa"};
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
+		};
 	};
 	class DadaRaw_Rice: DadaRaw_Base
 	{
@@ -132,6 +151,25 @@ class CfgVehicles
 		descriptionShort = "It's rice. Not sure what you were hoping for";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaRiceBowl_co.paa"};
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
+		};
 	};
 	class DadaRaw_PokeBowl: DadaRaw_Base
 	{
@@ -144,6 +182,25 @@ class CfgVehicles
 		descriptionShort = "Bowl of rice with multiple toppings on it, gotta eat em all!";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaPokeBowl_co.paa"};
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
+		};
 	};
 	class DadaRaw_TomatoSalad: DadaRaw_Base
 	{
@@ -177,6 +234,25 @@ class CfgVehicles
 		scope = 1;
 		displayName = "Cereal Bowl";
 		descriptionShort = "Bowl of cereal";
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
+		};
 	};
 	class DadaRawCerealCrunchin_Nesquik: DadaRaw_CerealCrunchin
 	{
@@ -184,6 +260,25 @@ class CfgVehicles
 		Color = "Coco";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaCerealCrunchinKids_co.paa"};
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
+		};
 	};
 	class DadaRaw_CerealCrunchin_Frosties: DadaRaw_CerealCrunchin
 	{
@@ -191,6 +286,25 @@ class CfgVehicles
 		Color = "Frosties";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaCerealCrunchinFrosties_co.paa"};
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
+		};
 	};
 	class DadaRaw_CerealCrunchin_Kosmostar: DadaRaw_CerealCrunchin
 	{
@@ -198,6 +312,25 @@ class CfgVehicles
 		Color = "Star";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaCerealCrunchinKosmostar_co.paa"};
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
+		};
 	};
 	class DadaRaw_SushiMaki: DadaRaw_Base
 	{
@@ -230,6 +363,25 @@ class CfgVehicles
 		};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
+		};
 		class AnimEvents
 		{
 			class SoundWeapon
@@ -282,6 +434,25 @@ class CfgVehicles
 				};
 			};
 		};
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
+		};
 	};
 	class FoodCan_100g_ColorBase;
 	class DadaRaw_SmallButter: FoodCan_100g_ColorBase
@@ -308,13 +479,24 @@ class CfgVehicles
 		descriptionShort = "Just a little bit of butter";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaFoodCan_SmallButter_co.paa"};
-		class Nutrition
+		class Food
 		{
-			fullnessIndex = 3;
-			energy = 250;
-			water = 25;
-			nutritionalIndex = 1;
-			toxicity = 0;
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		class DamageSystem
 		{
@@ -356,13 +538,24 @@ class CfgVehicles
 				};
 			};
 		};
-		class Nutrition
+				class Food
 		{
-			fullnessIndex = 3;
-			energy = 250;
-			water = 25;
-			nutritionalIndex = 1;
-			toxicity = 0;
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		class AnimEvents
 		{
@@ -415,13 +608,24 @@ class CfgVehicles
 		canBeSplit = 1;
 		hiddenSelections[] = {"zbytek"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\Mozza_co.paa"};
-		class Nutrition
+		class Food
 		{
-			fullnessIndex = 3;
-			energy = 150;
-			water = 50;
-			nutritionalIndex = 1;
-			toxicity = 0;
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		class DamageSystem
 		{
@@ -450,13 +654,24 @@ class CfgVehicles
 		hiddenSelections[] = {"cs_raw","camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseWrap_ca.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"};
-		class Nutrition
+		class Food
 		{
-			fullnessIndex = 3;
-			energy = 250;
-			water = 25;
-			nutritionalIndex = 1;
-			toxicity = 0;
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
 		};
 	};
 	class DamageSystem
@@ -479,13 +694,24 @@ class CfgVehicles
 		descriptionShort = "Le meilleur fromage à mettre dans vos poutines maison!";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaCheddarCurds_co.paa"};
-		class Nutrition
+		class Food
 		{
-			fullnessIndex = 0;
-			energy = 150;
-			water = 50;
-			nutritionalIndex = 1;
-			toxicity = 0;
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
 		};
 	};
 	class DadaRaw_PumpkinSeeds: Snack_Colorbase
@@ -515,13 +741,24 @@ class CfgVehicles
 		canBeSplit = 1;
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaFreshGoatCheese_co.paa"};
-		class Nutrition
+		class Food
 		{
-			fullnessIndex = 3;
-			energy = 150;
-			water = 50;
-			nutritionalIndex = 1;
-			toxicity = 0;
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		class DamageSystem
 		{
@@ -545,13 +782,24 @@ class CfgVehicles
 		canBeSplit = 1;
 		hiddenSelections[] = {"zbytek"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\Mozza_co.paa"};
-		class Nutrition
+		class Food
 		{
-			fullnessIndex = 3;
-			energy = 150;
-			water = 50;
-			nutritionalIndex = 1;
-			toxicity = 0;
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		class DamageSystem
 		{
@@ -574,13 +822,24 @@ class CfgVehicles
 		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.p3d";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\IScreamVanillaChoco_co.paa"};
-		class Nutrition
+		class Food
 		{
-			fullnessIndex = 3;
-			energy = 150;
-			water = 50;
-			nutritionalIndex = 1;
-			toxicity = 0;
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		class DamageSystem
 		{
@@ -664,13 +923,24 @@ class CfgVehicles
 		model = "\dz\gear\food\FoodCan_100g_open.p3d";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\Yogourt_co.paa"};
-		class Nutrition
+		class Food
 		{
-			fullnessIndex = 3;
-			energy = 150;
-			water = 50;
-			nutritionalIndex = 1;
-			toxicity = 0;
+			class FoodStages
+			{
+				class Raw
+				{
+					nutrition_properties[] = {5,67,67,1,0,4};
+				};
+				class Rotten
+				{
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+				};
+				class Dried
+				{
+						nutrition_properties[] = {1,167,13,1,0}
+				};
+			};
+			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		class DamageSystem
 		{
