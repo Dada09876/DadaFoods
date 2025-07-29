@@ -35,14 +35,6 @@ class CfgVehicles
 		inventorySlot[] = {"Ingredient","Ingredient1","Ingredient2","Ingredient3","Ingredient4","Ingredient5","Ingredient6","Ingredient7","Ingredient8"};
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaRawBowl_Base_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaRawBowl_Base_co.paa"};
-		class Nutrition
-		{
-			fullnessIndex = 3;
-			energy = 100;
-			water = 50;
-			nutritionalIndex = 1;
-			toxicity = 0;
-		};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
