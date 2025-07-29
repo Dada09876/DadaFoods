@@ -158,15 +158,15 @@ class CfgVehicles
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,40,40,1,0,4};
+					nutrition_properties[] = {5,67,67,1,0,4};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,20,16,1,0,"4 +     16"};
+					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
 				};
 				class Dried
 				{
-						nutrition_properties[] = {1,100,8,1,0}
+						nutrition_properties[] = {1,167,13,1,0}
 				};
 			};
 			class FoodStageTransitions: FruitStageTransitions{};
