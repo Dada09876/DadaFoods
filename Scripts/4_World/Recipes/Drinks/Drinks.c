@@ -6,7 +6,7 @@ class CraftDadaDrink_FreshMilk extends Craft_DadaTemp1Liquid1_BaseRecipe
 		m_Name = "Craft Fresh Milk";
 		
 		m_MinQuantityIngredient[0] = 10;//-1 = disable check
-		m_MinQuantityIngredient[1] = 200;//-1 = disable check
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
 		
 		//INGREDIENTS
 		//ingredient 1
