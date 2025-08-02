@@ -172,7 +172,7 @@ class CraftDadaDrink_MilkGallon extends Craft_DadaTemp1Liquid1_BaseRecipe
 		m_Name = "Craft Milk Gallon";
 		
 		m_MinQuantityIngredient[0] = 100;//-1 = disable check
-		m_MinQuantityIngredient[1] = 300;//-1 = disable check
+		m_MinQuantityIngredient[1] = 500;//-1 = disable check
 		
 		//ingredient 1
 		InsertIngredient(0,"PowderedMilk");//you can insert multiple ingredients this way
