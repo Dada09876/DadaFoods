@@ -225,8 +225,8 @@ class CraftDadaDrink_MilkShake extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		super.Init();
 		m_Name = "Craft MilkShake";
 		
-		m_MinQuantityIngredient[0] = 50;//-1 = disable check
-		m_MinQuantityIngredient[1] = 50;//-1 = disable check
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
 		
 		//INGREDIENTS
 		//ingredient 1
@@ -235,7 +235,7 @@ class CraftDadaDrink_MilkShake extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
         InsertIngredient(0,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 		InsertIngredient(0,"DadaDrink_MilkGallon");//you can insert multiple ingredients this w
     
-		m_IngredientAddQuantity[0] = -200;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -159;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
@@ -244,7 +244,7 @@ class CraftDadaDrink_MilkShake extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
         InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 		InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this w
     
-		m_IngredientAddQuantity[1] = -200;// 0 = do nothing
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		m_IngredientDestroy[1] = false;//true = destroy, false = do nothing
 		
 		//result1
@@ -261,7 +261,7 @@ class CraftDadaDrink_CurdsAndWhey extends Craft_DadaTempStageTemp1_BaseRecipe
 		super.Init();
 		m_Name = "Craft Curds and Whey";
 		
-		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MinQuantityIngredient[0] = 200;//-1 = disable check
 		m_MinQuantityIngredient[1] = 50;//-1 = disable check
 		
 		//INGREDIENTS
