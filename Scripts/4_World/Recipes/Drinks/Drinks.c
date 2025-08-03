@@ -5,20 +5,20 @@ class CraftDadaDrink_FreshMilk extends Craft_DadaTemp1Liquid1_BaseRecipe
 		super.Init();
 		m_Name = "Craft Fresh Milk";
 		
-		m_MinQuantityIngredient[0] = 10;//-1 = disable check
+		m_MinQuantityIngredient[0] = 38;//-1 = disable check
 		m_MinQuantityIngredient[1] = 100;//-1 = disable check
 		
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"PowderedMilk");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -33;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -50;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
 		InsertIngredient(1,"Bottle_Base");//you can insert multiple ingredients this w
 
-		m_IngredientAddQuantity[1] = -100;// 0 = do nothing
+		m_IngredientAddQuantity[1] = -200;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
 		
 		//result1
