@@ -6,7 +6,7 @@ class CraftDadaDrink_FreshMilk extends Craft_DadaTemp1Liquid1_BaseRecipe
 		m_Name = "Craft Fresh Milk";
 		
 		m_MinQuantityIngredient[0] = 38;//-1 = disable check
-		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		m_MinQuantityIngredient[1] = 250;//-1 = disable check
 		
 		//INGREDIENTS
 		//ingredient 1
@@ -18,7 +18,7 @@ class CraftDadaDrink_FreshMilk extends Craft_DadaTemp1Liquid1_BaseRecipe
 		//ingredient 2
 		InsertIngredient(1,"Bottle_Base");//you can insert multiple ingredients this w
 
-		m_IngredientAddQuantity[1] = -200;// 0 = do nothing
+		m_IngredientAddQuantity[1] = -262;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
 		
 		//result1
@@ -61,20 +61,20 @@ class CraftDadaDrink_MilkBottle extends Craft_DadaTemp1Liquid1_BaseRecipe
 		super.Init();
 		m_Name = "Craft Milk Bottle";
 		
-		m_MinQuantityIngredient[0] = 40;//-1 = disable check
-		m_MinQuantityIngredient[1] = 200;//-1 = disable check
+		m_MinQuantityIngredient[0] = 76;//-1 = disable check
+		m_MinQuantityIngredient[1] = 500;//-1 = disable check
 		
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"PowderedMilk");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -75;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -138;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
 		InsertIngredient(1,"Bottle_Base");//you can insert multiple ingredients this w
 		
-		m_IngredientAddQuantity[1] = -375;// 0 = do nothing
+		m_IngredientAddQuantity[1] = -850;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
 		
 		//result1
@@ -116,20 +116,20 @@ class CraftDadaDrink_MilkCarton extends Craft_DadaTemp1Liquid1_BaseRecipe
 		super.Init();
 		m_Name = "Craft Milk Carton";
 	
-		m_MinQuantityIngredient[0] = 40;//-1 = disable check
-		m_MinQuantityIngredient[1] = 300;//-1 = disable check
+		m_MinQuantityIngredient[0] = 76;//-1 = disable check
+		m_MinQuantityIngredient[1] = 500;//-1 = disable check
 		
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"PowderedMilk");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -75;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -138;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
 		InsertIngredient(1,"Bottle_Base");//you can insert multiple ingredients this w
 		
-		m_IngredientAddQuantity[1] = -375;// 0 = do nothing
+		m_IngredientAddQuantity[1] = -850;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
 		
 		//result1
@@ -171,8 +171,8 @@ class CraftDadaDrink_MilkGallon extends Craft_DadaTemp1Liquid1_BaseRecipe
 		super.Init();
 		m_Name = "Craft Milk Gallon";
 		
-		m_MinQuantityIngredient[0] = 150;//-1 = disable check
-		m_MinQuantityIngredient[1] = 500;//-1 = disable check
+		m_MinQuantityIngredient[0] = 200;//-1 = disable check
+		m_MinQuantityIngredient[1] = 1500;//-1 = disable check
 		
 		//ingredient 1
 		InsertIngredient(0,"PowderedMilk");//you can insert multiple ingredients this way
@@ -183,7 +183,7 @@ class CraftDadaDrink_MilkGallon extends Craft_DadaTemp1Liquid1_BaseRecipe
 		//ingredient 2
 		InsertIngredient(1,"Bottle_Base");//you can insert multiple ingredients this w
 		
-		m_IngredientAddQuantity[1] = -1000;// 0 = do nothing
+		m_IngredientAddQuantity[1] = -3000;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
 		
 		//result1
