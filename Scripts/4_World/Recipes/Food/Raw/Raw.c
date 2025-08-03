@@ -349,7 +349,7 @@ class CraftDadaRaw_SmallButter extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaRaw_SmallButter");//add results here
 
-		m_ResultSetQuantity[0] = 300;//-1 = do nothing
+		m_ResultSetQuantity[0] = 100;//-1 = do nothing
 	}
 };	
 
@@ -370,7 +370,7 @@ class CraftDadaRaw_BigButter extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		InsertIngredient(0,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 		InsertIngredient(0,"Lard");//you can insert multiple ingredient
     
-		m_IngredientAddQuantity[0] = -600;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -300;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
@@ -379,13 +379,13 @@ class CraftDadaRaw_BigButter extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this w
 		InsertIngredient(1,"Lard");//you can insert multiple ingredient
     
-		m_IngredientAddQuantity[1] = -600;// 0 = do nothing
+		m_IngredientAddQuantity[1] = -300;// 0 = do nothing
 		m_IngredientDestroy[1] = false;//true = destroy, false = do nothing
 		
 		//result1
 		AddResult("DadaRaw_BigButter");//add results here
 
-		m_ResultSetQuantity[0] = 600;//-1 = do nothing
+		m_ResultSetQuantity[0] = 250;//-1 = do nothing
 	}
 };	
 
