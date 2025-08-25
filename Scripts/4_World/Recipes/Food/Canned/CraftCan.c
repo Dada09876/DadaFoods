@@ -7,7 +7,7 @@ class Craft_Dada_RawFoodCan_LSVeggies extends Craft_DadaTempStageTemp1Stage1_Bas
 
 		//INGREDIENTS
 		//ingredient 1
-		InsertIngredient(0,"Tomato");
+			InsertIngredient(0,"Tomato");
         	InsertIngredient(0,"GreenBellPepper");
         	InsertIngredient(0,"Zucchini");
         	InsertIngredient(0,"SlicedPumpkin");
@@ -21,6 +21,7 @@ class Craft_Dada_RawFoodCan_LSVeggies extends Craft_DadaTempStageTemp1Stage1_Bas
         	InsertIngredient(1,"Potato");//you can insert multiple ingredients this way
         
 		//result1
+		m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_LSVeggies");//add results here
 	}
 };
@@ -44,6 +45,7 @@ class Craft_Dada_RawFoodCan_LSVeggies1 extends Craft_DadaTempTemp1Stage1_BaseRec
         	InsertIngredient(1,"Potato");//you can insert multiple ingredients this way
 
 		//result1
+		m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_LSVeggies");//add results here
 	}
 };
@@ -63,6 +65,7 @@ class Craft_Dada_RawFoodCan_LSVeggies2 extends Craft_DadaTempTemp1_BaseRecipe
         	InsertIngredient(1,"PotatoSeed");//you can insert multiple ingredients this way
 
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_LSVeggies");//add results here
 	}
 };
@@ -111,6 +114,7 @@ class Craft_Dada_RawFoodCan_STAGham extends Craft_DadaTempStageTemp1Stage1_BaseR
 		InsertIngredient(1,"FoxSteakMeat");
 
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_STAGham");//add results here
 	}
 };
@@ -149,6 +153,7 @@ class Craft_Dada_RawFoodCan_ESPENChunkySoup extends Craft_DadaTempStageTemp1Stag
         InsertIngredient(1,"PotatoSeed");
 
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_ESPENChunkySoup");//add results here
 	}
 };
@@ -194,6 +199,7 @@ class Craft_Dada_RawFoodCan_LSSPAM extends Craft_DadaTempStageTemp1Stage1_BaseRe
 		InsertIngredient(1,"FoxSteakMeat");
 
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_LSSPAM");//add results here
 	}
 };
@@ -227,6 +233,7 @@ class Craft_Dada_RawFoodCan_STAGchili extends Craft_DadaTempStageTemp1Stage1_Bas
 		InsertIngredient(1,"ReindeerSteakMeat");
 
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_STAGchili");//add results here
 	}
 };
@@ -251,6 +258,7 @@ class Craft_Dada_RawFoodCan_ESPENMacnCheese extends Craft_DadaTempStageTemp1Stag
 		InsertIngredient(1,"DadaRaw_FreshGoatCheese");//you can insert multiple ingredients
 		m_IngredientAddQuantity[1] = -50;// 0 = do nothing
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_ESPENMacnCheese");//add results here
 	}
 };
@@ -268,6 +276,7 @@ class Craft_Dada_RawFoodCan_DicedTomatoes extends Craft_DadaTempStageTemp1Stage1
         InsertIngredient(1,"Tomato");//you can insert multiple ingredients this way
 
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_DicedTomatoes");//add results here
 	}
 };
@@ -286,6 +295,7 @@ class Craft_Dada_RawFoodCan_Ketchup extends Craft_DadaTempStageTemp1Stage1_BaseR
         InsertIngredient(1,"Zucchini");//you can insert multiple ingredients this way
 
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_Ketchup");//add results here
 	}
 };
@@ -342,6 +352,7 @@ class Craft_Dada_RawFoodCan_Paella extends Craft_DadaTempStageTemp1Stage1_BaseRe
         	//InsertIngredient(1,"SRP_FreshWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
 		//InsertIngredient(1,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_Paella");//add results here
 	}
 };
@@ -388,6 +399,7 @@ class Craft_Dada_RawFoodCan_Paella1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
         	//InsertIngredient(1,"SRP_FreshWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
 		//InsertIngredient(1,"SRP_SaltWaterFishFilletMeat_Base");//you can insert multiple ingredients this way
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_Paella");//add results here
 	}
 };
@@ -406,6 +418,7 @@ class Craft_Dada_RawFoodCan_Paella2 extends Craft_DadaTempTemp1_BaseRecipe
         	InsertIngredient(1,"PotatoSeed");
         
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_Paella");//add results here
 	}
 };
@@ -424,6 +437,7 @@ class Craft_Dada_RawFoodCan_PumpkinPuree extends Craft_DadaTempStageTemp1Stage1_
         InsertIngredient(1,"Pumpkin");
 
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_PumpkinPuree");//add results here
 	}
 };
@@ -443,6 +457,7 @@ class Craft_Dada_RawFoodCan_Quail extends Craft_DadaTempStageTemp1Stage1_BaseRec
         InsertIngredient(1,"RabbitLegMeat");//you can insert multiple ingredients this way
         //InsertIngredient(1,"srpChickenleg");//you can insert multiple ingredients this way
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_Quail");//add results here
 
 	}
@@ -461,6 +476,7 @@ class Craft_Dada_RawFoodCan_Relish extends Craft_DadaTempStageTemp1Stage1_BaseRe
         InsertIngredient(1,"Zucchini");
 
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_Relish");//add results here
 	}
 };
@@ -503,6 +519,7 @@ class Craft_Dada_RawFoodCan_Samosa extends Craft_DadaTempStageTemp1Stage1_BaseRe
 		InsertIngredient(1,"SteelheadTroutFilletMeat");
 
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_Samosa");//add results here
 	}
 };
@@ -545,6 +562,7 @@ class Craft_Dada_RawFoodCan_Samosa1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 		InsertIngredient(1,"SteelheadTroutFilletMeat");
 
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_Samosa");//add results here
 	}
 };
@@ -564,6 +582,7 @@ class Craft_Dada_RawFoodCan_Samosa2 extends Craft_DadaTempTemp1_BaseRecipe
         InsertIngredient(1,"PotatoSeed");
 
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_Samosa");//add results here
 	}
 };
@@ -596,6 +615,7 @@ class Craft_Dada_RawFoodCan_HomemadeChili extends Craft_DadaTempStageTemp1Stage1
 		InsertIngredient(1,"ReindeerSteakMeat");
 
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_HomemadeChili");//add results here
 	}
 };
@@ -612,6 +632,7 @@ class Craft_Dada_RawFoodCan_HomemadePumpkinPuree extends Craft_DadaTempStageTemp
         InsertIngredient(1,"SlicedPumpkin");
 
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_HomemadePumpkinPuree");//add results here
 	}
 };
@@ -649,6 +670,7 @@ class Craft_Dada_RawFoodCan_Crab extends Craft_DadaTempStageTemp1Stage1_BaseReci
 		InsertIngredient(1,"WalleyePollockFilletMeat");
 		InsertIngredient(1,"SteelheadTroutFilletMeat");
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_Crab");//add results here
 	}
 };
@@ -688,6 +710,7 @@ class Craft_Dada_RawFoodCan_Clam extends Craft_DadaTempStageTemp1Stage1_BaseReci
 		InsertIngredient(1,"SteelheadTroutFilletMeat");
 
 		//result1
+	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_Clam");//add results here
 	}
 };
