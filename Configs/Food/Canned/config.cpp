@@ -144,6 +144,7 @@ class CfgVehicles
 		};
 		class Burned{};
 	};
+
 	class Edible_Base;
 	class Dada_RawFoodCan_Colorbase: Edible_Base
 	{
@@ -157,9 +158,9 @@ class CfgVehicles
 		model = "\dz\gear\food\food_can_open.p3d";
 		rotationFlags = 63;
 		itemSize[] = {1,2};
-		varQuantityInit = 100;
+		varQuantityInit = 300;
 		varQuantityMin = 0;
-		varQuantityMax = 400;
+		varQuantityMax = 450;
 		isMeleeWeapon = 1;
 		inventorySlot[] = {"DirectCookingA","DirectCookingB","DirectCookingC","SmokingA","SmokingB","SmokingC","SmokingD"};
 		class FoodAnimationSources;
@@ -262,7 +263,7 @@ class CfgVehicles
 		weight = 440;
 		varQuantityInit = 0;
 		varQuantityMin = 0;
-		varQuantityMax = 400;
+		varQuantityMax = 450;
 		isMeleeWeapon = 1;
 		class DamageSystem
 		{
@@ -319,7 +320,7 @@ class CfgVehicles
 		weight = 2;
 		varQuantityInit = 0;
 		varQuantityMin = 0;
-		varQuantityMax = 400;
+		varQuantityMax = 450;
 		isMeleeWeapon = 1;
 	
 		class Nutrition
@@ -915,9 +916,9 @@ class CfgVehicles
 		weight = 2.5;
 		interactionWeight = 1;
 		quantityBar = 1;
-		varQuantityInit = 100;
+		varQuantityInit = 1000;
 		varQuantityMin = 0;
-		varQuantityMax = 100;
+		varQuantityMax = 1000;
 		isMeleeWeapon = 1;
 		class DamageSystem
 		{
@@ -945,9 +946,9 @@ class CfgVehicles
 		weight = 5;
 		interactionWeight = 1;
 		quantityBar = 1;
-		varQuantityInit = 100;
+		varQuantityInit = 0;
 		varQuantityMin = 0;
-		varQuantityMax = 100;
+		varQuantityMax = 1000;
 		isMeleeWeapon = 1;
 		class DamageSystem
 		{
@@ -983,7 +984,7 @@ class CfgVehicles
 		weight = 2.5;
 		varQuantityInit = 0;
 		varQuantityMin = 0;
-		varQuantityMax = 100;
+		varQuantityMax = 1000;
 		interactionWeight = 1;
 		quantityBar = 1;
 		isMeleeWeapon = 1;
@@ -1013,9 +1014,9 @@ class CfgVehicles
 		weight = 2.5;
 		interactionWeight = 1;
 		quantityBar = 1;
-		varQuantityInit = 100;
+		varQuantityInit = 1000;
 		varQuantityMin = 0;
-		varQuantityMax = 100;
+		varQuantityMax = 1000;
 		isMeleeWeapon = 1;
 		class DamageSystem
 		{
@@ -1043,7 +1044,7 @@ class CfgVehicles
 		weight = 10;
 		varQuantityInit = 0;
 		varQuantityMin = 0;
-		varQuantityMax = 100;
+		varQuantityMax = 1000;
 		isMeleeWeapon = 1;
 		class DamageSystem
 		{
@@ -1079,7 +1080,7 @@ class CfgVehicles
 		weight = 2.5;
 		varQuantityInit = 0;
 		varQuantityMin = 0;
-		varQuantityMax = 100;
+		varQuantityMax = 1000;
 		interactionWeight = 1;
 		quantityBar = 1;
 		isMeleeWeapon = 1;
