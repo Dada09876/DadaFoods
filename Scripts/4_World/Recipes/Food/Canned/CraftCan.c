@@ -642,6 +642,9 @@ class Craft_Dada_RawFoodCan_Crab extends Craft_DadaTempStageTemp1Stage1_BaseReci
 	{
 		super.Init();
 		m_Name = "Craft Crab Can";
+
+		m_MinQuantityIngredient[0] = 250;//-1 = disable check
+		m_MinQuantityIngredient[1] = 250;//-1 = disable check
 		//INGREDIENTS
 		//ingredient 1
         InsertIngredient(0,"CarpFilletMeat");//you can insert multiple ingredients this way
@@ -670,7 +673,7 @@ class Craft_Dada_RawFoodCan_Crab extends Craft_DadaTempStageTemp1Stage1_BaseReci
 		InsertIngredient(1,"WalleyePollockFilletMeat");
 		InsertIngredient(1,"SteelheadTroutFilletMeat");
 		//result1
-	m_ResultSetQuantity[0] = 300;//-1 = do nothing
+	m_ResultSetQuantity[0] = 1000;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_Crab");//add results here
 	}
 };
@@ -680,6 +683,11 @@ class Craft_Dada_RawFoodCan_Clam extends Craft_DadaTempStageTemp1Stage1_BaseReci
 	{
 		super.Init();
 		m_Name = "Craft Clam Can";
+
+	
+		m_MinQuantityIngredient[0] = 250;//-1 = disable check
+		m_MinQuantityIngredient[1] = 250;//-1 = disable check
+	
 		//INGREDIENTS
 		//ingredient 1
         //InsertIngredient(0,"SRP_ClamFilletMeat");//you can insert multiple ingredients this way
@@ -710,7 +718,7 @@ class Craft_Dada_RawFoodCan_Clam extends Craft_DadaTempStageTemp1Stage1_BaseReci
 		InsertIngredient(1,"SteelheadTroutFilletMeat");
 
 		//result1
-	m_ResultSetQuantity[0] = 300;//-1 = do nothing
+	m_ResultSetQuantity[0] = 1000;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_Clam");//add results here
 	}
 };
