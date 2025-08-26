@@ -245,18 +245,18 @@ class Craft_Dada_RawFoodCan_ESPENMacnCheese extends Craft_DadaTempStageTemp1Stag
 		m_Name = "Craft ESPENLock Mac & Cheese Can";
 		//INGREDIENTS
 		//ingredient 1
-		m_MinQuantityIngredient[0] = 25;//-1 = disable check
-		m_MinQuantityIngredient[1] = 25;//-1 = disable check
+		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = 50;//-1 = disable check
 
         InsertIngredient(0,"DadaBread_Pasta");
-		m_IngredientAddQuantity[0] = -50;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -100;// 0 = do nothing
 
 		//ingredient 2
     	InsertIngredient(1,"DadaRaw_Mozza");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaRaw_CheddarCurds");//you can insert multiple ingredients way
 		InsertIngredient(1,"DadaRaw_Feta");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaRaw_FreshGoatCheese");//you can insert multiple ingredients
-		m_IngredientAddQuantity[1] = -50;// 0 = do nothing
+		m_IngredientAddQuantity[1] = -100;// 0 = do nothing
 		//result1
 	m_ResultSetQuantity[0] = 300;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_ESPENMacnCheese");//add results here
