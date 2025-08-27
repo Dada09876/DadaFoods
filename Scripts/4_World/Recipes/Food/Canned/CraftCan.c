@@ -437,7 +437,7 @@ class Craft_Dada_RawFoodCan_PumpkinPuree extends Craft_DadaTempStageTemp1Stage1_
         InsertIngredient(1,"Pumpkin");
 
 		//result1
-	m_ResultSetQuantity[0] = 300;//-1 = do nothing
+	m_ResultSetQuantity[0] = 450;//-1 = do nothing
 		AddResult("Dada_RawFoodCan_PumpkinPuree");//add results here
 	}
 };
