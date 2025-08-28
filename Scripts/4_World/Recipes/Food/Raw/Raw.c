@@ -144,7 +144,7 @@ class CraftDadaRaw_PokeBowl extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaRaw_PokeBowl");//add results here
 
-		m_ResultSetQuantity[0] = 275;//-1 = do nothing
+		m_ResultSetQuantity[0] = 300;//-1 = do nothing
 	}
 };
 
@@ -177,7 +177,7 @@ class CraftDadaRaw_CerealCrunchin_Frosties extends Craft_DadaTempTemp1Stage1_Bas
 		//result1
 		AddResult("DadaRaw_CerealCrunchin_Frosties");//add results here
 
-		m_ResultSetQuantity[0] = 250;//-1 = do nothing
+		m_ResultSetQuantity[0] = 150;//-1 = do nothing
 	}
 };	
 
@@ -447,7 +447,7 @@ class CraftFreshCheese_Mozza extends Craft_DadaTempStage_BaseRecipe
 		
 		//result1
 		AddResult("DadaRaw_Mozza");//add results here
-
+		m_ResultSetQuantity[0] = 100;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 
 
