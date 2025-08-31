@@ -586,33 +586,47 @@ class CfgVehicles
 		descriptionShort = "Freshly made pasta with chicken in a homemade tomato sauce.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_rotten_co.paa"};
-			class Food
+class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,50,50,1,0,4};
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,82,41,1,0,4};
+					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,53,17,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
 				};
 				class Baked
 				{
-					nutrition_properties[] = {1,300,50,1,0};
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,226,28,1,0};
+					cooking_properties[] = {70,45};
 				};
 				class Boiled
 				{
-					nutrition_properties[] = {1,250,100,1,0};
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,185,72,1,0};
+					cooking_properties[] = {70,55};
 				};
 				class Dried
 				{
-					nutrition_properties[] = {1,250,0,1,0};
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,185,9,1,0};
+					cooking_properties[] = {70,120,80};
 				};
 				class Burned
 				{
-					nutrition_properties[] = {5,50,0,1,0,16};
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,80,0,1,0,16};
+					cooking_properties[] = {100,90};
 				};
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
@@ -1186,33 +1200,47 @@ class CfgVehicles
 		descriptionShort = "Freshly made pasta in a homemade tomato sauce.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_rotten_co.paa"};
-			class Food
+class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,50,50,1,0,4};
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,82,41,1,0,4};
+					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,53,17,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
 				};
 				class Baked
 				{
-					nutrition_properties[] = {1,300,50,1,0};
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,226,28,1,0};
+					cooking_properties[] = {70,45};
 				};
 				class Boiled
 				{
-					nutrition_properties[] = {1,250,100,1,0};
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,185,72,1,0};
+					cooking_properties[] = {70,55};
 				};
 				class Dried
 				{
-					nutrition_properties[] = {1,250,0,1,0};
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,185,9,1,0};
+					cooking_properties[] = {70,120,80};
 				};
 				class Burned
 				{
-					nutrition_properties[] = {5,50,0,1,0,16};
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,80,0,1,0,16};
+					cooking_properties[] = {100,90};
 				};
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
@@ -1226,33 +1254,47 @@ class CfgVehicles
 		descriptionShort = "Freshly made pasta in a homemade tomato sauce.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_rotten_co.paa"};
-			class Food
+class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,50,50,1,0,4};
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,82,41,1,0,4};
+					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,53,17,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
 				};
 				class Baked
 				{
-					nutrition_properties[] = {1,300,50,1,0};
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,226,28,1,0};
+					cooking_properties[] = {70,45};
 				};
 				class Boiled
 				{
-					nutrition_properties[] = {1,250,100,1,0};
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,185,72,1,0};
+					cooking_properties[] = {70,55};
 				};
 				class Dried
 				{
-					nutrition_properties[] = {1,250,0,1,0};
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,185,9,1,0};
+					cooking_properties[] = {70,120,80};
 				};
 				class Burned
 				{
-					nutrition_properties[] = {5,50,0,1,0,16};
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,80,0,1,0,16};
+					cooking_properties[] = {100,90};
 				};
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
@@ -1266,33 +1308,47 @@ class CfgVehicles
 		descriptionShort = "Freshly made pasta in a homemade tomato sauce.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_rotten_co.paa"};
-			class Food
+class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,50,50,1,0,4};
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,82,41,1,0,4};
+					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,53,17,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
 				};
 				class Baked
 				{
-					nutrition_properties[] = {1,300,50,1,0};
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,226,28,1,0};
+					cooking_properties[] = {70,45};
 				};
 				class Boiled
 				{
-					nutrition_properties[] = {1,250,100,1,0};
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,185,72,1,0};
+					cooking_properties[] = {70,55};
 				};
 				class Dried
 				{
-					nutrition_properties[] = {1,250,0,1,0};
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,185,9,1,0};
+					cooking_properties[] = {70,120,80};
 				};
 				class Burned
 				{
-					nutrition_properties[] = {5,50,0,1,0,16};
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,80,0,1,0,16};
+					cooking_properties[] = {100,90};
 				};
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
@@ -1306,33 +1362,47 @@ class CfgVehicles
 		descriptionShort = "Freshly made pasta in a homemade tomato sauce.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_rotten_co.paa"};
-			class Food
+class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,50,50,1,0,4};
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,82,41,1,0,4};
+					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,53,17,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
 				};
 				class Baked
 				{
-					nutrition_properties[] = {1,300,50,1,0};
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,226,28,1,0};
+					cooking_properties[] = {70,45};
 				};
 				class Boiled
 				{
-					nutrition_properties[] = {1,250,100,1,0};
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,185,72,1,0};
+					cooking_properties[] = {70,55};
 				};
 				class Dried
 				{
-					nutrition_properties[] = {1,250,0,1,0};
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,185,9,1,0};
+					cooking_properties[] = {70,120,80};
 				};
 				class Burned
 				{
-					nutrition_properties[] = {5,50,0,1,0,16};
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,80,0,1,0,16};
+					cooking_properties[] = {100,90};
 				};
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
@@ -1426,33 +1496,47 @@ class CfgVehicles
 		descriptionShort = "Cheesy and Decadent";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMacaroniAndCheese_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMacaroniAndCheese_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMacaroniAndCheese_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMacaroniAndCheese_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMacaroniAndCheese_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMacaroniAndCheese_rotten_co.paa"};
-			class Food
+class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,50,50,1,0,4};
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,114,90,1,0,4};
+					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,61,39,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
 				};
 				class Baked
 				{
-					nutrition_properties[] = {1,300,50,1,0};
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,220,82,1,0};
+					cooking_properties[] = {70,45};
 				};
 				class Boiled
 				{
-					nutrition_properties[] = {1,250,100,1,0};
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,189,160,1,0};
+					cooking_properties[] = {70,55};
 				};
 				class Dried
 				{
-					nutrition_properties[] = {1,250,0,1,0};
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,189,43,1,0};
+					cooking_properties[] = {70,120,80};
 				};
 				class Burned
 				{
-					nutrition_properties[] = {5,50,0,1,0,16};
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,84,0,1,0,16};
+					cooking_properties[] = {100,90};
 				};
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
