@@ -215,7 +215,7 @@ class CfgVehicles
 		{
 			fullnessIndex = 3;
 			energy = 333;
-			water = 10;
+			water = 15;
 			nutritionalIndex = 1;
 			toxicity = 0;
 		};
@@ -306,13 +306,48 @@ class CfgVehicles
 				};
 			};
 		};
-		class Nutrition
+		class Food
 		{
-			fullnessIndex = 3;
-			energy = 100;
-			water = 50;
-			nutritionalIndex = 1;
-			toxicity = 0;
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,50,40,1,0,4};
+					cooking_properties[] = {0,0};
+				};
+				class Rotten
+				{
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,45,21,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
+				};
+				class Baked
+				{
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,226,28,1,0};
+					cooking_properties[] = {70,45};
+				};
+				class Boiled
+				{
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,150,32,1,0};
+					cooking_properties[] = {70,55};
+				};
+				class Dried
+				{
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,125,10,1,0};
+					cooking_properties[] = {70,120,80};
+				};
+				class Burned
+				{
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,45,0,1,0,16};
+					cooking_properties[] = {100,90};
+				};
+			};
+			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 		class NoiseImpact
 		{
