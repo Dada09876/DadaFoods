@@ -169,52 +169,6 @@ class CfgVehicles
 				};
 			};
 		};	
-		class FoodAnimationSources;
-		class AnimationSources: FoodAnimationSources{};
-		class Food
-		{
-			class FoodStages
-			{
-				class Raw
-				{
-					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,50,40,1,0,4};
-					cooking_properties[] = {0,0};
-				};
-				class Rotten
-				{
-					visual_properties[] = {-1,-1,5};
-					nutrition_properties[] = {10,45,21,1,0,"4 +     16"};
-					cooking_properties[] = {0,0};
-				};
-				class Baked
-				{
-					visual_properties[] = {0,1,1};
-					nutrition_properties[] = {1,150,32,1,0};
-					cooking_properties[] = {70,45};
-				};
-				class Boiled
-				{
-					visual_properties[] = {0,2,2};
-					nutrition_properties[] = {1,125,85,1,0};
-					cooking_properties[] = {70,55};
-				};
-				class Dried
-				{
-					visual_properties[] = {0,3,3};
-					nutrition_properties[] = {1,125,10,1,0};
-					cooking_properties[] = {70,120,80};
-				};
-				class Burned
-				{
-					visual_properties[] = {0,4,4};
-					nutrition_properties[] = {5,45,0,1,0,16};
-					cooking_properties[] = {100,90};
-				};
-			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
-		};
-
 		class NoiseImpact
 		{
 			strength = 600;
@@ -283,52 +237,6 @@ class CfgVehicles
 				};
 			};
 		};	
-		class FoodAnimationSources;
-		class AnimationSources: FoodAnimationSources{};
-		class Food
-		{
-			class FoodStages
-			{
-				class Raw
-				{
-					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,50,50,1,0,4};
-					cooking_properties[] = {0,0};
-				};
-				class Rotten
-				{
-					visual_properties[] = {-1,-1,5};
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
-					cooking_properties[] = {0,0};
-				};
-				class Baked
-				{
-					visual_properties[] = {0,1,1};
-					nutrition_properties[] = {1,300,50,1,0};
-					cooking_properties[] = {70,45};
-				};
-				class Boiled
-				{
-					visual_properties[] = {0,2,2};
-					nutrition_properties[] = {1,250,100,1,0};
-					cooking_properties[] = {70,55};
-				};
-				class Dried
-				{
-					visual_properties[] = {0,3,3};
-					nutrition_properties[] = {1,250,0,1,0};
-					cooking_properties[] = {70,120,80};
-				};
-				class Burned
-				{
-					visual_properties[] = {0,4,4};
-					nutrition_properties[] = {5,50,0,1,0,16};
-					cooking_properties[] = {100,90};
-				};
-			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
-		};
-
 		class NoiseImpact
 		{
 			strength = 600;
@@ -493,37 +401,6 @@ class CfgVehicles
 	class DadaBread_RoundDough: DadaBread_Base
 	{
 		scope = 2;
-		class Food
-		{
-			class FoodStages
-			{
-				class Raw
-				{
-					nutrition_properties[] = {5,50,50,1,0,4};
-				};
-				class Rotten
-				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
-				};
-				class Baked
-				{
-					nutrition_properties[] = {1,300,50,1,0};
-				};
-				class Boiled
-				{
-					nutrition_properties[] = {1,250,100,1,0};
-				};
-				class Dried
-				{
-					nutrition_properties[] = {1,250,0,1,0};
-				};
-				class Burned
-				{
-					nutrition_properties[] = {5,50,0,1,0,16};
-				};
-			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
-		};
 	};
 
 	class DadaBread_Pita: DadaBread_Base
@@ -535,38 +412,6 @@ class CfgVehicles
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_rotten_co.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"};
-	class Food
-		{
-			class FoodStages
-			{
-				class Raw
-				{
-					nutrition_properties[] = {5,50,50,1,0,4};
-				};
-				class Rotten
-				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
-				};
-				class Baked
-				{
-					nutrition_properties[] = {1,300,50,1,0};
-				};
-				class Boiled
-				{
-					nutrition_properties[] = {1,250,100,1,0};
-				};
-				class Dried
-				{
-					nutrition_properties[] = {1,250,0,1,0};
-				};
-				class Burned
-				{
-					nutrition_properties[] = {5,50,0,1,0,16};
-				};
-			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
-		};
-	};
 };
 
 	class DadaBread_Loaf: DadaBread_Base
@@ -590,37 +435,6 @@ class CfgVehicles
 				};
 			};
 		};	
-		class Food
-		{
-			class FoodStages
-			{
-				class Raw
-				{
-					nutrition_properties[] = {5,50,50,1,0,4};
-				};
-				class Rotten
-				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
-				};
-				class Baked
-				{
-					nutrition_properties[] = {1,300,50,1,0};
-				};
-				class Boiled
-				{
-					nutrition_properties[] = {1,250,100,1,0};
-				};
-				class Dried
-				{
-					nutrition_properties[] = {1,250,0,1,0};
-				};
-				class Burned
-				{
-					nutrition_properties[] = {5,50,0,1,0,16};
-				};
-			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
-		};
 	};
 
 	class DadaBread_Baguette: DadaBread_Base
@@ -633,37 +447,6 @@ class CfgVehicles
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_rotten_co.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"};
-			class Food
-		{
-			class FoodStages
-			{
-				class Raw
-				{
-					nutrition_properties[] = {5,50,50,1,0,4};
-				};
-				class Rotten
-				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
-				};
-				class Baked
-				{
-					nutrition_properties[] = {1,300,50,1,0};
-				};
-				class Boiled
-				{
-					nutrition_properties[] = {1,250,100,1,0};
-				};
-				class Dried
-				{
-					nutrition_properties[] = {1,250,0,1,0};
-				};
-				class Burned
-				{
-					nutrition_properties[] = {5,50,0,1,0,16};
-				};
-			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
-		};
 };
 
 	class DadaBread_Pasta: DadaBread_Base
@@ -671,37 +454,6 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Pasta Dough";
 		descriptionShort = "Good, just need the tomato sauce now";
-			class Food
-		{
-			class FoodStages
-			{
-				class Raw
-				{
-					nutrition_properties[] = {5,50,50,1,0,4};
-				};
-				class Rotten
-				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
-				};
-				class Baked
-				{
-					nutrition_properties[] = {1,300,50,1,0};
-				};
-				class Boiled
-				{
-					nutrition_properties[] = {1,250,100,1,0};
-				};
-				class Dried
-				{
-					nutrition_properties[] = {1,250,0,1,0};
-				};
-				class Burned
-				{
-					nutrition_properties[] = {5,50,0,1,0,16};
-				};
-			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
-		};
 };
 	
 	class DadaBread_Pizza: DadaBread_Base
@@ -713,37 +465,6 @@ class CfgVehicles
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_rotten_co.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat"};
-			class Food
-		{
-			class FoodStages
-			{
-				class Raw
-				{
-					nutrition_properties[] = {5,50,50,1,0,4};
-				};
-				class Rotten
-				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
-				};
-				class Baked
-				{
-					nutrition_properties[] = {1,300,50,1,0};
-				};
-				class Boiled
-				{
-					nutrition_properties[] = {1,250,100,1,0};
-				};
-				class Dried
-				{
-					nutrition_properties[] = {1,250,0,1,0};
-				};
-				class Burned
-				{
-					nutrition_properties[] = {5,50,0,1,0,16};
-				};
-			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
-		};
 };
 
 	class DadaBread_PizzaBase: DadaBread_Base
@@ -755,33 +476,47 @@ class CfgVehicles
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaBase_rotten_co.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat"};
-			class Food
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,50,50,1,0,4};
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,82,41,1,0,4};
+					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,53,17,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
 				};
 				class Baked
 				{
-					nutrition_properties[] = {1,300,50,1,0};
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,226,28,1,0};
+					cooking_properties[] = {70,45};
 				};
 				class Boiled
 				{
-					nutrition_properties[] = {1,250,100,1,0};
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,185,72,1,0};
+					cooking_properties[] = {70,55};
 				};
 				class Dried
 				{
-					nutrition_properties[] = {1,250,0,1,0};
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,185,9,1,0};
+					cooking_properties[] = {70,120,80};
 				};
 				class Burned
 				{
-					nutrition_properties[] = {5,50,0,1,0,16};
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,80,0,1,0,16};
+					cooking_properties[] = {100,90};
 				};
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
@@ -797,33 +532,47 @@ class CfgVehicles
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_rotten_co.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat"};
-			class Food
+			class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,50,50,1,0,4};
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,146,91,1,0,4};
+					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,69,39,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
 				};
 				class Baked
 				{
-					nutrition_properties[] = {1,300,50,1,0};
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,296,78,1,0};
+					cooking_properties[] = {70,45};
 				};
 				class Boiled
 				{
-					nutrition_properties[] = {1,250,100,1,0};
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,249,147,1,0};
+					cooking_properties[] = {70,55};
 				};
 				class Dried
 				{
-					nutrition_properties[] = {1,250,0,1,0};
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,249,42,1,0};
+					cooking_properties[] = {70,120,80};
 				};
 				class Burned
 				{
-					nutrition_properties[] = {5,50,0,1,0,16};
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,84,0,1,0,16};
+					cooking_properties[] = {100,90};
 				};
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
