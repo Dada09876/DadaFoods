@@ -647,27 +647,39 @@ class FoodAnimationSources;
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,50,50,1,0,4};
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,40,200,1,0,4};
+					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,16,75,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
 				};
 				class Baked
 				{
-					nutrition_properties[] = {1,300,50,1,0};
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,150,275,1,0};
+					cooking_properties[] = {70,45};
 				};
 				class Boiled
 				{
-					nutrition_properties[] = {1,250,100,1,0};
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,100,325,1,0};
+					cooking_properties[] = {70,55};
 				};
 				class Dried
 				{
-					nutrition_properties[] = {1,250,0,1,0};
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,100,150,1,0};
+					cooking_properties[] = {70,120,80};
 				};
 				class Burned
 				{
-					nutrition_properties[] = {5,50,0,1,0,16};
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,40,0,1,0,16};
+					cooking_properties[] = {100,90};
 				};
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
@@ -684,33 +696,45 @@ class FoodAnimationSources;
 		descriptionShort = "Potatoes beaten into a delicious purée.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_rotten_co.paa"};
-			class Food
+		class Food
 		{
 			class FoodStages
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,50,50,1,0,4};
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,75,13,1,0,4};
+					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,50,5,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
 				};
 				class Baked
 				{
-					nutrition_properties[] = {1,300,50,1,0};
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,250,8,1,0};
+					cooking_properties[] = {70,45};
 				};
 				class Boiled
 				{
-					nutrition_properties[] = {1,250,100,1,0};
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,200,20,1,0};
+					cooking_properties[] = {70,55};
 				};
 				class Dried
 				{
-					nutrition_properties[] = {1,250,0,1,0};
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,200,3,1,0};
+					cooking_properties[] = {70,120,80};
 				};
 				class Burned
 				{
-					nutrition_properties[] = {5,50,0,1,0,16};
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,75,0,1,0,16};
+					cooking_properties[] = {100,90};
 				};
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
@@ -723,33 +747,45 @@ class FoodAnimationSources;
 		descriptionShort = "A chili made popular by Bear Valley's recipe using bear meat.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_rotten_co.paa"};
-			class Food
+		class Food
 		{
 			class FoodStages
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,50,50,1,0,4};
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,92,50,1,0,4};
+					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,34,20,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
 				};
 				class Baked
 				{
-					nutrition_properties[] = {1,300,50,1,0};
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,417,30,1,0};
+					cooking_properties[] = {70,45};
 				};
 				class Boiled
 				{
-					nutrition_properties[] = {1,250,100,1,0};
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,350,80,1,0};
+					cooking_properties[] = {70,55};
 				};
 				class Dried
 				{
-					nutrition_properties[] = {1,250,0,1,0};
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,350,10,1,0};
+					cooking_properties[] = {70,120,80};
 				};
 				class Burned
 				{
-					nutrition_properties[] = {5,50,0,1,0,16};
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,92,0,1,0,16};
+					cooking_properties[] = {100,90};
 				};
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
@@ -764,33 +800,45 @@ class FoodAnimationSources;
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_rotten_co.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"};
-			class Food
+		class Food
 		{
 			class FoodStages
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,50,50,1,0,4};
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,133,54,1,0,4};
+					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,44,24,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
 				};
 				class Baked
 				{
-					nutrition_properties[] = {1,300,50,1,0};
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,367,36,1,0};
+					cooking_properties[] = {70,45};
 				};
 				class Boiled
 				{
-					nutrition_properties[] = {1,250,100,1,0};
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,313,96,1,0};
+					cooking_properties[] = {70,55};
 				};
 				class Dried
 				{
-					nutrition_properties[] = {1,250,0,1,0};
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,313,12,1,0};
+					cooking_properties[] = {70,120,80};
 				};
 				class Burned
 				{
-					nutrition_properties[] = {5,50,0,1,0,16};
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,64,0,1,0,16};
+					cooking_properties[] = {100,90};
 				};
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
@@ -803,33 +851,45 @@ class FoodAnimationSources;
 		descriptionShort = "Comforting soup for when you are sick.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChickenNoodleSoup_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChickenNoodleSoup_baked_co.paa", "Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChickenNoodleSoup_boiled_co.paa", "Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChickenNoodleSoup_dried_co.paa", "Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChickenNoodleSoup_burnt_co.paa", "Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChickenNoodleSoup_rotten_co.paa"};
-			class Food
+		class Food
 		{
 			class FoodStages
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,50,50,1,0,4};
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,41,117,1,0,4};
+					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {19,44,25,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
 				};
 				class Baked
 				{
-					nutrition_properties[] = {1,300,50,1,0};
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,158,148,1,0};
+					cooking_properties[] = {70,45};
 				};
 				class Boiled
 				{
-					nutrition_properties[] = {1,250,100,1,0};
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,113,189,1,0};
+					cooking_properties[] = {70,55};
 				};
 				class Dried
 				{
-					nutrition_properties[] = {1,250,0,1,0};
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,113,79,1,0};
+					cooking_properties[] = {70,120,80};
 				};
 				class Burned
 				{
-					nutrition_properties[] = {5,50,0,1,0,16};
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,41,0,1,0,16};
+					cooking_properties[] = {100,90};
 				};
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
