@@ -515,15 +515,21 @@ class CfgVehicles
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,67,67,1,0,4};
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {1,128,100,1,0};
+					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,32,35,1,0,16,1,9};
+					cooking_properties[] = {0,0};
 				};
 				class Dried
 				{
-						nutrition_properties[] = {1,167,13,1,0}
+					visual_properties[] = {1,3,3};
+					nutrition_properties[] = {1,128,65,1,0};
+					cooking_properties[] = {70,30,80};
 				};
 			};
 			class FoodStageTransitions: FruitStageTransitions{};
@@ -568,21 +574,27 @@ class CfgVehicles
 				};
 			};
 		};
-				class Food
+		class Food
 		{
 			class FoodStages
 			{
 				class Raw
 				{
-					nutrition_properties[] = {5,67,67,1,0,4};
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {1,128,100,1,0};
+					cooking_properties[] = {0,0};
 				};
 				class Rotten
 				{
-					nutrition_properties[] = {10,33,27,1,0,"4 +     16"};
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,32,35,1,0,16,1,9};
+					cooking_properties[] = {0,0};
 				};
 				class Dried
 				{
-						nutrition_properties[] = {1,167,13,1,0}
+					visual_properties[] = {1,3,3};
+					nutrition_properties[] = {1,128,65,1,0};
+					cooking_properties[] = {70,30,80};
 				};
 			};
 			class FoodStageTransitions: FruitStageTransitions{};
@@ -725,8 +737,8 @@ class CfgVehicles
 		class Nutrition
 		{
 			fullnessIndex = 0;
-			energy = 150;
-			water = 0;
+			energy = 250;
+			water = 8;
 			nutritionalIndex = 1;
 			toxicity = 0;
 		};
@@ -948,7 +960,7 @@ class CfgVehicles
 		{
 			fullnessIndex = 3;
 			energy = 333;
-			water = 20;
+			water = 15;
 			nutritionalIndex = 1;
 			toxicity = 0;
 		};
