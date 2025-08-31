@@ -1,10 +1,3 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: Configs\Food\Cannibal\config.bin
-//Produced from mikero's Dos Tools Dll version 9.93
-//https://mikero.bytex.digital/Downloads
-//'now' is Tue Feb 04 16:40:51 2025 : 'file' last modified on Sat Jan 18 22:45:02 2025
-////////////////////////////////////////////////////////////////////
-
 #define _ARMA_
 
 class CfgPatches
@@ -54,49 +47,6 @@ class CfgVehicles
 			};
 		};
 		class AnimationSources: FoodAnimationSources{};
-		class Food
-		{
-			class FoodStages
-			{
-				class Raw
-				{
-					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,50,50,1,0,4};
-					cooking_properties[] = {0,0};
-				};
-				class Rotten
-				{
-					visual_properties[] = {-1,-1,5};
-					nutrition_properties[] = {10,25,25,1,0,"4 +     16"};
-					cooking_properties[] = {0,0};
-				};
-				class Baked
-				{
-					visual_properties[] = {0,1,1};
-					nutrition_properties[] = {1,300,50,1,0};
-					cooking_properties[] = {70,45};
-				};
-				class Boiled
-				{
-					visual_properties[] = {0,2,2};
-					nutrition_properties[] = {1,250,100,1,0};
-					cooking_properties[] = {70,55};
-				};
-				class Dried
-				{
-					visual_properties[] = {0,3,3};
-					nutrition_properties[] = {1,250,0,1,0};
-					cooking_properties[] = {70,120,80};
-				};
-				class Burned
-				{
-					visual_properties[] = {0,4,4};
-					nutrition_properties[] = {5,50,0,1,0,16};
-					cooking_properties[] = {100,90};
-				};
-			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
-		};
 		class NoiseImpact
 		{
 			strength = 600;
@@ -141,13 +91,48 @@ class CfgVehicles
 		descriptionShort = "A stew made from human meat.";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Bowl_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_rotten_co.paa"};
-		class Nutrition
+		class Food
 		{
-			fullnessIndex = 2;
-			energy = 50;
-			water = 100;
-			nutritionalIndex = 1;
-			toxicity = 0;
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,41,117,1,0,4};
+					cooking_properties[] = {0,0};
+				};
+				class Rotten
+				{
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,19,44,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
+				};
+				class Baked
+				{
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,158,148,1,0};
+					cooking_properties[] = {70,45};
+				};
+				class Boiled
+				{
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,113,129,1,0};
+					cooking_properties[] = {70,55};
+				};
+				class Dried
+				{
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,113,79,1,0};
+					cooking_properties[] = {70,120,80};
+				};
+				class Burned
+				{
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,41,0,1,0,16};
+					cooking_properties[] = {100,90};
+				};
+			};
+			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 		class DamageSystem
 		{
@@ -168,13 +153,48 @@ class CfgVehicles
 		descriptionShort = "Human Guts Spaghetti";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Bowl_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_rotten_co.paa"};
-		class Nutrition
+		class Food
 		{
-			fullnessIndex = 3;
-			energy = 150;
-			water = 50;
-			nutritionalIndex = 1;
-			toxicity = 0;
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,82,41,1,0,4};
+					cooking_properties[] = {0,0};
+				};
+				class Rotten
+				{
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,53,17,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
+				};
+				class Baked
+				{
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,226,28,1,0};
+					cooking_properties[] = {70,45};
+				};
+				class Boiled
+				{
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,185,72,1,0};
+					cooking_properties[] = {70,55};
+				};
+				class Dried
+				{
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,185,9,1,0};
+					cooking_properties[] = {70,120,80};
+				};
+				class Burned
+				{
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,80,0,1,0,16};
+					cooking_properties[] = {100,90};
+				};
+			};
+			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 	};
 	
@@ -194,8 +214,8 @@ class CfgVehicles
 		class Nutrition
 		{
 			fullnessIndex = 3;
-			energy = 100;
-			water = 0;
+			energy = 333;
+			water = 10;
 			nutritionalIndex = 1;
 			toxicity = 0;
 		};
