@@ -16,6 +16,10 @@ class DadaCannibal_Base extends HumanSteakMeat
  	{
 		return true;
  	}
+		override bool CanProcessDecay()
+	{
+		return !( GetAgents() & eAgents.FOOD_POISON );
+	}
  	override void SetActions()
 	{
 		super.SetActions();
@@ -43,9 +47,6 @@ class DadaCannibal_PreservedFoodCan_Colorbase extends DadaCannibal_Base
 class DadaCannibal_PreservedFoodCan_Colorbase_Opened: Edible_Base
 {
 	override bool CanProcessDecay()
-	{
-		return !( GetAgents() & eAgents.FOOD_POISON );
-	}
 };
 
 class DadaCannibal_EyeballSoup extends DadaCannibal_Base
@@ -85,9 +86,7 @@ class DadaCannibal_Jerky extends DadaCannibal_Base
 	}
 };
 
-class DadaCannibal_WasteBread extends DadaCannibal_Base
-{
-};
+class DadaCannibal_WasteBread extends DadaCannibal_Base{};
 
 class DadaCannibal_RawFoodCan_STAGham extends DadaCannibal_RawFoodCan_Colorbase {};
 class DadaCannibal_PreservedFoodCan_STAGham extends DadaCannibal_PreservedFoodCan_Colorbase {};
