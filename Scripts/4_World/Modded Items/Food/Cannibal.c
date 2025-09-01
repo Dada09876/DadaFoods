@@ -157,6 +157,10 @@ class DadaCannibalDish_Sausage extends DadaCannibal_Base {};
 
 class DadaCannibalDrink_MilkShake extends DadaCannibal_Base 
 {
+	override bool CanBeCooked()
+ 	{
+		return false;
+ 	}		
 	override void SetActions()
 	{
 	super.SetActions();
