@@ -316,6 +316,8 @@ class CfgVehicles
 			};
 		};
 	};
+
+
 	class Dada_RawFoodCan_LSVeggies: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -1282,7 +1284,49 @@ class CfgVehicles
 		descriptionShort = "savoury filling";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Samosa_co.paa"};
-	
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,92,47,1,0,4};
+					cooking_properties[] = {0,0};
+				};
+				class Rotten
+				{
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,55,17,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
+				};
+				class Baked
+				{
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,456,26,1,0};
+					cooking_properties[] = {70,45};
+				};
+				class Boiled
+				{
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,383,67,1,0};
+					cooking_properties[] = {70,55};
+				};
+				class Dried
+				{
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,383,6,1,0};
+					cooking_properties[] = {70,120,80};
+				};
+				class Burned
+				{
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,92,0,1,0,16};
+					cooking_properties[] = {100,90};
+				};
+			};
+			class FoodStageTransitions: DadaDishStageTransitions{};
+		};
 };
 	class Dada_PreservedFoodCan_Samosa: Dada_PreservedFoodCan_Colorbase
 	{
@@ -1304,12 +1348,14 @@ class CfgVehicles
 		class Nutrition
 		{
 			fullnessIndex = 2;
-			energy = 200;
-			water = 350;
+			energy = 458;
+			water = 26;
 			nutritionalIndex = 1;
 			toxicity = 0;
 		};
 	};
+
+
 	class Dada_RawFoodCan_HomemadeChili: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -1318,7 +1364,50 @@ class CfgVehicles
 		color = "HomemadeChili";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
-	};
+	class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,92,50,1,0,4};
+					cooking_properties[] = {0,0};
+				};
+				class Rotten
+				{
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,34,20,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
+				};
+				class Baked
+				{
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,417,30,1,0};
+					cooking_properties[] = {70,45};
+				};
+				class Boiled
+				{
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,350,80,1,0};
+					cooking_properties[] = {70,55};
+				};
+				class Dried
+				{
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,350,10,1,0};
+					cooking_properties[] = {70,120,80};
+				};
+				class Burned
+				{
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,92,0,1,0,16};
+					cooking_properties[] = {100,90};
+				};
+			};
+			class FoodStageTransitions: DadaDishStageTransitions{};
+		};
+};
 	class Dada_PreservedFoodCan_HomemadeChili: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
@@ -1339,12 +1428,14 @@ class CfgVehicles
 		class Nutrition
 		{
 			fullnessIndex = 2;
-			energy = 200;
-			water = 350;
+			energy = 417;
+			water = 30;
 			nutritionalIndex = 1;
 			toxicity = 0;
 		};
 	};
+
+
 	class Dada_RawFoodCan_HomemadePumpkinPuree: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -1353,7 +1444,50 @@ class CfgVehicles
 		descriptionShort = "Made with love";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadePumpkinPuree_co.paa"};
-	};
+	class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,125,33,1,0,4};
+					cooking_properties[] = {0,0};
+				};
+				class Rotten
+				{
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,84,13,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
+				};
+				class Baked
+				{
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,251,20,1,0};
+					cooking_properties[] = {70,45};
+				};
+				class Boiled
+				{
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,209,53,1,0};
+					cooking_properties[] = {70,55};
+				};
+				class Dried
+				{
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,209,7,1,0};
+					cooking_properties[] = {70,120,80};
+				};
+				class Burned
+				{
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,125,0,1,0,16};
+					cooking_properties[] = {100,90};
+				};
+			};
+			class FoodStageTransitions: DadaDishStageTransitions{};
+		};
+};
 	class Dada_PreservedFoodCan_HomemadePumpkinPuree: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
@@ -1374,12 +1508,14 @@ class CfgVehicles
 		class Nutrition
 		{
 			fullnessIndex = 2;
-			energy = 200;
-			water = 350;
+			energy = 251;
+			water = 20;
 			nutritionalIndex = 1;
 			toxicity = 0;
 		};
 	};
+
+
 	class Dada_RawFoodCan_Crab: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -1398,6 +1534,49 @@ class CfgVehicles
 		varQuantityMin = 0;
 		varQuantityMax = 1000;
 		isMeleeWeapon = 1;
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,25,40,1,0,4};
+					cooking_properties[] = {0,0};
+				};
+				class Rotten
+				{
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,12,16,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
+				};
+				class Baked
+				{
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,180,24,1,0};
+					cooking_properties[] = {70,45};
+				};
+				class Boiled
+				{
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,153,64,1,0};
+					cooking_properties[] = {70,55};
+				};
+				class Dried
+				{
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,138,24,1,0};
+					cooking_properties[] = {70,120,80};
+				};
+				class Burned
+				{
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,48,0,1,0,16};
+					cooking_properties[] = {100,90};
+				};
+			};
+			class FoodStageTransitions: DadaDishStageTransitions{};
+		};
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -1452,8 +1631,8 @@ class CfgVehicles
 		class Nutrition
 		{
 			fullnessIndex = 2;
-			energy = 100;
-			water = 175;
+			energy = 180;
+			water = 24;
 			nutritionalIndex = 1;
 			toxicity = 0;
 		};
@@ -1496,6 +1675,49 @@ class CfgVehicles
 		varQuantityMin = 0;
 		varQuantityMax = 1000;
 		isMeleeWeapon = 1;
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,25,40,1,0,4};
+					cooking_properties[] = {0,0};
+				};
+				class Rotten
+				{
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,12,16,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
+				};
+				class Baked
+				{
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,180,24,1,0};
+					cooking_properties[] = {70,45};
+				};
+				class Boiled
+				{
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,153,64,1,0};
+					cooking_properties[] = {70,55};
+				};
+				class Dried
+				{
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,138,24,1,0};
+					cooking_properties[] = {70,120,80};
+				};
+				class Burned
+				{
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,48,0,1,0,16};
+					cooking_properties[] = {100,90};
+				};
+			};
+			class FoodStageTransitions: DadaDishStageTransitions{};
+		};
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -1548,8 +1770,8 @@ class CfgVehicles
 		class Nutrition
 		{
 			fullnessIndex = 2;
-			energy = 100;
-			water = 175;
+			energy = 180;
+			water = 24;
 			nutritionalIndex = 1;
 			toxicity = 0;
 		};
