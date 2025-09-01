@@ -156,6 +156,14 @@ class DadaCannibalDish_Sausage extends DadaCannibal_Base {};
 
 class DadaCannibalDrink_MilkShake extends DadaCannibal_Base 
 {
+	override bool IsFruit()
+	{
+		return true;
+	}
+	override bool IsMeat()
+ 	{
+		return false;
+ 	}
 	override bool CanBeCooked()
  	{
 		return false;
