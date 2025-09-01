@@ -1202,7 +1202,50 @@ class CfgVehicles
 		color = "Relish";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Relish_co.paa"};
-	};
+	class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {5,166,33,1,0,4};
+					cooking_properties[] = {0,0};
+				};
+				class Rotten
+				{
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,33,13,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
+				};
+				class Baked
+				{
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {1,333,20,1,0};
+					cooking_properties[] = {70,45};
+				};
+				class Boiled
+				{
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {1,266,53,1,0};
+					cooking_properties[] = {70,55};
+				};
+				class Dried
+				{
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {1,266,7,1,0};
+					cooking_properties[] = {70,120,80};
+				};
+				class Burned
+				{
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,166,0,1,0,16};
+					cooking_properties[] = {100,90};
+				};
+			};
+			class FoodStageTransitions: DadaDishStageTransitions{};
+		};
+};
 	class Dada_PreservedFoodCan_Relish: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
@@ -1223,12 +1266,14 @@ class CfgVehicles
 		class Nutrition
 		{
 			fullnessIndex = 2;
-			energy = 200;
-			water = 350;
+			energy = 333;
+			water = 20;
 			nutritionalIndex = 1;
 			toxicity = 0;
 		};
 	};
+
+
 	class Dada_RawFoodCan_Samosa: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
@@ -1237,7 +1282,8 @@ class CfgVehicles
 		descriptionShort = "savoury filling";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Samosa_co.paa"};
-	};
+	
+};
 	class Dada_PreservedFoodCan_Samosa: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
