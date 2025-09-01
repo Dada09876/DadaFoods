@@ -1,10 +1,3 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: Configs\Food\Canned\config.bin
-//Produced from mikero's Dos Tools Dll version 9.93
-//https://mikero.bytex.digital/Downloads
-//'now' is Tue Feb 04 16:40:51 2025 : 'file' last modified on Sat Jan 18 22:45:02 2025
-////////////////////////////////////////////////////////////////////
-
 #define _ARMA_
 
 class CfgPatches
@@ -165,49 +158,6 @@ class CfgVehicles
 		inventorySlot[] = {"DirectCookingA","DirectCookingB","DirectCookingC","SmokingA","SmokingB","SmokingC","SmokingD"};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
-		class Food
-		{
-			class FoodStages
-			{
-				class Raw
-				{
-					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {4,50,25,1,0,4};
-					cooking_properties[] = {0,0};
-				};
-				class Rotten
-				{
-					visual_properties[] = {-1,-1,5};
-					nutrition_properties[] = {5,25,10,1,0,"4 + 16",1,25};
-					cooking_properties[] = {0,0};
-				};
-				class Baked
-				{
-					visual_properties[] = {0,1,1};
-					nutrition_properties[] = {2,150,15,1,0,2};
-					cooking_properties[] = {70,45};
-				};
-				class Boiled
-				{
-					visual_properties[] = {0,2,2};
-					nutrition_properties[] = {2,125,40,1,0,2};
-					cooking_properties[] = {70,55};
-				};
-				class Dried
-				{
-					visual_properties[] = {0,3,3};
-					nutrition_properties[] = {3,125,5,1,0,2};
-					cooking_properties[] = {70,120,80};
-				};
-				class Burned
-				{
-					visual_properties[] = {0,4,4};
-					nutrition_properties[] = {4,50,0,1,0,16,1,5};
-					cooking_properties[] = {100,150};
-				};
-			};
-			class FoodStageTransitions: DadaCanStageTransitions{};
-		};
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -322,17 +272,6 @@ class CfgVehicles
 		varQuantityMin = 0;
 		varQuantityMax = 450;
 		isMeleeWeapon = 1;
-	
-		class Nutrition
-		{
-			fullnessIndex = 2;
-			energy = 200;
-			water = 20;
-			nutritionalIndex = 1;
-			toxicity = 0;
-			digestibility = 2;
-		};
-
 		class DamageSystem
 		{
 			class GlobalHealth
