@@ -280,7 +280,7 @@ class CfgVehicles
 				};
 			};
 		};
-class Nutrition
+		class Nutrition
 		{
 			fullnessIndex = 3;
 			energy = 10;
@@ -335,7 +335,7 @@ class Nutrition
 				};
 			};
 		};
-class Nutrition
+		class Nutrition
 		{
 			fullnessIndex = 3;
 			energy = 10;
@@ -390,7 +390,7 @@ class Nutrition
 				};
 			};
 		};
-class Nutrition
+		class Nutrition
 		{
 			fullnessIndex = 3;
 			energy = 10;
@@ -433,6 +433,14 @@ class Nutrition
 		varQuantityInit = 5000;
 		varQuantityMin = 0.0;
 		varQuantityMax = 5000;
+		class Nutrition
+		{
+			fullnessIndex = 2;
+			energy = 40
+			water = 0;
+			nutritionalIndex = 1;
+			toxicity = 0;
+		};
 		class DamageSystem
 		{
 			class GlobalHealth
