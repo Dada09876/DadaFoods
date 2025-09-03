@@ -30,6 +30,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaRawBowl_Base_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaRawBowl_Base_co.paa"};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
+		class FruitStageTransitions;
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -955,7 +956,7 @@ class CfgVehicles
 		weight = 10;
 		itemSize[] = {2,2};
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"P:\Source_Files\DadaFoods\Configs\Food\Raw\data\DadaRaw_Jerky_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaRaw_Jerky_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -1021,4 +1022,6 @@ class CfgVehicles
 			};
 		};
 	};
+};
+
 };

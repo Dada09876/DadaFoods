@@ -367,6 +367,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 };
@@ -390,7 +391,7 @@ class CfgVehicles
 		class Nutrition
 		{
 			fullnessIndex = 2;
-			energy = 251
+			energy = 251;
 			water = 26;
 			nutritionalIndex = 1;
 			toxicity = 0;
@@ -447,6 +448,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 	};
@@ -525,6 +527,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 };
@@ -605,6 +608,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 };
@@ -685,6 +689,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 };
@@ -765,6 +770,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 };
@@ -845,6 +851,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 };
@@ -925,6 +932,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 };
@@ -1005,6 +1013,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 };
@@ -1085,6 +1094,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 };
@@ -1165,6 +1175,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 };
@@ -1245,6 +1256,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 };
@@ -1325,6 +1337,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 };
@@ -1405,6 +1418,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 };
@@ -1485,6 +1499,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 };
@@ -1575,6 +1590,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 		class DamageSystem
@@ -1716,6 +1732,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
+			class DadaDishStageTransitions;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 		class DamageSystem

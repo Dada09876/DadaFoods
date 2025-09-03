@@ -277,6 +277,7 @@ class CfgVehicles
 		};
 	};
 
+	class DadaBread_Base;
 	class DadaCannibal_WasteBread: DadaBread_Base
 	{
 		scope = 2;
@@ -843,7 +844,6 @@ class CfgVehicles
 		};
 	};
 
-	class DadaBread_Base;
 	class DadaWasteBread_Pita: DadaBread_Base
 	{
 		scope = 2;
@@ -1699,6 +1699,7 @@ class CfgVehicles
 					cooking_properties[] = {70,120,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		class DamageSystem

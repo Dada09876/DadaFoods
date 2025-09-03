@@ -108,6 +108,7 @@ class CfgVehicles
 					cooking_properties[] = {70,120,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 };
@@ -144,6 +145,7 @@ class CfgVehicles
 					cooking_properties[] = {70,120,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 };
@@ -180,6 +182,7 @@ class CfgVehicles
 					cooking_properties[] = {70,120,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 };
@@ -247,6 +250,7 @@ class CfgVehicles
 					cooking_properties[] = {70,120,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 };
@@ -286,6 +290,7 @@ class CfgVehicles
 					cooking_properties[] = {70,120,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 class DamageSystem
@@ -383,6 +388,7 @@ class DamageSystem
 					cooking_properties[] = {70,120,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		class DamageSystem
@@ -482,6 +488,7 @@ class DamageSystem
 					cooking_properties[] = {70,120,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Drinks\data\MilkGallon.rvmat"};
@@ -552,6 +559,7 @@ class DamageSystem
 					cooking_properties[] = {70,120,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 class DamageSystem
@@ -626,6 +634,7 @@ class DamageSystem
 					cooking_properties[] = {70,120,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 class DamageSystem
@@ -700,6 +709,7 @@ class DamageSystem
 					cooking_properties[] = {70,120,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 class DamageSystem
@@ -779,6 +789,7 @@ class DamageSystem
 					cooking_properties[] = {70,120,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 class DamageSystem
@@ -861,6 +872,7 @@ class DamageSystem
 					cooking_properties[] = {70,120,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		class DamageSystem
