@@ -11,7 +11,7 @@ class CfgPatches
 	};
 };
 
-class BaseFoodStageTransitions;
+	class BaseFoodStageTransitions;
 	class DadaDishStageTransitions: BaseFoodStageTransitions
 	{
 	class Raw
@@ -217,7 +217,7 @@ class CfgVehicles
 		canBeSplit = 1;
 		inventorySlot[] = {"Ingredient","DirectCookingA","DirectCookingB","DirectCookingC","SmokingA","SmokingB","SmokingC","SmokingD","Ingredient1","Ingredient2","Ingredient3","Ingredient4","Ingredient5","Ingredient6","Ingredient7","Ingredient8"};
 		itemSize[] = {3,2};
-        	displayName = "Dish";
+        displayName = "Dish";
 		descriptionShort = "Dish.";
 		varQuantityInit = 125;
 		varQuantityMin = 0;
@@ -532,7 +532,7 @@ class CfgVehicles
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBread_PizzaMargherita_rotten_co.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.rvmat"};
-			class FoodAnimationSources;
+		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
@@ -577,7 +577,7 @@ class CfgVehicles
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaDish_Rigatoni: DadaDish_Base
 	{
@@ -586,7 +586,7 @@ class CfgVehicles
 		descriptionShort = "Freshly made pasta with chicken in a homemade tomato sauce.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_rotten_co.paa"};
-class FoodAnimationSources;
+		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
@@ -631,7 +631,7 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaSoup_ChickenBroth: DadaSoup_Base
 	{
@@ -640,7 +640,8 @@ class FoodAnimationSources;
 		descriptionShort = "Base for a good soup.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_rotten_co.paa"};
-
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -684,7 +685,7 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaDish_MashedPotatoes: DadaDish_Base
 	{
@@ -696,6 +697,8 @@ class FoodAnimationSources;
 		descriptionShort = "Potatoes beaten into a delicious purée.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMashedPotatoes_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -747,6 +750,8 @@ class FoodAnimationSources;
 		descriptionShort = "A chili made popular by Bear Valley's recipe using bear meat.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -800,6 +805,8 @@ class FoodAnimationSources;
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_rotten_co.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -851,6 +858,8 @@ class FoodAnimationSources;
 		descriptionShort = "Comforting soup for when you are sick.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChickenNoodleSoup_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChickenNoodleSoup_baked_co.paa", "Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChickenNoodleSoup_boiled_co.paa", "Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChickenNoodleSoup_dried_co.paa", "Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChickenNoodleSoup_burnt_co.paa", "Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChickenNoodleSoup_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -902,6 +911,8 @@ class FoodAnimationSources;
 		descriptionShort = "Spicy ragout.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGumbo_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGumbo_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGumbo_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGumbo_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGumbo_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGumbo_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -953,6 +964,8 @@ class FoodAnimationSources;
 		descriptionShort = "Spicy ragout.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSeafoodGumbo_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSeafoodGumbo_baked_co.paa", "Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSeafoodGumbo_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSeafoodGumbo_dried_co.paa", "Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSeafoodGumbo_burnt_co.paa", "Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSeafoodGumbo_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -996,7 +1009,8 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
+
 	class DadaSoup_TomatoSoup: DadaSoup_Base
 	{
 		scope = 2;
@@ -1004,6 +1018,8 @@ class FoodAnimationSources;
 		descriptionShort = "Delicious and healthy Roasted Tomato Soup made with freshly roasted tomatoes, caramelized onion, garlic, fresh basil and vegetable broth.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1055,6 +1071,8 @@ class FoodAnimationSources;
 		descriptionShort = "Delicious and healthy Ragout made with vegetable broth and other fresh ingredients.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1098,7 +1116,8 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
+
 	class DadaDish_GroundMeat: DadaDish_Base
 	{
 		scope = 2;
@@ -1110,6 +1129,8 @@ class FoodAnimationSources;
 		descriptionShort = "Can be used to make a lot of delicious dishes. Oh and also burgers";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1153,7 +1174,8 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
+
 	class DadaSoup_TomatoSauce: DadaSoup_Base
 	{
 		scope = 2;
@@ -1161,6 +1183,8 @@ class FoodAnimationSources;
 		descriptionShort = "Tomato sauce, best mixed with other things";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1205,6 +1229,7 @@ class FoodAnimationSources;
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
 	};
+
 	class DadaSoup_Gravy: DadaSoup_Base
 	{
 		scope = 2;
@@ -1212,6 +1237,8 @@ class FoodAnimationSources;
 		descriptionShort = "Sauce Brune.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGravy_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGravy_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGravy_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGravy_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGravy_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGravy_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1264,6 +1291,8 @@ class FoodAnimationSources;
 		descriptionShort = "Fancy dinner";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRabbitPlate_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRabbitPlate_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRabbitPlate_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRabbitPlate_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRabbitPlate_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRabbitPlate_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1307,7 +1336,7 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaSoup_ClamChowder: DadaSoup_Base
 	{
@@ -1316,6 +1345,8 @@ class FoodAnimationSources;
 		descriptionShort = "Fancy dinner";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaClamChowder_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaClamChowder_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaClamChowder_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaClamChowder_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaClamChowder_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaClamChowder_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1359,7 +1390,7 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaDish_Spaghetti: DadaDish_Base
 	{
@@ -1368,7 +1399,7 @@ class FoodAnimationSources;
 		descriptionShort = "Freshly made pasta in a homemade tomato sauce.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_rotten_co.paa"};
-class FoodAnimationSources;
+		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
@@ -1413,7 +1444,7 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaDish_Cannelloni: DadaDish_Base
 	{
@@ -1422,7 +1453,7 @@ class FoodAnimationSources;
 		descriptionShort = "Freshly made pasta in a homemade tomato sauce.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_rotten_co.paa"};
-class FoodAnimationSources;
+		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
@@ -1476,7 +1507,7 @@ class FoodAnimationSources;
 		descriptionShort = "Freshly made pasta in a homemade tomato sauce.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_rotten_co.paa"};
-class FoodAnimationSources;
+		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
@@ -1521,7 +1552,7 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaDish_Lasagna: DadaDish_Base
 	{
@@ -1530,7 +1561,7 @@ class FoodAnimationSources;
 		descriptionShort = "Freshly made pasta in a homemade tomato sauce.";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_rotten_co.paa"};
-class FoodAnimationSources;
+		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
@@ -1575,7 +1606,7 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaDish_SauteedMushrooms: DadaDish_Base
 	{
@@ -1584,6 +1615,8 @@ class FoodAnimationSources;
 		descriptionShort = "Mushrooms braised in a pan";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSauteedMushrooms_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSauteedMushrooms_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSauteedMushrooms_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSauteedMushrooms_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSauteedMushrooms_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSauteedMushrooms_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1627,7 +1660,7 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaSoup_MushroomCream: DadaSoup_Base
 	{
@@ -1636,6 +1669,8 @@ class FoodAnimationSources;
 		descriptionShort = "Cream of Mushrooms";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMushroomCream_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMushroomCream_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMushroomCream_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMushroomCream_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMushroomCream_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMushroomCream_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1679,7 +1714,7 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaDish_MacaroniAndCheese: DadaDish_Base
 	{
@@ -1688,7 +1723,7 @@ class FoodAnimationSources;
 		descriptionShort = "Cheesy and Decadent";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMacaroniAndCheese_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMacaroniAndCheese_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMacaroniAndCheese_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMacaroniAndCheese_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMacaroniAndCheese_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaMacaroniAndCheese_rotten_co.paa"};
-class FoodAnimationSources;
+		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
@@ -1733,7 +1768,7 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaDish_ShepherdsPie: DadaDish_Base
 	{
@@ -1742,6 +1777,8 @@ class FoodAnimationSources;
 		descriptionShort = "Comfort food";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaShepherdsPie_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaShepherdsPie_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaShepherdsPie_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaShepherdsPie_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaShepherdsPie_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaShepherdsPie_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1785,7 +1822,7 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaDish_PulledPork: DadaDish_Base
 	{
@@ -1794,6 +1831,8 @@ class FoodAnimationSources;
 		descriptionShort = "Cooked in a delicious barbecue sauce";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_rotten_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1848,6 +1887,8 @@ class FoodAnimationSources;
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_rotten_co.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1891,7 +1932,7 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaDish_Sausage: DadaDish_Base
 	{
@@ -1918,6 +1959,8 @@ class FoodAnimationSources;
 				};
 			};
 		};	
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1961,7 +2004,7 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaDish_Fries: DadaDish_Base
 	{
@@ -1988,6 +2031,8 @@ class FoodAnimationSources;
 				};
 			};
 		};	
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -2031,7 +2076,7 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaDish_FriteSauce: DadaDish_Base
 	{
@@ -2053,6 +2098,8 @@ class FoodAnimationSources;
 				};
 			};
 		};	
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -2096,7 +2143,7 @@ class FoodAnimationSources;
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
-};
+	};
 
 	class DadaDish_Poutine: DadaDish_Base
 	{
@@ -2118,8 +2165,9 @@ class FoodAnimationSources;
 				};
 			};
 		};	
-};
-class Food
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
@@ -2162,4 +2210,5 @@ class Food
 			};
 			class FoodStageTransitions: DadaDishStageTransitions{};
 		};
+	};
 };

@@ -156,8 +156,6 @@ class CfgVehicles
 		varQuantityMax = 450;
 		isMeleeWeapon = 1;
 		inventorySlot[] = {"DirectCookingA","DirectCookingB","DirectCookingC","SmokingA","SmokingB","SmokingC","SmokingD"};
-		class FoodAnimationSources;
-		class AnimationSources: FoodAnimationSources{};
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -326,7 +324,9 @@ class CfgVehicles
 		color = "LSVeggies";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-Veggies_co.paa"};
-	class Food
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
@@ -367,8 +367,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_LSVeggies: Dada_PreservedFoodCan_Colorbase
@@ -407,6 +406,8 @@ class CfgVehicles
 		color = "STAGham";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -448,8 +449,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 	};
 	class Dada_PreservedFoodCan_STAGham: Dada_PreservedFoodCan_Colorbase
@@ -527,8 +527,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_ESPENChunkySoup: Dada_PreservedFoodCan_Colorbase
@@ -567,7 +566,9 @@ class CfgVehicles
 		color = "LSSPAM";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
-	class Food
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
@@ -608,8 +609,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_LSSPAM: Dada_PreservedFoodCan_Colorbase
@@ -648,6 +648,8 @@ class CfgVehicles
 		color = "STAGchili";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -689,8 +691,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_STAGchili: Dada_PreservedFoodCan_Colorbase
@@ -729,7 +730,9 @@ class CfgVehicles
 		color = "ESPENMacnCheese";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENMacnCheese_co.paa"};
-	class Food
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
@@ -770,8 +773,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_ESPENMacnCheese: Dada_PreservedFoodCan_Colorbase
@@ -851,8 +853,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_DicedTomatoes: Dada_PreservedFoodCan_Colorbase
@@ -891,6 +892,8 @@ class CfgVehicles
 		descriptionShort = "Just put it on everithing you eat already";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -932,8 +935,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_Ketchup: Dada_PreservedFoodCan_Colorbase
@@ -972,7 +974,9 @@ class CfgVehicles
 		color = "Paella";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Paella_co.paa"};
-	class Food
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
@@ -1013,8 +1017,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_Paella: Dada_PreservedFoodCan_Colorbase
@@ -1053,7 +1056,9 @@ class CfgVehicles
 		color = "PumpkinPuree";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_PumpkinPuree_co.paa"};
-	class Food
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
@@ -1094,8 +1099,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_PumpkinPuree: Dada_PreservedFoodCan_Colorbase
@@ -1134,7 +1138,9 @@ class CfgVehicles
 		color = "Quail";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Quail_co.paa"};
-	class Food
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
@@ -1175,8 +1181,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_Quail: Dada_PreservedFoodCan_Colorbase
@@ -1215,7 +1220,9 @@ class CfgVehicles
 		color = "Relish";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Relish_co.paa"};
-	class Food
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
@@ -1256,8 +1263,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_Relish: Dada_PreservedFoodCan_Colorbase
@@ -1296,6 +1302,8 @@ class CfgVehicles
 		descriptionShort = "savoury filling";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Samosa_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1337,8 +1345,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_Samosa: Dada_PreservedFoodCan_Colorbase
@@ -1377,7 +1384,9 @@ class CfgVehicles
 		color = "HomemadeChili";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
-	class Food
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
@@ -1418,8 +1427,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_HomemadeChili: Dada_PreservedFoodCan_Colorbase
@@ -1458,7 +1466,9 @@ class CfgVehicles
 		descriptionShort = "Made with love";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadePumpkinPuree_co.paa"};
-	class Food
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
@@ -1499,8 +1509,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_HomemadePumpkinPuree: Dada_PreservedFoodCan_Colorbase
@@ -1549,6 +1558,8 @@ class CfgVehicles
 		varQuantityMin = 0;
 		varQuantityMax = 1000;
 		isMeleeWeapon = 1;
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1590,8 +1601,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 		class DamageSystem
 		{
@@ -1691,6 +1701,8 @@ class CfgVehicles
 		varQuantityMin = 0;
 		varQuantityMax = 1000;
 		isMeleeWeapon = 1;
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -1732,8 +1744,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class DadaDishStageTransitions;
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 		class DamageSystem
 		{

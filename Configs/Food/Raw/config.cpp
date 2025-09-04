@@ -28,9 +28,6 @@ class CfgVehicles
 		inventorySlot[] = {"Ingredient","Ingredient1","Ingredient2","Ingredient3","Ingredient4","Ingredient5","Ingredient6","Ingredient7","Ingredient8"};
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaRawBowl_Base_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaRawBowl_Base_co.paa"};
-		class FoodAnimationSources;
-		class AnimationSources: FoodAnimationSources{};
-		class FruitStageTransitions;
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -87,6 +84,8 @@ class CfgVehicles
 		descriptionShort = "Lettuce and dressing, perfect meal for the calorie averse or starter for everyone else";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaSalad_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -110,6 +109,7 @@ class CfgVehicles
 					cooking_properties[] = {70,30,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 	};
@@ -121,6 +121,8 @@ class CfgVehicles
 		descriptionShort = "It's rice. Not sure what you were hoping for";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaRiceBowl_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -144,6 +146,7 @@ class CfgVehicles
 					cooking_properties[] = {70,30,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 	};
@@ -159,6 +162,8 @@ class CfgVehicles
 		descriptionShort = "Bowl of rice with multiple toppings on it, gotta eat em all!";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaPokeBowl_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -182,6 +187,7 @@ class CfgVehicles
 					cooking_properties[] = {70,30,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 	};
@@ -193,6 +199,8 @@ class CfgVehicles
 		descriptionShort = "Tomato and Mozzarella Salad";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaTomatoSalad_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -216,6 +224,7 @@ class CfgVehicles
 					cooking_properties[] = {70,30,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 	};
@@ -225,6 +234,8 @@ class CfgVehicles
 		scope = 1;
 		displayName = "Cereal Bowl";
 		descriptionShort = "Bowl of cereal";
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -248,6 +259,7 @@ class CfgVehicles
 					cooking_properties[] = {70,30,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 	};
@@ -258,6 +270,8 @@ class CfgVehicles
 		Color = "Coco";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaCerealCrunchinKids_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -281,6 +295,7 @@ class CfgVehicles
 					cooking_properties[] = {70,30,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 	};
@@ -291,6 +306,8 @@ class CfgVehicles
 		Color = "Frosties";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaCerealCrunchinFrosties_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -314,6 +331,7 @@ class CfgVehicles
 					cooking_properties[] = {70,30,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 	};
@@ -324,6 +342,8 @@ class CfgVehicles
 		Color = "Star";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\ceramicbowl_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\DadaCerealCrunchinKosmostar_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -347,6 +367,7 @@ class CfgVehicles
 					cooking_properties[] = {70,30,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 	};
@@ -380,6 +401,8 @@ class CfgVehicles
 				};
 			};
 		};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -403,6 +426,7 @@ class CfgVehicles
 					cooking_properties[] = {70,30,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		class AnimEvents
@@ -458,6 +482,8 @@ class CfgVehicles
 				};
 			};
 		};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -481,6 +507,7 @@ class CfgVehicles
 					cooking_properties[] = {70,30,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 	};
@@ -495,6 +522,7 @@ class CfgVehicles
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaFoodCan_SmallButter_co.paa"};
 	};
+
 	class DadaRaw_SmallButter_Opened: DadaRaw_Base
 	{
 		debug_ItemCategory = 6;
@@ -510,6 +538,8 @@ class CfgVehicles
 		descriptionShort = "Just a little bit of butter";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaFoodCan_SmallButter_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -533,6 +563,7 @@ class CfgVehicles
 					cooking_properties[] = {70,30,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		class DamageSystem
@@ -547,6 +578,7 @@ class CfgVehicles
 			};
 		};
 	};
+	
 	class DadaRaw_BigButter: DadaRaw_Base
 	{
 		scope = 2;
@@ -575,6 +607,8 @@ class CfgVehicles
 				};
 			};
 		};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -598,6 +632,7 @@ class CfgVehicles
 					cooking_properties[] = {70,30,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		class AnimEvents
@@ -640,6 +675,8 @@ class CfgVehicles
 		canBeSplit = 1;
 		interactionWeight = 1;
 		quantityBar = 1;
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -663,6 +700,7 @@ class CfgVehicles
 					cooking_properties[] = {70,30,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 	};
@@ -705,14 +743,15 @@ class CfgVehicles
 		hiddenSelections[] = {"cs_raw","camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor_co.paa","Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseWrap_ca.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"};
-	class DamageSystem
-	{
-		class GlobalHealth
+		class DamageSystem
 		{
-			class Health
+			class GlobalHealth
 			{
-				hitpoints = 40;
-				healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}}};
+				class Health
+				{
+					hitpoints = 40;
+					healthLevels[] = {{1.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}},{0.0,{"Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseColor.rvmat"}}};
+				};
 			};
 		};
 	};
@@ -797,6 +836,8 @@ class CfgVehicles
 		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\IScream.p3d";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\IScreamVanillaChoco_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -820,6 +861,7 @@ class CfgVehicles
 					cooking_properties[] = {70,30,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		class DamageSystem
@@ -907,6 +949,8 @@ class CfgVehicles
 		model = "\dz\gear\food\FoodCan_100g_open.p3d";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\Yogourt_co.paa"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -930,6 +974,7 @@ class CfgVehicles
 					cooking_properties[] = {70,30,80};
 				};
 			};
+			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
 		class DamageSystem
@@ -1022,6 +1067,4 @@ class CfgVehicles
 			};
 		};
 	};
-};
-
 };

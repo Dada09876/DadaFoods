@@ -85,7 +85,9 @@ class CfgVehicles
 		descriptionShort = "Some say it's good for the bones";
 		hiddenSelections[] = {"zbytek"};
 		hiddenSelectionsTextures[] = {"\Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_FreshMilk_co.paa"};
-	class Food
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
@@ -122,7 +124,9 @@ class CfgVehicles
 		descriptionShort = "Little Miss Muffet’s favourite snack. Chunky and cheesy mix. Can be strained for its curds";
 		hiddenSelections[] = {"zbytek"};
 		hiddenSelectionsTextures[] = {"\Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_CurdsAndWhey_co.paa"};
-	class Food
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
@@ -148,7 +152,8 @@ class CfgVehicles
 			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
-};
+	};
+
 	class DadaDrink_Whey: DadaDrinks_ColorBase
 	{
 		canBeSplit = 1;
@@ -159,7 +164,9 @@ class CfgVehicles
 		descriptionShort = "Some like that dairy aftertaste";
 		hiddenSelections[] = {"zbytek"};
 		hiddenSelectionsTextures[] = {"\Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_Whey_co.paa"};
-	class Food
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
@@ -185,7 +192,8 @@ class CfgVehicles
 			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
-};
+	};
+
 	class DadaDrink_Coffee: DadaDrinks_ColorBase
 	{
 		scope = 2;
@@ -227,7 +235,9 @@ class CfgVehicles
 				};
 			};
 		};
-	class Food
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
+		class Food
 		{
 			class FoodStages
 			{
@@ -253,7 +263,8 @@ class CfgVehicles
 			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
-};
+	};
+
 	class DadaDrink_MilkBottle: DadaDrinks_ColorBase
 	{
 		scope = 2;
@@ -267,6 +278,8 @@ class CfgVehicles
 		itemSize[] = {1,3};
 		varQuantityInit = 1000;
 		varQuantityMax = 1000;
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -293,7 +306,7 @@ class CfgVehicles
 			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
-class DamageSystem
+		class DamageSystem
 		{
 			class GlobalHealth
 			{
@@ -352,6 +365,7 @@ class DamageSystem
 			};
 		};
 	};
+
 	class DadaDrink_MilkCarton: DadaDrinks_ColorBase
 	{
 		scope = 2;
@@ -365,6 +379,8 @@ class DamageSystem
 		itemSize[] = {1,3};
 		varQuantityInit = 1000;
 		varQuantityMax = 1000;
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -450,6 +466,7 @@ class DamageSystem
 			};
 		};
 	};
+
 	class DadaDrink_MilkGallon: DadaDrinks_ColorBase
 	{
 		fullnessIndex = 1;
@@ -465,6 +482,8 @@ class DamageSystem
 		itemSize[] = {4,5};
 		varQuantityInit = 4000;
 		varQuantityMax = 4000;
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -536,6 +555,8 @@ class DamageSystem
 		hiddenSelections[] = {"zbytek","camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_MilkCoffee_ca.paa","Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_MilkCoffee_ca.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Cup.rvmat"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -562,7 +583,7 @@ class DamageSystem
 			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
-class DamageSystem
+		class DamageSystem
 		{
 			class GlobalHealth
 			{
@@ -600,6 +621,7 @@ class DamageSystem
 			};
 		};
 	};
+
 	class DadaDrink_MilkCoffeeArt: DadaDrinks_ColorBase
 	{
 		scope = 2;
@@ -611,6 +633,8 @@ class DamageSystem
 		hiddenSelections[] = {"zbytek","camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_MilkCoffeeArt_ca.paa","Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_MilkCoffeeArt_ca.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Cup.rvmat"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -637,7 +661,7 @@ class DamageSystem
 			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
-class DamageSystem
+		class DamageSystem
 		{
 			class GlobalHealth
 			{
@@ -675,6 +699,7 @@ class DamageSystem
 			};
 		};
 	};
+
 	class DadaDrink_BlackTea: DadaDrinks_ColorBase
 	{
 		scope = 2;
@@ -686,6 +711,8 @@ class DamageSystem
 		hiddenSelections[] = {"zbytek","camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_BlackTea_ca.paa","Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_BlackTea_ca.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Cup.rvmat"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -712,7 +739,7 @@ class DamageSystem
 			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
-class DamageSystem
+		class DamageSystem
 		{
 			class GlobalHealth
 			{
@@ -755,6 +782,7 @@ class DamageSystem
 			};
 		};
 	};
+
 	class DadaDrink_GreenTea: DadaDrinks_ColorBase
 	{
 		scope = 2;
@@ -766,6 +794,8 @@ class DamageSystem
 		hiddenSelections[] = {"zbytek","camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_GreenTea_ca.paa","Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_GreenTea_ca.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Cup.rvmat"};
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
@@ -792,7 +822,7 @@ class DamageSystem
 			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};
 		};
-class DamageSystem
+		class DamageSystem
 		{
 			class GlobalHealth
 			{
@@ -835,6 +865,7 @@ class DamageSystem
 			};
 		};
 	};
+
 	class DadaDrink_MilkShake: DadaDrinks_ColorBase
 	{
 		scope = 2;
@@ -849,6 +880,8 @@ class DamageSystem
 		itemSize[] = {1,3};
 		varQuantityInit = 300;
 		varQuantityMax = 300;
+		class FoodAnimationSources;
+		class AnimationSources: FoodAnimationSources{};
 		class Food
 		{
 			class FoodStages
