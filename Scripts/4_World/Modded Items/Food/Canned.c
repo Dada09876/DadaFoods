@@ -56,7 +56,17 @@ class Dada_PreservedFoodCan_Colorbase_Opened: Edible_Base
 	}
 };
 
-class Dada_RawFoodCan_LSVeggies extends Dada_RawFoodCan_Colorbase{};
+class Dada_RawFoodCan_LSVeggies extends Dada_RawFoodCan_Colorbase
+{
+	override bool IsFruit()
+	{
+		return true;
+	}
+	override bool IsMeat()
+	{
+		return false;
+	}
+};
 class Dada_PreservedFoodCan_LSVeggies extends Dada_PreservedFoodCan_Colorbase{};
 class Dada_PreservedFoodCan_LSVeggies_Opened: Dada_PreservedFoodCan_Colorbase_Opened{};
 
@@ -76,7 +86,17 @@ class Dada_RawFoodCan_STAGchili extends Dada_RawFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_STAGchili extends Dada_PreservedFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_STAGchili_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
 
-class Dada_RawFoodCan_DicedTomatoes extends Dada_RawFoodCan_Colorbase {};
+class Dada_RawFoodCan_DicedTomatoes extends Dada_RawFoodCan_Colorbase 
+{
+	override bool IsFruit()
+	{
+		return true;
+	}
+	override bool IsMeat()
+	{
+		return false;
+	}
+};
 class Dada_PreservedFoodCan_DicedTomatoes extends Dada_PreservedFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_DicedTomatoes_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
 
@@ -84,7 +104,17 @@ class Dada_RawFoodCan_ESPENMacnCheese extends Dada_RawFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_ESPENMacnCheese extends Dada_PreservedFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_ESPENMacnCheese_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
 
-class Dada_RawFoodCan_Ketchup extends Dada_RawFoodCan_Colorbase {};
+class Dada_RawFoodCan_Ketchup extends Dada_RawFoodCan_Colorbase 
+{
+	override bool IsFruit()
+	{
+		return true;
+	}
+	override bool IsMeat()
+	{
+		return false;
+	}
+};
 class Dada_PreservedFoodCan_Ketchup extends Dada_PreservedFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_Ketchup_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
 
@@ -92,7 +122,17 @@ class Dada_RawFoodCan_Paella extends Dada_RawFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_Paella extends Dada_PreservedFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_Paella_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
 
-class Dada_RawFoodCan_PumpkinPuree extends Dada_RawFoodCan_Colorbase {};
+class Dada_RawFoodCan_PumpkinPuree extends Dada_RawFoodCan_Colorbase 
+{
+	override bool IsFruit()
+	{
+		return true;
+	}
+	override bool IsMeat()
+	{
+		return false;
+	}
+};
 class Dada_PreservedFoodCan_PumpkinPuree extends Dada_PreservedFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_PumpkinPuree_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
 
@@ -100,7 +140,17 @@ class Dada_RawFoodCan_Quail extends Dada_RawFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_Quail extends Dada_PreservedFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_Quail_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
 
-class Dada_RawFoodCan_Relish extends Dada_RawFoodCan_Colorbase {};
+class Dada_RawFoodCan_Relish extends Dada_RawFoodCan_Colorbase 
+{
+	override bool IsFruit()
+	{
+		return true;
+	}
+	override bool IsMeat()
+	{
+		return false;
+	}
+};
 class Dada_PreservedFoodCan_Relish extends Dada_PreservedFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_Relish_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
 
@@ -112,7 +162,17 @@ class Dada_RawFoodCan_HomemadeChili extends Dada_RawFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_HomemadeChili extends Dada_PreservedFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_HomemadeChili_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
 
-class Dada_RawFoodCan_HomemadePumpkinPuree extends Dada_RawFoodCan_Colorbase {};
+class Dada_RawFoodCan_HomemadePumpkinPuree extends Dada_RawFoodCan_Colorbase 
+{
+	override bool IsFruit()
+	{
+		return true;
+	}
+	override bool IsMeat()
+	{
+		return false;
+	}
+};
 class Dada_PreservedFoodCan_HomemadePumpkinPuree extends Dada_PreservedFoodCan_Colorbase {};
 class Dada_PreservedFoodCan_HomemadePumpkinPuree_Opened extends Dada_PreservedFoodCan_Colorbase_Opened {};
 
