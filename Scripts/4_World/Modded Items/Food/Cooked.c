@@ -44,12 +44,32 @@ class DadaSoup_ChickenBroth: DadaSoup_Base{};
 class DadaSoup_ChickenNoodleSoup: DadaSoup_Base{};
 class DadaSoup_TomatoSoup: DadaSoup_Base{};
 class DadaSoup_Ragout: DadaSoup_Base{};
-class DadaSoup_TomatoSauce: DadaSoup_Base{};
+class DadaSoup_TomatoSauce: DadaSoup_Base
+{
+	override bool IsFruit()
+	{
+		return true;
+	}
+	override bool IsMeat()
+	{
+		return false;
+	}
+};
 class DadaSoup_Gravy: DadaSoup_Base{};
 class DadaSoup_ClamChowder: DadaSoup_Base{};
 class DadaSoup_MushroomCream: DadaSoup_Base{};
 
-class DadaDish_MashedPotatoes: DadaDish_Base{};
+class DadaDish_MashedPotatoes: DadaDish_Base
+{
+	override bool IsFruit()
+	{
+		return true;
+	}
+	override bool IsMeat()
+	{
+		return false;
+	}
+};
 class DadaDish_Chili: DadaDish_Base{};
 class DadaDish_Pie: DadaDish_Base{};
 class DadaDish_Gumbo: DadaDish_Base{};
@@ -61,12 +81,32 @@ class DadaDish_Cannelloni: DadaDish_Base{};
 class DadaDish_Bowties: DadaDish_Base{};
 class DadaDish_Lasagna: DadaDish_Base{};
 class DadaDish_Sausage: DadaDish_Base{};
-class DadaDish_SauteedMushrooms: DadaDish_Base{};
+class DadaDish_SauteedMushrooms: DadaDish_Base
+{
+	override bool IsFruit()
+	{
+		return true;
+	}
+	override bool IsMeat()
+	{
+		return false;
+	}
+};
 class DadaDish_MacaroniAndCheese: DadaDish_Base{};
 class DadaDish_ShepherdsPie: DadaDish_Base{};
 class DadaDish_PulledPork: DadaDish_Base{};
 class DadaDish_Rigatoni: DadaDish_Base{};
-class DadaDish_Fries: DadaDish_Base{};
+class DadaDish_Fries: DadaDish_Base
+{
+	override bool IsFruit()
+	{
+		return true;
+	}
+	override bool IsMeat()
+	{
+		return false;
+	}
+};
 class DadaDish_FriteSauce: DadaDish_Base{};
 class DadaDish_Poutine: DadaDish_Base{};
 
