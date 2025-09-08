@@ -1,10 +1,3 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: Configs\Spawned\config.bin
-//Produced from mikero's Dos Tools Dll version 9.93
-//https://mikero.bytex.digital/Downloads
-//'now' is Tue Feb 04 16:40:53 2025 : 'file' last modified on Sat Jan 18 22:45:01 2025
-////////////////////////////////////////////////////////////////////
-
 #define _ARMA_
 
 class CfgPatches

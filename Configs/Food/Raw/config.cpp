@@ -93,7 +93,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {1,93,44,1,0};
+					nutrition_properties[] = {2,93,44,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -105,7 +105,7 @@ class CfgVehicles
 				class Dried
 				{
 					visual_properties[] = {1,3,3};
-					nutrition_properties[] = {1,80,8,1,0};
+					nutrition_properties[] = {2,80,8,1,0};
 					cooking_properties[] = {70,30,80};
 				};
 			};
@@ -130,7 +130,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {1,125,85,1,0};
+					nutrition_properties[] = {2,125,85,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -142,7 +142,7 @@ class CfgVehicles
 				class Dried
 				{
 					visual_properties[] = {1,3,3};
-					nutrition_properties[] = {1,125,10,1,0};
+					nutrition_properties[] = {2,125,10,1,0};
 					cooking_properties[] = {70,30,80};
 				};
 			};
@@ -171,7 +171,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {1,104,76,1,0};
+					nutrition_properties[] = {2,104,76,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -183,7 +183,7 @@ class CfgVehicles
 				class Dried
 				{
 					visual_properties[] = {1,3,3};
-					nutrition_properties[] = {1,104,12,1,0};
+					nutrition_properties[] = {2,104,12,1,0};
 					cooking_properties[] = {70,30,80};
 				};
 			};
@@ -208,7 +208,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {1,93,44,1,0};
+					nutrition_properties[] = {2,93,44,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -220,7 +220,7 @@ class CfgVehicles
 				class Dried
 				{
 					visual_properties[] = {1,3,3};
-					nutrition_properties[] = {1,80,8,1,0};
+					nutrition_properties[] = {2,80,8,1,0};
 					cooking_properties[] = {70,30,80};
 				};
 			};
@@ -243,7 +243,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {1,232,100,1,0};
+					nutrition_properties[] = {2,232,100,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -255,7 +255,7 @@ class CfgVehicles
 				class Dried
 				{
 					visual_properties[] = {1,3,3};
-					nutrition_properties[] = {1,232,65,1,0};
+					nutrition_properties[] = {2,232,65,1,0};
 					cooking_properties[] = {70,30,80};
 				};
 			};
@@ -279,7 +279,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {1,232,100,1,0};
+					nutrition_properties[] = {2,232,100,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -291,7 +291,7 @@ class CfgVehicles
 				class Dried
 				{
 					visual_properties[] = {1,3,3};
-					nutrition_properties[] = {1,232,65,1,0};
+					nutrition_properties[] = {2,232,65,1,0};
 					cooking_properties[] = {70,30,80};
 				};
 			};
@@ -315,7 +315,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {1,232,100,1,0};
+					nutrition_properties[] = {2,232,100,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -327,7 +327,7 @@ class CfgVehicles
 				class Dried
 				{
 					visual_properties[] = {1,3,3};
-					nutrition_properties[] = {1,232,65,1,0};
+					nutrition_properties[] = {2,232,65,1,0};
 					cooking_properties[] = {70,30,80};
 				};
 			};
@@ -351,7 +351,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {1,232,100,1,0};
+					nutrition_properties[] = {2,232,100,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -363,7 +363,7 @@ class CfgVehicles
 				class Dried
 				{
 					visual_properties[] = {1,3,3};
-					nutrition_properties[] = {1,232,65,1,0};
+					nutrition_properties[] = {2,232,65,1,0};
 					cooking_properties[] = {70,30,80};
 				};
 			};
@@ -410,7 +410,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {1,104,76,1,0};
+					nutrition_properties[] = {2,104,76,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -422,7 +422,7 @@ class CfgVehicles
 				class Dried
 				{
 					visual_properties[] = {1,3,3};
-					nutrition_properties[] = {1,104,12,1,0};
+					nutrition_properties[] = {2,104,12,1,0};
 					cooking_properties[] = {70,30,80};
 				};
 			};
@@ -491,7 +491,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {1,104,76,1,0};
+					nutrition_properties[] = {2,104,76,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -503,7 +503,7 @@ class CfgVehicles
 				class Dried
 				{
 					visual_properties[] = {1,3,3};
-					nutrition_properties[] = {1,104,12,1,0};
+					nutrition_properties[] = {2,104,12,1,0};
 					cooking_properties[] = {70,30,80};
 				};
 			};
@@ -547,7 +547,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {1,128,100,1,0};
+					nutrition_properties[] = {2,128,100,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -559,7 +559,7 @@ class CfgVehicles
 				class Dried
 				{
 					visual_properties[] = {1,3,3};
-					nutrition_properties[] = {1,128,65,1,0};
+					nutrition_properties[] = {2,128,65,1,0};
 					cooking_properties[] = {70,30,80};
 				};
 			};
@@ -616,7 +616,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {1,128,100,1,0};
+					nutrition_properties[] = {2,128,100,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -628,7 +628,7 @@ class CfgVehicles
 				class Dried
 				{
 					visual_properties[] = {1,3,3};
-					nutrition_properties[] = {1,128,65,1,0};
+					nutrition_properties[] = {2,128,65,1,0};
 					cooking_properties[] = {70,30,80};
 				};
 			};
@@ -684,7 +684,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {1,128,100,1,0};
+					nutrition_properties[] = {2,128,100,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -696,7 +696,7 @@ class CfgVehicles
 				class Dried
 				{
 					visual_properties[] = {1,3,3};
-					nutrition_properties[] = {1,128,65,1,0};
+					nutrition_properties[] = {2,128,65,1,0};
 					cooking_properties[] = {70,30,80};
 				};
 			};
@@ -776,7 +776,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\Dada_PumpkinSeeds_co.paa"};
 		class Nutrition
 		{
-			fullnessIndex = 0;
+			fullnessIndex = 3;
 			energy = 250;
 			water = 8;
 			nutritionalIndex = 1;
@@ -845,7 +845,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {1,128,100,1,0};
+					nutrition_properties[] = {2,128,100,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -857,7 +857,7 @@ class CfgVehicles
 				class Dried
 				{
 					visual_properties[] = {1,3,3};
-					nutrition_properties[] = {1,128,65,1,0};
+					nutrition_properties[] = {2,128,65,1,0};
 					cooking_properties[] = {70,30,80};
 				};
 			};
@@ -958,7 +958,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {1,128,100,1,0};
+					nutrition_properties[] = {2,128,100,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -970,7 +970,7 @@ class CfgVehicles
 				class Dried
 				{
 					visual_properties[] = {1,3,3};
-					nutrition_properties[] = {1,128,65,1,0};
+					nutrition_properties[] = {2,128,65,1,0};
 					cooking_properties[] = {70,30,80};
 				};
 			};
