@@ -48,6 +48,7 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaDish_GroundMeat);
     RegisterRecipe(new CraftDadaDish_MashedPotatoes);
     RegisterRecipe(new CraftDadaDish_MashedPotatoes1);
+    RegisterRecipe(new CraftDadaDish_MashedPotatoes2);
     RegisterRecipe(new CraftDadaSoup_ChickenBroth);
     RegisterRecipe(new CraftDadaSoup_ChickenBroth1);
     RegisterRecipe(new CraftDadaSoup_ChickenNoodleSoup);
@@ -212,5 +213,6 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaCharcoalPiece);
     RegisterRecipe(new CraftDadaCharcoalTabs);
     RegisterRecipe(new CraftDadaBoneMeal);
+    RegisterRecipe(new CraftDadaYeast);
   };
 };

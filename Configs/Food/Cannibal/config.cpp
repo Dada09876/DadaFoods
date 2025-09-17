@@ -13,7 +13,131 @@ class CfgPatches
 class CfgVehicles
 {
 	class BaseFoodStageTransitions;
-	class DadaDishStageTransitions;
+	class DadaCannibalStageTransitions: BaseFoodStageTransitions
+	{
+		class Raw
+		{
+			class ToBaked
+			{
+				transition_to = 2;
+				cooking_method = 1;
+			};
+			class ToBoiled
+			{
+				transition_to = 3;
+				cooking_method = 2;
+			};
+			class ToDried
+			{
+				transition_to = 4;
+				cooking_method = 3;
+			};
+			class ToBurned
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToRotten
+			{
+				transition_to = 6;
+				cooking_method = 4;
+			};
+		};
+		class Rotten
+		{
+			class ToBurned
+			{
+				transition_to = 5;
+				cooking_method = 1;
+			};
+		};
+		class Baked
+		{
+			class ToBaked
+			{
+				transition_to = 5;
+				cooking_method = 1;
+			};
+			class ToBoiled
+			{
+				transition_to = 5;
+				cooking_method = 2;
+			};
+			class ToDried
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToBurned
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToRotten
+			{
+				transition_to = 6;
+				cooking_method = 4;
+			};
+		};
+		class Boiled
+		{
+			class ToBaked
+			{
+				transition_to = 5;
+				cooking_method = 1;
+			};
+			class ToBoiled
+			{
+				transition_to = 5;
+				cooking_method = 2;
+			};
+			class ToDried
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToBurned
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToRotten
+			{
+				transition_to = 6;
+				cooking_method = 4;
+			};
+		};
+		class Dried
+		{
+			class ToBaked
+			{
+				transition_to = 5;
+				cooking_method = 1;
+			};
+			class ToBoiled
+			{
+				transition_to = 5;
+				cooking_method = 2;
+			};
+			class ToDried
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToBurned
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToRotten
+			{
+				transition_to = 6;
+				cooking_method = 4;
+			};
+		};
+		class Burned{};
+	};
+
 	class FoodAnimationSources;
 	class HumanSteakMeat;
 	class DadaCannibal_Base: HumanSteakMeat
@@ -30,7 +154,7 @@ class CfgVehicles
 		debug_ItemCategory = 6;
 		weight = 2;
 		interactionWeight = 1;
-		itemSize[] = {2,3};
+		itemSize[] = {2,2};
 		varQuantityInit = 125;
 		varQuantityMin = 0;
 		varQuantityMax = 300;
@@ -46,7 +170,6 @@ class CfgVehicles
 				};
 			};
 		};
-		class AnimationSources: FoodAnimationSources{};
 		class NoiseImpact
 		{
 			strength = 600;
@@ -91,6 +214,7 @@ class CfgVehicles
 		descriptionShort = "A stew made from human meat.";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Bowl_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EyeballSoup_rotten_co.paa"};
+		itemSize[] = {2,2};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -134,7 +258,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 		class DamageSystem
 		{
@@ -155,6 +279,7 @@ class CfgVehicles
 		descriptionShort = "Human Guts Spaghetti";
 		hiddenSelections[] = {"camoGround","cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_Bowl_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_EntrailSpaghetti_rotten_co.paa"};
+		itemSize[] = {2,2};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -198,7 +323,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 	};
 	
@@ -284,6 +409,7 @@ class CfgVehicles
 	class DadaBread_Base;
 	class DadaCannibal_WasteBread: DadaBread_Base
 	{
+		itemSize[] = {2,2};
 		scope = 2;
 		displayName = "Simple Round Dough";
 		descriptionShort = "A round, plain dough. Should be baked before consuming... but I guess no one can stop you if you don't.";
@@ -343,7 +469,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 	};
 
@@ -427,7 +553,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 	};
 	class Dada_PreservedFoodCan_CannibalLSSPAM: Dada_PreservedFoodCan_Colorbase
@@ -474,7 +600,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,84,60,1,0,4};
+					nutrition_properties[] = {5,84,60,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -508,7 +634,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 	};
 	class Dada_PreservedFoodCan_CannibalKetchup: Dada_PreservedFoodCan_Colorbase
@@ -555,7 +681,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,75,75,1,0,4};
+					nutrition_properties[] = {5,75,75,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -589,7 +715,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_CannibalDicedTomatoes: Dada_PreservedFoodCan_Colorbase
@@ -670,7 +796,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_CannibalHomemadeChili: Dada_PreservedFoodCan_Colorbase
@@ -751,7 +877,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_CannibalESPENChunkySoup: Dada_PreservedFoodCan_Colorbase
@@ -832,7 +958,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 };
 	class Dada_PreservedFoodCan_CannibalSTAGchili: Dada_PreservedFoodCan_Colorbase
@@ -865,6 +991,7 @@ class CfgVehicles
 	class DadaWasteBread_Pita: DadaBread_Base
 	{
 		scope = 2;
+		itemSize[] = {2,2};
 		displayName = "Flat Bread";
 		descriptionShort = "A flat dough. Should be baked before consuming... but I guess no one can stop you if you don't";
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\Pita.p3d";
@@ -876,7 +1003,7 @@ class CfgVehicles
 	class DadaWasteBread_Loaf: DadaBread_Base
 	{
 		scope = 2;
-		itemSize[] = {3,2};
+		itemSize[] = {2,2};
 		displayName = "Bread Loaf";
 		descriptionShort = "A loaf of bread. Should be baked before consuming... but I guess no one can stop you if you don't";
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\loaf.p3d";
@@ -899,7 +1026,7 @@ class CfgVehicles
 	class DadaWasteBread_Baguette: DadaBread_Base
 	{
 		scope = 2;
-		itemSize[] = {3,2};
+		itemSize[] = {4,1};
 		displayName = "Baguette";
 		descriptionShort = "Baguette du fromage. Should be baked before consuming... but I guess no one can stop you if you don't";
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\Baguette.p3d";
@@ -911,6 +1038,7 @@ class CfgVehicles
 	class DadaWasteBread_Pasta: DadaBread_Base
 	{
 		scope = 2;
+		itemSize[] = {2,2};
 		displayName = "Pasta Dough";
 		descriptionShort = "Good, just need the tomato sauce now";
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_rotten_co.paa"};
@@ -919,6 +1047,7 @@ class CfgVehicles
 	class DadaWasteBread_Pizza: DadaBread_Base
 	{
 		scope = 2;
+		itemSize[] = {2,2};
 		displayName = "Pizza Bianca";
 		descriptionShort = "Good, just need the tomato sauce now...";
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.p3d";
@@ -930,6 +1059,7 @@ class CfgVehicles
 	class DadaWasteBread_PizzaBase: DadaBread_Base
 	{
 		scope = 2;
+		itemSize[] = {2,2};
 		displayName = "Pizza Marinara";
 		descriptionShort = "Freshly made pizza, always better with some cheese";
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\Pizza.p3d";
@@ -979,7 +1109,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 	};
 
@@ -989,6 +1119,7 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Rigatoni";
 		descriptionShort = "Freshly made pasta with chicken in a homemade tomato sauce.";
+		itemSize[] = {2,2};
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRigatoni_rotten_co.paa"};
 		class FoodAnimationSources;
@@ -1034,7 +1165,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 };
 
@@ -1043,6 +1174,7 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Chili";
 		descriptionShort = "A chili made popular by Bear Valley's recipe using bear meat.";
+		itemSize[] = {2,2};
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaChili_rotten_co.paa"};
 	class Food
@@ -1086,7 +1218,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 };
 	class DadaCannibalDish_Pie: DadaDish_Base
@@ -1095,6 +1227,7 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Pie";
 		descriptionShort = "A pie crafted with love.";
+		itemSize[] = {2,2};
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cannibal\data\DadaCannibal_WasteBread_rotten_co.paa"};
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Bread.rvmat"};
@@ -1141,7 +1274,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 	};
 
@@ -1151,6 +1284,7 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Tomato Soup";
 		descriptionShort = "Delicious and healthy Roasted Tomato Soup made with freshly roasted tomatoes, caramelized onion, garlic, fresh basil and vegetable broth.";
+		itemSize[] = {2,2};
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSoup_rotten_co.paa"};
 		class FoodAnimationSources;
@@ -1162,7 +1296,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,58,138,1,0,4};
+					nutrition_properties[] = {5,58,138,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -1196,7 +1330,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 	};
 
@@ -1205,6 +1339,7 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Ragout";
 		descriptionShort = "Delicious and healthy Ragout made with vegetable broth and other fresh ingredients.";
+		itemSize[] = {2,2};
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaRagout_rotten_co.paa"};
 		class FoodAnimationSources;
@@ -1216,7 +1351,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,58,138,1,0,4};
+					nutrition_properties[] = {5,58,138,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -1250,18 +1385,18 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 };
 	class DadaCannibalDish_GroundMeat: DadaDish_Base
 	{
 		scope = 2;
-		itemSize[] = {2,3};
 		varQuantityInit = 65;
 		varQuantityMin = 0;
 		varQuantityMax = 150;
 		displayName = "Ground Meat";
 		descriptionShort = "Can be used to make a lot of delicious dishes. Oh and also burgers";
+		itemSize[] = {2,2};
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaGroundMeat_rotten_co.paa"};
 		class FoodAnimationSources;
@@ -1307,7 +1442,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 	};
 
@@ -1316,6 +1451,7 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Tomato Sauce";
 		descriptionShort = "Tomato sauce, best mixed with other things";
+		itemSize[] = {2,2};
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaTomatoSauce_rotten_co.paa"};
 		class FoodAnimationSources;
@@ -1327,7 +1463,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,75,75,1,0,4};
+					nutrition_properties[] = {5,75,75,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -1361,7 +1497,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 	};
 
@@ -1370,6 +1506,7 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Spaghetti bolognese";
 		descriptionShort = "Freshly made pasta in a homemade tomato sauce.";
+		itemSize[] = {2,2};
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaSpaghetti_rotten_co.paa"};
 		class FoodAnimationSources;
@@ -1415,7 +1552,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 	};
 
@@ -1424,6 +1561,7 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Cannelloni";
 		descriptionShort = "Freshly made pasta in a homemade tomato sauce.";
+		itemSize[] = {2,2};
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaCannelloni_rotten_co.paa"};
 		class FoodAnimationSources;
@@ -1469,7 +1607,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 	};
 
@@ -1478,6 +1616,7 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Bowties";
 		descriptionShort = "Freshly made pasta in a homemade tomato sauce.";
+		itemSize[] = {2,2};
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBowties_rotten_co.paa"};
 		class FoodAnimationSources;
@@ -1523,7 +1662,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 	};
 
@@ -1532,6 +1671,7 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Lasagna";
 		descriptionShort = "Freshly made pasta in a homemade tomato sauce.";
+		itemSize[] = {2,2};
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaLasagna_rotten_co.paa"};
 		class FoodAnimationSources;
@@ -1577,7 +1717,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 	};
 
@@ -1586,6 +1726,7 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Pulled Pork";
 		descriptionShort = "Cooked in a delicious barbecue sauce";
+		itemSize[] = {2,2};
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaPulledPork_rotten_co.paa"};
 		class FoodAnimationSources;
@@ -1631,7 +1772,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 	};
 
@@ -1692,7 +1833,7 @@ class CfgVehicles
 					cooking_properties[] = {100,90};
 				};
 			};
-			class FoodStageTransitions: DadaDishStageTransitions{};
+			class FoodStageTransitions: DadaCannibalStageTransitions{};
 		};
 		class DamageSystem
 		{
@@ -1731,7 +1872,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,100,200,1,0,4};
+					nutrition_properties[] = {5,100,200,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten

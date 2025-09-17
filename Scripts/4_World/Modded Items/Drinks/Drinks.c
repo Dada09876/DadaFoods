@@ -14,14 +14,17 @@ class DadaDrinks_ColorBase: Edible_Base
 	{
 		return false;
 	}		
+	
+	override bool CanBeCookedOnStick()
+	{
+		return false;
+	}	
+	
 	override bool IsFruit()
 	{
 		return true;
 	}
-	override bool CanBeCookedOnStick()
-	{
-		return false;
-	}
+	
 	override bool CanDecay()
 	{
 		return true;

@@ -18,13 +18,13 @@ class CraftDadaBread_Base extends Craft_DadaTempTemp1_BaseRecipe
 		//ingredient 2
 		InsertIngredient(1,"DadaSpawned_Yeast");//you can insert multiple ingredients this way
 		
-		m_IngredientAddQuantity[1] = -50;// 0 = do nothing
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		m_IngredientDestroy[1] = -1;// false = do nothing
 		
 		//result1
 		AddResult("DadaBread_RoundDough");//add results here
 
-		m_ResultSetFullQuantity[0] = 125;//true = set full quantity, false = do nothing
+		m_ResultSetFullQuantity[0] = 250;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = -1;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
@@ -38,14 +38,14 @@ class CraftDadaBread_Pita extends Craft_DadaTempStage_BaseRecipe
 		m_Name = "Mold Into Flat Bread";
 		
 		//conditions
-		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[0] = 125;//-1 = disable check
 		m_MinQuantityIngredient[1] = -1;//-1 = disable check
 		
 		//INGREDIENTS
 		//ingredient 1
 		InsertIngredient(0,"DadaBread_Base");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -100;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -250;// 0 = do nothing
 		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
 		
 		//ingredient 2
@@ -58,7 +58,7 @@ class CraftDadaBread_Pita extends Craft_DadaTempStage_BaseRecipe
 		//result1
 		AddResult("DadaBread_Pita");//add results here
 
-		m_ResultSetQuantity[0] = 50;//-1 = do nothing
+		m_ResultSetQuantity[0] = 250;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;// (
 	}
 };
@@ -70,13 +70,13 @@ class CraftDadaBread_Loaf extends Craft_DadaTempStage_BaseRecipe
 		super.Init();
 		m_Name = "Mold Into Loaf";
 
-		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[0] = 125;//-1 = disable check
 		m_MinQuantityIngredient[1] = -1;//-1 = disable check
 		
 		//ingredient 1
 		InsertIngredient(0,"DadaBread_Base");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -100;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -250;// 0 = do nothing
 		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
 	
 		//ingredient 2
@@ -89,7 +89,7 @@ class CraftDadaBread_Loaf extends Craft_DadaTempStage_BaseRecipe
 		//result1
 		AddResult("DadaBread_Loaf");//add results here
 
-		m_ResultSetQuantity[0] = 50;//-1 = do nothing
+		m_ResultSetQuantity[0] = 250;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -101,13 +101,13 @@ class CraftDadaBread_Baguette extends Craft_DadaTempStage_BaseRecipe
 		super.Init();
 		m_Name = "Mold Into Baguette";
 		
-		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[0] = 125;//-1 = disable check
 		m_MinQuantityIngredient[1] = -1;//-1 = disable check
 		
 		//ingredient 1
 		InsertIngredient(0,"DadaBread_Base");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -100;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -250;// 0 = do nothing
 		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
 		
 		//ingredient 2
@@ -120,7 +120,7 @@ class CraftDadaBread_Baguette extends Craft_DadaTempStage_BaseRecipe
 		//result1
 		AddResult("DadaBread_Baguette");//add results here
 
-		m_ResultSetQuantity[0] = 50;//-1 = do nothing
+		m_ResultSetQuantity[0] = 250;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;
 	}
 };
@@ -138,7 +138,7 @@ class CraftDadaBread_Pasta extends Craft_DadaTempStage_BaseRecipe
 		//ingredient 1
 		InsertIngredient(0,"DadaBread_Base");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -100;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -250;// 0 = do nothing
 		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
 		
 		//ingredient 2
@@ -152,7 +152,7 @@ class CraftDadaBread_Pasta extends Craft_DadaTempStage_BaseRecipe
 		//result1
 		AddResult("DadaBread_Pasta");//add results here
 
-		m_ResultSetQuantity[0] = 50;//-1 = do nothing
+		m_ResultSetQuantity[0] = 250;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -164,13 +164,13 @@ class CraftDadaBread_Pizza extends Craft_DadaTempStage_BaseRecipe
 		super.Init();
 		m_Name = "Mold Into Pizza Dough";
 		
-		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[0] = 125;//-1 = disable check
 		m_MinQuantityIngredient[1] = -1;//-1 = disable check
 		
 		//ingredient 1
 		InsertIngredient(0,"DadaBread_Base");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -100;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -250;// 0 = do nothing
 		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
 		
 		//ingredient 2
@@ -183,7 +183,7 @@ class CraftDadaBread_Pizza extends Craft_DadaTempStage_BaseRecipe
 		//result1
 		AddResult("DadaBread_Pizza");//add results here
 
-		m_ResultSetQuantity[0] = 50;//-1 = do nothing
+		m_ResultSetQuantity[0] = 250;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;
 	}
 };
@@ -385,7 +385,7 @@ class CraftDadaBread_PizzaMarinara extends Craft_DadaTempStageTemp1Stage1_BaseRe
 		//ingredient 1
 		InsertIngredient(0,"DadaBread_Pizza");//you can insert multiple ingredients this way
 
-		m_IngredientAddQuantity[0] = -50;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
@@ -421,7 +421,7 @@ class CraftDadaBread_PizzaMargherita extends Craft_DadaTempStageTemp1Stage1_Base
 		//ingredient 1
 		InsertIngredient(0,"DadaBread_PizzaBase");//you can insert multiple ingredients this way
 
-		m_IngredientAddQuantity[0] = -50;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
@@ -526,6 +526,33 @@ class CraftDadaDish_MashedPotatoes1 extends Craft_DadaTemp1_BaseRecipe
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 	
 		//ingredient 2
+		InsertIngredient(1,"PotatoSeed");//you can insert multiple ingredients this way
+	
+		//result1
+		AddResult("DadaDish_MashedPotatoes");//add results here
+
+		m_ResultSetQuantity[0] = 65;//-1 = do nothing
+		m_ResultInheritsHealth[0] = 1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaDish_MashedPotatoes2 extends Craft_DadaTemp1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Mashed Potatoes";
+
+		//conditions
+		m_MinQuantityIngredient[0] = -1;//-1 = disable check
+		m_MinQuantityIngredient[1] = -1;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(1,"Potato");//you can insert multiple ingredients this way
+		InsertIngredient(1,"PotatoSeed");//you can insert multiple ingredients this way
+		
+		//ingredient 2
+		InsertIngredient(1,"Potato");//you can insert multiple ingredients this way
 		InsertIngredient(1,"PotatoSeed");//you can insert multiple ingredients this way
 	
 		//result1
@@ -942,7 +969,7 @@ class CraftDadaDish_Pie extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		//ingredient 1
 		InsertIngredient(0,"DadaBread_Base");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -250;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
 		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
 		
 		//ingredient 2

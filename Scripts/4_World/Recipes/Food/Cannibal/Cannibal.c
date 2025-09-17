@@ -246,7 +246,7 @@ class CraftDadaCannibal_WasteBread extends Craft_DadaTemp1Stage1_BaseRecipe
 		//result1
 		AddResult("DadaCannibal_WasteBread");//add results here
 
-		m_ResultSetQuantity[0] = 90;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 	}
 };
 
@@ -265,7 +265,7 @@ class CraftDadaWasteBread_Pita extends Craft_DadaTempStage_BaseRecipe
 		//ingredient 1
 		InsertIngredient(0,"DadaCannibal_WasteBread");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -100;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
 		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
 		
 		//ingredient 2
@@ -278,7 +278,7 @@ class CraftDadaWasteBread_Pita extends Craft_DadaTempStage_BaseRecipe
 		//result1
 		AddResult("DadaWasteBread_Pita");//add results here
 
-		m_ResultSetQuantity[0] = 50;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;// (
 	}
 };
@@ -298,7 +298,7 @@ class CraftDadaWasteBread_Loaf extends Craft_DadaTempStage_BaseRecipe
 		//ingredient 1
 		InsertIngredient(0,"DadaCannibal_WasteBread");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -100;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
 		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
 		
 		//ingredient 2
@@ -311,7 +311,7 @@ class CraftDadaWasteBread_Loaf extends Craft_DadaTempStage_BaseRecipe
 		//result1
 		AddResult("DadaWasteBread_Loaf");//add results here
 
-		m_ResultSetQuantity[0] = 50;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;// (
 	}
 };
@@ -331,7 +331,7 @@ class CraftDadaWasteBread_Baguette extends Craft_DadaTempStage_BaseRecipe
 		//ingredient 1
 		InsertIngredient(0,"DadaCannibal_WasteBread");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -100;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
 		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
 		
 		//ingredient 2
@@ -344,7 +344,7 @@ class CraftDadaWasteBread_Baguette extends Craft_DadaTempStage_BaseRecipe
 		//result1
 		AddResult("DadaWasteBread_Baguette");//add results here
 
-		m_ResultSetQuantity[0] = 50;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;// (
 	}
 };
@@ -364,7 +364,7 @@ class CraftDadaWasteBread_Pasta extends Craft_DadaTempStage_BaseRecipe
 		//ingredient 1
 		InsertIngredient(0,"DadaCannibal_WasteBread");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -100;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
 		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
 		
 		//ingredient 2
@@ -377,7 +377,7 @@ class CraftDadaWasteBread_Pasta extends Craft_DadaTempStage_BaseRecipe
 		//result1
 		AddResult("DadaWasteBread_Pasta");//add results here
 
-		m_ResultSetQuantity[0] = 50;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;// (
 	}
 };
@@ -397,7 +397,7 @@ class CraftDadaWasteBread_Pizza extends Craft_DadaTempStage_BaseRecipe
 		//ingredient 1
 		InsertIngredient(0,"DadaCannibal_WasteBread");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -100;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
 		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
 		
 		//ingredient 2
@@ -410,7 +410,7 @@ class CraftDadaWasteBread_Pizza extends Craft_DadaTempStage_BaseRecipe
 		//result1
 		AddResult("DadaWasteBread_Pizza");//add results here
 
-		m_ResultSetQuantity[0] = 50;//-1 = do nothing
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;// (
 	}
 };
@@ -428,7 +428,7 @@ class CraftDadaWasteBread_PizzaBase extends Craft_DadaTempStageTemp1Stage1_BaseR
 		//ingredient 1
 		InsertIngredient(0,"DadaWasteBread_Pizza");//you can insert multiple ingredients this way
 
-		m_IngredientAddQuantity[0] = -50;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
@@ -830,7 +830,7 @@ class CraftDadaCannibalDish_Pie extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 		//ingredient 1
 		InsertIngredient(0,"DadaCannibal_WasteBread");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -250;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
 		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
 		
 		//ingredient 2

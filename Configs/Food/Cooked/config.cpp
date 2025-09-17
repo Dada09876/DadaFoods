@@ -14,127 +14,127 @@ class CfgPatches
 	class BaseFoodStageTransitions;
 	class DadaDishStageTransitions: BaseFoodStageTransitions
 	{
-	class Raw
-	{
-		class ToBaked
+		class Raw
 		{
-			transition_to = 2;
-			cooking_method = 1;
+			class ToBaked
+			{
+				transition_to = 2;
+				cooking_method = 1;
+			};
+			class ToBoiled
+			{
+				transition_to = 3;
+				cooking_method = 2;
+			};
+			class ToDried
+			{
+				transition_to = 4;
+				cooking_method = 3;
+			};
+			class ToBurned
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToRotten
+			{
+				transition_to = 6;
+				cooking_method = 4;
+			};
 		};
-		class ToBoiled
+		class Rotten
 		{
-			transition_to = 3;
-			cooking_method = 2;
+			class ToBurned
+			{
+				transition_to = 5;
+				cooking_method = 1;
+			};
 		};
-		class ToDried
+		class Baked
 		{
-			transition_to = 4;
-			cooking_method = 3;
+			class ToBaked
+			{
+				transition_to = 5;
+				cooking_method = 1;
+			};
+			class ToBoiled
+			{
+				transition_to = 5;
+				cooking_method = 2;
+			};
+			class ToDried
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToBurned
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToRotten
+			{
+				transition_to = 6;
+				cooking_method = 4;
+			};
 		};
-		class ToBurned
+		class Boiled
 		{
-			transition_to = 5;
-			cooking_method = 3;
+			class ToBaked
+			{
+				transition_to = 5;
+				cooking_method = 1;
+			};
+			class ToBoiled
+			{
+				transition_to = 5;
+				cooking_method = 2;
+			};
+			class ToDried
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToBurned
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToRotten
+			{
+				transition_to = 6;
+				cooking_method = 4;
+			};
 		};
-		class ToRotten
+		class Dried
 		{
-			transition_to = 6;
-			cooking_method = 4;
+			class ToBaked
+			{
+				transition_to = 5;
+				cooking_method = 1;
+			};
+			class ToBoiled
+			{
+				transition_to = 5;
+				cooking_method = 2;
+			};
+			class ToDried
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToBurned
+			{
+				transition_to = 5;
+				cooking_method = 3;
+			};
+			class ToRotten
+			{
+				transition_to = 6;
+				cooking_method = 4;
+			};
 		};
-	};
-	class Rotten
-	{
-		class ToBurned
-		{
-			transition_to = 5;
-			cooking_method = 1;
-		};
-	};
-	class Baked
-	{
-		class ToBaked
-		{
-			transition_to = 5;
-			cooking_method = 1;
-		};
-		class ToBoiled
-		{
-			transition_to = 5;
-			cooking_method = 2;
-		};
-		class ToDried
-		{
-			transition_to = 5;
-			cooking_method = 3;
-		};
-		class ToBurned
-		{
-			transition_to = 5;
-			cooking_method = 3;
-		};
-		class ToRotten
-		{
-			transition_to = 6;
-			cooking_method = 4;
-		};
-	};
-	class Boiled
-	{
-		class ToBaked
-		{
-			transition_to = 5;
-			cooking_method = 1;
-		};
-		class ToBoiled
-		{
-			transition_to = 5;
-			cooking_method = 2;
-		};
-		class ToDried
-		{
-			transition_to = 5;
-			cooking_method = 3;
-		};
-		class ToBurned
-		{
-			transition_to = 5;
-			cooking_method = 3;
-		};
-		class ToRotten
-		{
-			transition_to = 6;
-			cooking_method = 4;
-		};
-	};
-	class Dried
-	{
-		class ToBaked
-		{
-			transition_to = 5;
-			cooking_method = 1;
-		};
-		class ToBoiled
-		{
-			transition_to = 5;
-			cooking_method = 2;
-		};
-		class ToDried
-		{
-			transition_to = 5;
-			cooking_method = 3;
-		};
-		class ToBurned
-		{
-			transition_to = 5;
-			cooking_method = 3;
-		};
-		class ToRotten
-		{
-			transition_to = 6;
-			cooking_method = 4;
-		};
-	};
-	class Burned{};
+		class Burned{};
 	};
 
 class CfgVehicles
@@ -149,8 +149,8 @@ class CfgVehicles
 		quantityBar = 1;
 		canBeSplit = 1;
 		inventorySlot[] = {"Ingredient","DirectCookingA","DirectCookingB","DirectCookingC","SmokingA","SmokingB","SmokingC","SmokingD","Ingredient1","Ingredient2","Ingredient3","Ingredient4","Ingredient5","Ingredient6","Ingredient7","Ingredient8"};
-		itemSize[] = {3,2};
-        	displayName = "Soup";
+		itemSize[] = {2,2};
+        displayName = "Soup";
 		descriptionShort = "Soup.";
 		varQuantityInit = 125;
 		varQuantityMin = 0;
@@ -216,7 +216,7 @@ class CfgVehicles
 		quantityBar = 1;
 		canBeSplit = 1;
 		inventorySlot[] = {"Ingredient","DirectCookingA","DirectCookingB","DirectCookingC","SmokingA","SmokingB","SmokingC","SmokingD","Ingredient1","Ingredient2","Ingredient3","Ingredient4","Ingredient5","Ingredient6","Ingredient7","Ingredient8"};
-		itemSize[] = {3,2};
+		itemSize[] = {2,2};
         displayName = "Dish";
 		descriptionShort = "Dish.";
 		varQuantityInit = 125;
@@ -224,7 +224,7 @@ class CfgVehicles
 		varQuantityMax = 300;
 		hiddenSelections[] = {"camo","cs_raw"};
 		hiddenSelectionsTextures[] = {"\Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBroth_baked_co.paa"};
-	    	hiddenSelectionsMaterials[] = {"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"};
+	    hiddenSelectionsMaterials[] = {"\Source_Files\DadaFoods\Configs\Food\Cooked\data\Bowl.rvmat","Source_Files\DadaFoods\Configs\Food\Cooked\data\Food.rvmat"};
 
 		class DamageSystem
 		{
@@ -284,10 +284,10 @@ class CfgVehicles
 		weight = 4;
 		quantityBar = 1;
 		canBeSplit = 1;
-		varQuantityInit = 125;
+		varQuantityInit = 250;
 		varQuantityMin = 0;
 		varQuantityMax = 300;
-		itemSize[] = {2,3};
+		itemSize[] = {2,2};
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\RoundDough.p3d";
 		hiddenSelections[] = {"cs_raw"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_baked_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_burnt_co.paa","Source_Files\DadaFoods\Configs\Food\Cooked\data\DadaBreadDough_Base_rotten_co.paa"};
@@ -400,6 +400,9 @@ class CfgVehicles
 
 	class DadaBread_RoundDough: DadaBread_Base
 	{
+		varQuantityInit = 250;
+		varQuantityMin = 0;
+		varQuantityMax = 300;
 		scope = 2;
 	};
 
@@ -417,7 +420,6 @@ class CfgVehicles
 	class DadaBread_Loaf: DadaBread_Base
 	{
 		scope = 2;
-		itemSize[] = {3,2};
 		displayName = "Bread Loaf";
 		descriptionShort = "A loaf of bread. Should be baked before consuming... but I guess no one can stop you if you don't";
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\loaf.p3d";
@@ -440,7 +442,7 @@ class CfgVehicles
 	class DadaBread_Baguette: DadaBread_Base
 	{
 		scope = 2;
-		itemSize[] = {3,2};
+		itemSize[] = {4,1};
 		displayName = "Baguette";
 		descriptionShort = "Baguette du fromage. Should be baked before consuming... but I guess no one can stop you if you don't";
 		model = "\Source_Files\DadaFoods\Configs\Food\Cooked\data\Baguette.p3d";
@@ -649,7 +651,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,40,200,1,0,4};
+					nutrition_properties[] = {5,40,200,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -706,7 +708,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,75,13,1,0,4};
+					nutrition_properties[] = {5,75,13,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -1027,7 +1029,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,58,138,1,0,4};
+					nutrition_properties[] = {5,58,138,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -1080,7 +1082,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,58,138,1,0,4};
+					nutrition_properties[] = {5,58,138,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -1121,7 +1123,7 @@ class CfgVehicles
 	class DadaDish_GroundMeat: DadaDish_Base
 	{
 		scope = 2;
-		itemSize[] = {2,3};
+		itemSize[] = {2,2};
 		varQuantityInit = 65;
 		varQuantityMin = 0;
 		varQuantityMax = 150;
@@ -1192,7 +1194,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,75,75,1,0,4};
+					nutrition_properties[] = {5,75,75,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -1246,7 +1248,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,128,170,1,0,4};
+					nutrition_properties[] = {5,128,170,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -1624,7 +1626,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,170,125,1,0,4};
+					nutrition_properties[] = {5,170,125,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -1678,7 +1680,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,149,148,1,0,4};
+					nutrition_properties[] = {5,149,148,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -2040,7 +2042,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,75,13,1,0,4};
+					nutrition_properties[] = {5,75,13,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -2107,7 +2109,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,102,92,1,0,4};
+					nutrition_properties[] = {5,102,92,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -2174,7 +2176,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,166,142,1,0,4};
+					nutrition_properties[] = {5,166,142,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten

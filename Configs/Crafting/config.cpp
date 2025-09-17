@@ -28,7 +28,7 @@ class CfgVehicles
 		descriptionShort = "Sturdier tool than burlap to drain cheeses.";
 		model = "Source_Files\DadaFoods\Configs\Crafting\data\CheeseMold.p3d";
 		weight = 1000;
-		itemSize[] = {3,3};
+		itemSize[] = {2,2};
 		inventorySlot[] = {"DadaCheeseMold1"};
 		hiddenSelections[] = {"zbytek"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Crafting\data\CheeseMold_co.paa"};
@@ -210,7 +210,7 @@ class CfgVehicles
 		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Crafting\data\SaltBag.rvmat"};
 		animClass = "NoFireClass";
 		weight = 300;
-		itemSize[] = {3,5};
+		itemSize[] = {2,3};
 		stackedUnit = "g";
 		quantityBar = 1;
 		varQuantityInit = 12.0;
@@ -427,7 +427,7 @@ class CfgVehicles
 		canBeSplit = 1;
 		animClass = "NoFireClass";
 		weight = 1;
-		itemSize[] = {3,5};
+		itemSize[] = {2,3};
 		stackedUnit = "g";
 		quantityBar = 1;
 		varQuantityInit = 5000;

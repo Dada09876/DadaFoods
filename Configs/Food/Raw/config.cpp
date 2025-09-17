@@ -157,7 +157,7 @@ class CfgVehicles
 		varQuantityInit = 275;
 		varQuantityMin = 0;
 		varQuantityMax = 300;
-		itemSize[] = {2,3};
+		itemSize[] = {2,2};
 		displayName = "Poke Bowl";
 		descriptionShort = "Bowl of rice with multiple toppings on it, gotta eat em all!";
 		hiddenSelections[] = {"camoGround","cs_raw"};
@@ -731,7 +731,7 @@ class CfgVehicles
 	class DadaRaw_MontereyJack: DadaRaw_CheeseBase
 	{
 		scope = 2;
-		itemSize[] = {2,2};
+		itemSize[] = {1,2};
 		displayName = "Monterey Jack";
 		descriptionShort = "MontereyJack";
 		model = "Source_Files\DadaFoods\Configs\Food\Raw\data\CheeseBlock.p3d";
@@ -766,7 +766,7 @@ class CfgVehicles
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Raw\data\DadaCheddarCurds_co.paa"};
 	};
-	class DadaRaw_PumpkinSeeds: Snack_Colorbase
+	class DadaRaw_PumpkinSeeds: Snack_ColorBase
 	{
 		scope = 2;
 		model = "\DZ\gear\food\salty_crackers.p3d";

@@ -38,42 +38,6 @@ class CfgVehicles
 			};
 		};
 		soundImpactType = "metal";
-		class Nutrition
-		{
-			totalVolume = 1;
-			energy = 50;
-			water = 150;
-			nutritionalIndex = 1;
-			toxicity = 0;
-		};
-		class FoodAnimationSources;
-		class AnimationSources: FoodAnimationSources{};
-		class Food
-		{
-			class FoodStages
-			{
-				class Raw
-				{
-					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,0,0,1,0,4};
-					cooking_properties[] = {0,0};
-				};
-				class Rotten
-				{
-					visual_properties[] = {-1,-1,5};
-					nutrition_properties[] = {10,0,0,1,0,"4 +     16"};
-					cooking_properties[] = {0,0};
-				};
-				class Dried
-				{
-					visual_properties[] = {0,3,3};
-					nutrition_properties[] = {2,0,0,1,0};
-					cooking_properties[] = {70,120,80};
-				};
-			};
-			class FruitStageTransitions;
-			class FoodStageTransitions: FruitStageTransitions{};
-		};
 	};
 	class DadaDrink_FreshMilk: DadaDrinks_ColorBase
 	{
@@ -94,7 +58,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,64,200,1,0,4};
+					nutrition_properties[] = {2,64,200,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -133,7 +97,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,100,200,1,0,4};
+					nutrition_properties[] = {2,100,200,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -173,7 +137,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,15,200,1,0,4};
+					nutrition_properties[] = {2,15,200,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -244,7 +208,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,30,200,1,0,4};
+					nutrition_properties[] = {2,30,200,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -287,7 +251,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,64,200,1,0,4};
+					nutrition_properties[] = {2,64,200,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -388,7 +352,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,64,200,1,0,4};
+					nutrition_properties[] = {2,64,200,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -479,7 +443,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\MilkGallon_co.paa"};
 		inventorySlot[] = {"DadaMilkGallon"};
 		weight = 5;
-		itemSize[] = {4,5};
+		itemSize[] = {3,4};
 		varQuantityInit = 4000;
 		varQuantityMax = 4000;
 		class FoodAnimationSources;
@@ -491,7 +455,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,64,200,1,0,4};
+					nutrition_properties[] = {2,64,200,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -564,7 +528,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,47,200,1,0,4};
+					nutrition_properties[] = {2,47,200,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -642,7 +606,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,105,200,1,0,4};
+					nutrition_properties[] = {2,105,200,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -720,7 +684,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,30,200,1,0,4};
+					nutrition_properties[] = {2,30,200,,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -803,7 +767,7 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,30,200,1,0,4};
+					nutrition_properties[] = {2,30,200,1,0};
 					cooking_properties[] = {0,0};
 				};
 				class Rotten
@@ -879,6 +843,7 @@ class CfgVehicles
 		weight = 3;
 		itemSize[] = {1,3};
 		varQuantityInit = 300;
+		varQuantityMin = 0;
 		varQuantityMax = 300;
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
@@ -889,21 +854,24 @@ class CfgVehicles
 				class Raw
 				{
 					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {5,100,200,1,0,4};
+					nutrition_properties[] = {3,100,200,1,0};
 					cooking_properties[] = {0,0};
 				};
+
 				class Rotten
 				{
 					visual_properties[] = {-1,-1,5};
 					nutrition_properties[] = {10,32,75,1,0,"4 +     16"};
 					cooking_properties[] = {0,0};
 				};
+
 				class Dried
 				{
 					visual_properties[] = {0,3,3};
 					nutrition_properties[] = {2,100,130,1,0};
 					cooking_properties[] = {70,120,80};
 				};
+				
 			};
 			class FruitStageTransitions;
 			class FoodStageTransitions: FruitStageTransitions{};

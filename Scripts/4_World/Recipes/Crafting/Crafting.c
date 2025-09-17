@@ -318,3 +318,67 @@ class RepairDadaCheeseMold extends Craft_Dada_BaseRecipe
 		m_ResultSetQuantity[0] = -1;//-1 = do nothing
 	}
 };
+
+class CraftDadaYeast extends Craft_Dada_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Refine Yeast";
+		
+		m_MinQuantityIngredient[0] = -1;//-1 = disable check
+		
+		m_MinQuantityIngredient[1] = 70;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"KitchenKnife");//you can insert multiple ingredients this way
+		InsertIngredient(0,"SteakKnife");//you can insert multiple ingredients this way
+        InsertIngredient(0,"StoneKnife");//you can insert multiple ingredients this way
+        InsertIngredient(0,"BoneKnife");//you can insert multiple ingredients this way
+        InsertIngredient(0,"HandSaw");//you can insert multiple ingredients this way
+        InsertIngredient(0,"Hacksaw");//you can insert multiple ingredients this way
+        InsertIngredient(0,"Sickle");//you can insert multiple ingredients this way
+        InsertIngredient(0,"Cleaver");//you can insert multiple ingredients this way
+        InsertIngredient(0,"CombatKnife");//you can insert multiple ingredients this way
+        InsertIngredient(0,"HuntingKnife");//you can insert multiple ingredients this way
+        InsertIngredient(0,"Machete");//you can insert multiple ingredients this way
+        InsertIngredient(0,"Sword");//you can insert multiple ingredients this way
+        InsertIngredient(0,"KukriKnife");//you can insert multiple ingredients this way
+        InsertIngredient(0,"FangeKnife");//you can insert multiple ingredients this way
+        InsertIngredient(0,"CrudeMachete");//you can insert multiple ingredients this way
+        InsertIngredient(0,"OrientalMachete");//you can insert multiple ingredients this w
+		
+	
+		m_IngredientAddHealth[0] = -5;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Edible_Base");//you can insert multiple ingredients this way
+		
+		//result1
+		AddResult("DadaSpawned_Yeast");//add results here
+
+		m_ResultSetQuantity[0] = 50;//-1 = do nothing
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{
+		// define my variables
+		ItemBase ingredient1;
+
+		if (Class.CastTo(ingredient1, ingredients[1]))
+		{
+			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if the food is raw, burnt or rotten
+			if (foodStage1.IsFoodRotten())
+			{
+				return true;
+			}
+			// by this point we know the 2 ingredients are both good temperatures and have good food stages
+			return false;
+		}
+		// initial ingredients are wrong, false
+   		return false;
+   	}
+};
