@@ -163,8 +163,8 @@ class CfgVehicles
 		scope = 2;
 		itemSize[] = {2,1};
 		weight = 24;
-		displayName = "Cup of coffee";
-		descriptionShort = "A cup full of coffee.";
+		displayName = "Coffee";
+		descriptionShort = "A cup of coffee.";
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Cup.p3d";
 		hiddenSelections[] = {"zbytek","camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_Coffee_co.paa","Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_Coffee_co.paa"};
@@ -513,8 +513,8 @@ class CfgVehicles
 		scope = 2;
 		itemSize[] = {2,1};
 		weight = 24;
-		displayName = "Cup of milk coffee";
-		descriptionShort = "A cup full of milk coffee.";
+		displayName = "Milk Coffee";
+		descriptionShort = "A cup of coffee.";
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Cup.p3d";
 		hiddenSelections[] = {"zbytek","camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_MilkCoffee_ca.paa","Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_MilkCoffee_ca.paa"};
@@ -591,8 +591,8 @@ class CfgVehicles
 		scope = 2;
 		itemSize[] = {2,1};
 		weight = 24;
-		displayName = "Cup of milk coffee";
-		descriptionShort = "A cup full of coffee.";
+		displayName = "Barista Coffee";
+		descriptionShort = "A cup of coffee.";
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Cup.p3d";
 		hiddenSelections[] = {"zbytek","camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_MilkCoffeeArt_ca.paa","Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_MilkCoffeeArt_ca.paa"};
