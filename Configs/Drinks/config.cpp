@@ -669,8 +669,8 @@ class CfgVehicles
 		scope = 2;
 		itemSize[] = {2,1};
 		weight = 24;
-		displayName = "Cup of black tea";
-		descriptionShort = "A cup full of tea.";
+		displayName = "Black Tea";
+		descriptionShort = "A cup of tea.";
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Cup.p3d";
 		hiddenSelections[] = {"zbytek","camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_BlackTea_ca.paa","Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_BlackTea_ca.paa"};
@@ -752,8 +752,8 @@ class CfgVehicles
 		scope = 2;
 		itemSize[] = {2,1};
 		weight = 24;
-		displayName = "Cup of matcha";
-		descriptionShort = "A cup full of tea.";
+		displayName = "Matcha";
+		descriptionShort = "A cup of tea.";
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Cup.p3d";
 		hiddenSelections[] = {"zbytek","camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_GreenTea_ca.paa","Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_GreenTea_ca.paa"};
