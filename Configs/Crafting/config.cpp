@@ -253,7 +253,7 @@ class CfgVehicles
 	class DadaCoffeePacket: Edible_Base
 	{
 		scope = 2;
-		displayName = "Coffee Infuser Packet";
+		displayName = "Coffee Infuser";
 		descriptionShort = "May be used for making coffee";
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Crafting\data\CoffeePacket_co.paa"};
 		hiddenSelections[] = {"zbytek"};
@@ -308,7 +308,7 @@ class CfgVehicles
 	class DadaGreenTeaPacket: Edible_Base
 	{
 		scope = 2;
-		displayName = "Green Tea Packet";
+		displayName = "Green Tea Infuser";
 		descriptionShort = "May be used for making green tea";
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Crafting\data\GreenTeaPacket_co.paa"};
 		hiddenSelections[] = {"zbytek"};
@@ -363,7 +363,7 @@ class CfgVehicles
 	class DadaBlackTeaPacket: Edible_Base
 	{
 		scope = 2;
-		displayName = "Black Tea Packet";
+		displayName = "Black Tea Infuser";
 		descriptionShort = "May be used for making black tea";
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Crafting\data\BlackTeaPacket_co.paa"};
 		hiddenSelections[] = {"zbytek"};
