@@ -219,6 +219,9 @@ class CraftDadaBoneMeal extends Craft_Dada_BaseRecipe
 		//ingredient 2
 		InsertIngredient(1,"Hammer");//you can insert multiple ingredients this way
 		InsertIngredient(1,"MeatTenderizer");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Hatchet");//you can insert multiple ingredients this way
+		InsertIngredient(1,"PipeWrench");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Pipe");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = -5;// 0 = do nothing
 		m_IngredientDestroy[1] = false;//true = destroy, false = do nothing
@@ -226,7 +229,7 @@ class CraftDadaBoneMeal extends Craft_Dada_BaseRecipe
 		//result1
 		AddResult("DadaBoneMeal");//add results here
 
-		m_ResultSetQuantity[0] = 300;//-1 = do nothing
+		m_ResultSetQuantity[0] = 900;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };

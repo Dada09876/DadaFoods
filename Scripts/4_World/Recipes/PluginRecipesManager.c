@@ -49,12 +49,15 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaDish_MashedPotatoes);
     RegisterRecipe(new CraftDadaDish_MashedPotatoes1);
     RegisterRecipe(new CraftDadaDish_MashedPotatoes2);
+    RegisterRecipe(new CraftDadaDish_MashedPotatoes3);
+    RegisterRecipe(new CraftDadaDish_MashedPotatoes4);
     RegisterRecipe(new CraftDadaSoup_ChickenBroth);
     RegisterRecipe(new CraftDadaSoup_ChickenBroth1);
     RegisterRecipe(new CraftDadaSoup_ChickenNoodleSoup);
     RegisterRecipe(new CraftDadaDish_Chili);
     RegisterRecipe(new CraftDadaDish_Chili1);
     RegisterRecipe(new CraftDadaDish_Chili2);
+    RegisterRecipe(new CraftDadaDish_Chili3);
     RegisterRecipe(new CraftDadaSoup_Gravy);
     RegisterRecipe(new CraftDadaDish_Gumbo);
     RegisterRecipe(new CraftDadaDish_Gumbo1);
@@ -90,6 +93,7 @@ modded class PluginRecipesManager
     RegisterRecipe(new Craft_Dada_RawFoodCan_LSVeggies2);
     RegisterRecipe(new Craft_Dada_RawFoodCan_STAGham);
     RegisterRecipe(new Craft_Dada_RawFoodCan_ESPENChunkySoup);
+    RegisterRecipe(new Craft_Dada_RawFoodCan_ESPENChunkySoup1);
     RegisterRecipe(new Craft_Dada_RawFoodCan_LSSPAM);
     RegisterRecipe(new Craft_Dada_RawFoodCan_STAGchili);
     RegisterRecipe(new Craft_Dada_RawFoodCan_ESPENMacnCheese);
@@ -158,11 +162,14 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaDrink_Coffee);
     RegisterRecipe(new CraftDadaDrink_MilkCoffee);
     RegisterRecipe(new CraftDadaDrink_MilkCoffee1);
+    RegisterRecipe(new CraftDadaDrink_MilkCoffee2);
     RegisterRecipe(new CraftDadaDrink_MilkCoffeeArt);
     RegisterRecipe(new CraftDadaDrink_MilkCoffeeArt1);
+    RegisterRecipe(new CraftDadaDrink_MilkCoffeeArt2);
     RegisterRecipe(new CraftDadaDrink_BlackTea);
     RegisterRecipe(new CraftDadaDrink_GreenTea);
     RegisterRecipe(new CraftDadaDrink_MilkShake);
+    RegisterRecipe(new CraftDadaDrink_MilkShake1);
     RegisterRecipe(new CraftDadaDrink_CurdsAndWhey);
 
 
@@ -190,7 +197,9 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaCannibalDish_Chili1);
     RegisterRecipe(new CraftDadaCannibalDish_Pie);
     RegisterRecipe(new CraftDadaCannibalSoup_TomatoSoup);
+    RegisterRecipe(new CraftDadaCannibalSoup_TomatoSoup1);
     RegisterRecipe(new CraftDadaCannibalSoup_Ragout);
+    RegisterRecipe(new CraftDadaCannibalSoup_Ragout1);
     RegisterRecipe(new CraftDadaCannibalSoup_TomatoSauce);
     RegisterRecipe(new CraftDadaCannibalSoup_TomatoSauce1);
     RegisterRecipe(new Craft_DadaCannibal_RawFoodCan_STAGham);

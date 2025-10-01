@@ -51,6 +51,7 @@ class CraftDadaBread_Pita extends Craft_DadaTempStage_BaseRecipe
 		//ingredient 2
 		InsertIngredient(1,"Hammer");//you can insert multiple ingredients this way
 		InsertIngredient(1,"MeatTenderizer");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Hatchet");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = -5;// 0 = do nothing
 		m_IngredientDestroy[1] = -1;// false = do nothing
@@ -82,6 +83,7 @@ class CraftDadaBread_Loaf extends Craft_DadaTempStage_BaseRecipe
 		//ingredient 2
 		InsertIngredient(1,"Hammer");//you can insert multiple ingredients this way
 		InsertIngredient(1,"MeatTenderizer");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Hatchet");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = -5;// 0 = do nothing
 		m_IngredientDestroy[1] = -1;// false = do nothing
@@ -113,6 +115,7 @@ class CraftDadaBread_Baguette extends Craft_DadaTempStage_BaseRecipe
 		//ingredient 2
 		InsertIngredient(1,"Hammer");//you can insert multiple ingredients this way
 		InsertIngredient(1,"MeatTenderizer");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Hatchet");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = -5;// 0 = do nothing
 		m_IngredientDestroy[1] = -1;// false = do nothing
@@ -144,6 +147,7 @@ class CraftDadaBread_Pasta extends Craft_DadaTempStage_BaseRecipe
 		//ingredient 2
 		InsertIngredient(1,"Hammer");//you can insert multiple ingredients this way
 		InsertIngredient(1,"MeatTenderizer");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Hatchet");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = -5;// 0 = do nothing
 		m_IngredientAddQuantity[1] = 0;// 0 = do nothing
@@ -162,7 +166,7 @@ class CraftDadaBread_Pizza extends Craft_DadaTempStage_BaseRecipe
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Mold Into Pizza Dough";
+		m_Name = "Mold Into Pizza Bianca";
 		
 		m_MinQuantityIngredient[0] = 125;//-1 = disable check
 		m_MinQuantityIngredient[1] = -1;//-1 = disable check
@@ -176,6 +180,7 @@ class CraftDadaBread_Pizza extends Craft_DadaTempStage_BaseRecipe
 		//ingredient 2
 		InsertIngredient(1,"Hammer");//you can insert multiple ingredients this way
 		InsertIngredient(1,"MeatTenderizer");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Hatchet");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = -5;// 0 = do nothing
 		m_IngredientDestroy[1] = -1;// false = do nothing
@@ -391,10 +396,6 @@ class CraftDadaBread_PizzaMarinara extends Craft_DadaTempStageTemp1Stage1_BaseRe
 		//ingredient 2
 		InsertIngredient(1,"Dada_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Dada_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_STAGchili_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_HomemadeChili_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
@@ -451,6 +452,7 @@ class CraftDadaDish_GroundMeat extends Craft_DadaTemp1Stage1_BaseRecipe
 		//ingredient 1
 		InsertIngredient(0,"Hammer");//you can insert multiple ingredients this way
 		InsertIngredient(0,"MeatTenderizer");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Hatchet");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[0] = -5;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
@@ -492,6 +494,7 @@ class CraftDadaDish_MashedPotatoes extends Craft_DadaTemp1Stage1_BaseRecipe
 		//ingredient 1
 		InsertIngredient(0,"Hammer");//you can insert multiple ingredients this way
 		InsertIngredient(0,"MeatTenderizer");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Hatchet");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[0] = -5;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
@@ -507,7 +510,7 @@ class CraftDadaDish_MashedPotatoes extends Craft_DadaTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_MashedPotatoes1 extends Craft_DadaTemp1_BaseRecipe
+class CraftDadaDish_MashedPotatoes1 extends Craft_Dada_BaseRecipe
 {
 	override void Init()
 	{
@@ -521,6 +524,7 @@ class CraftDadaDish_MashedPotatoes1 extends Craft_DadaTemp1_BaseRecipe
 		//ingredient 1
 		InsertIngredient(0,"Hammer");//you can insert multiple ingredients this way
 		InsertIngredient(0,"MeatTenderizer");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Hatchet");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[0] = -5;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
@@ -545,20 +549,68 @@ class CraftDadaDish_MashedPotatoes2 extends Craft_DadaTemp1_BaseRecipe
 
 		//conditions
 		m_MinQuantityIngredient[0] = -1;//-1 = disable check
-		m_MinQuantityIngredient[1] = -1;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
 		
 		//ingredient 1
-		InsertIngredient(1,"Potato");//you can insert multiple ingredients this way
-		InsertIngredient(1,"PotatoSeed");//you can insert multiple ingredients this way
+		InsertIngredient(0,"PotatoSeed");//you can insert multiple ingredients this way
 		
 		//ingredient 2
 		InsertIngredient(1,"Potato");//you can insert multiple ingredients this way
+	
+		//result1
+		AddResult("DadaDish_MashedPotatoes");//add results here
+
+		m_ResultSetQuantity[0] = 130;//-1 = do nothing
+		m_ResultInheritsHealth[0] = 1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaDish_MashedPotatoes3 extends Craft_Dada_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Mashed Potatoes";
+
+		//conditions
+		m_MinQuantityIngredient[0] = -1;//-1 = disable check
+		m_MinQuantityIngredient[1] = -1;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(0,"PotatoSeed");//you can insert multiple ingredients this way
+	
+		//ingredient 2
 		InsertIngredient(1,"PotatoSeed");//you can insert multiple ingredients this way
 	
 		//result1
 		AddResult("DadaDish_MashedPotatoes");//add results here
 
-		m_ResultSetQuantity[0] = 65;//-1 = do nothing
+		m_ResultSetQuantity[0] = 130;//-1 = do nothing
+		m_ResultInheritsHealth[0] = 1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaDish_MashedPotatoes4 extends Craft_DadaTempTemp1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Mashed Potatoes";
+
+		//conditions
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(0,"Potato");//you can insert multiple ingredients this way
+		
+		//ingredient 2
+		InsertIngredient(1,"Potato");//you can insert multiple ingredients this way
+	
+		//result1
+		AddResult("DadaDish_MashedPotatoes");//add results here
+
+		m_ResultSetQuantity[0] = 130;//-1 = do nothing
 		m_ResultInheritsHealth[0] = 1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
@@ -598,7 +650,7 @@ class CraftDadaSoup_ChickenBroth extends Craft_DadaTemp1Liquid1_BaseRecipe
 		if (Class.CastTo(ingredient1, ingredients[1]))
 		{
 			// if the ingredient 2 is cooler than 10C or hotter than 70C
-			if (ingredient1.GetTemperature() < 30 || ingredient1.GetTemperature() > 200)
+			if (ingredient1.GetTemperature() < 50 || ingredient1.GetTemperature() > 200)
 			{
 				return false;
 			}
@@ -783,10 +835,10 @@ class CraftDadaDish_Chili1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 		
 		//INGREDIENTS
 		//ingredient 1
-		InsertIngredient(0,"BakedBeansCan_Opened");
+		InsertIngredient(0,"BakedBeansCan");
 		
 		//ingredient 2
-		InsertIngredient(0,"DadaDish_GroundMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"BakedBeansCan_Opened");
 		InsertIngredient(1,"Dada_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Dada_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Dada_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
@@ -806,7 +858,7 @@ class CraftDadaDish_Chili1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Chili2 extends Craft_DadaTempTemp1_BaseRecipe
+class CraftDadaDish_Chili2 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -825,7 +877,45 @@ class CraftDadaDish_Chili2 extends Craft_DadaTempTemp1_BaseRecipe
 		InsertIngredient(0,"BakedBeansCan_Opened");
 		
 		//ingredient 2
-		InsertIngredient(1,"BakedBeansCan_Opened");
+		InsertIngredient(1,"BakedBeansCan");
+		InsertIngredient(1,"Dada_PreservedFoodCan_DicedTomatoes");
+		InsertIngredient(1,"Dada_PreservedFoodCan_STAGchili");
+		InsertIngredient(1,"Dada_PreservedFoodCan_HomemadeChili");
+		
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaDish_Chili");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaDish_Chili3 extends Craft_DadaTempTemp1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Chili";
+		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
+		m_AnimationLength = 2;//animation length in relative time units
+		m_Specialty = -0.01;// value > 0 for roughness, value < 0 for precision
+		
+		//conditions
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"BakedBeansCan");
+		
+		//ingredient 2
+		InsertIngredient(1,"BakedBeansCan");
+		InsertIngredient(1,"Dada_PreservedFoodCan_DicedTomatoes");
+		InsertIngredient(1,"Dada_PreservedFoodCan_STAGchili");
+		InsertIngredient(1,"Dada_PreservedFoodCan_HomemadeChili");
 		
 		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
@@ -1655,6 +1745,7 @@ class CraftDadaSoup_TomatoSauce1 extends Craft_DadaTemp1Stage1_BaseRecipe
 		//ingredient 1
 		InsertIngredient(0,"Hammer");//you can insert multiple ingredients this way
 		InsertIngredient(0,"MeatTenderizer");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Hatchet");//you can insert multiple ingredients this way
 
 		m_IngredientAddHealth[0] = -5;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
