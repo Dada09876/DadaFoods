@@ -1230,7 +1230,6 @@ class CraftDadaDish_MacaroniAndCheese extends Craft_DadaTempStageTemp1Stage1_Bas
 		InsertIngredient(1,"DadaDrink_FreshMilk");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaRaw_CheeseBase");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaDrink_CurdsAndWhey");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaDrink_Whey");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaDrink_MilkBottle");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaDrink_MilkCarton");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaDrink_MilkGallon");//you can insert multiple ingredients this way
