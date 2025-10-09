@@ -1064,35 +1064,35 @@ class CraftDadaDish_Pie extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
 		
 		//ingredient 2
-        	InsertIngredient(1,"Apple");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"Plum");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"Pear");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"Tomato");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"GreenBellPepper");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"Zucchini");//you can insert multiple ingredients this way
-       	 	InsertIngredient(1,"SlicedPumpkin");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"Potato");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"GoatSteakMeat");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"MouflonSteakMeat");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"BoarSteakMeat");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"PigSteakMeat");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"DeerSteakMeat");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"WolfSteakMeat");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"BearSteakMeat");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"CowSteakMeat");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"SheepSteakMeat");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"FoxSteakMeat");//you can insert multiple ingredients this way
+        InsertIngredient(1,"Apple");//you can insert multiple ingredients this way
+        InsertIngredient(1,"Plum");//you can insert multiple ingredients this way
+        InsertIngredient(1,"Pear");//you can insert multiple ingredients this way
+        InsertIngredient(1,"Tomato");//you can insert multiple ingredients this way
+        InsertIngredient(1,"GreenBellPepper");//you can insert multiple ingredients this way
+        InsertIngredient(1,"Zucchini");//you can insert multiple ingredients this way
+       	InsertIngredient(1,"SlicedPumpkin");//you can insert multiple ingredients this way
+        InsertIngredient(1,"Potato");//you can insert multiple ingredients this way
+        InsertIngredient(1,"GoatSteakMeat");//you can insert multiple ingredients this way
+        InsertIngredient(1,"MouflonSteakMeat");//you can insert multiple ingredients this way
+        InsertIngredient(1,"BoarSteakMeat");//you can insert multiple ingredients this way
+        InsertIngredient(1,"PigSteakMeat");//you can insert multiple ingredients this way
+        InsertIngredient(1,"DeerSteakMeat");//you can insert multiple ingredients this way
+        InsertIngredient(1,"WolfSteakMeat");//you can insert multiple ingredients this way
+        InsertIngredient(1,"BearSteakMeat");//you can insert multiple ingredients this way
+        InsertIngredient(1,"CowSteakMeat");//you can insert multiple ingredients this way
+        InsertIngredient(1,"SheepSteakMeat");//you can insert multiple ingredients this way
+        InsertIngredient(1,"FoxSteakMeat");//you can insert multiple ingredients this way
 		InsertIngredient(1,"ReindeerSteakMeat");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"ChickenBreastMeat");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"RabbitLegMeat");//you can insert multiple ingredients this way
+        InsertIngredient(1,"ChickenBreastMeat");//you can insert multiple ingredients this way
+        InsertIngredient(1,"RabbitLegMeat");//you can insert multiple ingredients this way
 		InsertIngredient(1,"CarpFilletMeat");//you can insert multiple ingredients this way
 		InsertIngredient(1,"MackerelFilletMeat");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Bitterlings");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Sardines");//you can insert multiple ingredients this way
 		InsertIngredient(1,"AcanthopagrusFilletMeat");//you can insert multiple ingredients this way
 		InsertIngredient(1,"ChubFilletMeat");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"HerringFilletMeat");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"MullowayFilletMeat");//you can insert multiple ingredients this way
+        InsertIngredient(1,"HerringFilletMeat");//you can insert multiple ingredients this way
+        InsertIngredient(1,"MullowayFilletMeat");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaDish_MashedPotatoes");
 		InsertIngredient(1,"DadaDish_Chili");
 		InsertIngredient(1,"DadaDish_GroundMeat");
@@ -1934,3 +1934,102 @@ class CraftDadaDish_Poutine extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
+
+
+class CraftDadaDish_Rabbit extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Rabbit Confit";
+		
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"RabbitLegMeat");//you can insert multiple ingredients this way
+	
+		//ingredient 2
+		InsertIngredient(1,"DadaSoup_Gravy");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -100;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaDish_Rabbit");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaSoup_ClamChowder extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Clam Chowder";
+		
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"RabbitLegMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"CarpFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"MackerelFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Bitterlings");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Sardines");//you can insert multiple ingredients this way
+		InsertIngredient(0,"AcanthopagrusFilletMeat");//you can insert multiple ingredients this way
+		InsertIngredient(0,"ChubFilletMeat");//you can insert multiple ingredients this way
+        InsertIngredient(0,"HerringFilletMeat");//you can insert multiple ingredients this way
+        InsertIngredient(0,"MullowayFilletMeat");
+		InsertIngredient(0,"Dada_RawFoodCan_Clam");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Dada_PreservedFoodCan_Clam_Opened");//you can insert multi
+		InsertIngredient(0,"Dada_RawFoodCan_Crab");//you can insert multiple ingredients this way
+		InsertIngredient(0,"Dada_PreservedFoodCan_Crab_Opened");//you can insert multi
+	
+		//ingredient 2
+		InsertIngredient(1,"DadaSoup_Gravy");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -100;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaSoup_ClamChowder");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaSoup_ClamChowder1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Clam Chowder";
+		
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"Dada_PreservedFoodCan_Clam");//you can insert multi
+		InsertIngredient(0,"Dada_PreservedFoodCan_Crab");//you can insert multi
+	
+		//ingredient 2
+		InsertIngredient(1,"DadaSoup_Gravy");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -100;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaSoup_ClamChowder");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+

@@ -83,6 +83,9 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaDish_Fries1);
     RegisterRecipe(new CraftDadaDish_FriteSauce);
     RegisterRecipe(new CraftDadaDish_Poutine);
+    RegisterRecipe(new CraftDadaDish_Rabbit);
+    RegisterRecipe(new CraftDadaSoup_ClamChowder);
+    RegisterRecipe(new CraftDadaSoup_ClamChowder1);
 
     // FOOD CANNED
 
