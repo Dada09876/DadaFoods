@@ -874,6 +874,7 @@ class CraftDadaDish_Chili2 extends Craft_DadaTempStageTemp1_BaseRecipe
 		
 		//INGREDIENTS
 		//ingredient 1
+		InsertIngredient(0,"DadaDish_GroundMeat");//you can insert multiple ingredients this way
 		InsertIngredient(0,"BakedBeansCan_Opened");
 		
 		//ingredient 2
@@ -1071,8 +1072,6 @@ class CraftDadaDish_Pie extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
         	InsertIngredient(1,"Zucchini");//you can insert multiple ingredients this way
        	 	InsertIngredient(1,"SlicedPumpkin");//you can insert multiple ingredients this way
         	InsertIngredient(1,"Potato");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"SambucusBerry");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"CaninaBerry");//you can insert multiple ingredients this way
         	InsertIngredient(1,"GoatSteakMeat");//you can insert multiple ingredients this way
         	InsertIngredient(1,"MouflonSteakMeat");//you can insert multiple ingredients this way
         	InsertIngredient(1,"BoarSteakMeat");//you can insert multiple ingredients this way
@@ -1396,13 +1395,46 @@ class CraftDadaSoup_Ragout extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		m_IngredientDestroy[0] = false;// false = do nothing
 		
 		//ingredient 2
-		InsertIngredient(1,"Dada_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Dada_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Dada_PreservedFoodCan_STAGchili_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Dada_PreservedFoodCan_HomemadeChili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaSoup_TomatoSauce");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaSoup_Ragout");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaSoup_Ragout1 extends Craft_DadaTempStageTemp1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Ragout";
+		
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"DadaSoup_ChickenBroth");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = false;// false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
