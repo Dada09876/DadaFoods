@@ -1104,7 +1104,6 @@ class CraftDadaDish_Pie extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		InsertIngredient(1,"DadaDish_ShepherdsPie");
 		InsertIngredient(1,"DadaDish_PulledPork");
 		InsertIngredient(1,"Dada_RawFoodCan_Colorbase");
-		InsertIngredient(1,"Dada_PreservedFoodCan_Colorbase_Opened");
 
 		//result1
 		AddResult("DadaDish_Pie");//add results here
@@ -1143,6 +1142,7 @@ class CraftDadaDish_Pie1 extends Craft_DadaTempStageTemp1_BaseRecipe
 		InsertIngredient(1,"Dada_PreservedFoodCan_Colorbase");
         	InsertIngredient(1,"UnknownFoodCan");//you can insert multiple ingredients this way
 		InsertIngredient(1,"PotatoSeed");//you can insert multiple ingredients this wa
+		InsertIngredient(1,"Dada_PreservedFoodCan_Colorbase_Opened");
 		
 		//result1
 		AddResult("DadaDish_Pie");//add results here
