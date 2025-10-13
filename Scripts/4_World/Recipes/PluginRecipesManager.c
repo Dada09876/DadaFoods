@@ -190,6 +190,8 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaWasteBread_Pasta);
     RegisterRecipe(new CraftDadaWasteBread_Pizza);
     RegisterRecipe(new CraftDadaWasteBread_PizzaBase);
+    RegisterRecipe(new CraftDadaWasteBread_PizzaBase1);
+    RegisterRecipe(new CraftDadaWasteBread_PizzaBase2);
     RegisterRecipe(new CraftDadaCannibalDish_Spaghetti);
     RegisterRecipe(new CraftDadaCannibalDish_Cannelloni);
     RegisterRecipe(new CraftDadaCannibalDish_Bowties);
