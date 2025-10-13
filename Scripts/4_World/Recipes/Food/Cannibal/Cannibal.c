@@ -452,6 +452,66 @@ class CraftDadaWasteBread_PizzaBase extends Craft_DadaTempStageTemp1Stage1_BaseR
 	}
 };
 
+class CraftDadaWasteBread_PizzaBase2 extends Craft_DadaTempStage_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Pizza Marinara";
+	
+		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = -1;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(0,"DadaWasteBread_Pizza");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaWasteBread_PizzaBase");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaWasteBread_PizzaBase1 extends Craft_DadaTempStage_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Pizza Marinara";
+	
+		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(0,"DadaWasteBread_Pizza");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaWasteBread_PizzaBase");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
 class CraftDadaCannibalDish_Spaghetti extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
