@@ -1986,9 +1986,7 @@ class CraftDadaSoup_ClamChowder extends Craft_DadaTempStageTemp1Stage1_BaseRecip
         InsertIngredient(0,"HerringFilletMeat");//you can insert multiple ingredients this way
         InsertIngredient(0,"MullowayFilletMeat");
 		InsertIngredient(0,"Dada_RawFoodCan_Clam");//you can insert multiple ingredients this way
-		InsertIngredient(0,"Dada_PreservedFoodCan_Clam_Opened");//you can insert multi
 		InsertIngredient(0,"Dada_RawFoodCan_Crab");//you can insert multiple ingredients this way
-		InsertIngredient(0,"Dada_PreservedFoodCan_Crab_Opened");//you can insert multi
 	
 		//ingredient 2
 		InsertIngredient(1,"DadaSoup_Gravy");//you can insert multiple ingredients this way
@@ -2018,6 +2016,8 @@ class CraftDadaSoup_ClamChowder1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 		//ingredient 1
 		InsertIngredient(0,"Dada_PreservedFoodCan_Clam");//you can insert multi
 		InsertIngredient(0,"Dada_PreservedFoodCan_Crab");//you can insert multi
+		InsertIngredient(0,"Dada_PreservedFoodCan_Clam_Opened");//you can insert multi
+		InsertIngredient(0,"Dada_PreservedFoodCan_Crab_Opened");//you can insert multi
 	
 		//ingredient 2
 		InsertIngredient(1,"DadaSoup_Gravy");//you can insert multiple ingredients this way
@@ -2032,4 +2032,3 @@ class CraftDadaSoup_ClamChowder1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
-
