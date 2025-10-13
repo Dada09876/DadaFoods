@@ -437,39 +437,8 @@ class CraftDadaWasteBread_PizzaBase extends Craft_DadaTempStageTemp1Stage1_BaseR
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
-		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this wa
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
-		
-		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
-		m_IngredientDestroy[1] = false;// false = do nothing
-		
-		//result1
-		AddResult("DadaWasteBread_PizzaBase");//add results here
-
-		m_ResultSetQuantity[0] = 125;//-1 = do nothing
-		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
-	}
-};
-
-class CraftDadaWasteBread_PizzaBase2 extends Craft_DadaTempStage_BaseRecipe
-{
-	override void Init()
-	{
-		super.Init();
-		m_Name = "Make Pizza Marinara";
-	
-		m_MinQuantityIngredient[0] = 50;//-1 = disable check
-		m_MinQuantityIngredient[1] = -1;//-1 = disable check
-		
-		//ingredient 1
-		InsertIngredient(0,"DadaWasteBread_Pizza");//you can insert multiple ingredients this way
-
-		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
-		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
-		
-		//ingredient 2
-		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
@@ -498,11 +467,41 @@ class CraftDadaWasteBread_PizzaBase1 extends Craft_DadaTempStage_BaseRecipe
 		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
-		//ingredient 2
+		//ingredient 2_
 		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaWasteBread_PizzaBase");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaWasteBread_PizzaBase2 extends Craft_DadaTempStage_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Pizza Marinara";
+	
+		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(0,"DadaWasteBread_Pizza");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = true;// false = do nothing
 		
 		//result1
 		AddResult("DadaWasteBread_PizzaBase");//add results here
@@ -529,17 +528,78 @@ class CraftDadaCannibalDish_Spaghetti extends Craft_DadaTempStageTemp1Stage1_Bas
 		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
 		
 		//ingredient 2
-		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this 
 		InsertIngredient(1,"Dada_RawFoodCan_CannibalSTAGchili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalSTAGchili_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Dada_RawFoodCan_CannibalHomemadeChili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalHomemadeChili_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		
 		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaCannibalDish_Spaghetti");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;
+	}
+};
+
+class CraftDadaCannibalDish_Spaghetti1 extends Craft_DadaTempStage_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Spaghetti";
+		
+		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(0,"DadaWasteBread_Pasta");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[0] = -50;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalSTAGchili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalHomemadeChili_Opened");//you can insert multiple ingredients this wa
+		
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaCannibalDish_Spaghetti");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;
+	}
+};
+
+class CraftDadaCannibalDish_Spaghetti2 extends Craft_DadaTempStage_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Spaghetti";
+		
+		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(0,"DadaWasteBread_Pasta");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[0] = -50;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalSTAGchili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalHomemadeChili");//you can insert multiple ingredients this wa
+		
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = true;// false = do nothing
 		
 		//result1
 		AddResult("DadaCannibalDish_Spaghetti");//add results here
