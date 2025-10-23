@@ -724,11 +724,8 @@ class CraftDadaCannibalDish_Bowties extends  Craft_DadaTempStageTemp1Stage1_Base
 		
 		//ingredient 2
 		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Dada_RawFoodCan_CannibalSTAGchili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalSTAGchili_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Dada_RawFoodCan_CannibalHomemadeChili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalHomemadeChili_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
@@ -747,7 +744,7 @@ class CraftDadaCannibalDish_Bowties1 extends Craft_DadaTempStage_BaseRecipe
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Make Cannelloni";
+		m_Name = "Make Bowties";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
 		m_MinQuantityIngredient[1] = 100;//-1 = disable check
@@ -779,7 +776,7 @@ class CraftDadaCannibalDish_Bowties2 extends Craft_DadaTempStage_BaseRecipe
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Make Cannelloni";
+		m_Name = "Make Bowties";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
 		m_MinQuantityIngredient[1] = 100;//-1 = disable check
