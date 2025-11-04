@@ -868,7 +868,7 @@ class CraftDadaCannibalDish_Lasagna1 extends  Craft_DadaTempStage_BaseRecipe
 	}
 };
 
-class CraftDadaCannibalDish_Lasagna2 extends  Craft_DadaTempStageTemp1Stage1_BaseRecipe
+class CraftDadaCannibalDish_Lasagna2 extends  Craft_DadaTempStage_BaseRecipe
 {
 	override void Init()
 	{
@@ -890,7 +890,7 @@ class CraftDadaCannibalDish_Lasagna2 extends  Craft_DadaTempStageTemp1Stage1_Bas
 		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalHomemadeChili");//you can insert multiple ingredients this way
 	
 		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
-		m_IngredientDestroy[1] = false;// false = do nothing
+		m_IngredientDestroy[1] = true;// false = do nothing
 		
 		//result1
 		AddResult("DadaCannibalDish_Lasagna");//add results here
@@ -918,15 +918,76 @@ class CraftDadaCannibalDish_Rigatoni extends Craft_DadaTempStageTemp1Stage1_Base
 		
 		//ingredient 2
 		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Dada_RawFoodCan_CannibalSTAGchili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalSTAGchili_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Dada_RawFoodCan_CannibalHomemadeChili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalHomemadeChili_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaCannibalDish_Rigatoni");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaCannibalDish_Rigatoni1 extends Craft_DadaTempStage_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Rigatoni";
+	
+		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(0,"DadaWasteBread_Pasta");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[0] = -50;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalSTAGchili_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalHomemadeChili_Opened");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaCannibalDish_Rigatoni");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaCannibalDish_Rigatoni2 extends Craft_DadaTempStage_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Rigatoni";
+	
+		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(0,"DadaWasteBread_Pasta");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[0] = -50;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalSTAGchili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalHomemadeChili");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = true;// false = do nothing
 		
 		//result1
 		AddResult("DadaCannibalDish_Rigatoni");//add results here
@@ -954,11 +1015,70 @@ class CraftDadaCannibalDish_PulledPork extends Craft_DadaTempStageTemp1Stage1_Ba
 		
 		//ingredient 2
 		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaCannibalDish_PulledPork");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaCannibalDish_PulledPork1 extends Craft_DadaTempStage_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Pulled Pork";
+	
+		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(0,"HumanSteakMeat");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[0] = -100;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaCannibalDish_PulledPork");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaCannibalDish_PulledPork2 extends Craft_DadaTempStage_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Pulled Pork";
+	
+		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = 100;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(0,"HumanSteakMeat");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[0] = -100;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = true;// false = do nothing
 		
 		//result1
 		AddResult("DadaCannibalDish_PulledPork");//add results here
@@ -1138,11 +1258,13 @@ class CraftDadaCannibalDish_Pie extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 		//ingredient 1
 		InsertIngredient(0,"DadaCannibal_WasteBread");//you can insert multiple ingredients this way
 	
-		m_IngredientAddQuantity[0] = -125;// 0 = do nothing
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
 		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
 		
 		//ingredient 2
         InsertIngredient(1,"DadaCannibalDish_GroundMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibalDish_PulledPork");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaCannibalDish_Sausage");//you can insert multiple ingredients this way
 
 		//result1
 		AddResult("DadaCannibalDish_Pie");//add results here
@@ -1173,10 +1295,10 @@ class CraftDadaCannibalSoup_TomatoSoup extends Craft_DadaTemp1Stage1_BaseRecipe 
 		
 		//ingredient 2
 		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;//true = destroy, false = do nothing
 		
 		//result1
 		AddResult("DadaCannibalSoup_TomatoSoup");//add results here
@@ -1211,7 +1333,123 @@ class CraftDadaCannibalSoup_TomatoSoup extends Craft_DadaTemp1Stage1_BaseRecipe 
    	}
 };
 
-class CraftDadaCannibalSoup_TomatoSoup1 extends Craft_DadaTempLiquidTemp1Stage1_BaseRecipe
+class CraftDadaCannibalSoup_TomatoSoup1 extends Craft_Dada_BaseRecipe //works
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Tomato Soup";
+		
+		//conditions
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MinQuantityIngredient[1] = 90;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"BloodBagFull");//you can insert multiple ingredients this way
+		InsertIngredient(0,"BloodBagIV");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[0] = -300;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;//true = destroy, false = do nothing
+	
+		//result1
+		AddResult("DadaCannibalSoup_TomatoSoup");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{
+		// define my variables
+		ItemBase ingredient1;
+		if (Class.CastTo(ingredient1, ingredients[1]))
+		{
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
+	
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			{
+				return false;
+			}
+			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if the food is raw, burnt or rotten
+
+			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
+			{
+				return false;
+			}
+			// by this point we know the 2 ingredients are both good temperatures and have good food stages
+			return true;
+		}
+		// initial ingredients are wrong, false
+   		return false;
+   	}
+};
+
+class CraftDadaCannibalSoup_TomatoSoup2 extends Craft_Dada_BaseRecipe //works
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Tomato Soup";
+		
+		//conditions
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MinQuantityIngredient[1] = 90;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"BloodBagFull");//you can insert multiple ingredients this way
+		InsertIngredient(0,"BloodBagIV");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[0] = -300;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = true;//true = destroy, false = do nothing
+	
+		//result1
+		AddResult("DadaCannibalSoup_TomatoSoup");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{
+		// define my variables
+		ItemBase ingredient1;
+		if (Class.CastTo(ingredient1, ingredients[1]))
+		{
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
+	
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			{
+				return false;
+			}
+			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if the food is raw, burnt or rotten
+
+			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
+			{
+				return false;
+			}
+			// by this point we know the 2 ingredients are both good temperatures and have good food stages
+			return true;
+		}
+		// initial ingredients are wrong, false
+   		return false;
+   	}
+};
+
+class CraftDadaCannibalSoup_TomatoSoup3 extends Craft_DadaTempLiquidTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -1231,10 +1469,152 @@ class CraftDadaCannibalSoup_TomatoSoup1 extends Craft_DadaTempLiquidTemp1Stage1_
 		
 		//ingredient 2
 		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;//true = destroy, false = do nothing
+	
+		//result1
+		AddResult("DadaCannibalSoup_TomatoSoup");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{
+		// define my variables
+		ItemBase ingredient0;
+		ItemBase ingredient1;
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
+		{
+			// if the ingredient 1 is cooler than 10C or hotter than 70C
+
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 200)
+			{
+				return false;
+			}
+
+			if (ingredient0.GetLiquidType() == LIQUID_NONE || ingredient0.GetLiquidType() == LIQUID_SALINE || ingredient0.GetLiquidType() == LIQUID_VODKA || ingredient0.GetLiquidType() == LIQUID_BEER || ingredient0.GetLiquidType() == LIQUID_DISINFECTANT || ingredient0.GetLiquidType() == LIQUID_SOLUTION)
+			{
+				return false;
+			}
+
+
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
+	
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			{
+				return false;
+			}
+			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if the food is raw, burnt or rotten
+
+			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
+			{
+				return false;
+			}
+			// by this point we know the 2 ingredients are both good temperatures and have good food stages
+			return true;
+		}
+		// initial ingredients are wrong, false
+   		return false;
+   	}
+};
+
+class CraftDadaCannibalSoup_TomatoSoup4 extends Craft_DadaTempLiquidTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Tomato Soup";
+		
+		//conditions
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MinQuantityIngredient[1] = 90;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"Bottle_Base");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[0] = -300;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;//true = destroy, false = do nothing
+		
+		//result1
+		AddResult("DadaCannibalSoup_TomatoSoup");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{
+		// define my variables
+		ItemBase ingredient0;
+		ItemBase ingredient1;
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
+		{
+			// if the ingredient 1 is cooler than 10C or hotter than 70C
+
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 200)
+			{
+				return false;
+			}
+
+			if (ingredient0.GetLiquidType() == LIQUID_NONE || ingredient0.GetLiquidType() == LIQUID_SALINE || ingredient0.GetLiquidType() == LIQUID_VODKA || ingredient0.GetLiquidType() == LIQUID_BEER || ingredient0.GetLiquidType() == LIQUID_DISINFECTANT || ingredient0.GetLiquidType() == LIQUID_SOLUTION)
+			{
+				return false;
+			}
+
+
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
+	
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			{
+				return false;
+			}
+			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if the food is raw, burnt or rotten
+
+			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
+			{
+				return false;
+			}
+			// by this point we know the 2 ingredients are both good temperatures and have good food stages
+			return true;
+		}
+		// initial ingredients are wrong, false
+   		return false;
+   	}
+};
+
+class CraftDadaCannibalSoup_TomatoSoup5 extends Craft_DadaTempLiquidTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Tomato Soup";
+		
+		//conditions
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MinQuantityIngredient[1] = 90;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"Bottle_Base");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[0] = -300;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = true;//true = destroy, false = do nothing
 		
 		//result1
 		AddResult("DadaCannibalSoup_TomatoSoup");//add results here
