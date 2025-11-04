@@ -1722,12 +1722,128 @@ class CraftDadaCannibalSoup_Ragout extends Craft_DadaTemp1Stage1_BaseRecipe //wo
    	}
 };
 
-class CraftDadaCannibalSoup_Ragout1 extends Craft_DadaTempLiquidTemp1Stage1_BaseRecipe
+class CraftDadaCannibalSoup_Ragout1 extends Craft_Dada_BaseRecipe //works
 {
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Make Ragout";
+		m_Name = "Make Tomato Soup";
+		
+		//conditions
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MinQuantityIngredient[1] = 90;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"BloodBagFull");//you can insert multiple ingredients this way
+		InsertIngredient(0,"BloodBagIV");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[0] = -300;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;//true = destroy, false = do nothing
+	
+		//result1
+		AddResult("DadaCannibalSoup_Ragout");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{
+		// define my variables
+		ItemBase ingredient1;
+		if (Class.CastTo(ingredient1, ingredients[1]))
+		{
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
+	
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			{
+				return false;
+			}
+			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if the food is raw, burnt or rotten
+
+			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
+			{
+				return false;
+			}
+			// by this point we know the 2 ingredients are both good temperatures and have good food stages
+			return true;
+		}
+		// initial ingredients are wrong, false
+   		return false;
+   	}
+};
+
+class CraftDadaCannibalSoup_Ragout2 extends Craft_Dada_BaseRecipe //works
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Tomato Soup";
+		
+		//conditions
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MinQuantityIngredient[1] = 90;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"BloodBagFull");//you can insert multiple ingredients this way
+		InsertIngredient(0,"BloodBagIV");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[0] = -300;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = true;//true = destroy, false = do nothing
+	
+		//result1
+		AddResult("DadaCannibalSoup_Ragout");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{
+		// define my variables
+		ItemBase ingredient1;
+		if (Class.CastTo(ingredient1, ingredients[1]))
+		{
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
+	
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			{
+				return false;
+			}
+			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if the food is raw, burnt or rotten
+
+			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
+			{
+				return false;
+			}
+			// by this point we know the 2 ingredients are both good temperatures and have good food stages
+			return true;
+		}
+		// initial ingredients are wrong, false
+   		return false;
+   	}
+};
+
+class CraftDadaCannibalSoup_Ragout3 extends Craft_DadaTempLiquidTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Tomato Soup";
 		
 		//conditions
 		m_MinQuantityIngredient[0] = 100;//-1 = disable check
@@ -1742,10 +1858,152 @@ class CraftDadaCannibalSoup_Ragout1 extends Craft_DadaTempLiquidTemp1Stage1_Base
 		
 		//ingredient 2
 		InsertIngredient(1,"Dada_RawFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"DadaCannibalSoup_TomatoSauce");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;//true = destroy, false = do nothing
+	
+		//result1
+		AddResult("DadaCannibalSoup_Ragout");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{
+		// define my variables
+		ItemBase ingredient0;
+		ItemBase ingredient1;
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
+		{
+			// if the ingredient 1 is cooler than 10C or hotter than 70C
+
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 200)
+			{
+				return false;
+			}
+
+			if (ingredient0.GetLiquidType() == LIQUID_NONE || ingredient0.GetLiquidType() == LIQUID_SALINE || ingredient0.GetLiquidType() == LIQUID_VODKA || ingredient0.GetLiquidType() == LIQUID_BEER || ingredient0.GetLiquidType() == LIQUID_DISINFECTANT || ingredient0.GetLiquidType() == LIQUID_SOLUTION)
+			{
+				return false;
+			}
+
+
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
+	
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			{
+				return false;
+			}
+			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if the food is raw, burnt or rotten
+
+			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
+			{
+				return false;
+			}
+			// by this point we know the 2 ingredients are both good temperatures and have good food stages
+			return true;
+		}
+		// initial ingredients are wrong, false
+   		return false;
+   	}
+};
+
+class CraftDadaCannibalSoup_Ragout4 extends Craft_DadaTempLiquidTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Tomato Soup";
+		
+		//conditions
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MinQuantityIngredient[1] = 90;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"Bottle_Base");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[0] = -300;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes_Opened");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;//true = destroy, false = do nothing
+		
+		//result1
+		AddResult("DadaCannibalSoup_Ragout");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+	}
+
+	override bool CanDo(ItemBase ingredients[], PlayerBase player)//final check for recipe's validity
+	{
+		// define my variables
+		ItemBase ingredient0;
+		ItemBase ingredient1;
+		if (Class.CastTo(ingredient0, ingredients[0]) && Class.CastTo(ingredient1, ingredients[1]))
+		{
+			// if the ingredient 1 is cooler than 10C or hotter than 70C
+
+			if (ingredient0.GetTemperature() < 10 || ingredient0.GetTemperature() > 200)
+			{
+				return false;
+			}
+
+			if (ingredient0.GetLiquidType() == LIQUID_NONE || ingredient0.GetLiquidType() == LIQUID_SALINE || ingredient0.GetLiquidType() == LIQUID_VODKA || ingredient0.GetLiquidType() == LIQUID_BEER || ingredient0.GetLiquidType() == LIQUID_DISINFECTANT || ingredient0.GetLiquidType() == LIQUID_SOLUTION)
+			{
+				return false;
+			}
+
+
+			// if the ingredient 2 is cooler than 10C or hotter than 70C
+	
+			if (ingredient1.GetTemperature() < 10 || ingredient1.GetTemperature() > 70)
+			{
+				return false;
+			}
+			FoodStage foodStage1 = ingredient1.GetFoodStage();
+			// if the food is raw, burnt or rotten
+
+			if (foodStage1.IsFoodBurned() || foodStage1.IsFoodRotten())
+			{
+				return false;
+			}
+			// by this point we know the 2 ingredients are both good temperatures and have good food stages
+			return true;
+		}
+		// initial ingredients are wrong, false
+   		return false;
+   	}
+};
+
+class CraftDadaCannibalSoup_Ragout5 extends Craft_DadaTempLiquidTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Tomato Soup";
+		
+		//conditions
+		m_MinQuantityIngredient[0] = 100;//-1 = disable check
+		m_MinQuantityIngredient[1] = 90;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"Bottle_Base");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[0] = -300;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_PreservedFoodCan_CannibalDicedTomatoes");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = true;//true = destroy, false = do nothing
 		
 		//result1
 		AddResult("DadaCannibalSoup_Ragout");//add results here
