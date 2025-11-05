@@ -1695,13 +1695,54 @@ class CraftDadaDish_Pie1 extends Craft_DadaTempStageTemp1_BaseRecipe
 		InsertIngredient(1,"BakedBeansCan");
 		InsertIngredient(1,"TacticalBaconCan");//you can insert multiple ingredients this way
 		InsertIngredient(1,"SardinesCan");
-        	InsertIngredient(1,"TunaCan");//you can insert multiple ingredients this way
-        	InsertIngredient(1,"FoodCan_250g_ColorBase");//you can insert multiple ingredients this way
+        InsertIngredient(1,"TunaCan");//you can insert multiple ingredients this way
+        InsertIngredient(1,"FoodCan_250g_ColorBase");//you can insert multiple ingredients this way
 		InsertIngredient(1,"FoodCan_100g_ColorBase");
 		InsertIngredient(1,"Dada_PreservedFoodCan_Colorbase");
-        	InsertIngredient(1,"UnknownFoodCan");//you can insert multiple ingredients this way
+        InsertIngredient(1,"UnknownFoodCan");//you can insert multiple ingredients this way
 		InsertIngredient(1,"PotatoSeed");//you can insert multiple ingredients this wa
+
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = true;//true = destroy, false = do nothing
+		
+		//result1
+		AddResult("DadaDish_Pie");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaDish_Pie2 extends Craft_DadaTempStageTemp1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Mold Into Pie";
+		
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"DadaBread_Base");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[0] = -1;// 0 = do nothing
+		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
+		
+		//ingredient 2
 		InsertIngredient(1,"Dada_PreservedFoodCan_Colorbase_Opened");
+		InsertIngredient(1,"BakedBeansCan_Opened");
+		InsertIngredient(1,"PeachesCan_Opened");
+		InsertIngredient(1,"TacticalBaconCan_Opened");
+		InsertIngredient(1,"SardinesCan_Opened");
+		InsertIngredient(1,"TunaCan_Opened");
+		InsertIngredient(1,"FoodCan_250g_Opened_ColorBase");
+		InsertIngredient(1,"UnknownFoodCan_Opened");
+		InsertIngredient(1,"FoodCan_100g_Opened_ColorBase");
+
+		m_IngredientAddQuantity[1] = -125;// 0 = do nothing
+		m_IngredientDestroy[1] = false;//true = destroy, false = do nothing
 		
 		//result1
 		AddResult("DadaDish_Pie");//add results here
@@ -1849,12 +1890,76 @@ class CraftDadaDish_PulledPork extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		InsertIngredient(0,"DadaSoup_TomatoSauce");//you can insert multiple ingredients this way
 		InsertIngredient(0,"DadaSoup_Gravy");//you can insert multiple ingredients this way
 		InsertIngredient(0,"Dada_RawFoodCan_Ketchup");
-		InsertIngredient(0,"Dada_PreservedFoodCan_Ketchup_Opened");
 		InsertIngredient(0,"Dada_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = false;// false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"PigSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"BoarSteakMeat");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaDish_PulledPork");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaDish_PulledPork1 extends Craft_DadaTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Pulled Pork";
+		
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"Dada_PreservedFoodCan_Ketchup_Opened");
 		InsertIngredient(0,"Dada_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
 
 		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
 		m_IngredientDestroy[0] = false;// false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"PigSteakMeat");//you can insert multiple ingredients this way
+		InsertIngredient(1,"BoarSteakMeat");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaDish_PulledPork");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaDish_PulledPork2 extends Craft_DadaTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Pulled Pork";
+		
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"Dada_PreservedFoodCan_Ketchup");
+		InsertIngredient(0,"Dada_PreservedFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = true;// false = do nothing
 		
 		//ingredient 2
 		InsertIngredient(1,"PigSteakMeat");//you can insert multiple ingredients this way
@@ -1901,42 +2006,74 @@ class CraftDadaDish_Sausage extends Craft_DadaTempTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Pie2 extends Craft_DadaTempStageTemp1_BaseRecipe
+class CraftDadaSoup_Ragout extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
 		super.Init();
-		m_Name = "Mold Into Pie";
+		m_Name = "Craft Ragout";
 		
-		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
 		m_MinQuantityIngredient[1] = 60;//-1 = disable check
 		
 		//INGREDIENTS
 		//ingredient 1
-		InsertIngredient(0,"DadaBread_Base");//you can insert multiple ingredients this way
-	
-		m_IngredientAddQuantity[0] = -250;// 0 = do nothing
-		m_IngredientDestroy[0] = -1;//true = destroy, false = do nothing
+		InsertIngredient(0,"DadaSoup_ChickenBroth");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = false;// false = do nothing
 		
 		//ingredient 2
-        InsertIngredient(1,"BakedBeansCan_Opened");
-		InsertIngredient(1,"PeachesCan_Opened");
-		InsertIngredient(1,"TacticalBaconCan_Opened");
-		InsertIngredient(1,"SardinesCan_Opened");
-		InsertIngredient(1,"TunaCan_Opened");
-		InsertIngredient(1,"FoodCan_250g_Opened_ColorBase");
-		InsertIngredient(1,"UnknownFoodCan_Opened");
-		InsertIngredient(1,"FoodCan_100g_Opened_ColorBase");
+		InsertIngredient(1,"Dada_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"DadaSoup_TomatoSauce");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
 		
 		//result1
-		AddResult("DadaDish_Pie");//add results here
+		AddResult("DadaSoup_Ragout");//add results here
 
 		m_ResultSetQuantity[0] = 125;//-1 = do nothing
-		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 	}
 };
 
-class CraftDadaSoup_Ragout extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
+class CraftDadaSoup_Ragout1 extends Craft_DadaTempStage_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Ragout";
+		
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 60;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"DadaSoup_ChickenBroth");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = false;// false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Dada_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Dada_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = true;// false = do nothing
+		
+		//result1
+		AddResult("DadaSoup_Ragout");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaSoup_Ragout2 extends Craft_DadaTempStage_BaseRecipe
 {
 	override void Init()
 	{
@@ -1957,43 +2094,6 @@ class CraftDadaSoup_Ragout extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		InsertIngredient(1,"Dada_PreservedFoodCan_DicedTomatoes_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Dada_PreservedFoodCan_STAGchili_Opened");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Dada_PreservedFoodCan_HomemadeChili_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"DadaSoup_TomatoSauce");//you can insert multiple ingredients this way
-		
-		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
-		m_IngredientDestroy[1] = false;// false = do nothing
-		
-		//result1
-		AddResult("DadaSoup_Ragout");//add results here
-
-		m_ResultSetQuantity[0] = 125;//-1 = do nothing
-		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
-	}
-};
-
-class CraftDadaSoup_Ragout1 extends Craft_DadaTempStageTemp1_BaseRecipe
-{
-	override void Init()
-	{
-		super.Init();
-		m_Name = "Craft Ragout";
-		
-		m_MinQuantityIngredient[0] = 60;//-1 = disable check
-		m_MinQuantityIngredient[1] = 60;//-1 = disable check
-		
-		//INGREDIENTS
-		//ingredient 1
-		InsertIngredient(0,"DadaSoup_ChickenBroth");//you can insert multiple ingredients this way
-		
-		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
-		m_IngredientDestroy[0] = false;// false = do nothing
-		
-		//ingredient 2
-		InsertIngredient(1,"Dada_RawFoodCan_DicedTomatoes");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_RawFoodCan_STAGchili");//you can insert multiple ingredients this way
-		InsertIngredient(1,"Dada_RawFoodCan_HomemadeChili");//you can insert multiple ingredients this way
 		
 		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
 		m_IngredientDestroy[1] = false;// false = do nothing
@@ -2032,13 +2132,12 @@ class CraftDadaDish_Gumbo extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 		InsertIngredient(0,"RabbitLegMeat");//you can insert multiple ingredients this way
 		InsertIngredient(0,"ReindeerSteakMeat");//you can insert multiple ingredients this way
 		InsertIngredient(0,"Dada_RawFoodCan_STAGham");//you can insert multi
-		InsertIngredient(0,"Dada_PreservedFoodCan_STAGham_Opened");//you can insert multi
 		InsertIngredient(0,"Dada_RawFoodCan_LSSPAM");//you can insert multi
-		InsertIngredient(0,"Dada_PreservedFoodCan_LSSPAM_Opened");
 		InsertIngredient(0,"Dada_RawFoodCan_Paella");//you can insert multi
-		InsertIngredient(0,"Dada_PreservedFoodCan_Paella_Opened");
 		InsertIngredient(0,"Dada_RawFoodCan_Quail");//you can insert multi
-		InsertIngredient(0,"Dada_PreservedFoodCan_Quail_Opened");
+
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = false;// false = do nothing
 
 		//ingredient 2
 		InsertIngredient(1,"DadaRawRice");//you can insert multiple ingredients this way
@@ -2072,9 +2171,9 @@ class CraftDadaDish_Gumbo1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 		InsertIngredient(0,"Dada_PreservedFoodCan_LSSPAM");//you can insert multi
 		InsertIngredient(0,"Dada_PreservedFoodCan_Paella");//you can insert multi
 		InsertIngredient(0,"Dada_PreservedFoodCan_Quail");//you can insert multi
-		InsertIngredient(0,"TacticalBaconCan_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(0,"UnknownFoodCan_Opened");//you can insert multiple ingredients this way
-		InsertIngredient(0,"TunaCanDuck_Opened");//you can insert multi
+
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = true;// false = do nothing
 
 		//ingredient 2
 		InsertIngredient(1,"DadaRawRice");//you can insert multiple ingredients this way
@@ -2090,7 +2189,43 @@ class CraftDadaDish_Gumbo1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Gumbo2 extends Craft_DadaTempTemp1_BaseRecipe
+class CraftDadaDish_Gumbo2 extends Craft_DadaTemp1Stage1_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Gumbo";
+		
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 150;//-1 = disable check
+		
+		//ingredient 1
+		InsertIngredient(0,"Dada_PreservedFoodCan_STAGham_Opened");//you can insert multi
+		InsertIngredient(0,"Dada_PreservedFoodCan_LSSPAM_Opened");
+		InsertIngredient(0,"Dada_PreservedFoodCan_Paella_Opened");
+		InsertIngredient(0,"Dada_PreservedFoodCan_Quail_Opened");
+		InsertIngredient(0,"TacticalBaconCan_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(0,"UnknownFoodCan_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(0,"TunaCanDuck_Opened");//you can insert multi
+
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = false;// false = do nothing
+	
+		//ingredient 2
+		InsertIngredient(1,"DadaRawRice");//you can insert multiple ingredients this way
+
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaDish_Gumbo");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
+
+class CraftDadaDish_Gumbo3 extends Craft_Dada_BaseRecipe
 {
 	override void Init()
 	{
@@ -2109,6 +2244,9 @@ class CraftDadaDish_Gumbo2 extends Craft_DadaTempTemp1_BaseRecipe
 		InsertIngredient(0,"Dada_PreservedFoodCan_LSSPAM");//you can insert multi
 		InsertIngredient(0,"Dada_PreservedFoodCan_Paella");//you can insert multi
 		InsertIngredient(0,"Dada_PreservedFoodCan_Quail");//you can insert multi
+	
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = true;// false = do nothing
 		
 		//ingredient 2
 		InsertIngredient(1,"Rice");//you can insert multiple ingredients this way
@@ -2124,7 +2262,7 @@ class CraftDadaDish_Gumbo2 extends Craft_DadaTempTemp1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Gumbo3 extends Craft_DadaTempStageTemp1_BaseRecipe
+class CraftDadaDish_Gumbo4 extends Craft_DadaTempStage_BaseRecipe
 {
 	override void Init()
 	{
@@ -2150,13 +2288,12 @@ class CraftDadaDish_Gumbo3 extends Craft_DadaTempStageTemp1_BaseRecipe
 		InsertIngredient(0,"RabbitLegMeat");//you can insert multiple ingredients this way
 		InsertIngredient(0,"ReindeerSteakMeat");//you can insert multiple ingredients this way
 		InsertIngredient(0,"Dada_RawFoodCan_STAGham");//you can insert multi
-		InsertIngredient(0,"Dada_PreservedFoodCan_STAGham_Opened");//you can insert multi
 		InsertIngredient(0,"Dada_RawFoodCan_LSSPAM");//you can insert multi
-		InsertIngredient(0,"Dada_PreservedFoodCan_LSSPAM_Opened");
 		InsertIngredient(0,"Dada_RawFoodCan_Paella");//you can insert multi
-		InsertIngredient(0,"Dada_PreservedFoodCan_Paella_Opened");
 		InsertIngredient(0,"Dada_RawFoodCan_Quail");//you can insert multi
-		InsertIngredient(0,"Dada_PreservedFoodCan_Quail_Opened");
+
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = false;// false = do nothing
 		
 		//ingredient 2
 		InsertIngredient(1,"Rice");//you can insert multiple ingredients this way
@@ -2172,6 +2309,42 @@ class CraftDadaDish_Gumbo3 extends Craft_DadaTempStageTemp1_BaseRecipe
 	}
 };
 
+class CraftDadaDish_Gumbo5 extends Craft_Dada_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Craft Gumbo";
+	
+		m_MinQuantityIngredient[0] = 60;//-1 = disable check
+		m_MinQuantityIngredient[1] = 150;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"Dada_PreservedFoodCan_STAGham_Opened");//you can insert multi
+		InsertIngredient(0,"Dada_PreservedFoodCan_LSSPAM_Opened");
+		InsertIngredient(0,"Dada_PreservedFoodCan_Paella_Opened");
+		InsertIngredient(0,"Dada_PreservedFoodCan_Quail_Opened");
+		InsertIngredient(0,"TacticalBaconCan_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(0,"UnknownFoodCan_Opened");//you can insert multiple ingredients this way
+		InsertIngredient(0,"TunaCanDuck_Opened");//you can insert multi
+
+		m_IngredientAddQuantity[0] = -150;// 0 = do nothing
+		m_IngredientDestroy[0] = false;// false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Rice");//you can insert multiple ingredients this way
+		
+		m_IngredientAddQuantity[1] = -150;// 0 = do nothing
+		m_IngredientDestroy[1] = false;// false = do nothing
+		
+		//result1
+		AddResult("DadaDish_Gumbo");//add results here
+
+		m_ResultSetQuantity[0] = 125;//-1 = do nothing
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+	}
+};
 
 class CraftDadaDish_SeafoodGumbo extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 {
