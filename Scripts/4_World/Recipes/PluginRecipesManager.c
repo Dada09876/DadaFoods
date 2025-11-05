@@ -39,10 +39,18 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaBread_Pasta);
     RegisterRecipe(new CraftDadaBread_Pizza);
     RegisterRecipe(new CraftDadaDish_Spaghetti);
+    RegisterRecipe(new CraftDadaDish_Spaghetti1);
+    RegisterRecipe(new CraftDadaDish_Spaghetti2);
     RegisterRecipe(new CraftDadaDish_Cannelloni);
+    RegisterRecipe(new CraftDadaDish_Cannelloni1);
+    RegisterRecipe(new CraftDadaDish_Cannelloni2);
     RegisterRecipe(new CraftDadaDish_Bowties);
+    RegisterRecipe(new CraftDadaDish_Bowties1);
+    RegisterRecipe(new CraftDadaDish_Bowties2);
     RegisterRecipe(new CraftDadaDish_Lasagna);
     RegisterRecipe(new CraftDadaDish_Rigatoni);
+    RegisterRecipe(new CraftDadaDish_Rigatoni1);
+    RegisterRecipe(new CraftDadaDish_Rigatoni2);
     RegisterRecipe(new CraftDadaBread_PizzaMarinara);
     RegisterRecipe(new CraftDadaBread_PizzaMargherita);
     RegisterRecipe(new CraftDadaDish_GroundMeat);
