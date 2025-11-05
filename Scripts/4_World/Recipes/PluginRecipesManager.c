@@ -52,6 +52,8 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaDish_Rigatoni1);
     RegisterRecipe(new CraftDadaDish_Rigatoni2);
     RegisterRecipe(new CraftDadaBread_PizzaMarinara);
+    RegisterRecipe(new CraftDadaBread_PizzaMarinara1);
+    RegisterRecipe(new CraftDadaBread_PizzaMarinara2);
     RegisterRecipe(new CraftDadaBread_PizzaMargherita);
     RegisterRecipe(new CraftDadaDish_GroundMeat);
     RegisterRecipe(new CraftDadaDish_MashedPotatoes);
@@ -66,11 +68,18 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaDish_Chili1);
     RegisterRecipe(new CraftDadaDish_Chili2);
     RegisterRecipe(new CraftDadaDish_Chili3);
+    RegisterRecipe(new CraftDadaDish_Chili4);
+    RegisterRecipe(new CraftDadaDish_Chili5);
+    RegisterRecipe(new CraftDadaDish_Chili6);
+    RegisterRecipe(new CraftDadaDish_Chili7);
+    RegisterRecipe(new CraftDadaDish_Chili8);
     RegisterRecipe(new CraftDadaSoup_Gravy);
     RegisterRecipe(new CraftDadaDish_Gumbo);
     RegisterRecipe(new CraftDadaDish_Gumbo1);
     RegisterRecipe(new CraftDadaDish_Gumbo2);
     RegisterRecipe(new CraftDadaDish_Gumbo3);
+    RegisterRecipe(new CraftDadaDish_Gumbo4);
+    RegisterRecipe(new CraftDadaDish_Gumbo5);
     RegisterRecipe(new CraftDadaDish_MushroomCream);
     RegisterRecipe(new CraftDadaDish_SauteedMushrooms);
     RegisterRecipe(new CraftDadaDish_Pancakes);
@@ -78,14 +87,22 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaDish_Pie1);
     RegisterRecipe(new CraftDadaDish_Pie2);
     RegisterRecipe(new CraftDadaSoup_Ragout);
+    RegisterRecipe(new CraftDadaSoup_Ragout1);
+    RegisterRecipe(new CraftDadaSoup_Ragout2);
     RegisterRecipe(new CraftDadaDish_SeafoodGumbo);
     RegisterRecipe(new CraftDadaDish_SeafoodGumbo1);
+    RegisterRecipe(new CraftDadaDish_SeafoodGumbo2);
+    RegisterRecipe(new CraftDadaDish_SeafoodGumbo3);
+    RegisterRecipe(new CraftDadaDish_SeafoodGumbo4);
+    RegisterRecipe(new CraftDadaDish_SeafoodGumbo5);
     RegisterRecipe(new CraftDadaSoup_TomatoSauce);
     RegisterRecipe(new CraftDadaSoup_TomatoSauce1);
     RegisterRecipe(new CraftDadaSoup_TomatoSoup);
     RegisterRecipe(new CraftDadaDish_MacaroniAndCheese);
     RegisterRecipe(new CraftDadaDish_ShepardsPie);
     RegisterRecipe(new CraftDadaDish_PulledPork);
+    RegisterRecipe(new CraftDadaDish_PulledPork1);
+    RegisterRecipe(new CraftDadaDish_PulledPork2);
     RegisterRecipe(new CraftDadaDish_Sausage);
     RegisterRecipe(new CraftDadaDish_Fries);
     RegisterRecipe(new CraftDadaDish_Fries1);
@@ -94,6 +111,7 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaDish_Rabbit);
     RegisterRecipe(new CraftDadaSoup_ClamChowder);
     RegisterRecipe(new CraftDadaSoup_ClamChowder1);
+    RegisterRecipe(new CraftDadaSoup_ClamChowder2);
 
     // FOOD CANNED
 
