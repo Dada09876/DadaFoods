@@ -227,7 +227,7 @@ class CraftDadaDish_Spaghetti extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Spaghetti1 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaDish_Spaghetti1 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -259,7 +259,7 @@ class CraftDadaDish_Spaghetti1 extends Craft_DadaTempStage_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Spaghetti2 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaDish_Spaghetti2 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -324,7 +324,7 @@ class CraftDadaDish_Cannelloni extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Cannelloni1 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaDish_Cannelloni1 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -356,7 +356,7 @@ class CraftDadaDish_Cannelloni1 extends Craft_DadaTempStage_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Cannelloni2 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaDish_Cannelloni2 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -424,7 +424,7 @@ class CraftDadaDish_Bowties extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Bowties1 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaDish_Bowties1 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -458,7 +458,7 @@ class CraftDadaDish_Bowties1 extends Craft_DadaTempStage_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Bowties2 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaDish_Bowties2 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -525,7 +525,7 @@ class CraftDadaDish_Lasagna extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Lasagna1 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaDish_Lasagna1 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -557,7 +557,7 @@ class CraftDadaDish_Lasagna1 extends Craft_DadaTempStage_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Lasagna2 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaDish_Lasagna2 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -622,7 +622,7 @@ class CraftDadaDish_Rigatoni extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Rigatoni1 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaDish_Rigatoni1 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -654,7 +654,7 @@ class CraftDadaDish_Rigatoni1 extends Craft_DadaTempStage_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Rigatoni2 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaDish_Rigatoni2 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -717,7 +717,7 @@ class CraftDadaBread_PizzaMarinara extends Craft_DadaTempStageTemp1Stage1_BaseRe
 	}
 };
 
-class CraftDadaBread_PizzaMarinara1 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaBread_PizzaMarinara1 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -747,7 +747,7 @@ class CraftDadaBread_PizzaMarinara1 extends Craft_DadaTempStage_BaseRecipe
 	}
 };
 
-class CraftDadaBread_PizzaMarinara2 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaBread_PizzaMarinara2 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -1184,7 +1184,7 @@ class CraftDadaDish_Chili extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Chili1 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaDish_Chili1 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -1222,7 +1222,7 @@ class CraftDadaDish_Chili1 extends Craft_DadaTempStage_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Chili2 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaDish_Chili2 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -1260,7 +1260,7 @@ class CraftDadaDish_Chili2 extends Craft_DadaTempStage_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Chili3 extends Craft_DadaTemp1Stage1_BaseRecipe
+class CraftDadaDish_Chili3 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -1298,7 +1298,7 @@ class CraftDadaDish_Chili3 extends Craft_DadaTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Chili4 extends Craft_Dada_BaseRecipe
+class CraftDadaDish_Chili4 extends Craft_DadaTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -1336,7 +1336,7 @@ class CraftDadaDish_Chili4 extends Craft_Dada_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Chili5 extends Craft_Dada_BaseRecipe
+class CraftDadaDish_Chili5 extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -1412,7 +1412,7 @@ class CraftDadaDish_Chili6 extends Craft_DadaTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Chili7 extends Craft_Dada_BaseRecipe
+class CraftDadaDish_Chili7 extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -1450,7 +1450,7 @@ class CraftDadaDish_Chili7 extends Craft_Dada_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Chili8 extends Craft_Dada_BaseRecipe
+class CraftDadaDish_Chili8 extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -1910,7 +1910,7 @@ class CraftDadaDish_PulledPork extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_PulledPork1 extends Craft_DadaTemp1Stage1_BaseRecipe
+class CraftDadaDish_PulledPork1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -1943,7 +1943,7 @@ class CraftDadaDish_PulledPork1 extends Craft_DadaTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_PulledPork2 extends Craft_DadaTemp1Stage1_BaseRecipe
+class CraftDadaDish_PulledPork2 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -2073,7 +2073,7 @@ class CraftDadaSoup_Ragout1 extends Craft_DadaTempStage_BaseRecipe
 	}
 };
 
-class CraftDadaSoup_Ragout2 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaSoup_Ragout2 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -2189,7 +2189,7 @@ class CraftDadaDish_Gumbo1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Gumbo2 extends Craft_DadaTemp1Stage1_BaseRecipe
+class CraftDadaDish_Gumbo2 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -2225,7 +2225,7 @@ class CraftDadaDish_Gumbo2 extends Craft_DadaTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Gumbo3 extends Craft_Dada_BaseRecipe
+class CraftDadaDish_Gumbo3 extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -2309,7 +2309,7 @@ class CraftDadaDish_Gumbo4 extends Craft_DadaTempStage_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Gumbo5 extends Craft_Dada_BaseRecipe
+class CraftDadaDish_Gumbo5 extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -2385,7 +2385,7 @@ class CraftDadaDish_SeafoodGumbo extends Craft_DadaTempStageTemp1Stage1_BaseReci
 	}
 };
 
-class CraftDadaDish_SeafoodGumbo1 extends Craft_DadaTemp1Stage1_BaseRecipe
+class CraftDadaDish_SeafoodGumbo1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -2456,7 +2456,7 @@ class CraftDadaDish_SeafoodGumbo2 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_SeafoodGumbo3 extends Craft_Dada_BaseRecipe
+class CraftDadaDish_SeafoodGumbo3 extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -2491,7 +2491,7 @@ class CraftDadaDish_SeafoodGumbo3 extends Craft_Dada_BaseRecipe
 	}
 };
 
-class CraftDadaDish_SeafoodGumbo4 extends Craft_DadaTempStage_BaseRecipe
+class CraftDadaDish_SeafoodGumbo4 extends Craft_DadaTempStageTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -2528,7 +2528,7 @@ class CraftDadaDish_SeafoodGumbo4 extends Craft_DadaTempStage_BaseRecipe
 };
 
 
-class CraftDadaDish_SeafoodGumbo5 extends Craft_Dada_BaseRecipe
+class CraftDadaDish_SeafoodGumbo5 extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
@@ -2805,7 +2805,7 @@ class CraftDadaSoup_ClamChowder extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 	}
 };
 
-class CraftDadaSoup_ClamChowder1 extends Craft_DadaTemp1Stage1_BaseRecipe
+class CraftDadaSoup_ClamChowder1 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
@@ -2837,7 +2837,7 @@ class CraftDadaSoup_ClamChowder1 extends Craft_DadaTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaSoup_ClamChowder2 extends Craft_DadaTemp1Stage1_BaseRecipe
+class CraftDadaSoup_ClamChowder2 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
