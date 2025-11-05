@@ -1298,7 +1298,7 @@ class CraftDadaDish_Chili3 extends Craft_DadaTempTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaDish_Chili4 extends Craft_DadaTemp1_BaseRecipe
+class CraftDadaDish_Chili4 extends Craft_DadaTempTemp1_BaseRecipe
 {
 	override void Init()
 	{
