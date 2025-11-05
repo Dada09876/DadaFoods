@@ -48,6 +48,8 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaDish_Bowties1);
     RegisterRecipe(new CraftDadaDish_Bowties2);
     RegisterRecipe(new CraftDadaDish_Lasagna);
+    RegisterRecipe(new CraftDadaDish_Lasagna1);
+    RegisterRecipe(new CraftDadaDish_Lasagna2);
     RegisterRecipe(new CraftDadaDish_Rigatoni);
     RegisterRecipe(new CraftDadaDish_Rigatoni1);
     RegisterRecipe(new CraftDadaDish_Rigatoni2);
