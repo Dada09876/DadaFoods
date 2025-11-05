@@ -2837,7 +2837,7 @@ class CraftDadaSoup_ClamChowder1 extends Craft_DadaTemp1Stage1_BaseRecipe
 	}
 };
 
-class CraftDadaSoup_ClamChowder1 extends Craft_DadaTemp1Stage1_BaseRecipe
+class CraftDadaSoup_ClamChowder2 extends Craft_DadaTemp1Stage1_BaseRecipe
 {
 	override void Init()
 	{
