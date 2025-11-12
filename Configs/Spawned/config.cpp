@@ -305,6 +305,7 @@ class CfgVehicles
 			};
 		};
 	};
+	
 	class DadaSpawned_GreenTea: Edible_Base
 	{
 		scope = 2;
@@ -374,6 +375,15 @@ class CfgVehicles
 			};
 		};
 	};
+
+	class DadaSpawned_MatchaTea: DadaSpawned_GreenTea
+	{
+		scope = 2;
+		displayName = "Matcha Bag";
+		descriptionShort = "Bag full of grounded up tea leaves";
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Spawned\data\DadaSpawned_MatchaTeaBag_co.paa"};
+	};
+
 	class DadaSpawned_BlackTea: Edible_Base
 	{
 		scope = 2;

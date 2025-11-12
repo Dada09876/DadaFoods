@@ -6,4 +6,5 @@ class DadaSpawned_BoxCerealCrunchin_Kosmostar extends DadaSpawned_CerealBase {};
 class DadaSpawned_Yeast extends PowderedMilk {};
 class DadaSpawned_Coffee extends Rice {};
 class DadaSpawned_GreenTea extends Rice {};
+class DadaSpawned_MatchaTea extends DadaSpawned_GreenTea {};
 class DadaSpawned_BlackTea extends Rice {};

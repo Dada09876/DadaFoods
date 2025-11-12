@@ -174,6 +174,33 @@ class CraftDadaGreenTeaPacket extends Craft_DadaTemp_BaseRecipe
 	}
 };
 
+class CraftDadaMatchaTeaPacket extends Craft_DadaTemp_BaseRecipe
+{
+	override void Init()
+	{
+		super.Init();
+		m_Name = "Make Infusion Packet";
+
+		m_MinQuantityIngredient[0] = 50;//-1 = disable check
+		m_MinQuantityIngredient[1] = -1;//-1 = disable check
+		
+		//INGREDIENTS
+		//ingredient 1
+		InsertIngredient(0,"DadaSpawned_MatchaTea");//you can insert multiple ingredients this way
+	
+		m_IngredientAddQuantity[0] = -60;// 0 = do nothing
+		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		
+		//ingredient 2
+		InsertIngredient(1,"Paper");//you can insert multiple ingredients this way
+		
+		//result1
+		AddResult("DadaGMatchaTeaPacket");//add results here
+
+		m_ResultSetQuantity[0] = 50;//-1 = do nothing
+	}
+};
+
 class CraftDadaBlackTeaPacket extends Craft_DadaTemp_BaseRecipe
 {
 	override void Init()

@@ -27,6 +27,7 @@ modded class PluginRecipesManager
     RegisterRecipe(new RepairDadaCheeseMold);
     RegisterRecipe(new CraftDadaCoffeePacket);
     RegisterRecipe(new CraftDadaGreenTeaPacket);
+    RegisterRecipe(new CraftDadaMatchaTeaPacket);
     RegisterRecipe(new CraftDadaBlackTeaPacket);
 
 
@@ -199,6 +200,7 @@ modded class PluginRecipesManager
     RegisterRecipe(new CraftDadaDrink_MilkCoffeeArt2);
     RegisterRecipe(new CraftDadaDrink_BlackTea);
     RegisterRecipe(new CraftDadaDrink_GreenTea);
+    RegisterRecipe(new CraftDadaDrink_MatchaTea);
     RegisterRecipe(new CraftDadaDrink_MilkShake);
     RegisterRecipe(new CraftDadaDrink_MilkShake1);
     RegisterRecipe(new CraftDadaDrink_CurdsAndWhey);

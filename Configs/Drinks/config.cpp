@@ -752,7 +752,7 @@ class CfgVehicles
 		scope = 2;
 		itemSize[] = {2,1};
 		weight = 24;
-		displayName = "Matcha";
+		displayName = "Green Tea";
 		descriptionShort = "A cup of tea.";
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Cup.p3d";
 		hiddenSelections[] = {"zbytek","camoGround"};
@@ -828,6 +828,13 @@ class CfgVehicles
 				};
 			};
 		};
+	};
+
+	class DadaDrink_MatchaTea: DadaDrink_GreenTea
+	{
+		displayName = "Matcha";
+		hiddenSelections[] = {"zbytek","camoGround"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_MatchaTea_ca.paa","Source_Files\DadaFoods\Configs\Drinks\data\DadaDrink_MatchaTea_ca.paa"};
 	};
 
 	class DadaDrink_MilkShake: DadaDrinks_ColorBase

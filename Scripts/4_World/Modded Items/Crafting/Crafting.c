@@ -59,6 +59,8 @@ class DadaGreenTeaPacket extends ItemBase
 	}	
 };
 
+class DadaMatchaTeaPacket extends DadaGreenTeaPacket {};
+
 class DadaBlackTeaPacket extends ItemBase
 {
 	override void SetActions()

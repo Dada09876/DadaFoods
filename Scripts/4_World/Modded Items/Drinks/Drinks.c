@@ -103,6 +103,8 @@ class DadaDrink_GreenTea: DadaDrinks_ColorBase
 	}
 };
 
+class DadaDrink_MatchaTea: DadaDrink_GreenTea {};
+
 class DadaDrink_BlackTea: DadaDrinks_ColorBase
 {
   override void OnConsume(float amount, PlayerBase consumer)

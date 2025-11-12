@@ -305,6 +305,7 @@ class CfgVehicles
 			};
 		};
 	};
+
 	class DadaGreenTeaPacket: Edible_Base
 	{
 		scope = 2;
@@ -360,6 +361,15 @@ class CfgVehicles
 			};
 		};
 	};
+
+	class DadaMatchaTeaPacket: DadaGreenTeaPacket
+	{
+		scope = 2;
+		displayName = "Matcha Infuser";
+		descriptionShort = "May be used for making Matcha";
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Crafting\data\MatchaTeaPacket_co.paa"};
+	};
+
 	class DadaBlackTeaPacket: Edible_Base
 	{
 		scope = 2;
