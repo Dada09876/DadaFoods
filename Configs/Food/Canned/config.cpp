@@ -323,7 +323,7 @@ class CfgVehicles
 		descriptionShort = "Keeping things simple";
 		color = "LSVeggies";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-Veggies_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-Veggies_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-Veggies_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-Veggies_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-Veggies_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-Veggies_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-Veggies_rotten_co.paa"};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -377,7 +377,7 @@ class CfgVehicles
 		descriptionShort = "Keeping things simple";
 		color = "LSVeggies";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-Veggies_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-Veggies_cooked_co.paa"};
 	};
 	class Dada_PreservedFoodCan_LSVeggies_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -386,7 +386,7 @@ class CfgVehicles
 		descriptionShort = "Keeping things simple";
 		color = "LSVeggies";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-Veggies_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-Veggies_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -405,7 +405,7 @@ class CfgVehicles
 		descriptionShort = "Our ham will make you smile, or else";
 		color = "STAGham";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_rotten_co.paa"};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -459,7 +459,7 @@ class CfgVehicles
 		descriptionShort = "Our ham will make you smile, or else";
 		color = "STAGham";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_cooked_co.paa"};
 	};
 	class Dada_PreservedFoodCan_STAGham_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -468,7 +468,7 @@ class CfgVehicles
 		descriptionShort = "Our ham will make you smile, or else";
 		color = "STAGham";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -485,7 +485,7 @@ class CfgVehicles
 		descriptionShort = "ESPENLock Beef and Vegetable soup, as chunky as ever";
 		color = "ESPENChunkySoup";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_rotten_co.paa"};
 		class Food
 		{
 			class FoodStages
@@ -537,7 +537,7 @@ class CfgVehicles
 		descriptionShort = "ESPENLock Beef and Vegetable soup, as chunky as ever";
 		color = "ESPENChunkySoup";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_cooked_co.paa"};
 	};
 	class Dada_PreservedFoodCan_ESPENChunkySoup_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -546,7 +546,7 @@ class CfgVehicles
 		descriptionShort = "ESPENLock Beef and Vegetable soup, as chunky as ever";
 		color = "ESPENChunkySoup";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENChunkySoup_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -565,7 +565,7 @@ class CfgVehicles
 		descriptionShort = "An ESPENLock staple";
 		color = "LSSPAM";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_rotten_co.paa"};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -619,7 +619,7 @@ class CfgVehicles
 		descriptionShort = "An ESPENLock staple";
 		color = "LSSPAM";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_cooked_co.paa"};
 	};
 	class Dada_PreservedFoodCan_LSSPAM_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -628,7 +628,7 @@ class CfgVehicles
 		descriptionShort = "An ESPENLock staple";
 		color = "LSSPAM";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-SPAM_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -647,7 +647,7 @@ class CfgVehicles
 		descriptionShort = "The best chili ever made";
 		color = "STAGchili";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_rotten_co.paa"};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -701,7 +701,7 @@ class CfgVehicles
 		descriptionShort = "The best chili ever made";
 		color = "STAGchili";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_cooked_co.paa"};
 	};
 	class Dada_PreservedFoodCan_STAGchili_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -710,7 +710,7 @@ class CfgVehicles
 		descriptionShort = "The best chili ever made";
 		color = "STAGchili";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGchili_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -729,7 +729,7 @@ class CfgVehicles
 		descriptionShort = "Tastes like childhood. Pimp it with sausages for a more consistent meal";
 		color = "ESPENMacnCheese";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENMacnCheese_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENMacnCheese_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENMacnCheese_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENMacnCheese_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENMacnCheese_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENMacnCheese_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENMacnCheese_rotten_co.paa"};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -783,7 +783,7 @@ class CfgVehicles
 		descriptionShort = "Tastes like childhood. Pimp it with sausages for a more consistent meal";
 		color = "ESPENMacnCheese";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENMacnCheese_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENMacnCheese_cooked_co.paa.paa"};
 	};
 	class Dada_PreservedFoodCan_ESPENMacnCheese_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -792,7 +792,7 @@ class CfgVehicles
 		descriptionShort = "Tastes like childhood. Pimp it with sausages for a more consistent meal";
 		color = "ESPENMacnCheese";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENMacnCheese_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_ESPENMacnCheese_cooked_co.paa.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -811,7 +811,7 @@ class CfgVehicles
 		descriptionShort = "Start your tomato sauce from scratch... Almost";
 		color = "DicedTomatoes";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_rotten_co.paa"};
 	class Food
 		{
 			class FoodStages
@@ -863,7 +863,7 @@ class CfgVehicles
 		descriptionShort = "Start your tomato sauce from scratch... Almost";
 		color = "DicedTomatoes";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_cooked_co.paa"};
 	};
 	class Dada_PreservedFoodCan_DicedTomatoes_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -872,7 +872,7 @@ class CfgVehicles
 		descriptionShort = "Start your tomato sauce from scratch... Almost";
 		color = "DicedTomatoes";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_DicedTomatoes_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -891,7 +891,7 @@ class CfgVehicles
 		displayName = "Ketchup";
 		descriptionShort = "Just put it on everithing you eat already";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_rotten_co.paa"};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -945,7 +945,7 @@ class CfgVehicles
 		descriptionShort = "Just put it on everithing you eat already";
 		color = "Ketchup";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_cooked_co.paa"};
 	};
 	class Dada_PreservedFoodCan_Ketchup_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -954,7 +954,7 @@ class CfgVehicles
 		descriptionShort = "Just put it on everithing you eat already";
 		color = "Ketchup";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Ketchup_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -973,7 +973,7 @@ class CfgVehicles
 		descriptionShort = "Tastes like vacations";
 		color = "Paella";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Paella_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Paella_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Paella_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Paella_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Paella_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Paella_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Paella_rotten_co.paa"};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -1027,7 +1027,7 @@ class CfgVehicles
 		descriptionShort = "Tastes like vacations";
 		color = "Paella";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Paella_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Paella_cooked_co.paa"};
 	};
 	class Dada_PreservedFoodCan_Paella_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -1036,7 +1036,7 @@ class CfgVehicles
 		descriptionShort = "Tastes like vacations";
 		color = "Paella";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Paella_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Paella_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -1055,7 +1055,7 @@ class CfgVehicles
 		descriptionShort = "Fill your pie with it or add it to your cat's diet";
 		color = "PumpkinPuree";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_PumpkinPuree_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_PumpkinPuree_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_PumpkinPuree_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_PumpkinPuree_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_PumpkinPuree_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_PumpkinPuree_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_PumpkinPuree_rotten_co.paa"};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -1109,7 +1109,7 @@ class CfgVehicles
 		descriptionShort = "Fill your pie with it or add it to your cat's diet";
 		color = "PumpkinPuree";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_PumpkinPuree_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_PumpkinPuree_cooked_co.paa"};
 	};
 	class Dada_PreservedFoodCan_PumpkinPuree_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -1118,7 +1118,7 @@ class CfgVehicles
 		descriptionShort = "Fill your pie with it or add it to your cat's diet";
 		color = "PumpkinPuree";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_PumpkinPuree_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_PumpkinPuree_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -1137,7 +1137,7 @@ class CfgVehicles
 		descriptionShort = "Fancy poultry";
 		color = "Quail";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Quail_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Quail_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Quail_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Quail_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Quail_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Quail_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Quail_rotten_co.paa"};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -1191,7 +1191,7 @@ class CfgVehicles
 		descriptionShort = "Fancy poultry";
 		color = "Quail";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Quail_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Quail_cooked_co.paa"};
 	};
 	class Dada_PreservedFoodCan_Quail_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -1200,7 +1200,7 @@ class CfgVehicles
 		descriptionShort = "Fancy poultry";
 		color = "Quail";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Quail_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Quail_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -1219,7 +1219,7 @@ class CfgVehicles
 		descriptionShort = "Always cooked and pickled";
 		color = "Relish";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Relish_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Relish_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Relish_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Relish_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Relish_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Relish_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Relish_rotten_co.paa"};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -1273,7 +1273,7 @@ class CfgVehicles
 		descriptionShort = "Always cooked and pickled";
 		color = "Relish";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Relish_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Relish_cooked_co.paa"};
 	};
 	class Dada_PreservedFoodCan_Relish_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -1282,7 +1282,7 @@ class CfgVehicles
 		descriptionShort = "Always cooked and pickled";
 		color = "Relish";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Relish_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Relish_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -1301,7 +1301,7 @@ class CfgVehicles
 		displayName = "Samosa Filling Can";
 		descriptionShort = "savoury filling";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Samosa_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Samosa_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Samosa_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Samosa_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Samosa_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Samosa_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_Samosa_rotten_co.paa"};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -1355,7 +1355,7 @@ class CfgVehicles
 		descriptionShort = "savoury filling";
 		color = "Samosa";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Samosa_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Samosa_cooked_co.paa"};
 	};
 	class Dada_PreservedFoodCan_Samosa_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -1364,7 +1364,7 @@ class CfgVehicles
 		descriptionShort = "savoury filling";
 		color = "Samosa";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Samosa_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_Samosa_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -1383,7 +1383,7 @@ class CfgVehicles
 		descriptionShort = "The Original Bear Valley Chili Recipe";
 		color = "HomemadeChili";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_rotten_co.paa"};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -1437,7 +1437,7 @@ class CfgVehicles
 		descriptionShort = "The Original Bear Valley Chili Recipe";
 		color = "HomemadeChili";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_cooked_co.paa"};
 	};
 	class Dada_PreservedFoodCan_HomemadeChili_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -1446,7 +1446,7 @@ class CfgVehicles
 		descriptionShort = "The Original Bear Valley Chili Recipe";
 		color = "HomemadeChili";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadeChili_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -1465,7 +1465,7 @@ class CfgVehicles
 		displayName = "Homemade Pumpkin Purée";
 		descriptionShort = "Made with love";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadePumpkinPuree_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadePumpkinPuree_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadePumpkinPuree_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadePumpkinPuree_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadePumpkinPuree_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadePumpkinPuree_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadePumpkinPuree_rotten_co.paa"};
 		class FoodAnimationSources;
 		class AnimationSources: FoodAnimationSources{};
 		class Food
@@ -1519,7 +1519,7 @@ class CfgVehicles
 		descriptionShort = "Made with love";
 		color = "HomemadePumpkinPuree";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadePumpkinPuree_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadePumpkinPuree_cooked_co.paa"};
 	};
 	class Dada_PreservedFoodCan_HomemadePumpkinPuree_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -1528,7 +1528,7 @@ class CfgVehicles
 		descriptionShort = "Made with love";
 		color = "HomemadePumpkinPuree";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadePumpkinPuree_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_HomemadePumpkinPuree_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -1548,7 +1548,7 @@ class CfgVehicles
 		color = "Crab";
 		model = "\dz\gear\food\can_sardines_open.p3d";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaCrabCan_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaCrabCan_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\DadaCrabCan_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\DadaCrabCan_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\DadaCrabCan_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\DadaCrabCan_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\DadaCrabCan_rotten_co.paa"};
 		rotationFlags = 34;
 		itemSize[] = {2,1};
 		weight = 2.5;
@@ -1623,7 +1623,7 @@ class CfgVehicles
 		color = "Crab";
 		model = "\dz\gear\food\can_sardines.p3d";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaCrabCan_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaCrabCan_cooked_co.paa"};
 		rotationFlags = 34;
 		itemSize[] = {2,1};
 		weight = 5;
@@ -1653,7 +1653,7 @@ class CfgVehicles
 		color = "Crab";
 		model = "\dz\gear\food\can_sardines_open.p3d";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaCrabCan_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaCrabCan_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;
@@ -1691,7 +1691,7 @@ class CfgVehicles
 		descriptionShort = "Tender, succulent, medium sized chopped pieces of ocean clams";
 		model = "\dz\gear\food\can_sardines_open.p3d";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaClamCan_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaClamCan_raw_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\DadaClamCan_cooked_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\DadaClamCan_boiled_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\DadaClamCan_dried_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\DadaClamCan_burned_co.paa","Source_Files\DadaFoods\Configs\Food\Canned\data\DadaClamCan_rotten_co.paa"};
 		rotationFlags = 34;
 		itemSize[] = {2,1};
 		weight = 2.5;
@@ -1766,7 +1766,7 @@ class CfgVehicles
 		color = "Clam";
 		model = "\dz\gear\food\can_sardines.p3d";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaClamCan_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaClamCan_cooked_co.paa"};
 		rotationFlags = 34;
 		itemSize[] = {2,1};
 		weight = 10;
@@ -1794,7 +1794,7 @@ class CfgVehicles
 		color = "Clam";
 		model = "\dz\gear\food\can_sardines_open.p3d";
 		hiddenSelections[] = {"camoGround"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaClamCan_co.paa"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\DadaClamCan_cooked_co.paa"};
 		class Nutrition
 		{
 			fullnessIndex = 3;

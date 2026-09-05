@@ -140,7 +140,7 @@ class Craft_SealCan extends RecipeBase
 		m_IngredientAddHealth[0] = -10;	// -1 = do nothing
 		m_IngredientSetHealth[0] = -1; 	// -1 = do nothing
 		m_IngredientAddQuantity[0] = 0;// -1 = do nothing
-		m_IngredientDestroy[0] = -1;	// -1 = do nothing
+		m_IngredientDestroy[0] = false;	// -1 = do nothing
 		m_IngredientUseSoftSkills[0] = false;	// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2					
@@ -149,7 +149,7 @@ class Craft_SealCan extends RecipeBase
 		m_IngredientAddHealth[1] = 0;	// -1 = do nothing
 		m_IngredientSetHealth[1] = -1; 	// -1 = do nothing
 		m_IngredientAddQuantity[1] = -1;// -1 = do nothing
-		m_IngredientDestroy[1] = 1;		// destroy secondary ingredient
+		m_IngredientDestroy[1] = true;		// destroy secondary ingredient
 		m_IngredientUseSoftSkills[1] = false;	// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//result 1

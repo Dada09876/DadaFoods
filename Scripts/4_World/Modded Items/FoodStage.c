@@ -1,0 +1,1 @@
+class SaltChunk extends Edible_Base{};

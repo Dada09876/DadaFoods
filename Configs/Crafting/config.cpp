@@ -32,6 +32,7 @@ class CfgVehicles
 		inventorySlot[] = {"DadaCheeseMold1"};
 		hiddenSelections[] = {"zbytek"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Crafting\data\CheeseMold_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Crafting\data\cheesemold.rvmat"};
 		destroyOnEmpty = 0;
 		varQuantityDestroyOnMin = 0;
 		class DamageSystem
@@ -41,7 +42,7 @@ class CfgVehicles
 				class Health
 				{
 					hitpoints = 3200;
-					healthLevels[] = {{1,{"DZ\gear\cooking\data\cooking_pot.rvmat"}},{0.7,{"DZ\gear\cooking\data\cooking_pot.rvmat"}},{0.5,{"DZ\gear\cooking\data\cooking_pot_damage.rvmat"}},{0.3,{"DZ\gear\cooking\data\cooking_pot_damage.rvmat"}},{0,{"DZ\gear\cooking\data\cooking_pot_destruct.rvmat"}}};
+					healthLevels[] = {{1,{"Source_Files\DadaFoods\Configs\Crafting\data\cheesemold.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Crafting\data\cheesemold.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Crafting\data\cheesemold_damage.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Crafting\data\cheesemold_damage.rvmat"}},{0,{"Source_Files\DadaFoods\Configs\Crafting\data\cheesemold_destruct.rvmat"}}};
 				};
 			};
 		};

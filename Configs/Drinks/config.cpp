@@ -843,9 +843,9 @@ class CfgVehicles
 		canBeSplit = 1;
 		displayName = "Milkshake";
 		descriptionShort = "Shake it like a polaroid picture";
-		hiddenSelections[] = {"cs_raw","zbytek"};
-		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\Milkshake_co.paa","Source_Files\DadaFoods\Configs\Drinks\data\Milkshake_co.paa"};
-		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Drinks\data\MilkCarton.rvmat","Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"};
+		hiddenSelections[] = {"zbytek"};
+		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Drinks\data\Milkshake_co.paa"};
+		hiddenSelectionsMaterials[] = {"Source_Files\DadaFoods\Configs\Drinks\data\MilkCarton.rvmat"};
 		model = "Source_Files\DadaFoods\Configs\Drinks\data\Milkshake.p3d";
 		weight = 3;
 		itemSize[] = {1,3};
@@ -890,7 +890,7 @@ class CfgVehicles
 				class Health
 				{
 					hitpoints = 50;
-					healthLevels[] = {{1,{"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}},{0,{"Source_Files\DadaFoods\Configs\Drinks\data\Liquid.rvmat"}}};
+					healthLevels[] = {{1,{"Source_Files\DadaFoods\Configs\Drinks\data\MilkCarton.rvmat"}},{0.7,{"Source_Files\DadaFoods\Configs\Drinks\data\MilkCarton.rvmat"}},{0.5,{"Source_Files\DadaFoods\Configs\Drinks\data\MilkCarton.rvmat"}},{0.3,{"Source_Files\DadaFoods\Configs\Drinks\data\MilkCarton.rvmat"}},{0,{"Source_Files\DadaFoods\Configs\Drinks\data\MilkCarton.rvmat"}}};
 				};
 			};
 		};

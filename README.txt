@@ -59,5 +59,8 @@ Special thanks to
 	Fonts:
 		"Satisfy ttf" (http://www.apache.org/licenses/), Apache License, Version 2.0, January 2004 (https://fonts.google.com/specimen/Satisfy), Google fonts
 		"Darts" (http://scripts.sil.org/OFL) This Font Software is licensed under the SIL Open Font License, Version 1.1., (https://www.p-darts.jp/font/dartsfont/), Project Darts
+
+USE OF AI FOR:
+I used gemini for modifying some textures to fit Dayz style. I then used photoshop for further modifications.
   
                         
