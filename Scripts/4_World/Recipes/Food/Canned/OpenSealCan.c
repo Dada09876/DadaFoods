@@ -100,21 +100,21 @@ class Craft_OpenCan extends RecipeBase
 		return true;
 	}
 
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
-	{
-		ItemBase can;
-		Class.CastTo(can, ingredients[0]);
-		ItemBase tool;
-		Class.CastTo(tool, ingredients[1]);
-		PlayerBase playerPB;
-		Class.CastTo(playerPB, player);
-		OpenItem.OpenAndSwitch(tool, can, playerPB, specialty_weight);
+	override void Do(ItemBase ingredients[], PlayerBase player, array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
+     {
+        ItemBase can;
+        Class.CastTo(can, ingredients[0]);
+        ItemBase tool;
+        Class.CastTo(tool, ingredients[1]);
+        PlayerBase playerPB;
+        Class.CastTo(playerPB, player);
+        OpenItem.OpenAndSwitch(tool, can, playerPB, specialty_weight);
 		string newItemName = string.Format("%1_Opened", ingredients[0].GetType()); 
-		//DamageTool(tool,player);
-	}
+        //DamageTool(tool,player);
+     }
 };
 
-class Craft_SealCan extends RecipeBase  
+class Craft_SealCan extends RecipeBase
 {
 	override void Init()
 	{
@@ -153,42 +153,40 @@ class Craft_SealCan extends RecipeBase
 		m_IngredientUseSoftSkills[1] = false;	// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//result 1
-		AddResult("Dada_PreservedFoodCan_");	// recipe result
-		
-		m_ResultSetFullQuantity[0] = -1;	// -1 = do nothing
-		m_ResultSetQuantity[0] = -1;			// result quantity
-		m_ResultSetHealth[0] = -1;			// -1 = do nothing
-		m_ResultInheritsHealth[0] = -2;		// -1 = do nothing
-		m_ResultInheritsColor[0] = 1;		// -1 = do nothing
+		AddResult("Dada_PreservedFoodCan_");    // recipe result
+        m_ResultSetFullQuantity[0] = -1;    // -1 = do nothing
+        m_ResultSetQuantity[0] = -1;            // result quantity
+        m_ResultSetHealth[0] = -1;          // -1 = do nothing
+        m_ResultInheritsHealth[0] = -2;     // -1 = do nothing
+        m_ResultInheritsColor[0] = 1;       // -1 = do nothing
 		m_ResultToInventory[0] = -2;		// -1 = do nothing
 		m_ResultUseSoftSkills[0] = false;	// set 'true' to allow modification of the values by soft skillson this result
 		m_ResultReplacesIngredient[0] = -1;	// -1 = do nothing
 	}
 
-  override bool CanDo(ItemBase ingredients[], PlayerBase player)
+  	override bool CanDo(ItemBase ingredients[], PlayerBase player)
 	{
-    // check to see if the food can is baked or boiled. do not let them can the food if it is not cooked
-    Dada_RawFoodCan_Colorbase can = Dada_RawFoodCan_Colorbase.Cast(ingredients[1]);
-    if (can && (can.IsFoodBaked() || can.IsFoodBoiled() || can.IsFoodDried()))
-    {
-      return true;    
-    }
-    return false;
+		// check to see if the food can is baked or boiled. do not let them can the food if it is not cooked
+		Dada_RawFoodCan_Colorbase can = Dada_RawFoodCan_Colorbase.Cast(ingredients[1]);
+		if (can && (can.IsFoodBaked() || can.IsFoodBoiled() || can.IsFoodDried()))
+		{
+		return true;    
+		}
+		return false;
 	}
 
-	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)
+	override void Do(ItemBase ingredients[], PlayerBase player, array<ItemBase> results, float specialty_weight)
 	{
-	    Dada_RawFoodCan_Colorbase source = Dada_RawFoodCan_Colorbase.Cast(ingredients[1]);
-	    Dada_PreservedFoodCan_Colorbase result = Dada_PreservedFoodCan_Colorbase.Cast(results[0]);
-	
-	    if (source && result)
-	    {
-	        result.SetQuantity(source.GetQuantity());
-	        result.SetAgents(source.GetAgents());
-	        ///result.TransferFoodStage(source);
-	    }
-	}
+		Dada_RawFoodCan_Colorbase source = Dada_RawFoodCan_Colorbase.Cast(ingredients[1]);
+		Dada_PreservedFoodCan_Colorbase result = Dada_PreservedFoodCan_Colorbase.Cast(results[0]);
 
-    Debug.Log("Dada_RawFoodCanGoods: Recipe Do method called","recipes");
+		if (source && result)
+		{
+			result.SetQuantity(source.GetQuantity());
+			result.TransferAgents(source.GetAgents());
+			///result.TransferFoodStage(source);
+		}
+
+		Debug.Log("Dada_RawFoodCanGoods: Recipe Do method called","recipes");
 	}
 };
