@@ -1,0 +1,4 @@
+enum DadaFoodStageType : FoodStageType
+{
+	PRESERVED
+};
