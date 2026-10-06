@@ -98,5 +98,6 @@ modded class ModItemRegisterCallbacks
        /* pType.AddItemInHandsProfileIK("srpLargeCarvingBlock", "dz/anims/workspaces/player/player_main/props/player_main_heavy_generator.asi",pBehavior, "dz/anims/anm/player/ik/heavy/generator.anm");
         pType.AddItemInHandsProfileIK("srpXtraLargeCarvingBlock", "dz/anims/workspaces/player/player_main/props/player_main_heavy_generator.asi",pBehavior, "dz/anims/anm/player/ik/heavy/generator.anm");
         pType.AddItemInHandsProfileIK("srpGinormousCarvingBlock", "dz/anims/workspaces/player/player_main/player_main_heavy.asi",pBehavior, "dz/anims/anm/player/ik/heavy/metal_sheet.anm");*/
+        //"dz/anims/anm/player/ik/two_handed/CookingPot.anm"
     };
 };
