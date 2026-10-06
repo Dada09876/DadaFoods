@@ -62,5 +62,6 @@ Special thanks to
 
 USE OF AI FOR:
 I used gemini for modifying some textures to fit Dayz style. I then used photoshop for further modifications.
+Used GPT for setting up a new foodstage
   
                         
