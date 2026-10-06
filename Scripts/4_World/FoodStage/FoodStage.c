@@ -25,4 +25,94 @@ modded class FoodStage
 
 		return super.GetFoodStageNameHash(food_stage_type);
 	}
+
+	override void SetupFoodStageMapping()
+	{
+		super.SetupFoodStageMapping();
+
+		string foodType = m_FoodItem.GetType();
+		int hashedFood = foodType.Hash();
+
+		map<int, ref map<int, ref array<float>>> foodStagesMap;
+
+		if (!m_EdibleBasePropertiesMap.Find(hashedFood, foodStagesMap))
+			return;
+
+		int preservedHash = GetFoodStageNameHash(PRESERVED);
+
+		if (foodStagesMap.Contains(preservedHash))
+			return;
+
+		map<int, ref array<float>> stagePropertiesMap = new map<int, ref array<float>>;
+
+		array<float> visual_properties = new array<float>;
+		string path = string.Format("CfgVehicles %1 Food FoodStages Preserved visual_properties", foodType);
+		g_Game.ConfigGetFloatArray(path, visual_properties);
+		stagePropertiesMap.Insert(VISUAL_PROPERTIES_HASH, visual_properties);
+
+		array<float> nutrition_properties = new array<float>;
+		path = string.Format("CfgVehicles %1 Food FoodStages Preserved nutrition_properties", foodType);
+		g_Game.ConfigGetFloatArray(path, nutrition_properties);
+		stagePropertiesMap.Insert(NUTRITION_PROPERTIES_HASH, nutrition_properties);
+
+		array<float> cooking_properties = new array<float>;
+		path = string.Format("CfgVehicles %1 Food FoodStages Preserved cooking_properties", foodType);
+		g_Game.ConfigGetFloatArray(path, cooking_properties);
+		stagePropertiesMap.Insert(COOKING_PROPERTIES_HASH, cooking_properties);
+
+		foodStagesMap.Insert(preservedHash, stagePropertiesMap);
+	}
+
+	override void SetupFoodStageTransitionMapping()
+	{
+		super.SetupFoodStageTransitionMapping();
+
+		string foodType = m_FoodItem.GetType();
+		int hashedFood = foodType.Hash();
+
+		map<int, ref map<int, ref array<int>>> foodStagesMap;
+
+		if (!m_EdibleBaseTransitionsMap.Find(hashedFood, foodStagesMap))
+			return;
+
+		int preservedHash = GetFoodStageNameHash(PRESERVED);
+
+		if (foodStagesMap.Contains(preservedHash))
+			return;
+
+		map<int, ref array<int>> stageTransitionsMap = new map<int, ref array<int>>;
+
+		string config_path = string.Format("CfgVehicles %1 Food FoodStageTransitions Preserved", foodType);
+
+		for (int j = 0; j < g_Game.ConfigGetChildrenCount(config_path); ++j)
+		{
+			array<int> stageTransition = new array<int>;
+			string classCheck;
+
+			g_Game.ConfigGetChildName(config_path, j, classCheck);
+
+			string transition_path = string.Format("%1 %2", config_path, classCheck);
+
+			if (g_Game.ConfigIsExisting(transition_path))
+			{
+				int transitionClassHash = classCheck.Hash();
+
+				stageTransition.Insert(g_Game.ConfigGetInt(string.Format("%1 transition_to", transition_path)));
+
+				stageTransition.Insert(g_Game.ConfigGetInt(string.Format("%1 cooking_method", transition_path)));
+
+				stageTransitionsMap.Insert(transitionClassHash, stageTransition);
+
+				if (m_FoodStageTransitionKeys.Find(transitionClassHash) == -1)
+					m_FoodStageTransitionKeys.Insert(transitionClassHash);
+			}
+		}
+
+		foodStagesMap.Insert(preservedHash, stageTransitionsMap);
+	}
+
+	bool IsFoodPreserved()
+	{
+		return GetFoodStageType() == PRESERVED;
+	}
 };
