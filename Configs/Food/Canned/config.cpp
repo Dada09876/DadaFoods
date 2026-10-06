@@ -258,6 +258,7 @@ class CfgVehicles
 			};
 		};
 	};
+
 	class Dada_PreservedFoodCan_Colorbase_Opened: Edible_Base
 	{
 		scope = 0;

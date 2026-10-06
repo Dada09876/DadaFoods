@@ -19,5 +19,25 @@ modded class OpenAndSwitchLambda
 		{
             target.GetFoodStage().SetFoodStageType(previousStage);
         }
-	}
+
+        else if (previousStage == FoodStageType.RAW)
+        {
+            int randomStage = Math.RandomInt(0, 3);
+
+            switch (randomStage)
+            {
+                case 0:
+                    target.GetFoodStage().SetFoodStageType(FoodStageType.BAKED);
+                    break;
+
+                case 1:
+                    target.GetFoodStage().SetFoodStageType(FoodStageType.BOILED);
+                    break;
+
+                case 2:
+                    target.GetFoodStage().SetFoodStageType(FoodStageType.DRIED);
+                    break;
+            }
+        }
+    }
 };

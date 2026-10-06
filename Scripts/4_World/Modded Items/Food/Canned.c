@@ -30,10 +30,17 @@ class Dada_RawFoodCan_Colorbase extends Edible_Base
 
 class Dada_PreservedFoodCan_Colorbase extends Edible_Base 
 {
-  override bool CanDecay()
-	{
-		return false;
-	}
+	override void EEInit()
+		{
+			super.EEInit();
+
+			GetFoodStage().SetFoodStageType(FoodStage.PRESERVED);
+			GetFoodStage().SetPreviousFoodStageType(FoodStageType.RAW);
+		}
+	override bool CanDecay()
+		{
+			return false;
+		}
 };
 
 class Dada_PreservedFoodCan_Colorbase_Opened: Edible_Base
