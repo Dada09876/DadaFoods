@@ -182,9 +182,13 @@ class Craft_SealCan extends RecipeBase
 
 		if (source && result)
 		{
+			FoodStageType sourceStage = source.GetFoodStage().GetFoodStageType();
+
 			result.SetQuantity(source.GetQuantity());
 			result.TransferAgents(source.GetAgents());
-			///result.TransferFoodStage(source);
+
+			result.GetFoodStage().SetPreviousFoodStageType(sourceStage);
+			result.GetFoodStage().SetFoodStageType(FoodStage.PRESERVED);
 		}
 
 		Debug.Log("Dada_RawFoodCanGoods: Recipe Do method called","recipes");
