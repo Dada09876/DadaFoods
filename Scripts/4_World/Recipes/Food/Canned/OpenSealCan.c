@@ -185,7 +185,7 @@ class Craft_SealCan extends RecipeBase
 	    {
 	        result.SetQuantity(source.GetQuantity());
 	        result.SetAgents(source.GetAgents());
-	        result.TransferFoodStage(source);
+	        ///result.TransferFoodStage(source);
 	    }
 	}
 
