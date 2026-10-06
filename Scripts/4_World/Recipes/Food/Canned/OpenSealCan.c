@@ -178,12 +178,15 @@ class Craft_SealCan extends RecipeBase
 
 	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)
 	{
-    Dada_RawFoodCan_Colorbase can = Dada_RawFoodCan_Colorbase.Cast(ingredients[1]);
-    if (can && results[0])
-    {
-      // transfer the quantity properties
-      results[0].SetQuantity(can.GetQuantity());
-    }
+    	Dada_RawFoodCan_Colorbase source = Dada_RawFoodCan_Colorbase.Cast(ingredients[1]);
+    	Dada_PreservedFoodCan_Colorbase result = Dada_PreservedFoodCan_Colorbase.Cast(results[0]);
+
+    	if (source && result)
+    	{
+       		result.SetQuantity(source.GetQuantity());
+        	result.SetAgents(source.GetAgents());
+    	}
+	}
     Debug.Log("Dada_RawFoodCanGoods: Recipe Do method called","recipes");
 	}
 };
