@@ -5,6 +5,8 @@ modded class FoodStage
 
 	static int m_StagePreservedHash = 0;
 
+	protected FoodStageType m_PreviousFoodStageType;
+
 	override static string GetFoodStageName(FoodStageType food_stage_type)
 	{
 		if (food_stage_type == PRESERVED)
@@ -24,6 +26,31 @@ modded class FoodStage
 		}
 
 		return super.GetFoodStageNameHash(food_stage_type);
+	}
+
+	override void SetFoodStageType(FoodStageType food_stage_type)
+	{
+		FoodStageType stageOld = m_FoodStageType;
+
+		if (food_stage_type == PRESERVED)
+		{
+			if (stageOld == FoodStageType.BAKED || stageOld == FoodStageType.BOILED || stageOld == FoodStageType.DRIED)
+			{m_PreviousFoodStageType = stageOld;}
+		}
+
+		m_FoodStageType = food_stage_type;
+		OnFoodStageChange(stageOld, food_stage_type);
+		GetFoodItem().Synchronize();
+	}
+
+	FoodStageType GetPreviousFoodStageType()
+	{
+		return m_PreviousFoodStageType;
+	}
+
+	void SetPreviousFoodStageType(FoodStageType stage_type)
+	{
+		m_PreviousFoodStageType = stage_type;
 	}
 
 	override void SetupFoodStageMapping()
@@ -114,5 +141,21 @@ modded class FoodStage
 	bool IsFoodPreserved()
 	{
 		return GetFoodStageType() == PRESERVED;
+	}
+	override void OnStoreSave(ParamsWriteContext ctx)
+	{
+		super.OnStoreSave(ctx);
+		ctx.Write(m_PreviousFoodStageType);
+	}
+
+	override bool OnStoreLoad(ParamsReadContext ctx, int version)
+	{
+		if (!super.OnStoreLoad(ctx, version))
+			return false;
+
+		if (!ctx.Read(m_PreviousFoodStageType))
+			m_PreviousFoodStageType = FoodStageType.NONE;
+
+		return true;
 	}
 };
