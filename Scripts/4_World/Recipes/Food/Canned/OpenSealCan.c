@@ -104,10 +104,13 @@ class Craft_OpenCan extends RecipeBase
      {
         ItemBase can;
         Class.CastTo(can, ingredients[0]);
+
         ItemBase tool;
         Class.CastTo(tool, ingredients[1]);
+
         PlayerBase playerPB;
         Class.CastTo(playerPB, player);
+		
         OpenItem.OpenAndSwitch(tool, can, playerPB, specialty_weight);
 		string newItemName = string.Format("%1_Opened", ingredients[0].GetType()); 
         //DamageTool(tool,player);
