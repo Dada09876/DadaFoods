@@ -138,6 +138,14 @@ modded class FoodStage
 		foodStagesMap.Insert(preservedHash, stageTransitionsMap);
 	}
 
+	override FoodStageType GetNextFoodStageType(CookingMethodType cooking_method)
+	{
+		if (GetFoodStageType() == PRESERVED)
+			return m_PreviousFoodStageType;
+
+		return super.GetNextFoodStageType(cooking_method);
+	}
+
 	bool IsFoodPreserved()
 	{
 		return GetFoodStageType() == PRESERVED;
