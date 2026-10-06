@@ -136,6 +136,7 @@ class CfgVehicles
 			};
 		};
 		class Burned{};
+		class Preserved{};
 	};
 
 	class Edible_Base;
@@ -209,7 +210,7 @@ class CfgVehicles
 		rotationFlags = 63;
 		itemSize[] = {1,2};
 		weight = 440;
-		varQuantityInit = 0;
+		varQuantityInit = 440;
 		varQuantityMin = 0;
 		varQuantityMax = 450;
 		isMeleeWeapon = 1;
@@ -266,10 +267,11 @@ class CfgVehicles
 		model = "\dz\gear\food\food_can_open.p3d";
 		itemSize[] = {1,2};
 		weight = 2;
-		varQuantityInit = 0;
+		varQuantityInit = 440;
 		varQuantityMin = 0;
 		varQuantityMax = 450;
 		isMeleeWeapon = 1;
+		inventorySlot[] = {"DirectCookingA","DirectCookingB","DirectCookingC","SmokingA","SmokingB","SmokingC","SmokingD"};
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -369,7 +371,8 @@ class CfgVehicles
 			};
 			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
-};
+	};
+	
 	class Dada_PreservedFoodCan_LSVeggies: Dada_PreservedFoodCan_Colorbase
 	{
 		scope = 2;
@@ -379,6 +382,7 @@ class CfgVehicles
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_LS-Veggies_cooked_co.paa"};
 	};
+
 	class Dada_PreservedFoodCan_LSVeggies_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
 		scope = 2;
@@ -460,6 +464,18 @@ class CfgVehicles
 		color = "STAGham";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_cooked_co.paa"};
+		class Food
+		{
+			class FoodStages
+			{
+				class Preserved
+				{
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {0,0,0,0,0,0};
+					cooking_properties[] = {0,0};
+				};
+			};
+		};
 	};
 	class Dada_PreservedFoodCan_STAGham_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{
@@ -469,15 +485,51 @@ class CfgVehicles
 		color = "STAGham";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_cooked_co.paa"};
-		class Nutrition
+		class Food
 		{
-			fullnessIndex = 3;
-			energy = 583;
-			water = 40;
-			nutritionalIndex = 1;
-			toxicity = 0;
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {4,83,67,1,0,4};
+					cooking_properties[] = {0,0};
+				};
+				class Rotten
+				{
+					visual_properties[] = {-1,-1,5};
+					nutrition_properties[] = {10,42,27,1,0,"4 +     16"};
+					cooking_properties[] = {0,0};
+				};
+				class Baked
+				{
+					visual_properties[] = {0,1,1};
+					nutrition_properties[] = {3,583,40,1,0};
+					cooking_properties[] = {70,45};
+				};
+				class Boiled
+				{
+					visual_properties[] = {0,2,2};
+					nutrition_properties[] = {3,500,107,1,0};
+					cooking_properties[] = {70,55};
+				};
+				class Dried
+				{
+					visual_properties[] = {0,3,3};
+					nutrition_properties[] = {3,500,13,1,0};
+					cooking_properties[] = {70,120,80};
+				};
+				class Burned
+				{
+					visual_properties[] = {0,4,4};
+					nutrition_properties[] = {5,83,0,1,0,16};
+					cooking_properties[] = {100,90};
+				};
+			};
+			class FoodStageTransitions: DadaCanStageTransitions{};
 		};
 	};
+
 	class Dada_RawFoodCan_ESPENChunkySoup: Dada_RawFoodCan_Colorbase
 	{
 		scope = 2;
