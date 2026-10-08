@@ -10,6 +10,13 @@ modded class OpenAndSwitchLambda
 		if (!source || !target)
 			return;
 
+        if (source.IsFoodPreserved())
+        { 
+            target.TransferAgents(source.GetAgents());
+            target.SetTemperature(source.GetTemperature());
+            target.SetPredatorDerived(source.IsPredatorDerived());
+        }
+
 		if (!source.IsFoodPreserved())
 			return;
 

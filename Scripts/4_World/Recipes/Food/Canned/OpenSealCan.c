@@ -187,9 +187,11 @@ class Craft_SealCan extends RecipeBase
 		{
 			FoodStageType sourceStage = source.GetFoodStage().GetFoodStageType();
 
-			result.SetQuantity(source.GetQuantity());
-			result.TransferAgents(source.GetAgents());
-
+            result.SetQuantity(source.GetQuantity());
+            result.TransferAgents(source.GetAgents());
+			result.SetTemperature(source.GetTemperature());
+			result.SetPredatorDerived(source.IsPredatorDerived());
+			
 			result.GetFoodStage().SetPreviousFoodStageType(sourceStage);
 			result.GetFoodStage().SetFoodStageType(FoodStage.PRESERVED);
 		}

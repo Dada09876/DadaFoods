@@ -183,6 +183,61 @@ class Craft_Dada_BaseRecipe extends RecipeBase
 
 	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
@@ -262,6 +317,61 @@ class Craft_DadaTemp_BaseRecipe extends RecipeBase
 
    	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
@@ -340,6 +450,61 @@ class Craft_DadaTemp1_BaseRecipe extends RecipeBase
 
    	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
@@ -425,6 +590,61 @@ class Craft_DadaTempTemp1_BaseRecipe extends RecipeBase
 
    	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
@@ -514,6 +734,61 @@ class Craft_DadaTempStage_BaseRecipe extends RecipeBase
 
    	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
@@ -602,6 +877,61 @@ class Craft_DadaTemp1Stage1_BaseRecipe extends RecipeBase
 
    	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
@@ -696,6 +1026,61 @@ class Craft_DadaTempStageTemp1_BaseRecipe extends RecipeBase
 
    	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
@@ -790,6 +1175,61 @@ class Craft_DadaTempTemp1Stage1_BaseRecipe extends RecipeBase
 
    	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
@@ -893,6 +1333,61 @@ class Craft_DadaTempStageTemp1Stage1_BaseRecipe extends RecipeBase
 
    	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
@@ -975,6 +1470,61 @@ class Craft_DadaTempLiquid_BaseRecipe extends RecipeBase
 
    	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
@@ -1060,6 +1610,61 @@ class Craft_DadaTemp1Liquid1_BaseRecipe extends RecipeBase
 
    	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
@@ -1151,6 +1756,61 @@ class Craft_DadaTempLiquidTemp1_BaseRecipe extends RecipeBase
 
    	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
@@ -1243,6 +1903,61 @@ class Craft_DadaTempTemp1Liquid1_BaseRecipe extends RecipeBase
 
    	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
@@ -1343,6 +2058,61 @@ class Craft_DadaTempStageTemp1Liquid1_BaseRecipe extends RecipeBase
 
    	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
@@ -1443,6 +2213,61 @@ class Craft_DadaTempLiquidTemp1Stage1_BaseRecipe extends RecipeBase
 
    	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
@@ -1538,7 +2363,61 @@ class Craft_DadaTempLiquidTemp1Liquid1_BaseRecipe extends RecipeBase
 
    	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
+		ItemBase result;
+    	Class.CastTo(result, results[0]);
+		if (result)
+			{
+				Edible_Base ingredient0 = Edible_Base.Cast(ingredients[0]);
+				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
+				Edible_Base edibleResult = Edible_Base.Cast(result);
+
+				if (ingredient0)
+					result.TransferAgents(ingredient0.GetAgents());
+
+				if (ingredient1)
+					result.TransferAgents(ingredient1.GetAgents());
+
+				if (edibleResult)
+				{
+					bool predatorDerived = false;
+
+					if (ingredient0 && ingredient0.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredient1 && ingredient1.IsPredatorDerived())
+						predatorDerived = true;
+
+					if (ingredients[0].GetType() == "WolfSteakMeat" || ingredients[0].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					if (ingredients[1].GetType() == "WolfSteakMeat" || ingredients[1].GetType() == "BearSteakMeat")
+						predatorDerived = true;
+
+					edibleResult.SetPredatorDerived(predatorDerived);
+				}
+				
+				float quantity0;
+				float quantity1;
+
+				if (m_IngredientDestroy[0])
+					quantity0 = ingredients[0].GetQuantity();
+				else
+					quantity0 = -m_IngredientAddQuantity[0];
+
+				if (m_IngredientDestroy[1])
+					quantity1 = ingredients[1].GetQuantity();
+				else
+					quantity1 = -m_IngredientAddQuantity[1];
+
+				float totalQuantity = quantity0 + quantity1;
+
+				if (totalQuantity > 0)
+				{
+					float temperature = ((ingredients[0].GetTemperature() * quantity0) + (ingredients[1].GetTemperature() * quantity1)) / totalQuantity;
+					result.SetTemperature(temperature);
+				}
+			}
+
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-
