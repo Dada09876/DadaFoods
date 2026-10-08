@@ -124,6 +124,7 @@ class Craft_DadaTempStageLiquidTemp1Stage1Liquid1_BaseRecipe extends RecipeBase
 
 class Craft_Dada_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -191,10 +192,10 @@ class Craft_Dada_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
 
 				if (edibleResult)
@@ -244,6 +245,7 @@ class Craft_Dada_BaseRecipe extends RecipeBase
 
 class Craft_DadaTemp_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -325,10 +327,10 @@ class Craft_DadaTemp_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
 
 				if (edibleResult)
@@ -348,6 +350,7 @@ class Craft_DadaTemp_BaseRecipe extends RecipeBase
 						predatorDerived = true;
 
 					edibleResult.SetPredatorDerived(predatorDerived);
+
 				}
 				
 				float quantity0;
@@ -378,6 +381,7 @@ class Craft_DadaTemp_BaseRecipe extends RecipeBase
 
 class Craft_DadaTemp1_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -458,10 +462,10 @@ class Craft_DadaTemp1_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
 
 				if (edibleResult)
@@ -511,6 +515,7 @@ class Craft_DadaTemp1_BaseRecipe extends RecipeBase
 
 class Craft_DadaTempTemp1_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -598,10 +603,10 @@ class Craft_DadaTempTemp1_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
 
 				if (edibleResult)
@@ -621,6 +626,7 @@ class Craft_DadaTempTemp1_BaseRecipe extends RecipeBase
 						predatorDerived = true;
 
 					edibleResult.SetPredatorDerived(predatorDerived);
+					
 				}
 				
 				float quantity0;
@@ -651,6 +657,7 @@ class Craft_DadaTempTemp1_BaseRecipe extends RecipeBase
 
 class Craft_DadaTempStage_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -742,10 +749,10 @@ class Craft_DadaTempStage_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
 
 				if (edibleResult)
@@ -795,6 +802,7 @@ class Craft_DadaTempStage_BaseRecipe extends RecipeBase
 
 class Craft_DadaTemp1Stage1_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -885,10 +893,10 @@ class Craft_DadaTemp1Stage1_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
 
 				if (edibleResult)
@@ -938,6 +946,7 @@ class Craft_DadaTemp1Stage1_BaseRecipe extends RecipeBase
 
 class Craft_DadaTempStageTemp1_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -1034,10 +1043,10 @@ class Craft_DadaTempStageTemp1_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
 
 				if (edibleResult)
@@ -1087,6 +1096,7 @@ class Craft_DadaTempStageTemp1_BaseRecipe extends RecipeBase
 
 class Craft_DadaTempTemp1Stage1_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -1183,10 +1193,10 @@ class Craft_DadaTempTemp1Stage1_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
 
 				if (edibleResult)
@@ -1236,6 +1246,7 @@ class Craft_DadaTempTemp1Stage1_BaseRecipe extends RecipeBase
 
 class Craft_DadaTempStageTemp1Stage1_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -1341,10 +1352,10 @@ class Craft_DadaTempStageTemp1Stage1_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
 
 				if (edibleResult)
@@ -1395,6 +1406,7 @@ class Craft_DadaTempStageTemp1Stage1_BaseRecipe extends RecipeBase
 
 class Craft_DadaTempLiquid_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -1478,10 +1490,10 @@ class Craft_DadaTempLiquid_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
 
 				if (edibleResult)
@@ -1531,6 +1543,7 @@ class Craft_DadaTempLiquid_BaseRecipe extends RecipeBase
 
 class Craft_DadaTemp1Liquid1_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -1618,10 +1631,10 @@ class Craft_DadaTemp1Liquid1_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
 
 				if (edibleResult)
@@ -1672,6 +1685,7 @@ class Craft_DadaTemp1Liquid1_BaseRecipe extends RecipeBase
 
 class Craft_DadaTempLiquidTemp1_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -1764,10 +1778,10 @@ class Craft_DadaTempLiquidTemp1_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
 
 				if (edibleResult)
@@ -1818,6 +1832,7 @@ class Craft_DadaTempLiquidTemp1_BaseRecipe extends RecipeBase
 
 class Craft_DadaTempTemp1Liquid1_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -1911,10 +1926,10 @@ class Craft_DadaTempTemp1Liquid1_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
 
 				if (edibleResult)
@@ -1965,6 +1980,7 @@ class Craft_DadaTempTemp1Liquid1_BaseRecipe extends RecipeBase
 
 class Craft_DadaTempStageTemp1Liquid1_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -2066,12 +2082,11 @@ class Craft_DadaTempStageTemp1Liquid1_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
-
 				if (edibleResult)
 				{
 					bool predatorDerived = false;
@@ -2120,6 +2135,7 @@ class Craft_DadaTempStageTemp1Liquid1_BaseRecipe extends RecipeBase
 
 class Craft_DadaTempLiquidTemp1Stage1_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -2221,10 +2237,10 @@ class Craft_DadaTempLiquidTemp1Stage1_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
 
 				if (edibleResult)
@@ -2275,6 +2291,7 @@ class Craft_DadaTempLiquidTemp1Stage1_BaseRecipe extends RecipeBase
 
 class Craft_DadaTempLiquidTemp1Liquid1_BaseRecipe extends RecipeBase
 {
+	protected bool m_TransferAgents = true;
 	override void Init()
 	{
 		m_Name = "Craft Food";
@@ -2371,10 +2388,10 @@ class Craft_DadaTempLiquidTemp1Liquid1_BaseRecipe extends RecipeBase
 				Edible_Base ingredient1 = Edible_Base.Cast(ingredients[1]);
 				Edible_Base edibleResult = Edible_Base.Cast(result);
 
-				if (ingredient0)
+				if (ingredient0 && m_TransferAgents)
 					result.TransferAgents(ingredient0.GetAgents());
 
-				if (ingredient1)
+				if (ingredient1 && m_TransferAgents)
 					result.TransferAgents(ingredient1.GetAgents());
 
 				if (edibleResult)

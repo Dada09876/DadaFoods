@@ -44,7 +44,7 @@ class DadaCannibal_PreservedFoodCan_Colorbase extends DadaCannibal_Base
 	}
 };
 
-class DadaCannibal_PreservedFoodCan_Colorbase_Opened: Edible_Base
+class DadaCannibal_PreservedFoodCan_Colorbase_Opened: DadaCannibal_Base
 {};
 
 class DadaCannibal_EyeballSoup extends DadaCannibal_Base

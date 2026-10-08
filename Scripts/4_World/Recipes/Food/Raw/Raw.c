@@ -3,6 +3,7 @@ class CraftDadaRaw_Salad extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Salad";
 
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -32,6 +33,7 @@ class CraftDadaRaw_TomatoSalad extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Tomato Salad";
 
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -56,6 +58,7 @@ class CraftDadaRaw_Rice extends Craft_DadaTempTemp1Liquid1_BaseRecipe
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Rice";
 		
 		m_MinQuantityIngredient[0] = 30;//-1 = disable check
@@ -119,6 +122,7 @@ class CraftDadaRaw_PokeBowl extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Poke Bowl";
 	
 		m_MinQuantityIngredient[0] = 150;//-1 = disable check
@@ -153,6 +157,7 @@ class CraftDadaRaw_CerealCrunchin_Frosties extends Craft_DadaTempTemp1Stage1_Bas
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Cereal Bowl";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -186,6 +191,7 @@ class CraftDadaRawCerealCrunchin_Nesquik extends Craft_DadaTempTemp1Stage1_BaseR
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Chocolate Cereal Bowl";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -219,6 +225,7 @@ class CraftDadaRaw_CerealCrunchin_Kosmostar extends Craft_DadaTempTemp1Stage1_Ba
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Kosmostar Cereal Bowl";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -252,6 +259,7 @@ class CraftDadaRaw_SushiMaki extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Maki";
 	
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -286,6 +294,7 @@ class CraftDadaRaw_SushiOnigiri extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Onigiri";
 		
 		m_MinQuantityIngredient[0] = 50;//-1 = disable check
@@ -320,6 +329,7 @@ class CraftDadaRaw_SmallButter extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft little bit of butter";
 		
 		m_MinQuantityIngredient[0] = 150;//-1 = disable check
@@ -358,6 +368,7 @@ class CraftDadaRaw_BigButter extends Craft_DadaTempStageTemp1Stage1_BaseRecipe
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft big chunk of butter";
 
 		m_MinQuantityIngredient[0] = 300;//-1 = disable check
@@ -394,6 +405,7 @@ class CraftDadaRaw_Yogourt extends Craft_DadaTempStageTemp1_BaseRecipe
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Yogurt";
 		
 		m_MinQuantityIngredient[0] = 100;//-1 = disable check
@@ -421,10 +433,12 @@ class CraftDadaRaw_Yogourt extends Craft_DadaTempStageTemp1_BaseRecipe
 		m_ResultSetQuantity[0] = 150;//-1 = do nothing
 	}
 };	
-class CraftFreshCheese_Mozza extends RecipeBase
+class CraftFreshCheese_Mozza extends Craft_DadaTempStage_BaseRecipe
 {
 	override void Init()
 	{
+		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Mozzarella";
 		m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
 		m_AnimationLength = 1;//animation length in relative time units
@@ -519,8 +533,8 @@ class CraftFreshCheese_Mozza extends RecipeBase
 		}
 		// initial ingredients are wrong, false
    		return false;
-   	}
-
+	}
+	
 	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
 		Debug.Log("Recipe Do method called","recipes");
@@ -533,6 +547,7 @@ class CraftFreshCheese_CheddarCurds extends Craft_DadaTempStage_BaseRecipe
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Cheddar Curds";
 		
 				m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
@@ -642,6 +657,7 @@ class CraftFreshCheese_Goat extends Craft_DadaTempStage_BaseRecipe
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Goat Cheese";
 		
 				m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
@@ -750,6 +766,7 @@ class CraftFreshCheese_Feta extends Craft_DadaTempStage_BaseRecipe
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Feta Cheese";
 		
 				m_IsInstaRecipe = false;//should this recipe be performed instantly without animation
@@ -858,6 +875,7 @@ class CraftDadaRaw_FrozenYogurt extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Frozen Yogurt";
 		
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -927,6 +945,7 @@ class CraftDadaRaw_FrozenYogurt1 extends Craft_Dada_BaseRecipe
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Frozen Yogurt";
 		
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -958,6 +977,7 @@ class CraftDadaRaw_FrozenYogurt2 extends Craft_DadaTempStage_BaseRecipe
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Frozen Yogurt";
 		
 		m_MinQuantityIngredient[0] = 60;//-1 = disable check
@@ -1014,6 +1034,7 @@ class CraftDadaRaw_VanillaChocoSwirl extends Craft_DadaTempStageTemp1Stage1_Base
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Vanilla & Chocolate Ice Cream";
 		
 		m_MinQuantityIngredient[0] = 100;//-1 = disable check
@@ -1087,6 +1108,7 @@ class CraftDadaRaw_VanillaIceCream extends Craft_DadaTempStageTemp1Stage1_BaseRe
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Vanilla Ice Cream";
 		
 		m_MinQuantityIngredient[0] = 100;//-1 = disable check
@@ -1161,6 +1183,7 @@ class CraftDadaRaw_ChocoIScream extends Craft_DadaTempStageTemp1Stage1_BaseRecip
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft Chocolate Ice Cream";
 		
 		m_MinQuantityIngredient[0] = 100;//-1 = disable check
@@ -1234,6 +1257,7 @@ class CraftDadaRaw_PumpkinSeeds extends Craft_Dada_BaseRecipe
 	override void Init()
 	{
 		super.Init();
+		m_TransferAgents = false;
 		m_Name = "Craft roasted pumpkin seeds";
 		
 		m_MinQuantityIngredient[0] = 20;//-1 = disable check

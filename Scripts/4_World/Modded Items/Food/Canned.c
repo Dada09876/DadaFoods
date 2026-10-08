@@ -1,13 +1,28 @@
 class Dada_RawFoodCan_Colorbase extends Edible_Base
 {
+	override bool CanBeCombined(EntityAI other_item, bool reservation_check = true, bool stack_max_limit = false)
+	{
+		if (!super.CanBeCombined(other_item, reservation_check, stack_max_limit))
+			return false;
+
+		Edible_Base otherFood = Edible_Base.Cast(other_item);
+		if (!otherFood)
+			return false;
+
+		if (GetFoodStage().GetFoodStageType() != otherFood.GetFoodStage().GetFoodStageType())
+			return false;
+
+		return true;
+	}
+
 	override bool CanBeCooked()
 	{
 		return true;
 	}
   
-  override bool CanBeCookedOnStick()
+  	override bool CanBeCookedOnStick()
 	{
-		return true;
+		return false;
 	}	
 	
 	override bool IsMeat()
@@ -45,6 +60,36 @@ class Dada_PreservedFoodCan_Colorbase extends Edible_Base
 
 class Dada_PreservedFoodCan_Colorbase_Opened: Edible_Base
 {
+	override bool CanBeCombined(EntityAI other_item, bool reservation_check = true, bool stack_max_limit = false)
+	{
+		if (!super.CanBeCombined(other_item, reservation_check, stack_max_limit))
+			return false;
+
+		Edible_Base otherFood = Edible_Base.Cast(other_item);
+		if (!otherFood)
+			return false;
+
+		if (GetFoodStage().GetFoodStageType() != otherFood.GetFoodStage().GetFoodStageType())
+			return false;
+
+		return true;
+	}
+
+	override bool CanBeCooked()
+	{
+		return true;
+	}
+
+	override bool CanBeCookedOnStick()
+	{
+		return false;
+	}	
+	
+	override bool IsMeat()
+	{
+		return true;
+	}
+
 	override bool CanDecay()
 	{
 		return true;

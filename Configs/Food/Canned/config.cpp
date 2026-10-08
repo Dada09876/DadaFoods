@@ -214,6 +214,18 @@ class CfgVehicles
 		varQuantityMin = 0;
 		varQuantityMax = 450;
 		isMeleeWeapon = 1;
+		class Food
+		{
+			class FoodStages
+			{
+				class Preserved
+				{
+					visual_properties[] = {0,0,0};
+					nutrition_properties[] = {0,0,0,0,0,0};
+					cooking_properties[] = {0,0};
+				};
+			};
+		};
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -273,6 +285,7 @@ class CfgVehicles
 		varQuantityMax = 450;
 		isMeleeWeapon = 1;
 		inventorySlot[] = {"DirectCookingA","DirectCookingB","DirectCookingC","SmokingA","SmokingB","SmokingC","SmokingD"};
+		
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -465,18 +478,6 @@ class CfgVehicles
 		color = "STAGham";
 		hiddenSelections[] = {"camoGround"};
 		hiddenSelectionsTextures[] = {"Source_Files\DadaFoods\Configs\Food\Canned\data\can_STAGham_cooked_co.paa"};
-		class Food
-		{
-			class FoodStages
-			{
-				class Preserved
-				{
-					visual_properties[] = {0,0,0};
-					nutrition_properties[] = {0,0,0,0,0,0};
-					cooking_properties[] = {0,0};
-				};
-			};
-		};
 	};
 	class Dada_PreservedFoodCan_STAGham_Opened: Dada_PreservedFoodCan_Colorbase_Opened
 	{

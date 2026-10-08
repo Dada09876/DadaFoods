@@ -4,12 +4,36 @@ modded class Edible_Base
 
 	void Edible_Base()
 	{
+        m_IsPredatorDerived = false;
 	if (HasFoodStage())
     	{
         	m_FoodStage = new FoodStage(this);
         	RegisterNetSyncVariableInt("m_FoodStage.m_FoodStageType", FoodStageType.NONE, FoodStage.DADA_FOOD_STAGE_COUNT - 1);
     	}
 	}
+
+    override void OnStoreSave(ParamsWriteContext ctx)
+    {
+        super.OnStoreSave(ctx);
+        if (GetType().Contains("Dada_"))
+            ctx.Write(m_IsPredatorDerived);
+    }
+
+    override bool OnStoreLoad(ParamsReadContext ctx, int version)
+    {
+        if (!super.OnStoreLoad(ctx, version))
+            return false;
+
+        m_IsPredatorDerived = false;
+
+        if (GetType().Contains("Dada_"))
+        {
+            if (!ctx.Read(m_IsPredatorDerived))
+                m_IsPredatorDerived = false;
+        }
+
+        return true;
+    }
 
 	bool IsFoodPreserved()
 	{
